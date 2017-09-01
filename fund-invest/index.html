@@ -1,0 +1,227 @@
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#3E63BC" />
+    <!-- 위 3개의 메타 태그는 *반드시* head 태그의 처음에 와야합니다; 어떤 다른 콘텐츠들은 반드시 이 태그들 *다음에* 와야 합니다 -->
+    <title>Toss - 소액 펀드 투자</title>
+
+    <!-- Toss 공용 CSS 문서의 맨 처음에 와야 합니다;-->
+    <link href="assets/tossframe-2.0.4.css" rel="stylesheet">
+    <link href="assets/style.css" rel="stylesheet">
+
+
+  </head>
+  <body>
+
+
+
+    <!-- 투자 가이드 -->
+    <section class="blue600 py-5">
+      <div class="container text-center">
+          <h1 class="h4 gray0-text mx-auto mb-4">5,000원으로 시작하는<br>맞춤 펀드 투자</h1>
+          <button class="btn btn-block btn-accent">투자 가이드</button>
+      </div>
+    </section>
+
+    <!-- 상품 리스트 -->
+    <section>
+      <div class="container">
+        <div class="row">
+          <table class="w-100">
+
+            <!-- 필터 -->
+            <tr class="bb-1">
+              <th class="product-name text-center normal" colspan="2">상품명</th>
+              <th class="product-option w-20 pl-2 normal" data-toggle="modal" data-target="#optionFilter">
+                  <span id="optionName">구매자</span> <span class="oi oi-caret-bottom h7 normal"></span>
+              </th>
+              <th class="product-profit w-20 pl-2 normal" data-toggle="modal" data-target="#profitFilter">
+                수익률 <span class="oi oi-caret-bottom h7 normal"></span>
+              </th>
+            </tr>
+
+            <!-- 상품 -->
+            <a href="#">
+              <tr class="text-center">
+                <td class="product-type">
+                  <h7 class="orange500-text px-2">●</h7>
+                </td>
+                <td class="product-name">
+                  <p class="bold">국내 대형주 주식형</p>
+                  <h7>삼성중국본토레버리지…</h7>
+                </td>
+                <td class="product-buyer w-25 bold">3,506명</td>
+                <td class="product-profit w-25 bold pink500-text">20.5%</td>
+              </tr>
+            </a>
+            <a href="#">
+              <tr class="text-center">
+                <td class="product-type">
+                  <h7 class="orange500-text px-2">●</h7>
+                </td>
+                <td class="product-name">
+                  <p class="bold">국내 대형주 주식형</p>
+                  <h7>삼성중국본토레버리지…</h7>
+                </td>
+                <td class="product-buyer w-25 bold">3,506명</td>
+                <td class="product-profit w-25 bold pink500-text">20.5%</td>
+              </tr>
+            </a>
+            <a href="#">
+              <tr class="text-center">
+                <td class="product-type">
+                  <h7 class="orange500-text px-2">●</h7>
+                </td>
+                <td class="product-name">
+                  <p class="bold">국내 대형주 주식형</p>
+                  <h7>삼성중국본토레버리지…</h7>
+                </td>
+                <td class="product-buyer w-25 bold">3,506명</td>
+                <td class="product-profit w-25 bold pink500-text">20.5%</td>
+              </tr>
+            </a>
+            <a href="#">
+              <tr class="text-center">
+                <td class="product-type">
+                  <h7 class="orange500-text px-2">●</h7>
+                </td>
+                <td class="product-name">
+                  <p class="bold">국내 대형주 주식형</p>
+                  <h7>삼성중국본토레버리지…</h7>
+                </td>
+                <td class="product-buyer w-25 bold">3,506명</td>
+                <td class="product-profit w-25 bold pink500-text">20.5%</td>
+              </tr>
+            </a>
+            <a href="#">
+              <tr class="text-center">
+                <td class="product-type">
+                  <h7 class="orange500-text px-2">●</h7>
+                </td>
+                <td class="product-name">
+                  <p class="bold">국내 대형주 주식형</p>
+                  <h7>삼성중국본토레버리지…</h7>
+                </td>
+                <td class="product-buyer w-25 bold">3,506명</td>
+                <td class="product-profit w-25 bold pink500-text">20.5%</td>
+              </tr>
+            </a>
+
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- 하단 고정 필터 -->
+    <button id="filterButton" class="product-filter btn btn-block btn-warning" type="button" data-toggle="modal" data-target="#selectFilter">
+      <span class="oi oi-sort-descending h6"></span>
+      <span class="bold">실리형</span>
+    </button>
+
+    <!-- 성향 선택 모달 -->
+    <div class="modal fade" id="selectFilter" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">필터 선택</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+
+            <!-- 필터들 -->
+            <table>
+              <!-- 공격형 필터 카드 -->
+              <tr id="filterAggressive" data-dismiss="modal" class="filter-card rounded b-1 gray0 py-4 d-block mb-3">
+                <td class="w-30 text-center align-top">
+                  <h5 class="bold mb-0" style="line-height:1.8">공격형</h5>
+                </td>
+                <td class="align-top">
+                  <p class="h7 mt-0 pr-2">수익성이 높고 원금 손실의 위험도 있는 펀드입니다.</p>
+                  <span class="tag danger-6">매우높은위험</span>
+                  <span class="tag danger-5">높은위험</span>
+                </td>
+              </tr>
+              <!-- 실리형 필터 카드 -->
+              <tr id="filterBeneficial" data-dismiss="modal" class="filter-card selected rounded b-1 gray0 py-4 d-block mb-3">
+                <td class="w-30 text-center align-top">
+                  <h5 class="bold selected mb-0" style="line-height:1.8">실리형</h5>
+                </td>
+                <td class="align-top">
+                  <p class="h7 mt-0 pr-2">시장 평균 수익률을 추구하며 약간의 손실을 감수할 수 있는 주식 반 채권 반 펀드 등을 일컫습니다.</p>
+                  <span class="tag danger-4">다소높은위험</span>
+                  <span class="tag danger-3">보통위험</span>
+                </td>
+              </tr>
+              <!-- 안정형 필터 카드 -->
+              <tr id="filterStable" data-dismiss="modal" class="filter-card rounded b-1 gray0 py-4 d-block mb-3">
+                <td class="w-30 text-center align-top">
+                  <h5 class="bold mb-0" style="line-height:1.8">안정형</h5>
+                </td>
+                <td class="align-top">
+                  <p class="h7 mt-0 pr-2">내 돈은 내가 지킨다! 수익률은 조금 적더라도 원금의 손실이 없는 국.공채 MMF 등의 상품을 일컫습니다.</p>
+                  <span class="tag danger-2">낮은위험</span>
+                  <span class="tag danger-1">매우낮은위험</span>
+                </td>
+              </tr>
+            </table>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 구매자/판매자 선택 모달 -->
+    <div class="modal fade" id="optionFilter" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog fixed-bottom" role="document">
+
+        <div class="modal-content">
+          <div class="modal-body p-0 text-center">
+              <button data-dismiss="modal" class="dropdown-item w-100 py-4 bb-1 oi oi-check" type="button">
+                구매자
+              </button>
+              <button data-dismiss="modal" class="dropdown-item w-100 py-4" type="button">
+                판매액
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 수익률 선택 모달 -->
+    <div class="modal fade" id="profitFilter" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog fixed-bottom" role="document">
+
+        <div class="modal-content">
+          <div class="modal-body p-0 text-center">
+              <button data-dismiss="modal" class="dropdown-item w-100 py-4 bb-1 oi oi-check" type="button">
+                1개월
+              </button>
+              <button data-dismiss="modal" class="dropdown-item w-100 py-4 bb-1" type="button">
+                3개월
+              </button>
+              <button data-dismiss="modal" class="dropdown-item w-100 py-4 bb-1" type="button">
+                6개월
+              </button>
+              <button data-dismiss="modal" class="dropdown-item w-100 py-4" type="button">
+                1개월
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- 기본 JavaScript 프레임워크 -->
+    <script src="assets/jquery-3.2.1.min.js"></script>
+    <script src="assets/tether.min.js"></script>
+    <script src="assets/tossframe-2.0.0.js"></script>
+
+    <!-- 커스텀 이벤트 -->
+    <script src="assets/event.js"></script>
+
+  </body>
+</html>
