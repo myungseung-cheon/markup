@@ -1369,7 +1369,7 @@ h5, .h5, .filter-card .title, #blockKeyResult .value {
 h6, .h6, #filterButton i, #portfolio .title, #detailHeader .type {
   font-size: 1rem; }
 
-.bold, #filterButton span, .filter-card .title, #detailHeader .type, #blockProfit .label, #blockProfit .value, #blockKeyResult .label, #blockButtons button, #blockInfo .title, #blockAutoInvest .title {
+.bold, #filterButton span, .filter-card .title, #detailHeader .type, #blockProfit .label, #blockProfit .value, #blockKeyResult .label, #blockButtons button, #blockInfo .title, #blockAutoInvest .title, .survey .btn-next {
   font-weight: 700 !important; }
 
 .normal, #productList .list-header th, #productList .list-header i {
@@ -1472,7 +1472,7 @@ mark,
 .ABlue500-text {
   color: #144AE1; }
 
-.ABlue600, #blockButtons .btn-sell {
+.ABlue600 {
   background-color: #103BB4; }
 
 .ABlue600-text {
@@ -1520,10 +1520,10 @@ mark,
 .blue400-text {
   color: #7195FB; }
 
-.blue500, #blockAutoInvest {
+.blue500, #blockAutoInvest, .survey .progress-bar {
   background-color: #4E7BFA; }
 
-.blue500-text, .filter-card.selected .title {
+.blue500-text, .filter-card.selected .title, .survey .description {
   color: #4E7BFA; }
 
 .blue600, #banner, #portfolio {
@@ -1547,7 +1547,7 @@ mark,
 .gray0, .filter-card, #detailHeader, .block-shadow, #blockProfit, #blockKeyResult, #blockInfo {
   background-color: #FFFFFF; }
 
-.gray0-text, #banner h1, #portfolio .title, #portfolio .asset, #portfolio .arrow i, #blockButtons button, #blockAutoInvest {
+.gray0-text, #banner h1, #portfolio .title, #portfolio .asset, #portfolio .arrow i, #blockButtons button, #blockAutoInvest, .survey .btn-next {
   color: #FFFFFF; }
 
 .gray50, #blockInfo .quote, #blockInfo table .head {
@@ -1607,7 +1607,7 @@ mark,
 .gray600 {
   background-color: #999; }
 
-.gray600-text, #productList .product-info, #detailHeader .name, #blockProfit .label, #blockKeyResult .label {
+.gray600-text, #productList .product-info, #detailHeader .name, #blockProfit .label, #blockKeyResult .label, .survey fieldset[disabled] .question, .survey fieldset[disabled] .description, #sell_amount .note {
   color: #999; }
 
 .gray700 {
@@ -1676,7 +1676,7 @@ mark,
 .elephant700-text {
   color: #5C6476; }
 
-.elephant800 {
+.elephant800, #blockButtons .btn-sell {
   background-color: #3D424E; }
 
 .elephant800-text {
@@ -1880,7 +1880,7 @@ mark,
 .pink600-text {
   color: #CB3737; }
 
-.btn, #banner button, #filterButton, #blockButtons button, #blockInfo .files button, .terms-agree-all {
+.btn, #banner button, #filterButton, #blockProfit .control button, #blockButtons button, #blockInfo .files button, .survey .btn-next, .terms-agree-all {
   display: inline-block;
   font-weight: 400;
   line-height: 1;
@@ -1894,42 +1894,44 @@ mark,
   border-radius: 0.25rem;
   transition: all 0.2s ease-in-out; }
 
-.btn:focus, #banner button:focus, #filterButton:focus, #blockButtons button:focus, #blockInfo .files button:focus, .terms-agree-all:focus, .btn:hover, #banner button:hover, #filterButton:hover, #blockButtons button:hover, #blockInfo .files button:hover, .terms-agree-all:hover {
+.btn:focus, #banner button:focus, #filterButton:focus, #blockProfit .control button:focus, #blockButtons button:focus, #blockInfo .files button:focus, .survey .btn-next:focus, .terms-agree-all:focus, .btn:hover, #banner button:hover, #filterButton:hover, #blockProfit .control button:hover, #blockButtons button:hover, #blockInfo .files button:hover, .survey .btn-next:hover, .terms-agree-all:hover {
   text-decoration: none; }
 
-.btn:focus, #banner button:focus, #filterButton:focus, #blockButtons button:focus, #blockInfo .files button:focus, .terms-agree-all:focus, .btn.focus, #banner button.focus, .focus#filterButton, #blockButtons button.focus, #blockInfo .files button.focus, .focus.terms-agree-all {
+.btn:focus, #banner button:focus, #filterButton:focus, #blockProfit .control button:focus, #blockButtons button:focus, #blockInfo .files button:focus, .survey .btn-next:focus, .terms-agree-all:focus, .btn.focus, #banner button.focus, .focus#filterButton, #blockProfit .control button.focus, #blockButtons button.focus, #blockInfo .files button.focus, .survey .focus.btn-next, .focus.terms-agree-all {
   outline: 0;
   box-shadow: 0 0 0 2px rgba(20, 74, 225, 0.25); }
 
-.btn.disabled, #banner button.disabled, .disabled#filterButton, #blockButtons button.disabled, #blockInfo .files button.disabled, .disabled.terms-agree-all, .btn:disabled, #banner button:disabled, #filterButton:disabled, #blockButtons button:disabled, #blockInfo .files button:disabled, .terms-agree-all:disabled {
+.btn.disabled, #banner button.disabled, .disabled#filterButton, #blockProfit .control button.disabled, #blockButtons button.disabled, #blockInfo .files button.disabled, .survey .disabled.btn-next, .disabled.terms-agree-all, .btn:disabled, #banner button:disabled, #filterButton:disabled, #blockProfit .control button:disabled, #blockButtons button:disabled, #blockInfo .files button:disabled, .survey .btn-next:disabled, .terms-agree-all:disabled {
   cursor: not-allowed;
   opacity: .65; }
 
-.btn:active, #banner button:active, #filterButton:active, #blockButtons button:active, #blockInfo .files button:active, .terms-agree-all:active, .btn.active, #banner button.active, .active#filterButton, #blockButtons button.active, #blockInfo .files button.active, .active.terms-agree-all {
+.btn:active, #banner button:active, #filterButton:active, #blockProfit .control button:active, #blockButtons button:active, #blockInfo .files button:active, .survey .btn-next:active, .terms-agree-all:active, .btn.active, #banner button.active, .active#filterButton, #blockProfit .control button.active, #blockButtons button.active, #blockInfo .files button.active, .survey .active.btn-next, .active.terms-agree-all {
   background-image: none; }
 
-a.btn.disabled, a.disabled#filterButton, a.disabled.terms-agree-all,
+a.btn.disabled, a.disabled#filterButton, .survey a.disabled.btn-next, a.disabled.terms-agree-all,
 fieldset[disabled] a.btn,
 fieldset[disabled] a#filterButton,
+fieldset[disabled] .survey a.btn-next,
+.survey fieldset[disabled] a.btn-next,
 fieldset[disabled] a.terms-agree-all {
   pointer-events: none; }
 
-.btn-accent, #banner button, #blockButtons .btn-invest, .terms-agree-all.checked {
+.btn-accent, #banner button, #blockProfit .control button.selected, #blockButtons .btn-invest, .survey .btn-next, .terms-agree-all.checked {
   color: white;
   background-color: #144AE1;
   border-color: none; }
 
-.btn-accent:hover, #banner button:hover, #blockButtons .btn-invest:hover, .terms-agree-all.checked:hover {
+.btn-accent:hover, #banner button:hover, #blockProfit .control button.selected:hover, #blockButtons .btn-invest:hover, .survey .btn-next:hover, .terms-agree-all.checked:hover {
   color: white;
   background-color: #144AE1;
   border-color: none; }
 
-.btn-accent:active, #banner button:active, #blockButtons .btn-invest:active, .terms-agree-all.checked:active, .btn-accent.active, #banner button.active, #blockButtons .active.btn-invest, .active.terms-agree-all.checked, .show > .btn-accent.dropdown-toggle, #banner .show > button.dropdown-toggle, #blockButtons .show > .dropdown-toggle.btn-invest, .show > .dropdown-toggle.terms-agree-all.checked {
+.btn-accent:active, #banner button:active, #blockProfit .control button.selected:active, #blockButtons .btn-invest:active, .survey .btn-next:active, .terms-agree-all.checked:active, .btn-accent.active, #banner button.active, #blockProfit .control button.active.selected, #blockButtons .active.btn-invest, .survey .active.btn-next, .active.terms-agree-all.checked, .show > .btn-accent.dropdown-toggle, #banner .show > button.dropdown-toggle, #blockProfit .control .show > button.dropdown-toggle.selected, #blockButtons .show > .dropdown-toggle.btn-invest, .survey .show > .dropdown-toggle.btn-next, .show > .dropdown-toggle.terms-agree-all.checked {
   color: #B8CAFD;
   background-color: #103BB4;
   border-color: none; }
 
-.btn-accent.disabled, #banner button.disabled, #blockButtons .disabled.btn-invest, .disabled.terms-agree-all.checked, .btn-accent:disabled, #banner button:disabled, #blockButtons .btn-invest:disabled, .terms-agree-all.checked:disabled {
+.btn-accent.disabled, #banner button.disabled, #blockProfit .control button.disabled.selected, #blockButtons .disabled.btn-invest, .survey .disabled.btn-next, .disabled.terms-agree-all.checked, .btn-accent:disabled, #banner button:disabled, #blockProfit .control button.selected:disabled, #blockButtons .btn-invest:disabled, .survey .btn-next:disabled, .terms-agree-all.checked:disabled {
   color: #BBBBBB;
   background-color: #CCCCCC;
   border-color: none; }
@@ -2295,28 +2297,30 @@ fieldset[disabled] a.terms-agree-all {
 .btn-link:disabled:focus, .btn-link:disabled:hover {
   text-decoration: none; }
 
-.btn-lg, .btn-group-lg > .btn, #banner .btn-group-lg > button, .btn-group-lg > #filterButton, #blockButtons .btn-group-lg > button, #blockInfo .files .btn-group-lg > button, .btn-group-lg > .terms-agree-all {
+.btn-lg, .btn-group-lg > .btn, #banner .btn-group-lg > button, .btn-group-lg > #filterButton, #blockProfit .control .btn-group-lg > button, #blockButtons .btn-group-lg > button, #blockInfo .files .btn-group-lg > button, .survey .btn-group-lg > .btn-next, .btn-group-lg > .terms-agree-all {
   padding: 0.75rem 1.5rem;
   font-size: 1.25rem;
   border-radius: 0.3rem; }
 
-.btn-sm, .btn-group-sm > .btn, #banner .btn-group-sm > button, .btn-group-sm > #filterButton, #blockButtons .btn-group-sm > button, #blockInfo .files .btn-group-sm > button, .btn-group-sm > .terms-agree-all {
+.btn-sm, .btn-group-sm > .btn, #banner .btn-group-sm > button, .btn-group-sm > #filterButton, #blockProfit .control .btn-group-sm > button, #blockButtons .btn-group-sm > button, #blockInfo .files .btn-group-sm > button, .survey .btn-group-sm > .btn-next, .btn-group-sm > .terms-agree-all {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   border-radius: 0.2rem; }
 
-.btn-block, #banner button, #filterButton {
+.btn-block, #banner button, #filterButton, .survey .btn-next {
   display: block;
   width: 100%; }
 
-.btn-block + .btn-block, #banner button + .btn-block, #filterButton + .btn-block, #banner .btn-block + button, #banner button + button, #banner #filterButton + button, .btn-block + #filterButton, #banner button + #filterButton, #filterButton + #filterButton {
+.btn-block + .btn-block, #banner button + .btn-block, #filterButton + .btn-block, .survey .btn-next + .btn-block, #banner .btn-block + button, #banner button + button, #banner #filterButton + button, .survey #banner .btn-next + button, #banner .survey .btn-next + button, .btn-block + #filterButton, #banner button + #filterButton, #filterButton + #filterButton, .survey .btn-next + #filterButton, .survey .btn-block + .btn-next, #banner .survey button + .btn-next, .survey #banner button + .btn-next, .survey #filterButton + .btn-next, .survey .btn-next + .btn-next {
   margin-top: 0.5rem; }
 
-input[type="submit"].btn-block, input[type="submit"]#filterButton,
+input[type="submit"].btn-block, input[type="submit"]#filterButton, .survey input[type="submit"].btn-next,
 input[type="reset"].btn-block,
 input[type="reset"]#filterButton,
+.survey input[type="reset"].btn-next,
 input[type="button"].btn-block,
-input[type="button"]#filterButton {
+input[type="button"]#filterButton,
+.survey input[type="button"].btn-next {
   width: 100%; }
 
 .nav {
@@ -2437,7 +2441,7 @@ pre code {
   max-height: 340px;
   overflow-y: scroll; }
 
-.form-control, .input-birthdate, .input-gender {
+.form-control, .repeat-date, .input-birthdate, .input-gender {
   display: block;
   width: 100%;
   padding: 0.5rem 0.75rem;
@@ -2451,31 +2455,31 @@ pre code {
   border-radius: 0.25rem;
   transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s; }
 
-.form-control::-ms-expand, .input-birthdate::-ms-expand, .input-gender::-ms-expand {
+.form-control::-ms-expand, .repeat-date::-ms-expand, .input-birthdate::-ms-expand, .input-gender::-ms-expand {
   background-color: transparent;
   border: 0; }
 
-.form-control:focus, .input-birthdate:focus, .input-gender:focus {
+.form-control:focus, .repeat-date:focus, .input-birthdate:focus, .input-gender:focus {
   color: #111;
   background-color: #fff;
   border-color: #819ff4;
   outline: none; }
 
-.form-control::placeholder, .input-birthdate::placeholder, .input-gender::placeholder {
+.form-control::placeholder, .repeat-date::placeholder, .input-birthdate::placeholder, .input-gender::placeholder {
   color: #636c72;
   opacity: 1; }
 
-.form-control:disabled, .input-birthdate:disabled, .input-gender:disabled, .form-control[readonly], [readonly].input-birthdate, [readonly].input-gender {
+.form-control:disabled, .repeat-date:disabled, .input-birthdate:disabled, .input-gender:disabled, .form-control[readonly], [readonly].repeat-date, [readonly].input-birthdate, [readonly].input-gender {
   background-color: #eceeef;
   opacity: 1; }
 
-.form-control:disabled, .input-birthdate:disabled, .input-gender:disabled {
+.form-control:disabled, .repeat-date:disabled, .input-birthdate:disabled, .input-gender:disabled {
   cursor: not-allowed; }
 
-select.form-control:not([size]):not([multiple]), select.input-birthdate:not([size]):not([multiple]), select.input-gender:not([size]):not([multiple]) {
+select.form-control:not([size]):not([multiple]), select.repeat-date:not([size]):not([multiple]), select.input-birthdate:not([size]):not([multiple]), select.input-gender:not([size]):not([multiple]) {
   height: calc(2.25rem + 2px); }
 
-select.form-control:focus::-ms-value, select.input-birthdate:focus::-ms-value, select.input-gender:focus::-ms-value {
+select.form-control:focus::-ms-value, select.repeat-date:focus::-ms-value, select.input-birthdate:focus::-ms-value, select.input-gender:focus::-ms-value {
   color: #111;
   background-color: #fff; }
 
@@ -2512,59 +2516,69 @@ select.form-control:focus::-ms-value, select.input-birthdate:focus::-ms-value, s
   border: solid transparent;
   border-width: 1px 0; }
 
-.form-control-static.form-control-sm, .input-group-sm > .form-control-static.form-control, .input-group-sm > .form-control-static.input-birthdate, .input-group-sm > .form-control-static.input-gender,
+.form-control-static.form-control-sm, .input-group-sm > .form-control-static.form-control, .input-group-sm > .form-control-static.repeat-date, .input-group-sm > .form-control-static.input-birthdate, .input-group-sm > .form-control-static.input-gender,
 .input-group-sm > .form-control-static.input-group-addon,
 .input-group-sm > .input-group-btn > .form-control-static.btn,
 #banner .input-group-sm > .input-group-btn > button.form-control-static,
 .input-group-sm > .input-group-btn > .form-control-static#filterButton,
+#blockProfit .control .input-group-sm > .input-group-btn > button.form-control-static,
 #blockButtons .input-group-sm > .input-group-btn > button.form-control-static,
 #blockInfo .files .input-group-sm > .input-group-btn > button.form-control-static,
-.input-group-sm > .input-group-btn > .form-control-static.terms-agree-all, .form-control-static.form-control-lg, .input-group-lg > .form-control-static.form-control, .input-group-lg > .form-control-static.input-birthdate, .input-group-lg > .form-control-static.input-gender,
+.survey .input-group-sm > .input-group-btn > .form-control-static.btn-next,
+.input-group-sm > .input-group-btn > .form-control-static.terms-agree-all, .form-control-static.form-control-lg, .form-control-static.repeat-date, .input-group-lg > .form-control-static.form-control, .input-group-lg > .form-control-static.repeat-date, .input-group-lg > .form-control-static.input-birthdate, .input-group-lg > .form-control-static.input-gender,
 .input-group-lg > .form-control-static.input-group-addon,
 .input-group-lg > .input-group-btn > .form-control-static.btn,
 #banner .input-group-lg > .input-group-btn > button.form-control-static,
 .input-group-lg > .input-group-btn > .form-control-static#filterButton,
+#blockProfit .control .input-group-lg > .input-group-btn > button.form-control-static,
 #blockButtons .input-group-lg > .input-group-btn > button.form-control-static,
 #blockInfo .files .input-group-lg > .input-group-btn > button.form-control-static,
+.survey .input-group-lg > .input-group-btn > .form-control-static.btn-next,
 .input-group-lg > .input-group-btn > .form-control-static.terms-agree-all {
   padding-right: 0;
   padding-left: 0; }
 
-.form-control-sm, .input-group-sm > .form-control, .input-group-sm > .input-birthdate, .input-group-sm > .input-gender,
+.form-control-sm, .input-group-sm > .form-control, .input-group-sm > .repeat-date, .input-group-sm > .input-birthdate, .input-group-sm > .input-gender,
 .input-group-sm > .input-group-addon,
 .input-group-sm > .input-group-btn > .btn,
 #banner .input-group-sm > .input-group-btn > button,
 .input-group-sm > .input-group-btn > #filterButton,
+#blockProfit .control .input-group-sm > .input-group-btn > button,
 #blockButtons .input-group-sm > .input-group-btn > button,
 #blockInfo .files .input-group-sm > .input-group-btn > button,
+.survey .input-group-sm > .input-group-btn > .btn-next,
 .input-group-sm > .input-group-btn > .terms-agree-all {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   border-radius: 0.2rem; }
 
-select.form-control-sm:not([size]):not([multiple]), .input-group-sm > select.form-control:not([size]):not([multiple]), .input-group-sm > select.input-birthdate:not([size]):not([multiple]), .input-group-sm > select.input-gender:not([size]):not([multiple]),
+select.form-control-sm:not([size]):not([multiple]), .input-group-sm > select.form-control:not([size]):not([multiple]), .input-group-sm > select.repeat-date:not([size]):not([multiple]), .input-group-sm > select.input-birthdate:not([size]):not([multiple]), .input-group-sm > select.input-gender:not([size]):not([multiple]),
 .input-group-sm > select.input-group-addon:not([size]):not([multiple]),
 .input-group-sm > .input-group-btn > select.btn:not([size]):not([multiple]),
 .input-group-sm > .input-group-btn > select#filterButton:not([size]):not([multiple]),
+.survey .input-group-sm > .input-group-btn > select.btn-next:not([size]):not([multiple]),
 .input-group-sm > .input-group-btn > select.terms-agree-all:not([size]):not([multiple]) {
   height: 1.8125rem; }
 
-.form-control-lg, .input-group-lg > .form-control, .input-group-lg > .input-birthdate, .input-group-lg > .input-gender,
+.form-control-lg, .repeat-date, .input-group-lg > .form-control, .input-group-lg > .repeat-date, .input-group-lg > .input-birthdate, .input-group-lg > .input-gender,
 .input-group-lg > .input-group-addon,
 .input-group-lg > .input-group-btn > .btn,
 #banner .input-group-lg > .input-group-btn > button,
 .input-group-lg > .input-group-btn > #filterButton,
+#blockProfit .control .input-group-lg > .input-group-btn > button,
 #blockButtons .input-group-lg > .input-group-btn > button,
 #blockInfo .files .input-group-lg > .input-group-btn > button,
+.survey .input-group-lg > .input-group-btn > .btn-next,
 .input-group-lg > .input-group-btn > .terms-agree-all {
   padding: 0.75rem 1.5rem;
   font-size: 1.25rem;
   border-radius: 0.3rem; }
 
-select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.form-control:not([size]):not([multiple]), .input-group-lg > select.input-birthdate:not([size]):not([multiple]), .input-group-lg > select.input-gender:not([size]):not([multiple]),
+select.form-control-lg:not([size]):not([multiple]), select.repeat-date:not([size]):not([multiple]), .input-group-lg > select.form-control:not([size]):not([multiple]), .input-group-lg > select.repeat-date:not([size]):not([multiple]), .input-group-lg > select.input-birthdate:not([size]):not([multiple]), .input-group-lg > select.input-gender:not([size]):not([multiple]),
 .input-group-lg > select.input-group-addon:not([size]):not([multiple]),
 .input-group-lg > .input-group-btn > select.btn:not([size]):not([multiple]),
 .input-group-lg > .input-group-btn > select#filterButton:not([size]):not([multiple]),
+.survey .input-group-lg > .input-group-btn > select.btn-next:not([size]):not([multiple]),
 .input-group-lg > .input-group-btn > select.terms-agree-all:not([size]):not([multiple]) {
   height: 3.16667rem; }
 
@@ -2624,7 +2638,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
 .has-success .custom-control {
   color: #00C1A8; }
 
-.has-success .form-control, .has-success .input-birthdate, .has-success .input-gender {
+.has-success .form-control, .has-success .repeat-date, .has-success .input-birthdate, .has-success .input-gender {
   border-color: #00C1A8; }
 
 .has-success .input-group-addon {
@@ -2642,7 +2656,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
 .has-warning .custom-control {
   color: #F57F0A; }
 
-.has-warning .form-control, .has-warning .input-birthdate, .has-warning .input-gender {
+.has-warning .form-control, .has-warning .repeat-date, .has-warning .input-birthdate, .has-warning .input-gender {
   border-color: #F57F0A; }
 
 .has-warning .input-group-addon {
@@ -2660,7 +2674,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
 .has-danger .custom-control {
   color: #DB5237; }
 
-.has-danger .form-control, .has-danger .input-birthdate, .has-danger .input-gender {
+.has-danger .form-control, .has-danger .repeat-date, .has-danger .input-birthdate, .has-danger .input-gender {
   border-color: #DB5237; }
 
 .has-danger .input-group-addon {
@@ -2693,7 +2707,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
     align-items: center;
     margin-bottom: 0; }
 
-  .form-inline .form-control, .form-inline .input-birthdate, .form-inline .input-gender {
+  .form-inline .form-control, .form-inline .repeat-date, .form-inline .input-birthdate, .form-inline .input-gender {
     display: inline-block;
     width: auto;
     vertical-align: middle; }
@@ -5347,7 +5361,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
 .rounded-circle {
   border-radius: 50%; }
 
-.rounded-0, #blockButtons button {
+.rounded-0, #blockButtons button, .survey .btn-next {
   border-radius: 0; }
 
 .clearfix::after, .input-group-sign-in::after {
@@ -6007,7 +6021,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
   left: 0;
   z-index: 1030; }
 
-.fixed-bottom, #blockButtons {
+.fixed-bottom, #blockButtons, .survey .btn-next {
   position: fixed;
   right: 0;
   bottom: 0;
@@ -6076,7 +6090,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
 .w-95 {
   width: 95% !important; }
 
-.w-100, #productList table, #portfolio .page, #blockKeyResult table, .terms-agree-all {
+.w-100, #productList table, #portfolio .page, #blockProfit .control, #blockKeyResult table, .terms-agree-all {
   width: 100% !important; }
 
 .h-5 {
@@ -6154,7 +6168,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
 .mr-0 {
   margin-right: 0 !important; }
 
-.mb-0, .filter-card .title, #detailHeader .name, #blockKeyResult .value, #blockAutoInvest .quit {
+.mb-0, .filter-card .title, #detailHeader .name, #blockKeyResult .value, #blockAutoInvest .quit, .survey .btn-next {
   margin-bottom: 0 !important; }
 
 .ml-0 {
@@ -6200,7 +6214,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
 .mr-2 {
   margin-right: 0.5rem !important; }
 
-.mb-2, #productList .product-name, #detailHeader .type, #blockInfo .title {
+.mb-2, #productList .product-name, #detailHeader .type, #blockProfit .control, #blockInfo .title, #blockInfo .asset canvas, .survey .question {
   margin-bottom: 0.5rem !important; }
 
 .ml-2, #blockAutoInvest .title {
@@ -6246,7 +6260,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
 .mr-4 {
   margin-right: 1.5rem !important; }
 
-.mb-4, #banner h1, .input-group-sign-in {
+.mb-4, #banner h1, #blockProfit canvas, .survey input, .input-group-sign-in {
   margin-bottom: 1.5rem !important; }
 
 .ml-4, #blockAutoInvest .description, #blockAutoInvest hr, #blockAutoInvest .quit {
@@ -6263,7 +6277,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
 .m-5 {
   margin: 3rem 3rem !important; }
 
-.mt-5 {
+.mt-5, .survey .question, .survey .btn-next {
   margin-top: 3rem !important; }
 
 .mr-5 {
@@ -6390,7 +6404,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
 .pl-2 {
   padding-left: 0.5rem !important; }
 
-.px-2, #productList .list-item i {
+.px-2, #productList .list-item i, #blockProfit canvas {
   padding-right: 0.5rem !important;
   padding-left: 0.5rem !important; }
 
@@ -6436,11 +6450,11 @@ a.bg-inverse:focus, a.bg-inverse:hover {
 .pl-4 {
   padding-left: 1.5rem !important; }
 
-.px-4 {
+.px-4, .modal-footer button, .survey .sheet {
   padding-right: 1.5rem !important;
   padding-left: 1.5rem !important; }
 
-.py-4, .filter-card, #detailHeader, #blockButtons button {
+.py-4, .filter-card, #detailHeader, #blockButtons button, .survey .btn-next {
   padding-top: 1.5rem !important;
   padding-bottom: 1.5rem !important; }
 
@@ -8118,7 +8132,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
   text-align: right !important; }
 
 .text-center, #banner, #productList .list-header th, #productList .product-option,
-#productList .product-profit, .filter-card .title, #portfolio .page, #blockKeyResult .sales, #blockKeyResult .buyer, .input-group-sign-in {
+#productList .product-profit, .filter-card .title, #portfolio .page, #blockProfit .control, #blockKeyResult .sales, #blockKeyResult .buyer, .input-group-sign-in {
   text-align: center !important; }
 
 @media (min-width: 576px) {
@@ -8468,134 +8482,220 @@ tbody.collapse.show {
   display: inline-flex;
   vertical-align: middle; }
 
-.btn-group > .btn, #banner .btn-group > button, .btn-group > #filterButton, #blockButtons .btn-group > button, #blockInfo .files .btn-group > button, .btn-group > .terms-agree-all,
+.btn-group > .btn, #banner .btn-group > button, .btn-group > #filterButton, #blockProfit .control .btn-group > button, #blockButtons .btn-group > button, #blockInfo .files .btn-group > button, .survey .btn-group > .btn-next, .btn-group > .terms-agree-all,
 .btn-group-vertical > .btn,
 #banner .btn-group-vertical > button,
 .btn-group-vertical > #filterButton,
+#blockProfit .control .btn-group-vertical > button,
 #blockButtons .btn-group-vertical > button,
 #blockInfo .files .btn-group-vertical > button,
+.survey .btn-group-vertical > .btn-next,
 .btn-group-vertical > .terms-agree-all {
   position: relative;
   flex: 0 1 auto; }
 
-.btn-group > .btn:hover, #banner .btn-group > button:hover, .btn-group > #filterButton:hover, #blockButtons .btn-group > button:hover, #blockInfo .files .btn-group > button:hover, .btn-group > .terms-agree-all:hover,
+.btn-group > .btn:hover, #banner .btn-group > button:hover, .btn-group > #filterButton:hover, #blockProfit .control .btn-group > button:hover, #blockButtons .btn-group > button:hover, #blockInfo .files .btn-group > button:hover, .survey .btn-group > .btn-next:hover, .btn-group > .terms-agree-all:hover,
 .btn-group-vertical > .btn:hover,
 #banner .btn-group-vertical > button:hover,
 .btn-group-vertical > #filterButton:hover,
+#blockProfit .control .btn-group-vertical > button:hover,
 #blockButtons .btn-group-vertical > button:hover,
 #blockInfo .files .btn-group-vertical > button:hover,
+.survey .btn-group-vertical > .btn-next:hover,
 .btn-group-vertical > .terms-agree-all:hover {
   z-index: 2; }
 
-.btn-group > .btn:focus, #banner .btn-group > button:focus, .btn-group > #filterButton:focus, #blockButtons .btn-group > button:focus, #blockInfo .files .btn-group > button:focus, .btn-group > .terms-agree-all:focus, .btn-group > .btn:active, #banner .btn-group > button:active, .btn-group > #filterButton:active, #blockButtons .btn-group > button:active, #blockInfo .files .btn-group > button:active, .btn-group > .terms-agree-all:active, .btn-group > .btn.active, #banner .btn-group > button.active, .btn-group > .active#filterButton, #blockButtons .btn-group > button.active, #blockInfo .files .btn-group > button.active, .btn-group > .active.terms-agree-all,
+.btn-group > .btn:focus, #banner .btn-group > button:focus, .btn-group > #filterButton:focus, #blockProfit .control .btn-group > button:focus, #blockButtons .btn-group > button:focus, #blockInfo .files .btn-group > button:focus, .survey .btn-group > .btn-next:focus, .btn-group > .terms-agree-all:focus, .btn-group > .btn:active, #banner .btn-group > button:active, .btn-group > #filterButton:active, #blockProfit .control .btn-group > button:active, #blockButtons .btn-group > button:active, #blockInfo .files .btn-group > button:active, .survey .btn-group > .btn-next:active, .btn-group > .terms-agree-all:active, .btn-group > .btn.active, #banner .btn-group > button.active, .btn-group > .active#filterButton, #blockProfit .control .btn-group > button.active, #blockButtons .btn-group > button.active, #blockInfo .files .btn-group > button.active, .survey .btn-group > .active.btn-next, .btn-group > .active.terms-agree-all,
 .btn-group-vertical > .btn:focus,
 #banner .btn-group-vertical > button:focus,
 .btn-group-vertical > #filterButton:focus,
+#blockProfit .control .btn-group-vertical > button:focus,
 #blockButtons .btn-group-vertical > button:focus,
 #blockInfo .files .btn-group-vertical > button:focus,
+.survey .btn-group-vertical > .btn-next:focus,
 .btn-group-vertical > .terms-agree-all:focus,
 .btn-group-vertical > .btn:active,
 #banner .btn-group-vertical > button:active,
 .btn-group-vertical > #filterButton:active,
+#blockProfit .control .btn-group-vertical > button:active,
 #blockButtons .btn-group-vertical > button:active,
 #blockInfo .files .btn-group-vertical > button:active,
+.survey .btn-group-vertical > .btn-next:active,
 .btn-group-vertical > .terms-agree-all:active,
 .btn-group-vertical > .btn.active,
 #banner .btn-group-vertical > button.active,
 .btn-group-vertical > .active#filterButton,
+#blockProfit .control .btn-group-vertical > button.active,
 #blockButtons .btn-group-vertical > button.active,
 #blockInfo .files .btn-group-vertical > button.active,
+.survey .btn-group-vertical > .active.btn-next,
 .btn-group-vertical > .active.terms-agree-all {
   z-index: 2; }
 
-.btn-group .btn + .btn, .btn-group #banner button + .btn, #banner .btn-group button + .btn, .btn-group #filterButton + .btn, .btn-group #blockButtons button + .btn, #blockButtons .btn-group button + .btn, .btn-group #blockInfo .files button + .btn, #blockInfo .files .btn-group button + .btn, .btn-group #banner .btn + button, #banner .btn-group .btn + button, .btn-group #banner button + button, #banner .btn-group button + button, .btn-group #banner #filterButton + button, #banner .btn-group #filterButton + button, .btn-group .btn + #filterButton, .btn-group #banner button + #filterButton, #banner .btn-group button + #filterButton, .btn-group #filterButton + #filterButton, .btn-group #blockButtons button + #filterButton, #blockButtons .btn-group button + #filterButton, .btn-group #blockInfo .files button + #filterButton, #blockInfo .files .btn-group button + #filterButton, .btn-group #blockButtons .btn + button, #blockButtons .btn-group .btn + button, .btn-group #blockButtons #filterButton + button, #blockButtons .btn-group #filterButton + button, .btn-group #blockButtons button + button, #blockButtons .btn-group button + button, .btn-group #blockInfo .files .btn + button, #blockInfo .files .btn-group .btn + button, .btn-group #blockInfo .files #filterButton + button, #blockInfo .files .btn-group #filterButton + button, .btn-group #blockInfo .files button + button, #blockInfo .files .btn-group button + button, .btn-group .terms-agree-all + .btn, .btn-group #banner .terms-agree-all + button, #banner .btn-group .terms-agree-all + button, .btn-group .terms-agree-all + #filterButton, .btn-group #blockButtons .terms-agree-all + button, #blockButtons .btn-group .terms-agree-all + button, .btn-group #blockInfo .files .terms-agree-all + button, #blockInfo .files .btn-group .terms-agree-all + button, .btn-group .btn + .terms-agree-all, .btn-group #banner button + .terms-agree-all, #banner .btn-group button + .terms-agree-all, .btn-group #filterButton + .terms-agree-all, .btn-group #blockButtons button + .terms-agree-all, #blockButtons .btn-group button + .terms-agree-all, .btn-group #blockInfo .files button + .terms-agree-all, #blockInfo .files .btn-group button + .terms-agree-all, .btn-group .terms-agree-all + .terms-agree-all,
+.btn-group .btn + .btn, .btn-group #banner button + .btn, #banner .btn-group button + .btn, .btn-group #filterButton + .btn, .btn-group #blockProfit .control button + .btn, #blockProfit .control .btn-group button + .btn, .btn-group #blockButtons button + .btn, #blockButtons .btn-group button + .btn, .btn-group #blockInfo .files button + .btn, #blockInfo .files .btn-group button + .btn, .btn-group .survey .btn-next + .btn, .survey .btn-group .btn-next + .btn, .btn-group #banner .btn + button, #banner .btn-group .btn + button, .btn-group #banner button + button, #banner .btn-group button + button, .btn-group #banner #filterButton + button, #banner .btn-group #filterButton + button, .btn-group .survey #banner .btn-next + button, #banner .btn-group .survey .btn-next + button, .survey .btn-group #banner .btn-next + button, #banner .survey .btn-group .btn-next + button, .btn-group .btn + #filterButton, .btn-group #banner button + #filterButton, #banner .btn-group button + #filterButton, .btn-group #filterButton + #filterButton, .btn-group #blockProfit .control button + #filterButton, #blockProfit .control .btn-group button + #filterButton, .btn-group #blockButtons button + #filterButton, #blockButtons .btn-group button + #filterButton, .btn-group #blockInfo .files button + #filterButton, #blockInfo .files .btn-group button + #filterButton, .btn-group .survey .btn-next + #filterButton, .survey .btn-group .btn-next + #filterButton, .btn-group #blockProfit .control .btn + button, #blockProfit .control .btn-group .btn + button, .btn-group #blockProfit .control #filterButton + button, #blockProfit .control .btn-group #filterButton + button, .btn-group #blockProfit .control button + button, #blockProfit .control .btn-group button + button, .btn-group .survey #blockProfit .control .btn-next + button, #blockProfit .control .btn-group .survey .btn-next + button, .survey .btn-group #blockProfit .control .btn-next + button, #blockProfit .control .survey .btn-group .btn-next + button, .btn-group #blockButtons .btn + button, #blockButtons .btn-group .btn + button, .btn-group #blockButtons #filterButton + button, #blockButtons .btn-group #filterButton + button, .btn-group #blockButtons button + button, #blockButtons .btn-group button + button, .btn-group .survey #blockButtons .btn-next + button, #blockButtons .btn-group .survey .btn-next + button, .survey .btn-group #blockButtons .btn-next + button, #blockButtons .survey .btn-group .btn-next + button, .btn-group #blockInfo .files .btn + button, #blockInfo .files .btn-group .btn + button, .btn-group #blockInfo .files #filterButton + button, #blockInfo .files .btn-group #filterButton + button, .btn-group #blockInfo .files button + button, #blockInfo .files .btn-group button + button, .btn-group .survey #blockInfo .files .btn-next + button, #blockInfo .files .btn-group .survey .btn-next + button, .survey .btn-group #blockInfo .files .btn-next + button, #blockInfo .files .survey .btn-group .btn-next + button, .btn-group .survey .btn + .btn-next, .survey .btn-group .btn + .btn-next, .btn-group #banner .survey button + .btn-next, .survey .btn-group #banner button + .btn-next, #banner .btn-group .survey button + .btn-next, .survey #banner .btn-group button + .btn-next, .btn-group .survey #filterButton + .btn-next, .survey .btn-group #filterButton + .btn-next, .btn-group #blockProfit .control .survey button + .btn-next, .survey .btn-group #blockProfit .control button + .btn-next, #blockProfit .control .btn-group .survey button + .btn-next, .survey #blockProfit .control .btn-group button + .btn-next, .btn-group #blockButtons .survey button + .btn-next, .survey .btn-group #blockButtons button + .btn-next, #blockButtons .btn-group .survey button + .btn-next, .survey #blockButtons .btn-group button + .btn-next, .btn-group #blockInfo .files .survey button + .btn-next, .survey .btn-group #blockInfo .files button + .btn-next, #blockInfo .files .btn-group .survey button + .btn-next, .survey #blockInfo .files .btn-group button + .btn-next, .btn-group .survey .btn-next + .btn-next, .survey .btn-group .btn-next + .btn-next, .btn-group .terms-agree-all + .btn, .btn-group #banner .terms-agree-all + button, #banner .btn-group .terms-agree-all + button, .btn-group .terms-agree-all + #filterButton, .btn-group #blockProfit .control .terms-agree-all + button, #blockProfit .control .btn-group .terms-agree-all + button, .btn-group #blockButtons .terms-agree-all + button, #blockButtons .btn-group .terms-agree-all + button, .btn-group #blockInfo .files .terms-agree-all + button, #blockInfo .files .btn-group .terms-agree-all + button, .btn-group .survey .terms-agree-all + .btn-next, .survey .btn-group .terms-agree-all + .btn-next, .btn-group .btn + .terms-agree-all, .btn-group #banner button + .terms-agree-all, #banner .btn-group button + .terms-agree-all, .btn-group #filterButton + .terms-agree-all, .btn-group #blockProfit .control button + .terms-agree-all, #blockProfit .control .btn-group button + .terms-agree-all, .btn-group #blockButtons button + .terms-agree-all, #blockButtons .btn-group button + .terms-agree-all, .btn-group #blockInfo .files button + .terms-agree-all, #blockInfo .files .btn-group button + .terms-agree-all, .btn-group .survey .btn-next + .terms-agree-all, .survey .btn-group .btn-next + .terms-agree-all, .btn-group .terms-agree-all + .terms-agree-all,
 .btn-group .btn + .btn-group,
 .btn-group #banner button + .btn-group,
 #banner .btn-group button + .btn-group,
 .btn-group #filterButton + .btn-group,
+.btn-group #blockProfit .control button + .btn-group,
+#blockProfit .control .btn-group button + .btn-group,
 .btn-group #blockButtons button + .btn-group,
 #blockButtons .btn-group button + .btn-group,
 .btn-group #blockInfo .files button + .btn-group,
 #blockInfo .files .btn-group button + .btn-group,
+.btn-group .survey .btn-next + .btn-group,
+.survey .btn-group .btn-next + .btn-group,
 .btn-group .terms-agree-all + .btn-group,
 .btn-group .btn-group + .btn,
 .btn-group #banner .btn-group + button,
 #banner .btn-group .btn-group + button,
 .btn-group .btn-group + #filterButton,
+.btn-group #blockProfit .control .btn-group + button,
+#blockProfit .control .btn-group .btn-group + button,
 .btn-group #blockButtons .btn-group + button,
 #blockButtons .btn-group .btn-group + button,
 .btn-group #blockInfo .files .btn-group + button,
 #blockInfo .files .btn-group .btn-group + button,
+.btn-group .survey .btn-group + .btn-next,
+.survey .btn-group .btn-group + .btn-next,
 .btn-group .btn-group + .terms-agree-all,
 .btn-group .btn-group + .btn-group,
 .btn-group-vertical .btn + .btn,
 .btn-group-vertical #banner button + .btn,
 #banner .btn-group-vertical button + .btn,
 .btn-group-vertical #filterButton + .btn,
+.btn-group-vertical #blockProfit .control button + .btn,
+#blockProfit .control .btn-group-vertical button + .btn,
 .btn-group-vertical #blockButtons button + .btn,
 #blockButtons .btn-group-vertical button + .btn,
 .btn-group-vertical #blockInfo .files button + .btn,
 #blockInfo .files .btn-group-vertical button + .btn,
+.btn-group-vertical .survey .btn-next + .btn,
+.survey .btn-group-vertical .btn-next + .btn,
 .btn-group-vertical #banner .btn + button,
 #banner .btn-group-vertical .btn + button,
 .btn-group-vertical #banner button + button,
 #banner .btn-group-vertical button + button,
 .btn-group-vertical #banner #filterButton + button,
 #banner .btn-group-vertical #filterButton + button,
+.btn-group-vertical .survey #banner .btn-next + button,
+#banner .btn-group-vertical .survey .btn-next + button,
+.survey .btn-group-vertical #banner .btn-next + button,
+#banner .survey .btn-group-vertical .btn-next + button,
 .btn-group-vertical .btn + #filterButton,
 .btn-group-vertical #banner button + #filterButton,
 #banner .btn-group-vertical button + #filterButton,
 .btn-group-vertical #filterButton + #filterButton,
+.btn-group-vertical #blockProfit .control button + #filterButton,
+#blockProfit .control .btn-group-vertical button + #filterButton,
 .btn-group-vertical #blockButtons button + #filterButton,
 #blockButtons .btn-group-vertical button + #filterButton,
 .btn-group-vertical #blockInfo .files button + #filterButton,
 #blockInfo .files .btn-group-vertical button + #filterButton,
+.btn-group-vertical .survey .btn-next + #filterButton,
+.survey .btn-group-vertical .btn-next + #filterButton,
+.btn-group-vertical #blockProfit .control .btn + button,
+#blockProfit .control .btn-group-vertical .btn + button,
+.btn-group-vertical #blockProfit .control #filterButton + button,
+#blockProfit .control .btn-group-vertical #filterButton + button,
+.btn-group-vertical #blockProfit .control button + button,
+#blockProfit .control .btn-group-vertical button + button,
+.btn-group-vertical .survey #blockProfit .control .btn-next + button,
+#blockProfit .control .btn-group-vertical .survey .btn-next + button,
+.survey .btn-group-vertical #blockProfit .control .btn-next + button,
+#blockProfit .control .survey .btn-group-vertical .btn-next + button,
 .btn-group-vertical #blockButtons .btn + button,
 #blockButtons .btn-group-vertical .btn + button,
 .btn-group-vertical #blockButtons #filterButton + button,
 #blockButtons .btn-group-vertical #filterButton + button,
 .btn-group-vertical #blockButtons button + button,
 #blockButtons .btn-group-vertical button + button,
+.btn-group-vertical .survey #blockButtons .btn-next + button,
+#blockButtons .btn-group-vertical .survey .btn-next + button,
+.survey .btn-group-vertical #blockButtons .btn-next + button,
+#blockButtons .survey .btn-group-vertical .btn-next + button,
 .btn-group-vertical #blockInfo .files .btn + button,
 #blockInfo .files .btn-group-vertical .btn + button,
 .btn-group-vertical #blockInfo .files #filterButton + button,
 #blockInfo .files .btn-group-vertical #filterButton + button,
 .btn-group-vertical #blockInfo .files button + button,
 #blockInfo .files .btn-group-vertical button + button,
+.btn-group-vertical .survey #blockInfo .files .btn-next + button,
+#blockInfo .files .btn-group-vertical .survey .btn-next + button,
+.survey .btn-group-vertical #blockInfo .files .btn-next + button,
+#blockInfo .files .survey .btn-group-vertical .btn-next + button,
+.btn-group-vertical .survey .btn + .btn-next,
+.survey .btn-group-vertical .btn + .btn-next,
+.btn-group-vertical #banner .survey button + .btn-next,
+.survey .btn-group-vertical #banner button + .btn-next,
+#banner .btn-group-vertical .survey button + .btn-next,
+.survey #banner .btn-group-vertical button + .btn-next,
+.btn-group-vertical .survey #filterButton + .btn-next,
+.survey .btn-group-vertical #filterButton + .btn-next,
+.btn-group-vertical #blockProfit .control .survey button + .btn-next,
+.survey .btn-group-vertical #blockProfit .control button + .btn-next,
+#blockProfit .control .btn-group-vertical .survey button + .btn-next,
+.survey #blockProfit .control .btn-group-vertical button + .btn-next,
+.btn-group-vertical #blockButtons .survey button + .btn-next,
+.survey .btn-group-vertical #blockButtons button + .btn-next,
+#blockButtons .btn-group-vertical .survey button + .btn-next,
+.survey #blockButtons .btn-group-vertical button + .btn-next,
+.btn-group-vertical #blockInfo .files .survey button + .btn-next,
+.survey .btn-group-vertical #blockInfo .files button + .btn-next,
+#blockInfo .files .btn-group-vertical .survey button + .btn-next,
+.survey #blockInfo .files .btn-group-vertical button + .btn-next,
+.btn-group-vertical .survey .btn-next + .btn-next,
+.survey .btn-group-vertical .btn-next + .btn-next,
 .btn-group-vertical .terms-agree-all + .btn,
 .btn-group-vertical #banner .terms-agree-all + button,
 #banner .btn-group-vertical .terms-agree-all + button,
 .btn-group-vertical .terms-agree-all + #filterButton,
+.btn-group-vertical #blockProfit .control .terms-agree-all + button,
+#blockProfit .control .btn-group-vertical .terms-agree-all + button,
 .btn-group-vertical #blockButtons .terms-agree-all + button,
 #blockButtons .btn-group-vertical .terms-agree-all + button,
 .btn-group-vertical #blockInfo .files .terms-agree-all + button,
 #blockInfo .files .btn-group-vertical .terms-agree-all + button,
+.btn-group-vertical .survey .terms-agree-all + .btn-next,
+.survey .btn-group-vertical .terms-agree-all + .btn-next,
 .btn-group-vertical .btn + .terms-agree-all,
 .btn-group-vertical #banner button + .terms-agree-all,
 #banner .btn-group-vertical button + .terms-agree-all,
 .btn-group-vertical #filterButton + .terms-agree-all,
+.btn-group-vertical #blockProfit .control button + .terms-agree-all,
+#blockProfit .control .btn-group-vertical button + .terms-agree-all,
 .btn-group-vertical #blockButtons button + .terms-agree-all,
 #blockButtons .btn-group-vertical button + .terms-agree-all,
 .btn-group-vertical #blockInfo .files button + .terms-agree-all,
 #blockInfo .files .btn-group-vertical button + .terms-agree-all,
+.btn-group-vertical .survey .btn-next + .terms-agree-all,
+.survey .btn-group-vertical .btn-next + .terms-agree-all,
 .btn-group-vertical .terms-agree-all + .terms-agree-all,
 .btn-group-vertical .btn + .btn-group,
 .btn-group-vertical #banner button + .btn-group,
 #banner .btn-group-vertical button + .btn-group,
 .btn-group-vertical #filterButton + .btn-group,
+.btn-group-vertical #blockProfit .control button + .btn-group,
+#blockProfit .control .btn-group-vertical button + .btn-group,
 .btn-group-vertical #blockButtons button + .btn-group,
 #blockButtons .btn-group-vertical button + .btn-group,
 .btn-group-vertical #blockInfo .files button + .btn-group,
 #blockInfo .files .btn-group-vertical button + .btn-group,
+.btn-group-vertical .survey .btn-next + .btn-group,
+.survey .btn-group-vertical .btn-next + .btn-group,
 .btn-group-vertical .terms-agree-all + .btn-group,
 .btn-group-vertical .btn-group + .btn,
 .btn-group-vertical #banner .btn-group + button,
 #banner .btn-group-vertical .btn-group + button,
 .btn-group-vertical .btn-group + #filterButton,
+.btn-group-vertical #blockProfit .control .btn-group + button,
+#blockProfit .control .btn-group-vertical .btn-group + button,
 .btn-group-vertical #blockButtons .btn-group + button,
 #blockButtons .btn-group-vertical .btn-group + button,
 .btn-group-vertical #blockInfo .files .btn-group + button,
 #blockInfo .files .btn-group-vertical .btn-group + button,
+.btn-group-vertical .survey .btn-group + .btn-next,
+.survey .btn-group-vertical .btn-group + .btn-next,
 .btn-group-vertical .btn-group + .terms-agree-all,
 .btn-group-vertical .btn-group + .btn-group {
   margin-left: -1px; }
@@ -8607,17 +8707,17 @@ tbody.collapse.show {
 .btn-toolbar .input-group {
   width: auto; }
 
-.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle), #banner .btn-group > button:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group > #filterButton:not(:first-child):not(:last-child):not(.dropdown-toggle), #blockButtons .btn-group > button:not(:first-child):not(:last-child):not(.dropdown-toggle), #blockInfo .files .btn-group > button:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group > .terms-agree-all:not(:first-child):not(:last-child):not(.dropdown-toggle) {
+.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle), #banner .btn-group > button:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group > #filterButton:not(:first-child):not(:last-child):not(.dropdown-toggle), #blockProfit .control .btn-group > button:not(:first-child):not(:last-child):not(.dropdown-toggle), #blockButtons .btn-group > button:not(:first-child):not(:last-child):not(.dropdown-toggle), #blockInfo .files .btn-group > button:not(:first-child):not(:last-child):not(.dropdown-toggle), .survey .btn-group > .btn-next:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group > .terms-agree-all:not(:first-child):not(:last-child):not(.dropdown-toggle) {
   border-radius: 0; }
 
-.btn-group > .btn:first-child, #banner .btn-group > button:first-child, .btn-group > #filterButton:first-child, #blockButtons .btn-group > button:first-child, #blockInfo .files .btn-group > button:first-child, .btn-group > .terms-agree-all:first-child {
+.btn-group > .btn:first-child, #banner .btn-group > button:first-child, .btn-group > #filterButton:first-child, #blockProfit .control .btn-group > button:first-child, #blockButtons .btn-group > button:first-child, #blockInfo .files .btn-group > button:first-child, .survey .btn-group > .btn-next:first-child, .btn-group > .terms-agree-all:first-child {
   margin-left: 0; }
 
-.btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle), #banner .btn-group > button:first-child:not(:last-child):not(.dropdown-toggle), .btn-group > #filterButton:first-child:not(:last-child):not(.dropdown-toggle), #blockButtons .btn-group > button:first-child:not(:last-child):not(.dropdown-toggle), #blockInfo .files .btn-group > button:first-child:not(:last-child):not(.dropdown-toggle), .btn-group > .terms-agree-all:first-child:not(:last-child):not(.dropdown-toggle) {
+.btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle), #banner .btn-group > button:first-child:not(:last-child):not(.dropdown-toggle), .btn-group > #filterButton:first-child:not(:last-child):not(.dropdown-toggle), #blockProfit .control .btn-group > button:first-child:not(:last-child):not(.dropdown-toggle), #blockButtons .btn-group > button:first-child:not(:last-child):not(.dropdown-toggle), #blockInfo .files .btn-group > button:first-child:not(:last-child):not(.dropdown-toggle), .survey .btn-group > .btn-next:first-child:not(:last-child):not(.dropdown-toggle), .btn-group > .terms-agree-all:first-child:not(:last-child):not(.dropdown-toggle) {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0; }
 
-.btn-group > .btn:last-child:not(:first-child), #banner .btn-group > button:last-child:not(:first-child), .btn-group > #filterButton:last-child:not(:first-child), #blockButtons .btn-group > button:last-child:not(:first-child), #blockInfo .files .btn-group > button:last-child:not(:first-child), .btn-group > .terms-agree-all:last-child:not(:first-child),
+.btn-group > .btn:last-child:not(:first-child), #banner .btn-group > button:last-child:not(:first-child), .btn-group > #filterButton:last-child:not(:first-child), #blockProfit .control .btn-group > button:last-child:not(:first-child), #blockButtons .btn-group > button:last-child:not(:first-child), #blockInfo .files .btn-group > button:last-child:not(:first-child), .survey .btn-group > .btn-next:last-child:not(:first-child), .btn-group > .terms-agree-all:last-child:not(:first-child),
 .btn-group > .dropdown-toggle:not(:first-child) {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0; }
@@ -8625,15 +8725,15 @@ tbody.collapse.show {
 .btn-group > .btn-group {
   float: left; }
 
-.btn-group > .btn-group:not(:first-child):not(:last-child) > .btn, #banner .btn-group > .btn-group:not(:first-child):not(:last-child) > button, .btn-group > .btn-group:not(:first-child):not(:last-child) > #filterButton, #blockButtons .btn-group > .btn-group:not(:first-child):not(:last-child) > button, #blockInfo .files .btn-group > .btn-group:not(:first-child):not(:last-child) > button, .btn-group > .btn-group:not(:first-child):not(:last-child) > .terms-agree-all {
+.btn-group > .btn-group:not(:first-child):not(:last-child) > .btn, #banner .btn-group > .btn-group:not(:first-child):not(:last-child) > button, .btn-group > .btn-group:not(:first-child):not(:last-child) > #filterButton, #blockProfit .control .btn-group > .btn-group:not(:first-child):not(:last-child) > button, #blockButtons .btn-group > .btn-group:not(:first-child):not(:last-child) > button, #blockInfo .files .btn-group > .btn-group:not(:first-child):not(:last-child) > button, .survey .btn-group > .btn-group:not(:first-child):not(:last-child) > .btn-next, .btn-group > .btn-group:not(:first-child):not(:last-child) > .terms-agree-all {
   border-radius: 0; }
 
-.btn-group > .btn-group:first-child:not(:last-child) > .btn:last-child, #banner .btn-group > .btn-group:first-child:not(:last-child) > button:last-child, .btn-group > .btn-group:first-child:not(:last-child) > #filterButton:last-child, #blockButtons .btn-group > .btn-group:first-child:not(:last-child) > button:last-child, #blockInfo .files .btn-group > .btn-group:first-child:not(:last-child) > button:last-child, .btn-group > .btn-group:first-child:not(:last-child) > .terms-agree-all:last-child,
+.btn-group > .btn-group:first-child:not(:last-child) > .btn:last-child, #banner .btn-group > .btn-group:first-child:not(:last-child) > button:last-child, .btn-group > .btn-group:first-child:not(:last-child) > #filterButton:last-child, #blockProfit .control .btn-group > .btn-group:first-child:not(:last-child) > button:last-child, #blockButtons .btn-group > .btn-group:first-child:not(:last-child) > button:last-child, #blockInfo .files .btn-group > .btn-group:first-child:not(:last-child) > button:last-child, .survey .btn-group > .btn-group:first-child:not(:last-child) > .btn-next:last-child, .btn-group > .btn-group:first-child:not(:last-child) > .terms-agree-all:last-child,
 .btn-group > .btn-group:first-child:not(:last-child) > .dropdown-toggle {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0; }
 
-.btn-group > .btn-group:last-child:not(:first-child) > .btn:first-child, #banner .btn-group > .btn-group:last-child:not(:first-child) > button:first-child, .btn-group > .btn-group:last-child:not(:first-child) > #filterButton:first-child, #blockButtons .btn-group > .btn-group:last-child:not(:first-child) > button:first-child, #blockInfo .files .btn-group > .btn-group:last-child:not(:first-child) > button:first-child, .btn-group > .btn-group:last-child:not(:first-child) > .terms-agree-all:first-child {
+.btn-group > .btn-group:last-child:not(:first-child) > .btn:first-child, #banner .btn-group > .btn-group:last-child:not(:first-child) > button:first-child, .btn-group > .btn-group:last-child:not(:first-child) > #filterButton:first-child, #blockProfit .control .btn-group > .btn-group:last-child:not(:first-child) > button:first-child, #blockButtons .btn-group > .btn-group:last-child:not(:first-child) > button:first-child, #blockInfo .files .btn-group > .btn-group:last-child:not(:first-child) > button:first-child, .survey .btn-group > .btn-group:last-child:not(:first-child) > .btn-next:first-child, .btn-group > .btn-group:last-child:not(:first-child) > .terms-agree-all:first-child {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0; }
 
@@ -8641,18 +8741,18 @@ tbody.collapse.show {
 .btn-group.open .dropdown-toggle {
   outline: 0; }
 
-.btn + .dropdown-toggle-split, #banner button + .dropdown-toggle-split, #filterButton + .dropdown-toggle-split, #blockButtons button + .dropdown-toggle-split, #blockInfo .files button + .dropdown-toggle-split, .terms-agree-all + .dropdown-toggle-split {
+.btn + .dropdown-toggle-split, #banner button + .dropdown-toggle-split, #filterButton + .dropdown-toggle-split, #blockProfit .control button + .dropdown-toggle-split, #blockButtons button + .dropdown-toggle-split, #blockInfo .files button + .dropdown-toggle-split, .survey .btn-next + .dropdown-toggle-split, .terms-agree-all + .dropdown-toggle-split {
   padding-right: 0.75rem;
   padding-left: 0.75rem; }
 
-.btn + .dropdown-toggle-split::after, #banner button + .dropdown-toggle-split::after, #filterButton + .dropdown-toggle-split::after, #blockButtons button + .dropdown-toggle-split::after, #blockInfo .files button + .dropdown-toggle-split::after, .terms-agree-all + .dropdown-toggle-split::after {
+.btn + .dropdown-toggle-split::after, #banner button + .dropdown-toggle-split::after, #filterButton + .dropdown-toggle-split::after, #blockProfit .control button + .dropdown-toggle-split::after, #blockButtons button + .dropdown-toggle-split::after, #blockInfo .files button + .dropdown-toggle-split::after, .survey .btn-next + .dropdown-toggle-split::after, .terms-agree-all + .dropdown-toggle-split::after {
   margin-left: 0; }
 
-.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, #banner .btn-group-sm > button + .dropdown-toggle-split, .btn-group-sm > #filterButton + .dropdown-toggle-split, #blockButtons .btn-group-sm > button + .dropdown-toggle-split, #blockInfo .files .btn-group-sm > button + .dropdown-toggle-split, .btn-group-sm > .terms-agree-all + .dropdown-toggle-split {
+.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, #banner .btn-group-sm > button + .dropdown-toggle-split, .btn-group-sm > #filterButton + .dropdown-toggle-split, #blockProfit .control .btn-group-sm > button + .dropdown-toggle-split, #blockButtons .btn-group-sm > button + .dropdown-toggle-split, #blockInfo .files .btn-group-sm > button + .dropdown-toggle-split, .survey .btn-group-sm > .btn-next + .dropdown-toggle-split, .btn-group-sm > .terms-agree-all + .dropdown-toggle-split {
   padding-right: 0.375rem;
   padding-left: 0.375rem; }
 
-.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, #banner .btn-group-lg > button + .dropdown-toggle-split, .btn-group-lg > #filterButton + .dropdown-toggle-split, #blockButtons .btn-group-lg > button + .dropdown-toggle-split, #blockInfo .files .btn-group-lg > button + .dropdown-toggle-split, .btn-group-lg > .terms-agree-all + .dropdown-toggle-split {
+.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, #banner .btn-group-lg > button + .dropdown-toggle-split, .btn-group-lg > #filterButton + .dropdown-toggle-split, #blockProfit .control .btn-group-lg > button + .dropdown-toggle-split, #blockButtons .btn-group-lg > button + .dropdown-toggle-split, #blockInfo .files .btn-group-lg > button + .dropdown-toggle-split, .survey .btn-group-lg > .btn-next + .dropdown-toggle-split, .btn-group-lg > .terms-agree-all + .dropdown-toggle-split {
   padding-right: 1.125rem;
   padding-left: 1.125rem; }
 
@@ -8662,68 +8762,78 @@ tbody.collapse.show {
   align-items: flex-start;
   justify-content: center; }
 
-.btn-group-vertical .btn, .btn-group-vertical #banner button, #banner .btn-group-vertical button, .btn-group-vertical #filterButton, .btn-group-vertical #blockButtons button, #blockButtons .btn-group-vertical button, .btn-group-vertical #blockInfo .files button, #blockInfo .files .btn-group-vertical button, .btn-group-vertical .terms-agree-all,
+.btn-group-vertical .btn, .btn-group-vertical #banner button, #banner .btn-group-vertical button, .btn-group-vertical #filterButton, .btn-group-vertical #blockProfit .control button, #blockProfit .control .btn-group-vertical button, .btn-group-vertical #blockButtons button, #blockButtons .btn-group-vertical button, .btn-group-vertical #blockInfo .files button, #blockInfo .files .btn-group-vertical button, .btn-group-vertical .survey .btn-next, .survey .btn-group-vertical .btn-next, .btn-group-vertical .terms-agree-all,
 .btn-group-vertical .btn-group {
   width: 100%; }
 
-.btn-group-vertical > .btn + .btn, #banner .btn-group-vertical > button + .btn, .btn-group-vertical > #filterButton + .btn, #blockButtons .btn-group-vertical > button + .btn, #blockInfo .files .btn-group-vertical > button + .btn, #banner .btn-group-vertical > .btn + button, #banner .btn-group-vertical > button + button, #banner .btn-group-vertical > #filterButton + button, .btn-group-vertical > .btn + #filterButton, #banner .btn-group-vertical > button + #filterButton, .btn-group-vertical > #filterButton + #filterButton, #blockButtons .btn-group-vertical > button + #filterButton, #blockInfo .files .btn-group-vertical > button + #filterButton, #blockButtons .btn-group-vertical > .btn + button, #blockButtons .btn-group-vertical > #filterButton + button, #blockButtons .btn-group-vertical > button + button, #blockInfo .files .btn-group-vertical > .btn + button, #blockInfo .files .btn-group-vertical > #filterButton + button, #blockInfo .files .btn-group-vertical > button + button, .btn-group-vertical > .terms-agree-all + .btn, #banner .btn-group-vertical > .terms-agree-all + button, .btn-group-vertical > .terms-agree-all + #filterButton, #blockButtons .btn-group-vertical > .terms-agree-all + button, #blockInfo .files .btn-group-vertical > .terms-agree-all + button, .btn-group-vertical > .btn + .terms-agree-all, #banner .btn-group-vertical > button + .terms-agree-all, .btn-group-vertical > #filterButton + .terms-agree-all, #blockButtons .btn-group-vertical > button + .terms-agree-all, #blockInfo .files .btn-group-vertical > button + .terms-agree-all, .btn-group-vertical > .terms-agree-all + .terms-agree-all,
+.btn-group-vertical > .btn + .btn, #banner .btn-group-vertical > button + .btn, .btn-group-vertical > #filterButton + .btn, #blockProfit .control .btn-group-vertical > button + .btn, #blockButtons .btn-group-vertical > button + .btn, #blockInfo .files .btn-group-vertical > button + .btn, .survey .btn-group-vertical > .btn-next + .btn, #banner .btn-group-vertical > .btn + button, #banner .btn-group-vertical > button + button, #banner .btn-group-vertical > #filterButton + button, .survey #banner .btn-group-vertical > .btn-next + button, #banner .survey .btn-group-vertical > .btn-next + button, .btn-group-vertical > .btn + #filterButton, #banner .btn-group-vertical > button + #filterButton, .btn-group-vertical > #filterButton + #filterButton, #blockProfit .control .btn-group-vertical > button + #filterButton, #blockButtons .btn-group-vertical > button + #filterButton, #blockInfo .files .btn-group-vertical > button + #filterButton, .survey .btn-group-vertical > .btn-next + #filterButton, #blockProfit .control .btn-group-vertical > .btn + button, #blockProfit .control .btn-group-vertical > #filterButton + button, #blockProfit .control .btn-group-vertical > button + button, .survey #blockProfit .control .btn-group-vertical > .btn-next + button, #blockProfit .control .survey .btn-group-vertical > .btn-next + button, #blockButtons .btn-group-vertical > .btn + button, #blockButtons .btn-group-vertical > #filterButton + button, #blockButtons .btn-group-vertical > button + button, .survey #blockButtons .btn-group-vertical > .btn-next + button, #blockButtons .survey .btn-group-vertical > .btn-next + button, #blockInfo .files .btn-group-vertical > .btn + button, #blockInfo .files .btn-group-vertical > #filterButton + button, #blockInfo .files .btn-group-vertical > button + button, .survey #blockInfo .files .btn-group-vertical > .btn-next + button, #blockInfo .files .survey .btn-group-vertical > .btn-next + button, .survey .btn-group-vertical > .btn + .btn-next, #banner .survey .btn-group-vertical > button + .btn-next, .survey #banner .btn-group-vertical > button + .btn-next, .survey .btn-group-vertical > #filterButton + .btn-next, #blockProfit .control .survey .btn-group-vertical > button + .btn-next, .survey #blockProfit .control .btn-group-vertical > button + .btn-next, #blockButtons .survey .btn-group-vertical > button + .btn-next, .survey #blockButtons .btn-group-vertical > button + .btn-next, #blockInfo .files .survey .btn-group-vertical > button + .btn-next, .survey #blockInfo .files .btn-group-vertical > button + .btn-next, .survey .btn-group-vertical > .btn-next + .btn-next, .btn-group-vertical > .terms-agree-all + .btn, #banner .btn-group-vertical > .terms-agree-all + button, .btn-group-vertical > .terms-agree-all + #filterButton, #blockProfit .control .btn-group-vertical > .terms-agree-all + button, #blockButtons .btn-group-vertical > .terms-agree-all + button, #blockInfo .files .btn-group-vertical > .terms-agree-all + button, .survey .btn-group-vertical > .terms-agree-all + .btn-next, .btn-group-vertical > .btn + .terms-agree-all, #banner .btn-group-vertical > button + .terms-agree-all, .btn-group-vertical > #filterButton + .terms-agree-all, #blockProfit .control .btn-group-vertical > button + .terms-agree-all, #blockButtons .btn-group-vertical > button + .terms-agree-all, #blockInfo .files .btn-group-vertical > button + .terms-agree-all, .survey .btn-group-vertical > .btn-next + .terms-agree-all, .btn-group-vertical > .terms-agree-all + .terms-agree-all,
 .btn-group-vertical > .btn + .btn-group,
 #banner .btn-group-vertical > button + .btn-group,
 .btn-group-vertical > #filterButton + .btn-group,
+#blockProfit .control .btn-group-vertical > button + .btn-group,
 #blockButtons .btn-group-vertical > button + .btn-group,
 #blockInfo .files .btn-group-vertical > button + .btn-group,
+.survey .btn-group-vertical > .btn-next + .btn-group,
 .btn-group-vertical > .terms-agree-all + .btn-group,
 .btn-group-vertical > .btn-group + .btn,
 #banner .btn-group-vertical > .btn-group + button,
 .btn-group-vertical > .btn-group + #filterButton,
+#blockProfit .control .btn-group-vertical > .btn-group + button,
 #blockButtons .btn-group-vertical > .btn-group + button,
 #blockInfo .files .btn-group-vertical > .btn-group + button,
+.survey .btn-group-vertical > .btn-group + .btn-next,
 .btn-group-vertical > .btn-group + .terms-agree-all,
 .btn-group-vertical > .btn-group + .btn-group {
   margin-top: -1px;
   margin-left: 0; }
 
-.btn-group-vertical > .btn:not(:first-child):not(:last-child), #banner .btn-group-vertical > button:not(:first-child):not(:last-child), .btn-group-vertical > #filterButton:not(:first-child):not(:last-child), #blockButtons .btn-group-vertical > button:not(:first-child):not(:last-child), #blockInfo .files .btn-group-vertical > button:not(:first-child):not(:last-child), .btn-group-vertical > .terms-agree-all:not(:first-child):not(:last-child) {
+.btn-group-vertical > .btn:not(:first-child):not(:last-child), #banner .btn-group-vertical > button:not(:first-child):not(:last-child), .btn-group-vertical > #filterButton:not(:first-child):not(:last-child), #blockProfit .control .btn-group-vertical > button:not(:first-child):not(:last-child), #blockButtons .btn-group-vertical > button:not(:first-child):not(:last-child), #blockInfo .files .btn-group-vertical > button:not(:first-child):not(:last-child), .survey .btn-group-vertical > .btn-next:not(:first-child):not(:last-child), .btn-group-vertical > .terms-agree-all:not(:first-child):not(:last-child) {
   border-radius: 0; }
 
-.btn-group-vertical > .btn:first-child:not(:last-child), #banner .btn-group-vertical > button:first-child:not(:last-child), .btn-group-vertical > #filterButton:first-child:not(:last-child), #blockButtons .btn-group-vertical > button:first-child:not(:last-child), #blockInfo .files .btn-group-vertical > button:first-child:not(:last-child), .btn-group-vertical > .terms-agree-all:first-child:not(:last-child) {
+.btn-group-vertical > .btn:first-child:not(:last-child), #banner .btn-group-vertical > button:first-child:not(:last-child), .btn-group-vertical > #filterButton:first-child:not(:last-child), #blockProfit .control .btn-group-vertical > button:first-child:not(:last-child), #blockButtons .btn-group-vertical > button:first-child:not(:last-child), #blockInfo .files .btn-group-vertical > button:first-child:not(:last-child), .survey .btn-group-vertical > .btn-next:first-child:not(:last-child), .btn-group-vertical > .terms-agree-all:first-child:not(:last-child) {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0; }
 
-.btn-group-vertical > .btn:last-child:not(:first-child), #banner .btn-group-vertical > button:last-child:not(:first-child), .btn-group-vertical > #filterButton:last-child:not(:first-child), #blockButtons .btn-group-vertical > button:last-child:not(:first-child), #blockInfo .files .btn-group-vertical > button:last-child:not(:first-child), .btn-group-vertical > .terms-agree-all:last-child:not(:first-child) {
+.btn-group-vertical > .btn:last-child:not(:first-child), #banner .btn-group-vertical > button:last-child:not(:first-child), .btn-group-vertical > #filterButton:last-child:not(:first-child), #blockProfit .control .btn-group-vertical > button:last-child:not(:first-child), #blockButtons .btn-group-vertical > button:last-child:not(:first-child), #blockInfo .files .btn-group-vertical > button:last-child:not(:first-child), .survey .btn-group-vertical > .btn-next:last-child:not(:first-child), .btn-group-vertical > .terms-agree-all:last-child:not(:first-child) {
   border-top-right-radius: 0;
   border-top-left-radius: 0; }
 
-.btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn, #banner .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > button, .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > #filterButton, #blockButtons .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > button, #blockInfo .files .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > button, .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .terms-agree-all {
+.btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn, #banner .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > button, .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > #filterButton, #blockProfit .control .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > button, #blockButtons .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > button, #blockInfo .files .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > button, .survey .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn-next, .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .terms-agree-all {
   border-radius: 0; }
 
-.btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn:last-child, #banner .btn-group-vertical > .btn-group:first-child:not(:last-child) > button:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) > #filterButton:last-child, #blockButtons .btn-group-vertical > .btn-group:first-child:not(:last-child) > button:last-child, #blockInfo .files .btn-group-vertical > .btn-group:first-child:not(:last-child) > button:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) > .terms-agree-all:last-child,
+.btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn:last-child, #banner .btn-group-vertical > .btn-group:first-child:not(:last-child) > button:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) > #filterButton:last-child, #blockProfit .control .btn-group-vertical > .btn-group:first-child:not(:last-child) > button:last-child, #blockButtons .btn-group-vertical > .btn-group:first-child:not(:last-child) > button:last-child, #blockInfo .files .btn-group-vertical > .btn-group:first-child:not(:last-child) > button:last-child, .survey .btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn-next:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) > .terms-agree-all:last-child,
 .btn-group-vertical > .btn-group:first-child:not(:last-child) > .dropdown-toggle {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0; }
 
-.btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn:first-child, #banner .btn-group-vertical > .btn-group:last-child:not(:first-child) > button:first-child, .btn-group-vertical > .btn-group:last-child:not(:first-child) > #filterButton:first-child, #blockButtons .btn-group-vertical > .btn-group:last-child:not(:first-child) > button:first-child, #blockInfo .files .btn-group-vertical > .btn-group:last-child:not(:first-child) > button:first-child, .btn-group-vertical > .btn-group:last-child:not(:first-child) > .terms-agree-all:first-child {
+.btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn:first-child, #banner .btn-group-vertical > .btn-group:last-child:not(:first-child) > button:first-child, .btn-group-vertical > .btn-group:last-child:not(:first-child) > #filterButton:first-child, #blockProfit .control .btn-group-vertical > .btn-group:last-child:not(:first-child) > button:first-child, #blockButtons .btn-group-vertical > .btn-group:last-child:not(:first-child) > button:first-child, #blockInfo .files .btn-group-vertical > .btn-group:last-child:not(:first-child) > button:first-child, .survey .btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn-next:first-child, .btn-group-vertical > .btn-group:last-child:not(:first-child) > .terms-agree-all:first-child {
   border-top-right-radius: 0;
   border-top-left-radius: 0; }
 
-[data-toggle="buttons"] > .btn input[type="radio"], #banner [data-toggle="buttons"] > button input[type="radio"], [data-toggle="buttons"] > #filterButton input[type="radio"], #blockButtons [data-toggle="buttons"] > button input[type="radio"], #blockInfo .files [data-toggle="buttons"] > button input[type="radio"], [data-toggle="buttons"] > .terms-agree-all input[type="radio"],
+[data-toggle="buttons"] > .btn input[type="radio"], #banner [data-toggle="buttons"] > button input[type="radio"], [data-toggle="buttons"] > #filterButton input[type="radio"], #blockProfit .control [data-toggle="buttons"] > button input[type="radio"], #blockButtons [data-toggle="buttons"] > button input[type="radio"], #blockInfo .files [data-toggle="buttons"] > button input[type="radio"], .survey [data-toggle="buttons"] > .btn-next input[type="radio"], [data-toggle="buttons"] > .terms-agree-all input[type="radio"],
 [data-toggle="buttons"] > .btn input[type="checkbox"],
 #banner [data-toggle="buttons"] > button input[type="checkbox"],
 [data-toggle="buttons"] > #filterButton input[type="checkbox"],
+#blockProfit .control [data-toggle="buttons"] > button input[type="checkbox"],
 #blockButtons [data-toggle="buttons"] > button input[type="checkbox"],
 #blockInfo .files [data-toggle="buttons"] > button input[type="checkbox"],
+.survey [data-toggle="buttons"] > .btn-next input[type="checkbox"],
 [data-toggle="buttons"] > .terms-agree-all input[type="checkbox"],
 [data-toggle="buttons"] > .btn-group > .btn input[type="radio"],
 #banner [data-toggle="buttons"] > .btn-group > button input[type="radio"],
 [data-toggle="buttons"] > .btn-group > #filterButton input[type="radio"],
+#blockProfit .control [data-toggle="buttons"] > .btn-group > button input[type="radio"],
 #blockButtons [data-toggle="buttons"] > .btn-group > button input[type="radio"],
 #blockInfo .files [data-toggle="buttons"] > .btn-group > button input[type="radio"],
+.survey [data-toggle="buttons"] > .btn-group > .btn-next input[type="radio"],
 [data-toggle="buttons"] > .btn-group > .terms-agree-all input[type="radio"],
 [data-toggle="buttons"] > .btn-group > .btn input[type="checkbox"],
 #banner [data-toggle="buttons"] > .btn-group > button input[type="checkbox"],
 [data-toggle="buttons"] > .btn-group > #filterButton input[type="checkbox"],
+#blockProfit .control [data-toggle="buttons"] > .btn-group > button input[type="checkbox"],
 #blockButtons [data-toggle="buttons"] > .btn-group > button input[type="checkbox"],
 #blockInfo .files [data-toggle="buttons"] > .btn-group > button input[type="checkbox"],
+.survey [data-toggle="buttons"] > .btn-group > .btn-next input[type="checkbox"],
 [data-toggle="buttons"] > .btn-group > .terms-agree-all input[type="checkbox"] {
   position: absolute;
   clip: rect(0, 0, 0, 0);
@@ -8734,19 +8844,20 @@ tbody.collapse.show {
   display: flex;
   width: 100%; }
 
-.input-group .form-control, .input-group .input-birthdate, .input-group .input-gender {
+.input-group .form-control, .input-group .repeat-date, .input-group .input-birthdate, .input-group .input-gender {
   position: relative;
   z-index: 2;
   flex: 1 1 auto;
   width: 1%;
   margin-bottom: 0; }
 
-.input-group .form-control:focus, .input-group .input-birthdate:focus, .input-group .input-gender:focus, .input-group .form-control:active, .input-group .input-birthdate:active, .input-group .input-gender:active, .input-group .form-control:hover, .input-group .input-birthdate:hover, .input-group .input-gender:hover {
+.input-group .form-control:focus, .input-group .repeat-date:focus, .input-group .input-birthdate:focus, .input-group .input-gender:focus, .input-group .form-control:active, .input-group .repeat-date:active, .input-group .input-birthdate:active, .input-group .input-gender:active, .input-group .form-control:hover, .input-group .repeat-date:hover, .input-group .input-birthdate:hover, .input-group .input-gender:hover {
   z-index: 3; }
 
 .input-group-addon,
 .input-group-btn,
 .input-group .form-control,
+.input-group .repeat-date,
 .input-group .input-birthdate,
 .input-group .input-gender {
   display: flex;
@@ -8756,6 +8867,7 @@ tbody.collapse.show {
 .input-group-addon:not(:first-child):not(:last-child),
 .input-group-btn:not(:first-child):not(:last-child),
 .input-group .form-control:not(:first-child):not(:last-child),
+.input-group .repeat-date:not(:first-child):not(:last-child),
 .input-group .input-birthdate:not(:first-child):not(:last-child),
 .input-group .input-gender:not(:first-child):not(:last-child) {
   border-radius: 0; }
@@ -8782,20 +8894,24 @@ tbody.collapse.show {
 .input-group-sm > .input-group-btn > .input-group-addon.btn,
 #banner .input-group-sm > .input-group-btn > button.input-group-addon,
 .input-group-sm > .input-group-btn > .input-group-addon#filterButton,
+#blockProfit .control .input-group-sm > .input-group-btn > button.input-group-addon,
 #blockButtons .input-group-sm > .input-group-btn > button.input-group-addon,
 #blockInfo .files .input-group-sm > .input-group-btn > button.input-group-addon,
+.survey .input-group-sm > .input-group-btn > .input-group-addon.btn-next,
 .input-group-sm > .input-group-btn > .input-group-addon.terms-agree-all {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   border-radius: 0.2rem; }
 
-.input-group-addon.form-control-lg,
+.input-group-addon.form-control-lg, .input-group-addon.repeat-date,
 .input-group-lg > .input-group-addon,
 .input-group-lg > .input-group-btn > .input-group-addon.btn,
 #banner .input-group-lg > .input-group-btn > button.input-group-addon,
 .input-group-lg > .input-group-btn > .input-group-addon#filterButton,
+#blockProfit .control .input-group-lg > .input-group-btn > button.input-group-addon,
 #blockButtons .input-group-lg > .input-group-btn > button.input-group-addon,
 #blockInfo .files .input-group-lg > .input-group-btn > button.input-group-addon,
+.survey .input-group-lg > .input-group-btn > .input-group-addon.btn-next,
 .input-group-lg > .input-group-btn > .input-group-addon.terms-agree-all {
   padding: 0.75rem 1.5rem;
   font-size: 1.25rem;
@@ -8805,32 +8921,40 @@ tbody.collapse.show {
 .input-group-addon input[type="checkbox"] {
   margin-top: 0; }
 
-.input-group .form-control:not(:last-child), .input-group .input-birthdate:not(:last-child), .input-group .input-gender:not(:last-child),
+.input-group .form-control:not(:last-child), .input-group .repeat-date:not(:last-child), .input-group .input-birthdate:not(:last-child), .input-group .input-gender:not(:last-child),
 .input-group-addon:not(:last-child),
 .input-group-btn:not(:last-child) > .btn,
 #banner .input-group-btn:not(:last-child) > button,
 .input-group-btn:not(:last-child) > #filterButton,
+#blockProfit .control .input-group-btn:not(:last-child) > button,
 #blockButtons .input-group-btn:not(:last-child) > button,
 #blockInfo .files .input-group-btn:not(:last-child) > button,
+.survey .input-group-btn:not(:last-child) > .btn-next,
 .input-group-btn:not(:last-child) > .terms-agree-all,
 .input-group-btn:not(:last-child) > .btn-group > .btn,
 #banner .input-group-btn:not(:last-child) > .btn-group > button,
 .input-group-btn:not(:last-child) > .btn-group > #filterButton,
+#blockProfit .control .input-group-btn:not(:last-child) > .btn-group > button,
 #blockButtons .input-group-btn:not(:last-child) > .btn-group > button,
 #blockInfo .files .input-group-btn:not(:last-child) > .btn-group > button,
+.survey .input-group-btn:not(:last-child) > .btn-group > .btn-next,
 .input-group-btn:not(:last-child) > .btn-group > .terms-agree-all,
 .input-group-btn:not(:last-child) > .dropdown-toggle,
 .input-group-btn:not(:first-child) > .btn:not(:last-child):not(.dropdown-toggle),
 #banner .input-group-btn:not(:first-child) > button:not(:last-child):not(.dropdown-toggle),
 .input-group-btn:not(:first-child) > #filterButton:not(:last-child):not(.dropdown-toggle),
+#blockProfit .control .input-group-btn:not(:first-child) > button:not(:last-child):not(.dropdown-toggle),
 #blockButtons .input-group-btn:not(:first-child) > button:not(:last-child):not(.dropdown-toggle),
 #blockInfo .files .input-group-btn:not(:first-child) > button:not(:last-child):not(.dropdown-toggle),
+.survey .input-group-btn:not(:first-child) > .btn-next:not(:last-child):not(.dropdown-toggle),
 .input-group-btn:not(:first-child) > .terms-agree-all:not(:last-child):not(.dropdown-toggle),
 .input-group-btn:not(:first-child) > .btn-group:not(:last-child) > .btn,
 #banner .input-group-btn:not(:first-child) > .btn-group:not(:last-child) > button,
 .input-group-btn:not(:first-child) > .btn-group:not(:last-child) > #filterButton,
+#blockProfit .control .input-group-btn:not(:first-child) > .btn-group:not(:last-child) > button,
 #blockButtons .input-group-btn:not(:first-child) > .btn-group:not(:last-child) > button,
 #blockInfo .files .input-group-btn:not(:first-child) > .btn-group:not(:last-child) > button,
+.survey .input-group-btn:not(:first-child) > .btn-group:not(:last-child) > .btn-next,
 .input-group-btn:not(:first-child) > .btn-group:not(:last-child) > .terms-agree-all {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0; }
@@ -8838,37 +8962,45 @@ tbody.collapse.show {
 .input-group-addon:not(:last-child) {
   border-right: 0; }
 
-.input-group .form-control:not(:first-child), .input-group .input-birthdate:not(:first-child), .input-group .input-gender:not(:first-child),
+.input-group .form-control:not(:first-child), .input-group .repeat-date:not(:first-child), .input-group .input-birthdate:not(:first-child), .input-group .input-gender:not(:first-child),
 .input-group-addon:not(:first-child),
 .input-group-btn:not(:first-child) > .btn,
 #banner .input-group-btn:not(:first-child) > button,
 .input-group-btn:not(:first-child) > #filterButton,
+#blockProfit .control .input-group-btn:not(:first-child) > button,
 #blockButtons .input-group-btn:not(:first-child) > button,
 #blockInfo .files .input-group-btn:not(:first-child) > button,
+.survey .input-group-btn:not(:first-child) > .btn-next,
 .input-group-btn:not(:first-child) > .terms-agree-all,
 .input-group-btn:not(:first-child) > .btn-group > .btn,
 #banner .input-group-btn:not(:first-child) > .btn-group > button,
 .input-group-btn:not(:first-child) > .btn-group > #filterButton,
+#blockProfit .control .input-group-btn:not(:first-child) > .btn-group > button,
 #blockButtons .input-group-btn:not(:first-child) > .btn-group > button,
 #blockInfo .files .input-group-btn:not(:first-child) > .btn-group > button,
+.survey .input-group-btn:not(:first-child) > .btn-group > .btn-next,
 .input-group-btn:not(:first-child) > .btn-group > .terms-agree-all,
 .input-group-btn:not(:first-child) > .dropdown-toggle,
 .input-group-btn:not(:last-child) > .btn:not(:first-child),
 #banner .input-group-btn:not(:last-child) > button:not(:first-child),
 .input-group-btn:not(:last-child) > #filterButton:not(:first-child),
+#blockProfit .control .input-group-btn:not(:last-child) > button:not(:first-child),
 #blockButtons .input-group-btn:not(:last-child) > button:not(:first-child),
 #blockInfo .files .input-group-btn:not(:last-child) > button:not(:first-child),
+.survey .input-group-btn:not(:last-child) > .btn-next:not(:first-child),
 .input-group-btn:not(:last-child) > .terms-agree-all:not(:first-child),
 .input-group-btn:not(:last-child) > .btn-group:not(:first-child) > .btn,
 #banner .input-group-btn:not(:last-child) > .btn-group:not(:first-child) > button,
 .input-group-btn:not(:last-child) > .btn-group:not(:first-child) > #filterButton,
+#blockProfit .control .input-group-btn:not(:last-child) > .btn-group:not(:first-child) > button,
 #blockButtons .input-group-btn:not(:last-child) > .btn-group:not(:first-child) > button,
 #blockInfo .files .input-group-btn:not(:last-child) > .btn-group:not(:first-child) > button,
+.survey .input-group-btn:not(:last-child) > .btn-group:not(:first-child) > .btn-next,
 .input-group-btn:not(:last-child) > .btn-group:not(:first-child) > .terms-agree-all {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0; }
 
-.form-control + .input-group-addon:not(:first-child), .input-birthdate + .input-group-addon:not(:first-child), .input-gender + .input-group-addon:not(:first-child) {
+.form-control + .input-group-addon:not(:first-child), .repeat-date + .input-group-addon:not(:first-child), .input-birthdate + .input-group-addon:not(:first-child), .input-gender + .input-group-addon:not(:first-child) {
   border-left: 0; }
 
 .input-group-btn {
@@ -8876,26 +9008,26 @@ tbody.collapse.show {
   font-size: 0;
   white-space: nowrap; }
 
-.input-group-btn > .btn, #banner .input-group-btn > button, .input-group-btn > #filterButton, #blockButtons .input-group-btn > button, #blockInfo .files .input-group-btn > button, .input-group-btn > .terms-agree-all {
+.input-group-btn > .btn, #banner .input-group-btn > button, .input-group-btn > #filterButton, #blockProfit .control .input-group-btn > button, #blockButtons .input-group-btn > button, #blockInfo .files .input-group-btn > button, .survey .input-group-btn > .btn-next, .input-group-btn > .terms-agree-all {
   position: relative;
   flex: 1; }
 
-.input-group-btn > .btn + .btn, #banner .input-group-btn > button + .btn, .input-group-btn > #filterButton + .btn, #blockButtons .input-group-btn > button + .btn, #blockInfo .files .input-group-btn > button + .btn, #banner .input-group-btn > .btn + button, #banner .input-group-btn > button + button, #banner .input-group-btn > #filterButton + button, .input-group-btn > .btn + #filterButton, #banner .input-group-btn > button + #filterButton, .input-group-btn > #filterButton + #filterButton, #blockButtons .input-group-btn > button + #filterButton, #blockInfo .files .input-group-btn > button + #filterButton, #blockButtons .input-group-btn > .btn + button, #blockButtons .input-group-btn > #filterButton + button, #blockButtons .input-group-btn > button + button, #blockInfo .files .input-group-btn > .btn + button, #blockInfo .files .input-group-btn > #filterButton + button, #blockInfo .files .input-group-btn > button + button, .input-group-btn > .terms-agree-all + .btn, #banner .input-group-btn > .terms-agree-all + button, .input-group-btn > .terms-agree-all + #filterButton, #blockButtons .input-group-btn > .terms-agree-all + button, #blockInfo .files .input-group-btn > .terms-agree-all + button, .input-group-btn > .btn + .terms-agree-all, #banner .input-group-btn > button + .terms-agree-all, .input-group-btn > #filterButton + .terms-agree-all, #blockButtons .input-group-btn > button + .terms-agree-all, #blockInfo .files .input-group-btn > button + .terms-agree-all, .input-group-btn > .terms-agree-all + .terms-agree-all {
+.input-group-btn > .btn + .btn, #banner .input-group-btn > button + .btn, .input-group-btn > #filterButton + .btn, #blockProfit .control .input-group-btn > button + .btn, #blockButtons .input-group-btn > button + .btn, #blockInfo .files .input-group-btn > button + .btn, .survey .input-group-btn > .btn-next + .btn, #banner .input-group-btn > .btn + button, #banner .input-group-btn > button + button, #banner .input-group-btn > #filterButton + button, .survey #banner .input-group-btn > .btn-next + button, #banner .survey .input-group-btn > .btn-next + button, .input-group-btn > .btn + #filterButton, #banner .input-group-btn > button + #filterButton, .input-group-btn > #filterButton + #filterButton, #blockProfit .control .input-group-btn > button + #filterButton, #blockButtons .input-group-btn > button + #filterButton, #blockInfo .files .input-group-btn > button + #filterButton, .survey .input-group-btn > .btn-next + #filterButton, #blockProfit .control .input-group-btn > .btn + button, #blockProfit .control .input-group-btn > #filterButton + button, #blockProfit .control .input-group-btn > button + button, .survey #blockProfit .control .input-group-btn > .btn-next + button, #blockProfit .control .survey .input-group-btn > .btn-next + button, #blockButtons .input-group-btn > .btn + button, #blockButtons .input-group-btn > #filterButton + button, #blockButtons .input-group-btn > button + button, .survey #blockButtons .input-group-btn > .btn-next + button, #blockButtons .survey .input-group-btn > .btn-next + button, #blockInfo .files .input-group-btn > .btn + button, #blockInfo .files .input-group-btn > #filterButton + button, #blockInfo .files .input-group-btn > button + button, .survey #blockInfo .files .input-group-btn > .btn-next + button, #blockInfo .files .survey .input-group-btn > .btn-next + button, .survey .input-group-btn > .btn + .btn-next, #banner .survey .input-group-btn > button + .btn-next, .survey #banner .input-group-btn > button + .btn-next, .survey .input-group-btn > #filterButton + .btn-next, #blockProfit .control .survey .input-group-btn > button + .btn-next, .survey #blockProfit .control .input-group-btn > button + .btn-next, #blockButtons .survey .input-group-btn > button + .btn-next, .survey #blockButtons .input-group-btn > button + .btn-next, #blockInfo .files .survey .input-group-btn > button + .btn-next, .survey #blockInfo .files .input-group-btn > button + .btn-next, .survey .input-group-btn > .btn-next + .btn-next, .input-group-btn > .terms-agree-all + .btn, #banner .input-group-btn > .terms-agree-all + button, .input-group-btn > .terms-agree-all + #filterButton, #blockProfit .control .input-group-btn > .terms-agree-all + button, #blockButtons .input-group-btn > .terms-agree-all + button, #blockInfo .files .input-group-btn > .terms-agree-all + button, .survey .input-group-btn > .terms-agree-all + .btn-next, .input-group-btn > .btn + .terms-agree-all, #banner .input-group-btn > button + .terms-agree-all, .input-group-btn > #filterButton + .terms-agree-all, #blockProfit .control .input-group-btn > button + .terms-agree-all, #blockButtons .input-group-btn > button + .terms-agree-all, #blockInfo .files .input-group-btn > button + .terms-agree-all, .survey .input-group-btn > .btn-next + .terms-agree-all, .input-group-btn > .terms-agree-all + .terms-agree-all {
   margin-left: -1px; }
 
-.input-group-btn > .btn:focus, #banner .input-group-btn > button:focus, .input-group-btn > #filterButton:focus, #blockButtons .input-group-btn > button:focus, #blockInfo .files .input-group-btn > button:focus, .input-group-btn > .terms-agree-all:focus, .input-group-btn > .btn:active, #banner .input-group-btn > button:active, .input-group-btn > #filterButton:active, #blockButtons .input-group-btn > button:active, #blockInfo .files .input-group-btn > button:active, .input-group-btn > .terms-agree-all:active, .input-group-btn > .btn:hover, #banner .input-group-btn > button:hover, .input-group-btn > #filterButton:hover, #blockButtons .input-group-btn > button:hover, #blockInfo .files .input-group-btn > button:hover, .input-group-btn > .terms-agree-all:hover {
+.input-group-btn > .btn:focus, #banner .input-group-btn > button:focus, .input-group-btn > #filterButton:focus, #blockProfit .control .input-group-btn > button:focus, #blockButtons .input-group-btn > button:focus, #blockInfo .files .input-group-btn > button:focus, .survey .input-group-btn > .btn-next:focus, .input-group-btn > .terms-agree-all:focus, .input-group-btn > .btn:active, #banner .input-group-btn > button:active, .input-group-btn > #filterButton:active, #blockProfit .control .input-group-btn > button:active, #blockButtons .input-group-btn > button:active, #blockInfo .files .input-group-btn > button:active, .survey .input-group-btn > .btn-next:active, .input-group-btn > .terms-agree-all:active, .input-group-btn > .btn:hover, #banner .input-group-btn > button:hover, .input-group-btn > #filterButton:hover, #blockProfit .control .input-group-btn > button:hover, #blockButtons .input-group-btn > button:hover, #blockInfo .files .input-group-btn > button:hover, .survey .input-group-btn > .btn-next:hover, .input-group-btn > .terms-agree-all:hover {
   z-index: 3; }
 
-.input-group-btn:not(:last-child) > .btn, #banner .input-group-btn:not(:last-child) > button, .input-group-btn:not(:last-child) > #filterButton, #blockButtons .input-group-btn:not(:last-child) > button, #blockInfo .files .input-group-btn:not(:last-child) > button, .input-group-btn:not(:last-child) > .terms-agree-all,
+.input-group-btn:not(:last-child) > .btn, #banner .input-group-btn:not(:last-child) > button, .input-group-btn:not(:last-child) > #filterButton, #blockProfit .control .input-group-btn:not(:last-child) > button, #blockButtons .input-group-btn:not(:last-child) > button, #blockInfo .files .input-group-btn:not(:last-child) > button, .survey .input-group-btn:not(:last-child) > .btn-next, .input-group-btn:not(:last-child) > .terms-agree-all,
 .input-group-btn:not(:last-child) > .btn-group {
   margin-right: -1px; }
 
-.input-group-btn:not(:first-child) > .btn, #banner .input-group-btn:not(:first-child) > button, .input-group-btn:not(:first-child) > #filterButton, #blockButtons .input-group-btn:not(:first-child) > button, #blockInfo .files .input-group-btn:not(:first-child) > button, .input-group-btn:not(:first-child) > .terms-agree-all,
+.input-group-btn:not(:first-child) > .btn, #banner .input-group-btn:not(:first-child) > button, .input-group-btn:not(:first-child) > #filterButton, #blockProfit .control .input-group-btn:not(:first-child) > button, #blockButtons .input-group-btn:not(:first-child) > button, #blockInfo .files .input-group-btn:not(:first-child) > button, .survey .input-group-btn:not(:first-child) > .btn-next, .input-group-btn:not(:first-child) > .terms-agree-all,
 .input-group-btn:not(:first-child) > .btn-group {
   z-index: 2;
   margin-left: -1px; }
 
-.input-group-btn:not(:first-child) > .btn:focus, #banner .input-group-btn:not(:first-child) > button:focus, .input-group-btn:not(:first-child) > #filterButton:focus, #blockButtons .input-group-btn:not(:first-child) > button:focus, #blockInfo .files .input-group-btn:not(:first-child) > button:focus, .input-group-btn:not(:first-child) > .terms-agree-all:focus, .input-group-btn:not(:first-child) > .btn:active, #banner .input-group-btn:not(:first-child) > button:active, .input-group-btn:not(:first-child) > #filterButton:active, #blockButtons .input-group-btn:not(:first-child) > button:active, #blockInfo .files .input-group-btn:not(:first-child) > button:active, .input-group-btn:not(:first-child) > .terms-agree-all:active, .input-group-btn:not(:first-child) > .btn:hover, #banner .input-group-btn:not(:first-child) > button:hover, .input-group-btn:not(:first-child) > #filterButton:hover, #blockButtons .input-group-btn:not(:first-child) > button:hover, #blockInfo .files .input-group-btn:not(:first-child) > button:hover, .input-group-btn:not(:first-child) > .terms-agree-all:hover,
+.input-group-btn:not(:first-child) > .btn:focus, #banner .input-group-btn:not(:first-child) > button:focus, .input-group-btn:not(:first-child) > #filterButton:focus, #blockProfit .control .input-group-btn:not(:first-child) > button:focus, #blockButtons .input-group-btn:not(:first-child) > button:focus, #blockInfo .files .input-group-btn:not(:first-child) > button:focus, .survey .input-group-btn:not(:first-child) > .btn-next:focus, .input-group-btn:not(:first-child) > .terms-agree-all:focus, .input-group-btn:not(:first-child) > .btn:active, #banner .input-group-btn:not(:first-child) > button:active, .input-group-btn:not(:first-child) > #filterButton:active, #blockProfit .control .input-group-btn:not(:first-child) > button:active, #blockButtons .input-group-btn:not(:first-child) > button:active, #blockInfo .files .input-group-btn:not(:first-child) > button:active, .survey .input-group-btn:not(:first-child) > .btn-next:active, .input-group-btn:not(:first-child) > .terms-agree-all:active, .input-group-btn:not(:first-child) > .btn:hover, #banner .input-group-btn:not(:first-child) > button:hover, .input-group-btn:not(:first-child) > #filterButton:hover, #blockProfit .control .input-group-btn:not(:first-child) > button:hover, #blockButtons .input-group-btn:not(:first-child) > button:hover, #blockInfo .files .input-group-btn:not(:first-child) > button:hover, .survey .input-group-btn:not(:first-child) > .btn-next:hover, .input-group-btn:not(:first-child) > .terms-agree-all:hover,
 .input-group-btn:not(:first-child) > .btn-group:focus,
 .input-group-btn:not(:first-child) > .btn-group:active,
 .input-group-btn:not(:first-child) > .btn-group:hover {
@@ -8973,7 +9105,7 @@ tbody.collapse.show {
 .custom-controls-stacked .custom-control + .custom-control {
   margin-left: 0; }
 
-.custom-select {
+.custom-select, .repeat-date {
   display: inline-block;
   max-width: 100%;
   height: calc(2.25rem + 2px);
@@ -8988,20 +9120,20 @@ tbody.collapse.show {
   -moz-appearance: none;
   -webkit-appearance: none; }
 
-.custom-select:focus {
+.custom-select:focus, .repeat-date:focus {
   border-color: #819ff4;
   outline: none; }
 
-.custom-select:focus::-ms-value {
+.custom-select:focus::-ms-value, .repeat-date:focus::-ms-value {
   color: #111;
   background-color: #fff; }
 
-.custom-select:disabled {
+.custom-select:disabled, .repeat-date:disabled {
   color: #636c72;
   cursor: not-allowed;
   background-color: #eceeef; }
 
-.custom-select::-ms-expand {
+.custom-select::-ms-expand, .repeat-date::-ms-expand {
   opacity: 0; }
 
 .custom-select-sm {
@@ -9701,7 +9833,7 @@ tbody.collapse.show {
 .badge:empty {
   display: none; }
 
-.btn .badge, #banner button .badge, #filterButton .badge, #blockButtons button .badge, #blockInfo .files button .badge, .terms-agree-all .badge {
+.btn .badge, #banner button .badge, #filterButton .badge, #blockProfit .control button .badge, #blockButtons button .badge, #blockInfo .files button .badge, .survey .btn-next .badge, .terms-agree-all .badge {
   position: relative;
   top: -1px; }
 
@@ -10722,10 +10854,10 @@ button.close {
 .h4, #banner h1 {
   line-height: 1.3em; }
 
-.h7, #productList .list-header i, #productList .list-item i, #productList .product-info, #detailHeader .name, #blockInfo .quote, #blockAutoInvest i, h7 {
+.h7, #productList .list-header i, #productList .list-item i, #productList .product-info, #detailHeader .name, #blockInfo .quote, #blockAutoInvest i, #sell_amount .note, h7 {
   font-size: 13px; }
 
-.fixed-bottom, #blockButtons {
+.fixed-bottom, #blockButtons, .survey .btn-next {
   position: fixed;
   bottom: 0; }
 
@@ -10767,7 +10899,7 @@ a, a:focus, a:hover {
 .modal-dialog {
   margin: 0;
   padding: 0; }
-  .modal-dialog.fixed-bottom, .modal-dialog#blockButtons {
+  .modal-dialog.fixed-bottom, .modal-dialog#blockButtons, .survey .modal-dialog.btn-next {
     position: fixed;
     width: 100%; }
 
@@ -10784,10 +10916,6 @@ a, a:focus, a:hover {
 
 .modal.show .modal-dialog {
   transform: translate(0, 0); }
-
-.modal-footer {
-  padding: 0px;
-  border-top: none; }
 
 .filter-card.selected {
   background: #EDF2FE;
@@ -10854,6 +10982,13 @@ a, a:focus, a:hover {
   background: #FFFFFF;
   box-shadow: 0 1px 2px 0 #E0E0E0; }
 
+#blockProfit .control button {
+  border-radius: 100px;
+  font-size: 14px;
+  line-height: 1;
+  padding: 8px 11px;
+  background-color: transparent; }
+
 #blockButtons button {
   float: left; }
 
@@ -10867,5 +11002,19 @@ a, a:focus, a:hover {
   box-shadow: 0 1px 2px 0 #E0E0E0; }
   #blockAutoInvest hr {
     border-top: 1px solid white; }
+
+#finishAutoInvestModal .modal-header {
+  border-bottom: 0;
+  padding: 1rem 1rem 0; }
+#finishAutoInvestModal .modal-footer {
+  padding: 0 1rem 2rem;
+  border-top: 0; }
+
+.survey .progress-bar {
+  height: 0.25rem; }
+
+.repeat-date {
+  margin-bottom: 300px;
+  background: #fff url(../../assets/images/caret-bottom.svg) no-repeat right 0.75rem center; }
 
 /*# sourceMappingURL=style.css.map */

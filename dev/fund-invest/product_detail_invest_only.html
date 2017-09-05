@@ -35,7 +35,23 @@
     <section id="blockProfit">
       <p class="label">수익률</p>
       <h2 class="value">24.1%</h2>
-      <canvas id="myChart" width="400" height="400"></canvas>
+      <canvas id="profitChart" width="400" height="400"></canvas>
+      <table class="control">
+        <tr>
+          <td>
+            <button>1달</button>
+          </td>
+          <td>
+            <button class="selected">3달</button>
+          </td>
+          <td>
+            <button>6달</button>
+          </td>
+          <td>
+            <button>1년</button>
+          </td>
+        </tr>
+      </table>
     </section>
 
     <!-- 판매액 / 구매자 -->
@@ -68,12 +84,14 @@
       </div>
       <div class="asset">
         <p class="title">자산 구성</p>
+        <canvas id="assetChart" height="160"></canvas>
         <div class="quote">
           * ‘자본시장과 금융투자업에 관한 법’에 의거 자산내역(주식,채권 기타유동성자산 등)은 <strong>조회일로부터 2개월 전</strong> 자료입니다.
         </div>
       </div>
       <div class="stock">
         <p class="title">주식 구성</p>
+        <canvas id="stockChart" height="460"></canvas>
       </div>
       <div class="payment">
         <p class="title">결제일</p>

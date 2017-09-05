@@ -122,15 +122,16 @@ ul {
     line-height: 1.5;
   }
 }
+.modal-footer {
+  button {
+    @extend .px-4 ;
+  }
+}
 .modal.fade .modal-dialog {
   transform: translate(0, 100vh);
 }
 .modal.show .modal-dialog {
   transform: translate(0, 0);
-}
-.modal-footer {
-  padding: 0px;
-  border-top: none;
 }
 
 // 성향 필터 카드
@@ -261,6 +262,23 @@ ul {
   .value {
     @extend .pink500-text, .bold, .px-3 ;
   }
+  canvas {
+    @extend .px-2, .mb-4 ;
+  }
+  .control {
+    @extend .w-100, .text-center, .mb-2 ;
+    button {
+      @extend .btn ;
+      border-radius: 100px ;
+      font-size: 14px;
+      line-height: 1;
+      padding: 8px 11px;
+      background-color: transparent;
+      &.selected {
+        @extend .btn-accent ;
+      }
+    }
+  }
 }
 
 //상세화면 Key Resault
@@ -288,7 +306,7 @@ ul {
     float: left;
   }
   .btn-sell {
-    @extend .ABlue600 ;
+    @extend .elephant800 ;
   }
   .btn-invest {
     @extend .btn-accent ;
@@ -316,6 +334,11 @@ ul {
   .files button {
     @extend .btn, .btn-secondary ;
   }
+  .asset {
+    canvas {
+      @extend .mb-2 ;
+    }
+  }
   table {
     @extend .table, .table-bordered ;
     td {
@@ -328,6 +351,7 @@ ul {
   }
 }
 
+// 자동 투자 블럭
 #blockAutoInvest {
   @extend .blue500, .m-3, .gray0-text, .p-3 ;
   box-shadow: 0 1px 2px 0 #E0E0E0;
@@ -346,5 +370,60 @@ ul {
   }
   .quit {
     @extend .ml-4, .mb-0 ;
+  }
+}
+#finishAutoInvestModal {
+  .modal-header {
+    border-bottom: 0;
+    padding: 1rem 1rem 0;
+  }
+  .modal-footer {
+    padding: 0 1rem 2rem;
+    border-top: 0;
+  }
+}
+
+// 투자하기, 환매하기, 성향 조사에 쓰이는 질문지 형식
+.survey {
+  .progress-bar {
+    @extend .blue500 ;
+    height: 0.25rem ;
+  }
+  .sheet {
+    @extend .px-4 ;
+  }
+  .question {
+    @extend .mb-2, .mt-5 ;
+  }
+  .description {
+    @extend .blue500-text ;
+  }
+  input {
+    @extend .mb-4 ;
+  }
+  .btn-next {
+    @extend .btn, .btn-block, .btn-accent, .mt-5, .mb-0, .rounded-0, .py-4, .bold, .fixed-bottom, .gray0-text ;
+  }
+  fieldset[disabled] {
+    .question {
+      @extend .gray600-text ;
+    }
+    .description {
+      @extend .gray600-text ;
+    }
+  }
+}
+
+// 자동 투자 설정
+.repeat-date {
+  @extend .form-control, .form-control-lg, .custom-select ;
+  margin-bottom: 300px;
+  background: #fff url(../../assets/images/caret-bottom.svg) no-repeat right 0.75rem center;
+}
+
+// 환매 설정
+#sell_amount {
+  .note {
+    @extend .h7, .gray600-text ;
   }
 }
