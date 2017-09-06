@@ -12,8 +12,16 @@ a, a:focus, a:hover {
   text-decoration: none !important;
   color: inherit !important;
 }
-ul {
-  @extend .pl-3 ;
+.quote {
+  @extend .h7, .p-3, .b-1, .rounded, .gray50, .gray700-text ;
+  ul {
+    @extend .pl-3 ;
+  }
+}
+.quote-warning {
+  @extend .quote, .orange500-text, .bold ;
+  background-color: #fef2e6 ;
+  border: 0 !important;
 }
 
 // 시작 가이드 배너
@@ -229,38 +237,44 @@ ul {
   }
 }
 
-// 상세화면 헤더
-#detailHeader {
-  @extend .px-3, .py-4, .gray0, .bb-1 ;
-  tr {
-    @extend .align-top ;
+// 블럭
+.block {
+  @extend .p-4, .gray0, .bb-1 ;
+  .title {
+    @extend .h5, .gray800-text, .mb-3, .bold ;
   }
-  td {
-    @extend .px-3 ;
+  .title-sm {
+    @extend .h6, .gray800-text, .mb-3, .bold ;
   }
-  .type {
-    @extend .h6, .gray800-text, .mb-2, .bold ;
-  }
-  .name {
+  .subtitle {
     @extend .h7, .gray600-text, .mb-0 ;
   }
 }
 
-// 박스 쉐도우
-.block-shadow {
-  background: #FFFFFF;
+// 카드 블럭
+.block-card {
+  @extend .block, .m-3 ;
   box-shadow: 0 1px 2px 0 #E0E0E0;
-  @extend .gray0, .my-3, .p-3 ;
+}
+
+.table-full-width {
+    @extend  .w-100 ;
+  .label {
+    @extend .gray600-text, .mb-2 ;
+  }
+  .value {
+    @extend .gray800-text, .h5, .mb-0 ;
+  }
 }
 
 // 상세화면 수익률
-#blockProfit {
-  @extend .block-shadow, .mx-3 ;
+#profit {
+  @extend .block-card ;
   .label {
     @extend .gray600-text, .bold, .mb-1, .px-3 ;
   }
   .value {
-    @extend .pink500-text, .bold, .px-3 ;
+    @extend .pink500-text, .px-3 ;
   }
   canvas {
     @extend .px-2, .mb-4 ;
@@ -281,23 +295,6 @@ ul {
   }
 }
 
-//상세화면 Key Resault
-#blockKeyResult {
-  @extend .block-shadow, .mx-3 ;
-  table {
-    @extend  .w-100 ;
-  }
-  .sales, .buyer {
-    @extend .d-table-cell, .text-center ;
-  }
-  .label {
-    @extend .gray600-text, .bold, .mb-1, .px-3 ;
-  }
-  .value {
-    @extend .gray800-text, .px-3, .h5, .mb-0 ;
-  }
-}
-
 // 투자 버튼
 #blockButtons {
   @extend .fixed-bottom ;
@@ -306,7 +303,7 @@ ul {
     float: left;
   }
   .btn-sell {
-    @extend .elephant800 ;
+    @extend .ABlue800 ;
   }
   .btn-invest {
     @extend .btn-accent ;
@@ -316,31 +313,9 @@ ul {
 
 //정보 화면
 #blockInfo {
-  @extend .block-shadow ;
-  padding-top: 2rem !important;
-  padding-bottom: 2rem !important;
-  &>div {
-    @extend .px-3, .mb-5 ;
-  }
-  .title {
-    @extend .bold, .mb-2 ;
-  }
-  .description {
-    @extend .gray800-text ;
-  }
-  .quote {
-    @extend .h7, .p-3, .b-1, .rounded, .gray50, .gray700-text ;
-  }
-  .files button {
-    @extend .btn, .btn-secondary ;
-  }
-  .asset {
-    canvas {
-      @extend .mb-2 ;
-    }
-  }
-  table {
-    @extend .table, .table-bordered ;
+
+  .table-left-head {
+    @extend .table, .table-bordered, .mb-5 ;
     td {
       @extend .py-3 ;
       min-width: 92px;
@@ -392,17 +367,41 @@ ul {
   .sheet {
     @extend .px-4 ;
   }
-  .question {
+  .question, .title {
     @extend .mb-2, .mt-5 ;
   }
   .description {
     @extend .blue500-text ;
   }
+  .info {
+    @extend .gray600-text, .normal ;
+    line-height: 1.6;
+  }
   input {
     @extend .mb-4 ;
   }
+  table {
+    @extend .table ;
+    td {
+      @extend .py-3, .px-0, .bt-0, .bb-1 ;
+    }
+    .head {
+      @extend .gray800-text, .w-30 ;
+    }
+    .data {
+      @extend .bold, .text-right, .gray800-text ;
+     }
+  }
   .btn-next {
     @extend .btn, .btn-block, .btn-accent, .mt-5, .mb-0, .rounded-0, .py-4, .bold, .fixed-bottom, .gray0-text ;
+  }
+  .btn-confirm {
+    @extend .btn, .btn-accent, .btn-block, .rounded-0, .bold, .mb-5 ;
+  }
+  .btn-download {
+    @extend .btn, .btn-secondary, .btn-block ;
+    font-size: 1rem !important;
+    border-color: #e0e0e0;
   }
   fieldset[disabled] {
     .question {
@@ -410,6 +409,20 @@ ul {
     }
     .description {
       @extend .gray600-text ;
+    }
+  }
+  .terms-list {
+    @extend .mb-4 ;
+  }
+  .terms-child {
+    @extend .pr-4 ;
+    position: relative;
+    font-size: 14px;
+    &:before {
+      @extend .oi, .oi-chevron-right, .pt-2, .gray500-text ;
+      position: absolute;
+      top: 0;
+      right: 0;
     }
   }
 }
@@ -425,5 +438,52 @@ ul {
 #sell_amount {
   .note {
     @extend .h7, .gray600-text ;
+  }
+}
+
+// 구매 계약서
+#contractSummary {
+  .title {
+    @extend .mb-5, .bold ;
+  }
+}
+.circle-steps {
+  display: table;
+  width: 100%;
+  text-align: center;
+  li {
+    @extend .w-25 ;
+    display: table-cell;
+    position: relative;
+  }
+  h7 {
+    display: block;
+    margin-top: 60px;
+  }
+  .circle {
+    @extend .gray200 ;
+    position: absolute;
+    border-radius: 100px;
+    width: 40px;
+    height: 40px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: -1;
+
+  }
+  .bar {
+    width: 100%;
+    position: absolute;
+    border: 6px solid #F0F0F0;
+    left: 50%;
+    top: 13px;
+    z-index: -2;
+  }
+  .term {
+    @extend .h7, .blue500-text ;
+    &.active {
+      @extend .blue500-text ;
+    }
   }
 }
