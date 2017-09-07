@@ -11177,14 +11177,14 @@ a, a:focus, a:hover {
     left: 0;
     right: 0;
     margin: auto;
-    z-index: -1; }
+    z-index: 2; }
   .circle-steps .bar {
     width: 100%;
     position: absolute;
     border: 6px solid #EBEBEB;
     left: 50%;
     top: 13px;
-    z-index: -2; }
+    z-index: 1; }
   .circle-steps .active .bar {
     border-color: #4E7BFA; }
 
