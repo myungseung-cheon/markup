@@ -12,8 +12,16 @@ a, a:focus, a:hover {
   text-decoration: none !important;
   color: inherit !important;
 }
-ul {
-  @extend .pl-3 ;
+.quote {
+  @extend .h7, .p-3, .b-1, .rounded, .gray50, .gray700-text ;
+  ul {
+    @extend .pl-3 ;
+  }
+}
+.quote-warning {
+  @extend .quote, .orange500-text, .bold ;
+  background-color: #fef2e6 ;
+  border: 0 !important;
 }
 
 // 시작 가이드 배너
@@ -122,15 +130,16 @@ ul {
     line-height: 1.5;
   }
 }
+.modal-footer {
+  button {
+    @extend .px-4 ;
+  }
+}
 .modal.fade .modal-dialog {
   transform: translate(0, 100vh);
 }
 .modal.show .modal-dialog {
   transform: translate(0, 0);
-}
-.modal-footer {
-  padding: 0px;
-  border-top: none;
 }
 
 // 성향 필터 카드
@@ -228,55 +237,167 @@ ul {
   }
 }
 
-// 상세화면 헤더
-#detailHeader {
-  @extend .px-3, .py-4, .gray0, .bb-1 ;
-  tr {
-    @extend .align-top ;
+// 블럭
+.block {
+  @extend .p-4, .gray0, .bb-1 ;
+  .title {
+    @extend .h5, .gray900-text ;
   }
-  td {
-    @extend .px-3 ;
+  .title-sm {
+    @extend .h6, .gray800-text, .mb-3, .bold ;
   }
-  .type {
-    @extend .h6, .gray800-text, .mb-2, .bold ;
-  }
-  .name {
+  .subtitle {
     @extend .h7, .gray600-text, .mb-0 ;
+  }
+  .label {
+    @extend .gray600-text, .mb-1 ;
+  }
+}
+.block-blue {
+  @extend .p-4, .blue600, .gray0-text ;
+  .title {
+
+  }
+  .label {
+
   }
 }
 
-// 박스 쉐도우
-.block-shadow {
-  background: #FFFFFF;
+// 카드 블럭
+.block-card {
+  @extend .block, .m-3 ;
   box-shadow: 0 1px 2px 0 #E0E0E0;
-  @extend .gray0, .my-3, .p-3 ;
+}
+
+.table-full-width {
+  @extend  .w-100 ;
+  .label {
+    @extend .gray600-text, .mb-1 ;
+  }
+  .value {
+    @extend .gray800-text, .h5, .mb-0 ;
+  }
+  &.reverse {
+    .label {
+      @extend .blue200-text ;
+    }
+    .value {
+      @extend .gray0-text, .h5, .mb-0 ;
+    }
+  }
+}
+
+.table-portfolio {
+  @extend .w-100 ;
+  tr {
+    background-color: white;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  td {
+    @extend .py-4 ;
+    &:first-child {
+      @extend .pl-4, .text-left ;
+    }
+    &:last-child {
+      @extend .pr-4, .text-right ;
+    }
+    h6 {
+      @extend .mb-1 ;
+    }
+  }
+  .plus {
+    @extend .pink500-text ;
+  }
+  .minus {
+    @extend .blue500-text ;
+  }
+}
+
+.table-wating {
+  @extend .w-100 ;
+  tr {
+    background-color: white;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  td {
+    @extend .py-4, .align-top ;
+    &:first-child {
+      @extend .pl-4, .text-left ;
+    }
+    &:last-child {
+      @extend .pr-4, .text-right ;
+    }
+    h6 {
+      @extend .mb-1 ;
+    }
+  }
+  .plus {
+    @extend .pink500-text ;
+  }
+  .minus {
+    @extend .blue500-text ;
+  }
+  .status {
+    @extend .orange500-text ;
+    font-size: 14px;
+    font-weight: bold;
+  }
+}
+
+.table-complete {
+  @extend .w-100 ;
+  tr {
+    background-color: white;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  td {
+    @extend .py-4, .align-top ;
+    &:first-child {
+      @extend .pl-4, .text-left ;
+    }
+    &:last-child {
+      @extend .pr-4, .text-right ;
+    }
+    h6 {
+      @extend .mb-1 ;
+    }
+  }
+  .plus {
+    @extend .pink500-text ;
+  }
+  .minus {
+    @extend .blue500-text ;
+  }
+  .status {
+    @extend .gray600-text ;
+    font-size: 14px;
+    font-weight: bold;
+  }
+}
+
+.section-header {
+  @extend .text-center, .gray700-text, .pb-2, .pt-3, .mt-2 ;
 }
 
 // 상세화면 수익률
-#blockProfit {
-  @extend .block-shadow, .mx-3 ;
-  .label {
-    @extend .gray600-text, .bold, .mb-1, .px-3 ;
+#profit {
+  @extend .block-card ;
+  canvas {
+    @extend .px-2, .mb-4 ;
   }
-  .value {
-    @extend .pink500-text, .bold, .px-3 ;
-  }
-}
-
-//상세화면 Key Resault
-#blockKeyResult {
-  @extend .block-shadow, .mx-3 ;
-  table {
-    @extend  .w-100 ;
-  }
-  .sales, .buyer {
-    @extend .d-table-cell, .text-center ;
-  }
-  .label {
-    @extend .gray600-text, .bold, .mb-1, .px-3 ;
-  }
-  .value {
-    @extend .gray800-text, .px-3, .h5, .mb-0 ;
+  .control {
+    @extend .w-100, .text-center, .mb-2 ;
+    button {
+      @extend .btn ;
+      border-radius: 100px ;
+      font-size: 14px;
+      line-height: 1;
+      padding: 8px 11px;
+      background-color: transparent;
+      &.selected {
+        @extend .btn-accent ;
+      }
+    }
   }
 }
 
@@ -288,7 +409,7 @@ ul {
     float: left;
   }
   .btn-sell {
-    @extend .ABlue600 ;
+    @extend .ABlue800 ;
   }
   .btn-invest {
     @extend .btn-accent ;
@@ -298,26 +419,9 @@ ul {
 
 //정보 화면
 #blockInfo {
-  @extend .block-shadow ;
-  padding-top: 2rem !important;
-  padding-bottom: 2rem !important;
-  &>div {
-    @extend .px-3, .mb-5 ;
-  }
-  .title {
-    @extend .bold, .mb-2 ;
-  }
-  .description {
-    @extend .gray800-text ;
-  }
-  .quote {
-    @extend .h7, .p-3, .b-1, .rounded, .gray50, .gray700-text ;
-  }
-  .files button {
-    @extend .btn, .btn-secondary ;
-  }
-  table {
-    @extend .table, .table-bordered ;
+
+  .table-left-head {
+    @extend .table, .table-bordered, .mb-5 ;
     td {
       @extend .py-3 ;
       min-width: 92px;
@@ -328,6 +432,7 @@ ul {
   }
 }
 
+// 자동 투자 블럭
 #blockAutoInvest {
   @extend .blue500, .m-3, .gray0-text, .p-3 ;
   box-shadow: 0 1px 2px 0 #E0E0E0;
@@ -346,5 +451,172 @@ ul {
   }
   .quit {
     @extend .ml-4, .mb-0 ;
+  }
+}
+#finishAutoInvestModal {
+  .modal-header {
+    border-bottom: 0;
+    padding: 1rem 1rem 0;
+  }
+  .modal-footer {
+    padding: 0 1rem 2rem;
+    border-top: 0;
+  }
+}
+
+// 투자하기, 환매하기, 성향 조사에 쓰이는 질문지 형식
+.survey {
+  .progress-bar {
+    @extend .blue500 ;
+    height: 0.25rem ;
+  }
+  .sheet {
+    @extend .px-4 ;
+  }
+  .question, .title {
+    @extend .mb-2, .mt-5 ;
+  }
+  .description {
+    @extend .blue500-text ;
+  }
+  .info {
+    @extend .gray600-text, .normal ;
+    line-height: 1.6;
+  }
+  input {
+    @extend .mb-4 ;
+  }
+  table {
+    @extend .table ;
+    td {
+      @extend .py-3, .px-0, .bt-0, .bb-1 ;
+    }
+    .head {
+      @extend .gray800-text, .w-30 ;
+    }
+    .data {
+      @extend .bold, .text-right, .gray800-text ;
+     }
+  }
+  .btn-next {
+    @extend .btn, .btn-block, .btn-accent, .mt-5, .mb-0, .rounded-0, .py-4, .bold, .fixed-bottom, .gray0-text ;
+  }
+  .btn-confirm {
+    @extend .btn, .btn-accent, .btn-block, .rounded-0, .bold, .mb-5 ;
+  }
+  .btn-download {
+    @extend .btn, .btn-secondary, .btn-block ;
+    font-size: 1rem !important;
+    border-color: #e0e0e0;
+  }
+  fieldset[disabled] {
+    .question {
+      @extend .gray600-text ;
+    }
+    .description {
+      @extend .gray600-text ;
+    }
+  }
+  .terms-list {
+    @extend .mb-4 ;
+  }
+  .terms-child {
+    @extend .pr-4 ;
+    position: relative;
+    font-size: 14px;
+    &:before {
+      @extend .oi, .oi-chevron-right, .pt-2, .gray500-text ;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+}
+
+// 포트폴리오 내역
+.order-detail {
+  table {
+    @extend .table, .mb-0 ;
+    td {
+      @extend .pt-0, .px-0, .bt-0 ;
+    }
+    .head {
+      @extend .gray700-text, .w-40 ;
+    }
+    .data {
+      @extend .text-right, .gray800-text ;
+     }
+  }
+}
+
+// 자동 투자 설정
+.repeat-date {
+  @extend .form-control, .form-control-lg, .custom-select ;
+  margin-bottom: 300px;
+  background: #fff url(../../assets/images/caret-bottom.svg) no-repeat right 0.75rem center;
+}
+
+// 환매 설정
+#sell_amount {
+  .note {
+    @extend .h7, .gray600-text ;
+  }
+}
+
+// 구매 계약서
+#contractSummary {
+  .title {
+    @extend .mb-5, .bold ;
+  }
+}
+.circle-steps {
+  display: table;
+  width: 100%;
+  text-align: center;
+  li {
+    @extend .w-25 ;
+    display: table-cell;
+    position: relative;
+  }
+  h7 {
+    display: block;
+    margin-top: 60px;
+  }
+  .circle {
+    @extend .gray200 ;
+    position: absolute;
+    border-radius: 100px;
+    width: 40px;
+    height: 40px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: -1;
+
+  }
+  .bar {
+    width: 100%;
+    position: absolute;
+    border: 6px solid #EBEBEB;
+    left: 50%;
+    top: 13px;
+    z-index: -2;
+  }
+  .term {
+    @extend .h7, .blue500-text ;
+    &.active {
+      @extend .blue500-text ;
+    }
+  }
+  .active {
+    .circle {
+      @extend .blue500 ;
+    }
+    .bar {
+      border-color: #4E7BFA;
+    }
+    h7 {
+      @extend .blue500-text, .bold ;
+    }
   }
 }
