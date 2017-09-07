@@ -27,13 +27,15 @@
       <div class="sheet">
         <h4 class="question">얼마를 구매할까요?</h4>
         <p class="description">최대금액 : 2,000,000원</p>
-        <form action="">
-          <input class="form-control form-control-lg" type="text">
-
+        <form action="buy_contract.html">
+          <div class="input-group mb-3">
+            <input class="form-control form-control-lg" style="margin-bottom: 0px !important" type="text" aria-describedby="basic-addon2">
+            <span class="input-group-addon px-4" id="basic-addon2">원</span>
+          </div>
           <label class="radio-lg inline">
             <input type="radio" name="radio" value="1" checked>한 번만
           </label>
-          <label class="radio-lg inline ml-4">
+          <label class="radio-lg inline ml-4" id="seletAutoInvest">
             <input type="radio" name="radio" value="2">매월 반복
           </label>
           <input type="submit" value="다음" class="btn-next">
@@ -57,7 +59,7 @@
     <script src="assets/javascript/chartSetting.js"></script>
 
     <!-- 커스텀 이벤트 -->
-    <!-- <script src="assets/javascript/event.js"></script> -->
+    <script src="assets/javascript/event.js"></script>
 
   </body>
 </html>

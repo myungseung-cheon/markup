@@ -1,4 +1,30 @@
 $(document).ready(function(){
+    // 프로토타입용 코드
+
+    $('.list-item').click(function(){
+        location.href = 'product_detail_invest_only.html';
+    });
+    $('.btn-invest').click(function(){
+        location.href = 'buy_amount_norepeat.html';
+    });
+    $('#seletAutoInvest').click(function(){
+        location.href = 'buy_amount_repeated.html';
+    });
+    $('#selectInvestOnce').click(function(){
+        location.href = 'buy_amount_norepeat.html';
+    });
+    $('#addAutoInvest, #buttonNext').click(function(){
+        location.href = 'buy_contract.html';
+    });
+    $('#confirmBuy').click(function(){
+        location.href = 'portfolio.html';
+    });
+    $('#portfolioPage table').click(function(){
+        location.href = 'portfolio_detail_buy.html';
+    });
+
+
+
 
     // 성향 카드 선택
     $('.filter-card').click(function(){

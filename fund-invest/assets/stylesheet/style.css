@@ -1562,7 +1562,7 @@ mark,
 .gray100-text {
   color: #F5F5F5; }
 
-.gray150 {
+.gray150, .section-header {
   background-color: #F0F0F0; }
 
 .gray150-text {

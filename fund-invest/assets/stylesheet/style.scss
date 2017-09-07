@@ -376,7 +376,7 @@ a, a:focus, a:hover {
 }
 
 .section-header {
-  @extend .text-center, .gray700-text, .pb-2, .pt-3, .mt-2 ;
+  @extend .text-center, .gray700-text, .pb-2, .pt-3, .mt-2, .gray150 ;
 }
 
 // 상세화면 수익률
