@@ -1344,7 +1344,7 @@ output {
   .offset-xl-11 {
     margin-left: 91.66667%; } }
 h1, h2, h3, h4, h5, h6,
-.h1, .h2, #portfolio .asset, .h3, .h4, #banner h1, .h5, .filter-card .title, .block .title, .block-card .title, #profit .title, .table-full-width .value, .h6, #filterButton i, #portfolio .title, .block .title-sm, .block-card .title-sm, #profit .title-sm {
+.h1, .h2, #portfolio .asset, .h3, .h4, #banner h1, .h5, .filter-card .title, .block .title, .block-card .title, #profit .title, .table-full-width .value, .table-full-width.reverse .value, .h6, #filterButton i, #portfolio .title, .block .title-sm, .block-card .title-sm, #profit .title-sm {
   margin-bottom: 0.5rem;
   font-family: inherit;
   font-weight: 500;
@@ -1363,13 +1363,13 @@ h3, .h3 {
 h4, .h4, #banner h1 {
   font-size: 1.5rem; }
 
-h5, .h5, .filter-card .title, .block .title, .block-card .title, #profit .title, .table-full-width .value {
+h5, .h5, .filter-card .title, .block .title, .block-card .title, #profit .title, .table-full-width .value, .table-full-width.reverse .value {
   font-size: 1.25rem; }
 
 h6, .h6, #filterButton i, #portfolio .title, .block .title-sm, .block-card .title-sm, #profit .title-sm {
   font-size: 1rem; }
 
-.bold, .quote-warning, #filterButton span, .filter-card .title, .block .title, .block-card .title, #profit .title, .block .title-sm, .block-card .title-sm, #profit .title-sm, #profit .label, #blockButtons button, #blockAutoInvest .title, .survey table .data, .survey .btn-next, .survey .btn-confirm, #contractSummary .title {
+.bold, .quote-warning, #filterButton span, .filter-card .title, .block .title-sm, .block-card .title-sm, #profit .title-sm, #blockButtons button, #blockAutoInvest .title, .survey table .data, .survey .btn-next, .survey .btn-confirm, #contractSummary .title {
   font-weight: 700 !important; }
 
 .normal, #productList .list-header th, #productList .list-header i, .survey .info {
@@ -1505,7 +1505,7 @@ mark,
 .blue200 {
   background-color: #B8CAFD; }
 
-.blue200-text, #portfolio .minus, #portfolio .arrow i:before {
+.blue200-text, #portfolio .minus, #portfolio .arrow i:before, .table-full-width.reverse .label {
   color: #B8CAFD; }
 
 .blue300 {
@@ -1523,10 +1523,10 @@ mark,
 .blue500, #blockAutoInvest, .survey .progress-bar {
   background-color: #4E7BFA; }
 
-.blue500-text, .filter-card.selected .title, .survey .description, .circle-steps .term, .circle-steps .term.active {
+.blue500-text, .filter-card.selected .title, .table-portfolio .minus, .survey .description, .circle-steps .term, .circle-steps .term.active {
   color: #4E7BFA; }
 
-.blue600, #banner, #portfolio {
+.blue600, #banner, #portfolio, .block-blue {
   background-color: #3E63BC; }
 
 .blue600-text {
@@ -1544,10 +1544,10 @@ mark,
 .blue800-text {
   color: #1F3164; }
 
-.gray0, .filter-card, .block, .block-card, #profit {
+.gray0, .filter-card, .block, .block-card, #profit, .table-portfolio tr {
   background-color: #FFFFFF; }
 
-.gray0-text, #banner h1, #portfolio .title, #portfolio .asset, #portfolio .arrow i, #blockButtons button, #blockAutoInvest, .survey .btn-next {
+.gray0-text, #banner h1, #portfolio .title, #portfolio .asset, #portfolio .arrow i, .block-blue, .table-full-width.reverse .value, #blockButtons button, #blockAutoInvest, .survey .btn-next {
   color: #FFFFFF; }
 
 .gray50, .quote, .quote-warning, #blockInfo .table-left-head .head {
@@ -1607,7 +1607,7 @@ mark,
 .gray600 {
   background-color: #999; }
 
-.gray600-text, #productList .product-info, .block .subtitle, .block-card .subtitle, #profit .subtitle, .table-full-width .label, #profit .label, .survey .info, .survey fieldset[disabled] .question, .survey fieldset[disabled] .description, #sell_amount .note {
+.gray600-text, #productList .product-info, .block .subtitle, .block-card .subtitle, #profit .subtitle, .block .label, .block-card .label, #profit .label, .table-full-width .label, .survey .info, .survey fieldset[disabled] .question, .survey fieldset[disabled] .description, #sell_amount .note {
   color: #999; }
 
 .gray700 {
@@ -1619,13 +1619,13 @@ mark,
 .gray800 {
   background-color: #333; }
 
-.gray800-text, .block .title, .block-card .title, #profit .title, .block .title-sm, .block-card .title-sm, #profit .title-sm, .table-full-width .value, .survey table .head, .survey table .data, .post {
+.gray800-text, .block .title-sm, .block-card .title-sm, #profit .title-sm, .table-full-width .value, .survey table .head, .survey table .data, .post {
   color: #333; }
 
 .gray900 {
   background-color: #111; }
 
-.gray900-text {
+.gray900-text, .block .title, .block-card .title, #profit .title {
   color: #111; }
 
 .gray999 {
@@ -1871,7 +1871,7 @@ mark,
 .pink500 {
   background-color: #FE4545; }
 
-.pink500-text, #portfolio .plus, #profit .value {
+.pink500-text, #portfolio .plus, .table-portfolio .plus {
   color: #FE4545; }
 
 .pink600 {
@@ -4944,7 +4944,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
 .br-1 {
   border-right: 1px solid #E0E0E0 !important; }
 
-.bb-1, #productList .list-header, .block, .block-card, #profit, .survey table td {
+.bb-1, #productList .list-header, .block, .block-card, #profit, .table-portfolio tr, .survey table td {
   border-bottom: 1px solid #E0E0E0 !important; }
 
 .bl-1 {
@@ -6106,7 +6106,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
 .w-95 {
   width: 95% !important; }
 
-.w-100, #productList table, #portfolio .page, .table-full-width, #profit .control, .terms-agree-all {
+.w-100, #productList table, #portfolio .page, .table-full-width, .table-portfolio, .table-portfolio tr, #profit .control, .terms-agree-all {
   width: 100% !important; }
 
 .h-5 {
@@ -6184,7 +6184,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
 .mr-0 {
   margin-right: 0 !important; }
 
-.mb-0, .filter-card .title, .block .subtitle, .block-card .subtitle, #profit .subtitle, .table-full-width .value, #blockAutoInvest .quit, .survey .btn-next {
+.mb-0, .filter-card .title, .block .subtitle, .block-card .subtitle, #profit .subtitle, .table-full-width .value, .table-full-width.reverse .value, #blockAutoInvest .quit, .survey .btn-next {
   margin-bottom: 0 !important; }
 
 .ml-0 {
@@ -6207,7 +6207,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
 .mr-1 {
   margin-right: 0.25rem !important; }
 
-.mb-1, #profit .label {
+.mb-1, .block .label, .block-card .label, #profit .label, .table-full-width .label, .table-portfolio td h6 {
   margin-bottom: 0.25rem !important; }
 
 .ml-1 {
@@ -6230,7 +6230,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
 .mr-2 {
   margin-right: 0.5rem !important; }
 
-.mb-2, #productList .product-name, .table-full-width .label, #profit .control, .survey .question, .survey .title {
+.mb-2, #productList .product-name, #profit .control, .survey .question, .survey .title {
   margin-bottom: 0.5rem !important; }
 
 .ml-2, #blockAutoInvest .title {
@@ -6253,7 +6253,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
 .mr-3 {
   margin-right: 1rem !important; }
 
-.mb-3, .filter-card, #portfolio .profit, .block .title, .block-card .title, #profit .title, .block .title-sm, .block-card .title-sm, #profit .title-sm, .post > h1, .post > h2 {
+.mb-3, .filter-card, #portfolio .profit, .block .title-sm, .block-card .title-sm, #profit .title-sm, .post > h1, .post > h2 {
   margin-bottom: 1rem !important; }
 
 .ml-3 {
@@ -6443,7 +6443,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
 .pl-3, .quote ul, .quote-warning ul {
   padding-left: 1rem !important; }
 
-.px-3, #banner, #portfolio .page, #profit .label, #profit .value {
+.px-3, #banner, #portfolio .page {
   padding-right: 1rem !important;
   padding-left: 1rem !important; }
 
@@ -6451,7 +6451,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
   padding-top: 1rem !important;
   padding-bottom: 1rem !important; }
 
-.p-4, .block, .block-card, #profit {
+.p-4, .block, .block-card, #profit, .block-blue, .table-portfolio tr {
   padding: 1.5rem 1.5rem !important; }
 
 .pt-4 {
@@ -8312,7 +8312,7 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
   .hidden-print {
     display: none !important; } }
 h1, h2, h3, h4, h5, h6,
-.h1, .h2, #portfolio .asset, .h3, .h4, #banner h1, .h5, .filter-card .title, .block .title, .block-card .title, #profit .title, .table-full-width .value, .h6, #filterButton i, #portfolio .title, .block .title-sm, .block-card .title-sm, #profit .title-sm {
+.h1, .h2, #portfolio .asset, .h3, .h4, #banner h1, .h5, .filter-card .title, .block .title, .block-card .title, #profit .title, .table-full-width .value, .table-full-width.reverse .value, .h6, #filterButton i, #portfolio .title, .block .title-sm, .block-card .title-sm, #profit .title-sm {
   margin-bottom: 0.8rem; }
 
 .post {
@@ -11095,6 +11095,11 @@ a, a:focus, a:hover {
 
 .block-card, #profit {
   box-shadow: 0 1px 2px 0 #E0E0E0; }
+
+.table-portfolio tr {
+  display: block; }
+.table-portfolio td {
+  display: inline-block; }
 
 #profit .control button {
   border-radius: 100px;

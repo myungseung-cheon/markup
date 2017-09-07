@@ -14,24 +14,18 @@
     <link href="assets/stylesheet/style.css" rel="stylesheet">
 
   </head>
-  <body class="gray100">
+  <body class="gray150">
 
     <!-- 헤더 -->
-    <section id="detailHeader">
-      <table>
-        <tr>
-          <td>
-            <h1 class="type">국내 대형주 주식형</h1>
-            <p class="name">맥쿼리테마따라잡기증권자투자신탁1호[주식](A)</p>
-          </td>
-        </tr>
-      </table>
+    <section id="header" class="block">
+      <h1 class="title mb-2 bold">국내 대형주 주식형</h1>
+      <p class="subtitle">맥쿼리테마따라잡기증권자투자신탁1호[주식](A)</p>
     </section>
 
     <!-- 수익률 -->
-    <section id="blockProfit">
+    <section id="profit" class="block">
       <p class="label">수익률</p>
-      <h2 class="value">24.1%</h2>
+      <h2 class="pink500-text">24.1%</h2>
       <canvas id="profitChart" width="400" height="400"></canvas>
       <!-- 기간 설정 -->
       <table class="control">
@@ -53,19 +47,38 @@
     </section>
 
     <!-- 판매액 / 구매자 -->
-    <section id="blockKeyResult">
-      <table>
+    <section id="keyResult" class="block-card">
+        <p class="title mb-3">상품 특징</p>
+        <p class=" mb-4">신탁 재산의 60% 이상을 중국 및 홍콩 주식에 투자하는 펀드입니다.</p>
+      <table class="table-full-width mb-3">
         <tr>
-          <td class="sales">
+          <td>
             <div class="label">판매액</div>
             <div class="value">1,091억원</div>
           </td>
-          <td class="buyer">
+          <td>
             <div class="label">구매자수</div>
             <div class="value">4,232명</div>
           </td>
         </tr>
       </table>
+    </section>
+
+    <!-- 자산 구성 -->
+    <section id="asset" class="block-card">
+      <div class="asset">
+        <p class="title mb-3">자산 구성</p>
+        <canvas id="assetChart" height="160" class="mb-3"></canvas>
+        <div class="quote">
+          * ‘자본시장과 금융투자업에 관한 법’에 의거 자산내역(주식,채권 기타유동성자산 등)은 <strong>조회일로부터 2개월 전</strong> 자료입니다.
+        </div>
+      </div>
+    </section>
+
+    <!-- 주식 구성 -->
+    <section id="stock" class="block-card">
+        <p class="title">주식 구성</p>
+        <canvas id="stockChart" height="460"></canvas>
     </section>
 
     <!-- 투자하기 버튼 -->
@@ -75,25 +88,10 @@
 
 
     <!-- 상세 정보 -->
-    <section id="blockInfo">
-      <div class="summary">
-        <p class="title">상품 특징</p>
-        <p class="description">신탁 재산의 60% 이상을 중국 및 홍콩 주식에 투자하는 펀드입니다.</p>
-      </div>
-      <div class="asset">
-        <p class="title">자산 구성</p>
-        <canvas id="assetChart" height="160"></canvas>
-        <div class="quote">
-          * ‘자본시장과 금융투자업에 관한 법’에 의거 자산내역(주식,채권 기타유동성자산 등)은 <strong>조회일로부터 2개월 전</strong> 자료입니다.
-        </div>
-      </div>
-      <div class="stock">
-        <p class="title">주식 구성</p>
-        <canvas id="stockChart" height="460"></canvas>
-      </div>
-      <div class="payment">
-        <p class="title">결제일</p>
-        <table>
+    <section id="blockInfo" class="block">
+
+        <p class="title-sm">결제일</p>
+        <table class="table-left-head">
           <tr>
             <td class="head">살 때</td>
             <td class="data">최대 2영업일 결제</td>
@@ -103,10 +101,9 @@
             <td class="data">최대 3영업일 결제</td>
           </tr>
         </table>
-      </div>
-      <div class="fee">
-        <p class="title">수수료</p>
-        <table>
+
+        <p class="title-sm">수수료</p>
+        <table class="table-left-head">
           <tr>
             <td class="head">보수</td>
             <td class="date">1.20%</td>
@@ -120,10 +117,9 @@
             <td class="date">없음</td>
           </tr>
         </table>
-      </div>
-      <div class="checklist">
-        <p class="title">확인하세요!</p>
-        <div class="quote">
+
+        <p class="title-sm">확인하세요!</p>
+        <div class="quote mb-5">
           <ul>
           	<li>이 금융상품은 예금자보호법에 따라 예금보험공사가 보호하지 않습니다.</li>
           	<li>집합투자증권은 운용실적에 따라 이익 또는 손실이 발생할 수 있으며 그 결과는 투자자에게 귀속됩니다.</li>
@@ -137,12 +133,11 @@
           	<li>펀드정보는 영업일 오전 8시30분에 업데이트 됩니다.</li>
           </ul>
         </div>
-      </div>
-      <div class="files">
-        <p class="title">상품정보 다운로드</p>
-        <button>집합투자규약</button>
-        <button>투자설명서</button>
-      </div>
+
+        <p class="title-sm">상품정보 다운로드</p>
+        <button class="btn btn-secondary mb-7">집합투자규약</button>
+        <button class="btn btn-secondary mb-7">투자설명서</button>
+
     </section>
 
 

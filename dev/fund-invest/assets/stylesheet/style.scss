@@ -241,13 +241,25 @@ a, a:focus, a:hover {
 .block {
   @extend .p-4, .gray0, .bb-1 ;
   .title {
-    @extend .h5, .gray800-text, .mb-3, .bold ;
+    @extend .h5, .gray900-text ;
   }
   .title-sm {
     @extend .h6, .gray800-text, .mb-3, .bold ;
   }
   .subtitle {
     @extend .h7, .gray600-text, .mb-0 ;
+  }
+  .label {
+    @extend .gray600-text, .mb-1 ;
+  }
+}
+.block-blue {
+  @extend .p-4, .blue600, .gray0-text ;
+  .title {
+
+  }
+  .label {
+
   }
 }
 
@@ -258,24 +270,46 @@ a, a:focus, a:hover {
 }
 
 .table-full-width {
-    @extend  .w-100 ;
+  @extend  .w-100 ;
   .label {
-    @extend .gray600-text, .mb-2 ;
+    @extend .gray600-text, .mb-1 ;
   }
   .value {
     @extend .gray800-text, .h5, .mb-0 ;
+  }
+  &.reverse {
+    .label {
+      @extend .blue200-text ;
+    }
+    .value {
+      @extend .gray0-text, .h5, .mb-0 ;
+    }
+  }
+}
+
+.table-portfolio {
+  @extend .w-100 ;
+  tr {
+    @extend .bb-1, .p-4, .gray0, .w-100 ;
+    display: block;
+  }
+  td {
+    display: inline-block;
+    h6 {
+      @extend .mb-1 ;
+    }
+  }
+  .plus {
+    @extend .pink500-text ;
+  }
+  .minus {
+    @extend .blue500-text ;
   }
 }
 
 // 상세화면 수익률
 #profit {
   @extend .block-card ;
-  .label {
-    @extend .gray600-text, .bold, .mb-1, .px-3 ;
-  }
-  .value {
-    @extend .pink500-text, .px-3 ;
-  }
   canvas {
     @extend .px-2, .mb-4 ;
   }
