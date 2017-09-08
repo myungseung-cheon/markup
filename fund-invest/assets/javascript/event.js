@@ -19,9 +19,22 @@ $(document).ready(function(){
     $('#confirmBuy').click(function(){
         location.href = 'portfolio.html';
     });
-    $('#portfolioPage table').click(function(){
+    $('#watingList').click(function(){
         location.href = 'portfolio_detail_buy.html';
     });
+    $('.table-portfolio').click(function(){
+        location.href = 'product_detail_investing.html';
+    });
+    $('.btn-sell').click(function(){
+        location.href = 'sell_amount.html';
+    });
+    $('#sellSubmit').click(function(){
+        location.href = 'sell_contract.html';
+    });
+    $('.btn-confirm').click(function(){
+        location.href = 'portfolio.html';
+    });
+
 
 
 
