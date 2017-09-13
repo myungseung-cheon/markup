@@ -20,7 +20,6 @@ $(document).ready(function(){
         } else if ( $('#filterStable').hasClass('selected') ) {
             btn.addClass('btn-success');
         }
-
     });
 
     // 구매자/판매자
@@ -37,16 +36,27 @@ $(document).ready(function(){
     });
 
     //스크롤 이벤트
-    var iScrollPos = 0;
-
+    var lastScrollTop = 0;
     $(window).scroll(function () {
 
-        var iCurScrollPos = $(this).scrollTop();
+        var src = $(this).scrollTop();
         var btn = $('#filterButton');
-        if (iCurScrollPos > iScrollPos) {
-            btn.addClass('btn-hide');
+        var targetSrc = 860;
+
+        // 모든 상품 영역을 볼 때 필터 보임
+        if (src > targetSrc) {
+            // 스크롤 내리는 중이면 필터 보임
+            if(src < lastScrollTop) {
+                btn.addClass('btn-hide');
+            }
+            // 스크롤 올리는 중이면 필터 가림
+            else {
+                btn.removeClass('btn-hide');
+            }
+            lastScrollTop = src;
         } else {
-            btn.removeClass('btn-hide');
+        // 모든 상품을 안볼 때 필터 가림
+          btn.addClass('btn-hide');
         }
     });
 

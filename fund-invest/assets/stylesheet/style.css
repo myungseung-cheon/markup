@@ -1372,7 +1372,7 @@ h6, .h6, #filterButton i, #portfolio .title, .block .title-sm, .block-card .titl
 .bold, .quote-warning, #filterButton span, .filter-card .title, .block .title-sm, .block-card .title-sm, #profit .title-sm, #blockButtons button, #blockAutoInvest .title, .survey table .data, .survey .btn-next, .survey .btn-confirm, #contractSummary .title, .circle-steps .active h7 {
   font-weight: 700 !important; }
 
-.normal, #productList .list-header th, #productList .list-header i, .survey .info {
+.normal, .stockList .list-header th, .stockList .list-header i, .survey .info {
   font-weight: 400 !important; }
 
 .light {
@@ -1568,7 +1568,7 @@ mark,
 .gray150-text {
   color: #F0F0F0; }
 
-.gray200, #productList .product-info, .circle-steps .circle {
+.gray200, .stockList .product-info, .circle-steps .circle {
   background-color: #EBEBEB; }
 
 .gray200-text {
@@ -1607,7 +1607,7 @@ mark,
 .gray600 {
   background-color: #999; }
 
-.gray600-text, #productList .product-info, .block .subtitle, .block-card .subtitle, #profit .subtitle, .block .label, .block-card .label, #profit .label, .table-full-width .label, .table-complete .status, .survey .info, .survey fieldset[disabled] .question, .survey fieldset[disabled] .description, #sell_amount .note {
+.gray600-text, .stockList .product-info, .block .subtitle, .block-card .subtitle, #profit .subtitle, .block .label, .block-card .label, #profit .label, .table-full-width .label, .table-complete .status, .survey .info, .survey fieldset[disabled] .question, .survey fieldset[disabled] .description, #sell_amount .note {
   color: #999; }
 
 .gray700 {
@@ -1757,7 +1757,7 @@ mark,
 .orange500 {
   background-color: #F57F0A; }
 
-.orange500-text, .quote-warning, #productList .list-item i, .table-wating .status {
+.orange500-text, .quote-warning, .stockList .list-item i, .table-wating .status {
   color: #F57F0A; }
 
 .orange600 {
@@ -3374,7 +3374,7 @@ background-color: #3D424E;
   src: url("../fonts/open-iconic-sm.eot") format("embedded-opentype"), url("../fonts/open-iconic.woff") format("woff"), url("../fonts/open-iconic.ttf") format("truetype"), url("../fonts/open-iconic.svg#iconic-sm") format("svg");
   font-weight: normal;
   font-style: normal; }
-.oi, #productList .list-header i, #filterButton i, #portfolio .arrow i, #blockAutoInvest i, .survey .terms-child:before {
+.oi, .stockList .list-header i, #filterButton i, #portfolio .arrow i, #blockAutoInvest i, .survey .terms-child:before {
   position: relative;
   top: 1px;
   display: inline-block;
@@ -3385,31 +3385,31 @@ background-color: #3D424E;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
-.oi:empty:before, #productList .list-header i:empty:before, #filterButton i:empty:before, #portfolio .arrow i:empty:before, #blockAutoInvest i:empty:before, .survey .terms-child:empty:before {
+.oi:empty:before, .stockList .list-header i:empty:before, #filterButton i:empty:before, #portfolio .arrow i:empty:before, #blockAutoInvest i:empty:before, .survey .terms-child:empty:before {
   width: 1em;
   text-align: center;
   box-sizing: content-box; }
 
-.oi.oi-align-center:before, #productList .list-header i.oi-align-center:before, #filterButton i.oi-align-center:before, #portfolio .arrow i.oi-align-center:before, #blockAutoInvest i.oi-align-center:before, .survey .oi-align-center.terms-child:before {
+.oi.oi-align-center:before, .stockList .list-header i.oi-align-center:before, #filterButton i.oi-align-center:before, #portfolio .arrow i.oi-align-center:before, #blockAutoInvest i.oi-align-center:before, .survey .oi-align-center.terms-child:before {
   text-align: center; }
 
-.oi.oi-align-left:before, #productList .list-header i.oi-align-left:before, #filterButton i.oi-align-left:before, #portfolio .arrow i.oi-align-left:before, #blockAutoInvest i.oi-align-left:before, .survey .oi-align-left.terms-child:before {
+.oi.oi-align-left:before, .stockList .list-header i.oi-align-left:before, #filterButton i.oi-align-left:before, #portfolio .arrow i.oi-align-left:before, #blockAutoInvest i.oi-align-left:before, .survey .oi-align-left.terms-child:before {
   text-align: left; }
 
-.oi.oi-align-right:before, #productList .list-header i.oi-align-right:before, #filterButton i.oi-align-right:before, #portfolio .arrow i.oi-align-right:before, #blockAutoInvest i.oi-align-right:before, .survey .oi-align-right.terms-child:before {
+.oi.oi-align-right:before, .stockList .list-header i.oi-align-right:before, #filterButton i.oi-align-right:before, #portfolio .arrow i.oi-align-right:before, #blockAutoInvest i.oi-align-right:before, .survey .oi-align-right.terms-child:before {
   text-align: right; }
 
-.oi.oi-flip-horizontal:before, #productList .list-header i.oi-flip-horizontal:before, #filterButton i.oi-flip-horizontal:before, #portfolio .arrow i.oi-flip-horizontal:before, #blockAutoInvest i.oi-flip-horizontal:before, .survey .oi-flip-horizontal.terms-child:before {
+.oi.oi-flip-horizontal:before, .stockList .list-header i.oi-flip-horizontal:before, #filterButton i.oi-flip-horizontal:before, #portfolio .arrow i.oi-flip-horizontal:before, #blockAutoInvest i.oi-flip-horizontal:before, .survey .oi-flip-horizontal.terms-child:before {
   -webkit-transform: scale(-1, 1);
   -ms-transform: scale(-1, 1);
   transform: scale(-1, 1); }
 
-.oi.oi-flip-vertical:before, #productList .list-header i.oi-flip-vertical:before, #filterButton i.oi-flip-vertical:before, #portfolio .arrow i.oi-flip-vertical:before, #blockAutoInvest i.oi-flip-vertical:before, .survey .oi-flip-vertical.terms-child:before {
+.oi.oi-flip-vertical:before, .stockList .list-header i.oi-flip-vertical:before, #filterButton i.oi-flip-vertical:before, #portfolio .arrow i.oi-flip-vertical:before, #blockAutoInvest i.oi-flip-vertical:before, .survey .oi-flip-vertical.terms-child:before {
   -webkit-transform: scale(1, -1);
   -ms-transform: scale(-1, 1);
   transform: scale(1, -1); }
 
-.oi.oi-flip-horizontal-vertical:before, #productList .list-header i.oi-flip-horizontal-vertical:before, #filterButton i.oi-flip-horizontal-vertical:before, #portfolio .arrow i.oi-flip-horizontal-vertical:before, #blockAutoInvest i.oi-flip-horizontal-vertical:before, .survey .oi-flip-horizontal-vertical.terms-child:before {
+.oi.oi-flip-horizontal-vertical:before, .stockList .list-header i.oi-flip-horizontal-vertical:before, #filterButton i.oi-flip-horizontal-vertical:before, #portfolio .arrow i.oi-flip-horizontal-vertical:before, #blockAutoInvest i.oi-flip-horizontal-vertical:before, .survey .oi-flip-horizontal-vertical.terms-child:before {
   -webkit-transform: scale(-1, -1);
   -ms-transform: scale(-1, 1);
   transform: scale(-1, -1); }
@@ -3549,7 +3549,7 @@ background-color: #3D424E;
 .oi-camera-slr:before {
   content: '\e02c'; }
 
-.oi-caret-bottom:before, #productList .list-header i:before {
+.oi-caret-bottom:before, .stockList .list-header i:before {
   content: '\e02d'; }
 
 .oi-caret-left:before {
@@ -4938,13 +4938,13 @@ a.bg-inverse:focus, a.bg-inverse:hover {
 .b-1, .quote, .quote-warning, .filter-card {
   border: 1px solid #E0E0E0 !important; }
 
-.bt-1 {
+.bt-1, .stockList .list-header {
   border-top: 1px solid #E0E0E0 !important; }
 
 .br-1 {
   border-right: 1px solid #E0E0E0 !important; }
 
-.bb-1, #productList .list-header, .block, .block-card, #profit, .survey table td {
+.bb-1, .stockList .list-header, .block, .block-card, #profit, .survey table td {
   border-bottom: 1px solid #E0E0E0 !important; }
 
 .bl-1 {
@@ -5985,7 +5985,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
 
   .align-self-xl-stretch {
     align-self: stretch !important; } }
-.float-left, .terms-agree-all .oi, .terms-agree-all #productList .list-header i, #productList .list-header .terms-agree-all i, .terms-agree-all #filterButton i, #filterButton .terms-agree-all i, .terms-agree-all #portfolio .arrow i, #portfolio .arrow .terms-agree-all i, .terms-agree-all #blockAutoInvest i, #blockAutoInvest .terms-agree-all i, .terms-agree-all .survey .terms-child:before, .survey .terms-agree-all .terms-child:before, .input-group-sign-in > * {
+.float-left, .terms-agree-all .oi, .terms-agree-all .stockList .list-header i, .stockList .list-header .terms-agree-all i, .terms-agree-all #filterButton i, #filterButton .terms-agree-all i, .terms-agree-all #portfolio .arrow i, #portfolio .arrow .terms-agree-all i, .terms-agree-all #blockAutoInvest i, #blockAutoInvest .terms-agree-all i, .terms-agree-all .survey .terms-child:before, .survey .terms-agree-all .terms-child:before, .input-group-sign-in > * {
   float: left !important; }
 
 .float-right {
@@ -6106,7 +6106,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
 .w-95 {
   width: 95% !important; }
 
-.w-100, #productList table, #portfolio .page, .table-full-width, .table-portfolio, .table-wating, .table-complete, #profit .control, .terms-agree-all {
+.w-100, .stockList table, #portfolio .page, .table-full-width, .table-portfolio, .table-wating, .table-complete, #profit .control, .terms-agree-all {
   width: 100% !important; }
 
 .h-5 {
@@ -6230,7 +6230,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
 .mr-2 {
   margin-right: 0.5rem !important; }
 
-.mb-2, #productList .product-name, #profit .control, .survey .question, .survey .title {
+.mb-2, .stockList .product-name, #profit .control, .survey .question, .survey .title {
   margin-bottom: 0.5rem !important; }
 
 .ml-2, #blockAutoInvest .title {
@@ -6420,7 +6420,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
 .pl-2 {
   padding-left: 0.5rem !important; }
 
-.px-2, #productList .list-item i, #profit canvas {
+.px-2, .stockList .list-item i, #profit canvas {
   padding-right: 0.5rem !important;
   padding-left: 0.5rem !important; }
 
@@ -6428,7 +6428,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
   padding-top: 0.5rem !important;
   padding-bottom: 0.5rem !important; }
 
-.p-3, .quote, .quote-warning, #productList .product-info, #blockAutoInvest, .terms-agree-all {
+.p-3, .quote, .quote-warning, .stockList .product-info, #blockAutoInvest, .terms-agree-all {
   padding: 1rem 1rem !important; }
 
 .pt-3, .section-header {
@@ -6447,7 +6447,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
   padding-right: 1rem !important;
   padding-left: 1rem !important; }
 
-.py-3, #productList .list-header th, #blockInfo .table-left-head td, .survey table td, .agree-all {
+.py-3, .stockList .list-header th, #blockInfo .table-left-head td, .survey table td, .agree-all {
   padding-top: 1rem !important;
   padding-bottom: 1rem !important; }
 
@@ -8147,8 +8147,8 @@ a.bg-inverse:focus, a.bg-inverse:hover {
 .text-right, .table-portfolio td:last-child, .table-wating td:last-child, .table-complete td:last-child, .survey table .data, .order-detail table .data {
   text-align: right !important; }
 
-.text-center, #banner, #productList .list-header th, #productList .product-option,
-#productList .product-profit, .filter-card .title, #portfolio .page, .section-header, #profit .control, .input-group-sign-in {
+.text-center, #banner, .stockList .list-header th, .stockList .product-option,
+.stockList .product-profit, .filter-card .title, #portfolio .page, .section-header, #profit .control, .input-group-sign-in {
   text-align: center !important; }
 
 @media (min-width: 576px) {
@@ -10960,13 +10960,17 @@ button.close {
   text-align: center; }
 
 /* 기본 설정 */
+*, h1, h2, h3, h4, h5, h6, p
+.h1, .h2, #portfolio .asset, .h3, .h4, #banner h1, .h5, .filter-card .title, .block .title, .block-card .title, #profit .title, .table-full-width .value, .table-full-width.reverse .value, .h6, #filterButton i, #portfolio .title, .block .title-sm, .block-card .title-sm, #profit .title-sm {
+  word-break: keep-all; }
+
 .container {
   max-width: 475px; }
 
 .h4, #banner h1 {
   line-height: 1.3em; }
 
-.h7, .quote, .quote-warning, #productList .list-header i, #productList .list-item i, #productList .product-info, .block .subtitle, .block-card .subtitle, #profit .subtitle, #blockAutoInvest i, #sell_amount .note, .circle-steps .term, h7 {
+.h7, .quote, .quote-warning, .stockList .list-header i, .stockList .list-item i, .stockList .product-info, .block .subtitle, .block-card .subtitle, #profit .subtitle, #blockAutoInvest i, #sell_amount .note, .circle-steps .term, h7 {
   font-size: 13px; }
 
 .fixed-bottom, #blockButtons, .survey .btn-next {
@@ -10981,18 +10985,26 @@ a, a:focus, a:hover {
   background-color: #fef2e6;
   border: 0 !important; }
 
-#productList .list-header .arrow {
+.no-col-padding [class*='col'] {
+  padding: 0; }
+
+.block-image {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover; }
+
+.stockList .list-header .arrow {
   position: absolute;
   font-size: 10px;
   margin: 5px 0 0 6px; }
-#productList .product-name {
+.stockList .product-name {
   padding: 24px 0;
   text-align: left; }
-  #productList .product-name .sort {
+  .stockList .product-name .sort {
     margin-bottom: 0px; }
-  #productList .product-name .name {
+  .stockList .product-name .name {
     color: #999999; }
-#productList .product-info {
+.stockList .product-info {
   line-height: 1.6; }
 
 #filterButton {
