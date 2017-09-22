@@ -47,6 +47,24 @@ a, a:focus, a:hover {
     display: none;
   }
 }
+.btn-square {
+    @extend .btn, .rounded-0, .bold, .gray0-text ;
+}
+.btn-modal {
+    @extend .btn, .w-49, .mb-2, .bold ;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.btn-outline-white {
+  background-color: transparent;
+}
+.w-49 {
+    width: 49%;
+}
+.modal .table-bordered th,
+.modal .table-bordered td {
+  border: 1px solid #e0e0e0;
+}
 
 // 시작 가이드 배너
 #banner {

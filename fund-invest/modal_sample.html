@@ -1,0 +1,60 @@
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#3E63BC" />
+  <!-- 위 3개의 메타 태그는 *반드시* head 태그의 처음에 와야합니다; 어떤 다른 콘텐츠들은 반드시 이 태그들 *다음에* 와야 합니다 -->
+  <title>Toss - 소액 펀드 투자</title>
+
+  <!-- Toss 공용 CSS 문서의 맨 처음에 와야 합니다;-->
+  <link href="assets/stylesheet/tossframe-2.0.4.css" rel="stylesheet">
+  <link href="assets/stylesheet/style.css" rel="stylesheet">
+
+
+</head>
+<body>
+
+  <!-- 하단 고정 필터 -->
+  <!-- data-target에 띄우고자 하는 모달의 id를 입력하세요 -->
+  <button id="filterButton" class="btn-accent" data-toggle="modal" data-target="#exampleModalName">
+    <span class="name">모달 호출</span>
+  </button>
+
+  <!-- 성향 선택 모달 -->
+  <!-- 모달의 id를 설정하세요. data-target은 id를 기준으로 모달을 호출합니다 -->
+  <div class="modal fade" id="exampleModalName" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog fixed-bottom" role="document">
+      <div class="modal-content">
+
+        <!-- header -->
+        <div class="modal-header">
+          <h5 class="modal-title">타이틀</h5>
+          <!-- Close button
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button> -->
+        </div>
+
+        <!-- body -->
+        <div class="modal-body">
+          <div class="content pb-3 mb-3">내용을 입력하세요</div>
+          <div class="text-center">
+            <button class="btn-modal btn-secondary">Action 1</button>
+            <button class="btn-modal btn-accent">Action 2</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 기본 JavaScript 프레임워크 -->
+  <script src="assets/javascript/jquery-3.2.1.min.js"></script>
+  <script src="assets/javascript/tether.min.js"></script>
+  <script src="assets/javascript/tossframe-2.0.0.js"></script>
+
+  <!-- 커스텀 이벤트 -->
+  <script src="assets/javascript/event.js"></script>
+
+</body>
+</html>
