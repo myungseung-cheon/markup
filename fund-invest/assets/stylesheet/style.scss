@@ -38,6 +38,15 @@ a, a:focus, a:hover {
   background-position: center center;
   background-size: cover;
 }
+.radio-btn {
+  @extend .blue500-text, .mb-1, .py-3, .px-0, .bold ;
+  border: 1px solid #144ae1;
+  text-align: center;
+  font-size: 18px;
+  input {
+    display: none;
+  }
+}
 
 // 시작 가이드 배너
 #banner {
@@ -489,6 +498,9 @@ a, a:focus, a:hover {
   }
   .question, .title {
     @extend .mb-2, .mt-5 ;
+  }
+  .tag {
+    @extend .blue500-text, .mt-5, .mb-2 ;
   }
   .description {
     @extend .blue500-text ;
