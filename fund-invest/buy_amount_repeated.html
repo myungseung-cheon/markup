@@ -27,26 +27,39 @@
       <div class="sheet">
         <form action="">
           <!-- 금액 입력 -->
-          <h4 class="question">얼마를 구매할까요?</h4>
+          <h4 class="question">얼마를 투자할까요?</h4>
           <p class="description">최대금액 : 2,000,000원</p>
-          <input class="form-control form-control-lg" type="text" value="42만원">
+          <div class="input-group mb-3">
+            <input id="buyAmount" class="form-control form-control-lg mb-0" aria-describedby="basic-addon3" type="number">
+            <span class="input-group-addon px-3" id="basic-addon3">원</span>
+          </div>
 
           <!-- 반복 선택 -->
-          <label class="radio-lg inline">
-            <input type="radio" name="radio" value="1">한 번만
-          </label>
-          <label class="radio-lg inline ml-4">
-            <input type="radio" name="radio" value="2" checked>매월 반복
-          </label>
-
-          <!-- 반복일 설정 -->
           <fieldset disabled>
-            <h4 class="question">언제 구매할까요?</h4>
-            <p class="description">* 한 번 선택한 날짜는 변경할 수 없습니다.</p>
-            <select class="repeat-date oi oi-caret-bottom">
-              <option selected>매 월 31일</option>
-            </select>
+            <label class="radio-lg inline">
+              <input type="radio" name="radio" value="1">한 번만
+            </label>
+            <label class="radio-lg inline ml-4">
+              <input type="radio" name="radio" value="2" checked>매월 반복
+            </label>
           </fieldset>
+
+          <!-- 반복 상세 설정 -->
+          <div id="repeatOption" class="sheet py-2 rounded gray100 mt-3">
+            <!-- 반복일 설정 -->
+            <fieldset disabled>
+              <h6 class="sub-question">어떤 날짜에 반복할까요?</h6>
+              <select class="repeat-date oi oi-caret-bottom mb-3">
+                <option selected>매월 31일</option>
+              </select>
+            </fieldset>
+
+            <!-- 반복 마감 설정 -->
+            <h6 class="sub-question">언제까지 반복할까요?</h6>
+            <select class="repeat-date oi oi-caret-bottom mb-3">
+              <option selected>18년 7월</option>
+            </select>
+          </div>
 
           <a href="#confirmRepeatModal" data-toggle="modal" data-target="#confirmRepeatModal">
             <input type="submit" value="다음" class="btn-next">

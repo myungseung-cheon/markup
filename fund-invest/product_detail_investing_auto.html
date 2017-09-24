@@ -31,11 +31,11 @@
     </section>
 
     <!-- 자동투자 종료 모달 -->
-    <div id="finishAutoInvestModal" class="modal fade">
+    <!-- <div id="finishAutoInvestModal" class="modal fade">
       <div class="modal-dialog fixed-bottom gray0" role="document">
         <div class="modal-conten">
           <div class="modal-header">
-            <h5 class="modal-title">자동 투자를 종료할까요?</h5>
+            <h5 class="modal-title">정말 자동투자를 종료할까요?</h5>
           </div>
           <div class="modal-body">
             <p>한 번 취소하면 되돌릴 수 없으며, [구매하기]를 눌러 다시 설정해야합니다.</p>
@@ -46,13 +46,34 @@
           </div>
         </div>
       </div>
+    </div> -->
+
+    <div class="modal fade" id="finishAutoInvestModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog fixed-bottom" role="document">
+        <div class="modal-content">
+
+          <!-- header -->
+          <div class="modal-header">
+            <h5 class="modal-title">정말 자동투자를 종료할까요?</h5>
+          </div>
+
+          <!-- body -->
+          <div class="modal-body">
+            <p>한 번 취소하면 되돌릴 수 없으며, [구매하기]를 눌러 다시 설정해야합니다.</p>
+            <div class="text-center">
+              <button class="btn-modal btn-secondary">계속 투자하기</button>
+              <button class="btn-modal btn-danger">종료하기</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- 수익률 -->
     <section id="profit" class="block">
       <p class="label">수익률</p>
       <h2 class="pink500-text">24.1%</h2>
-      <canvas id="profitChart" width="400" height="400"></canvas>
+      <canvas id="profitChart" width="400" height="200"></canvas>
       <!-- 기간 설정 -->
       <table class="control">
         <tr>

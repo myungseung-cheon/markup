@@ -2,10 +2,11 @@
 
 
 /* 기본 설정 */
-*, h1, h2, h3, h4, h5, h6, p
+h1, h2, h3, h4, h5, h6, p
 .h1, .h2, .h3, .h4, .h5, .h6 {
   word-break: keep-all;
 }
+
 .container { max-width: 475px; }
 .h4 { line-height: 1.3em; }
 .h7, h7 { font-size: 13px; }
@@ -16,6 +17,8 @@
 a, a:focus, a:hover {
   text-decoration: none !important;
   color: inherit !important;
+  -webkit-appearance:none;
+  outline: none;
 }
 .quote {
   @extend .h7, .p-3, .b-1, .rounded, .gray50, .gray700-text ;
@@ -64,6 +67,27 @@ a, a:focus, a:hover {
 .modal .table-bordered th,
 .modal .table-bordered td {
   border: 1px solid #e0e0e0;
+}
+.col-option-selected {
+  @extend .blue50 ;
+}
+.hide {
+  display: none;
+}
+fieldset:disabled {
+  h1, h2, h3, h4, h5, h6, h7, label, input,
+  .h1, .h2, .h3, .h4, .h5, .h6, .h7 {
+    @extend .gray600-text ;
+  }
+}
+.line-height-base {
+  line-height: 1.6rem;
+}
+.modal-title {
+  @extend .bold ;
+}
+.modal-content {
+  @extend .p-2 ;
 }
 
 // 시작 가이드 배너
@@ -233,10 +257,22 @@ a, a:focus, a:hover {
 .btn-hide {
   bottom: -62px !important;
 }
+// 상품 헤더
+.header-shinhan {
+  @extend .blue600, .blue200-text, .h7, .text-center, .py-2 ;
+  box-shadow: 0px 1px 6px 0px #2e4996;
+  position: relative;
+  z-index: 1;
+  img {
+    opacity: 0.9;
+    height:18px;
+    margin-top:-2px;
+  }
+}
 
 // 메인화면 내 자산
 #portfolio {
-  @extend .blue600 ;
+  @extend .blue600  ;
   .page {
     @extend .py-5, .px-3, .text-center, .w-100 ;
   }
@@ -517,6 +553,9 @@ a, a:focus, a:hover {
   .question, .title {
     @extend .mb-2, .mt-5 ;
   }
+  .sub-question {
+    @extend .mt-4 ;
+  }
   .tag {
     @extend .blue500-text, .mt-5, .mb-2 ;
   }
@@ -527,19 +566,23 @@ a, a:focus, a:hover {
     @extend .gray600-text, .normal ;
     line-height: 1.6;
   }
-  input {
-    @extend .mb-4 ;
-  }
   table {
     @extend .table ;
+    &.unstyled {
+      @extend .mb-0 ;
+      td {
+        @extend .bb-0, .pt-0, .pb-2 ;
+      }
+    }
     td {
       @extend .py-3, .px-0, .bt-0, .bb-1 ;
     }
     .head {
-      @extend .gray800-text, .w-30 ;
+      @extend .bold, .gray800-text, .w-35 ;
     }
     .data {
-      @extend .bold, .text-right, .gray800-text ;
+      @extend .gray800-text ;
+      word-break: normal;
      }
   }
   .btn-next {
@@ -551,6 +594,7 @@ a, a:focus, a:hover {
   .btn-download {
     @extend .btn, .btn-secondary, .btn-block ;
     font-size: 1rem !important;
+    border-radius: 0 !important;
     border-color: #e0e0e0;
   }
   fieldset[disabled] {
@@ -596,8 +640,12 @@ a, a:focus, a:hover {
 // 자동 투자 설정
 .repeat-date {
   @extend .form-control, .form-control-lg, .custom-select ;
-  margin-bottom: 300px;
   background: #fff url(../../assets/images/caret-bottom.svg) no-repeat right 0.75rem center;
+}
+
+//투자 설정
+#invest_amount {
+  margin-bottom: 160px;
 }
 
 // 환매 설정
@@ -624,7 +672,7 @@ a, a:focus, a:hover {
   }
   h7 {
     display: block;
-    margin-top: 60px;
+    margin-top: 52px;
   }
   .circle {
     @extend .gray200 ;

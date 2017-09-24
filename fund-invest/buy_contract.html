@@ -7,9 +7,6 @@
     <!-- 위 3개의 메타 태그는 *반드시* head 태그의 처음에 와야합니다; 어떤 다른 콘텐츠들은 반드시 이 태그들 *다음에* 와야 합니다 -->
     <title>Toss - 소액 펀드 투자</title>
 
-    <!-- Toss 공용 CSS 문서의 맨 처음에 와야 합니다;-->
-    <link href="assets/stylesheet/tossframe-2.0.4.css" rel="stylesheet">
-
     <!-- 커스텀 스타일 -->
     <link href="assets/stylesheet/style.css" rel="stylesheet">
 
@@ -25,10 +22,7 @@
 
         <!-- 양식 -->
         <div class="sheet">
-
-            <!-- 제목 -->
-            <h4 class="title">구매 계약서</h4>
-
+            <h4 class="title">투자 계약서</h4>
             <!-- 요약 -->
             <table>
                 <!-- 상품명 -->
@@ -38,11 +32,11 @@
                 </tr>
                 <!-- 투자금액 -->
                 <tr>
-                    <td class="head">구매 금액</td>
+                    <td class="head">투자 금액</td>
                     <td class="data">200 만원</td>
                 </tr>
                 <!-- 수수료 -->
-                <tr>
+                <!-- <tr>
                     <td class="head">수수료</td>
                     <td class="data">
                         <p>보수 1.2%</p>
@@ -51,52 +45,76 @@
                             선취 수수료 없음
                         </span>
                     </td>
+                </tr> -->
+
+                <!-- 운용보고서 -->
+                <tr>
+                    <td class="head mb-4">운용보고서</td>
+                    <td>
+                        <p class="h7">투자의 운용에 대한 보고서를 수령할 방법을 선택하세요.</p>
+                        <label class="radio-lg inline">
+                          <input type="radio" name="radio" value="1" checked>자택
+                        </label>
+                        <label class="radio-lg inline ml-4">
+                          <input type="radio" name="radio" value="2">이메일
+                        </label>
+                    </td>
                 </tr>
+                <tr>
+                    <td class="bt-0" colspan="2">
+                        <!-- 자택 선택 시 노출 -->
+                        <div id="reportToHome" class="b-1 rounded p-3 gray50">
+                            주소 : 서울시 관악구 봉천동 ###
+                        </div>
+                        <!-- 이메일 선택 시 노출 -->
+                        <div id="reportToEmail" class="b-1 rounded p-3 gray50 hide">
+                            <p>이메일</p>
+                            <input class="form-control form-control-lg mb-0" type="email" placeholder="name@email.com" required>
+                            <h7 id="errorLog" class="ABlue500-text">이메일 주소를 입력해주세요</h7>
+                        </div>
+                    </td>
+                </tr>
+
                 <!-- 계약일 -->
                 <tr>
                     <td colspan="2">
-                        <p class="mb-4">계약일</p>
+                        <p class="head mb-4">계약일</p>
                         <ol class="circle-steps">
                             <li>
                                 <div class="circle"></div>
                                 <div class="bar"></div>
-                                <h7>구매요청</h7>
+                                <h7>투자요청</h7>
                                 <span class="term">즉시</span>
                             </li>
                             <li>
                                 <div class="circle"></div>
                                 <div class="bar"></div>
-                                <h7>입금완료</h7>
+                                <h7>주문완료</h7>
                                 <span class="term">즉시</span>
                             </li>
                             <li>
                                 <div class="circle"></div>
-                                <div class="bar"></div>
-                                <h7>계약완료</h7>
-                                <span class="term">1일</span>
-                            </li>
-                            <li>
-                                <div class="circle"></div>
-                                <h7>상품전달</h7>
+                                <h7>결제완료</h7>
                                 <span class="term">1일</span>
                             </li>
                         </ol>
 
                         <!-- 15:30 이후에 투자 안내 -->
                         <!-- <div class="quote-warning">
-                            15:30 이후에 구매를 요청하셨기 때문에, 출금된 돈은 다음날 투자사로 입금됩니다.
+                            15:30 이후에 투자를 요청하셨기 때문에, 출금된 돈은 다음날 투자사로 입금됩니다.
                         </div> -->
 
                         <!-- 17:00 이후에 투자 안내 -->
                         <!-- <div class="quote-warning">
-                            17:00 이후에 구매를 요청하셨기 때문에 다음날 접수됩니다.
+                            17:00 이후에 투자를 요청하셨기 때문에 다음날 접수됩니다.
                         </div> -->
                     </td>
                 </tr>
+
             </table>
 
             <!-- 필수항목 모두 동의 -->
-            <label class="checkbox-lg bold agree-all">
+            <label id="checkAllAgreement" class="checkbox-lg bold agree-all">
                 <input type="checkbox" name="input1">투자자 동의사항 모두 확인
             </label>
             <ul class="terms-list required">
@@ -110,7 +128,7 @@
             <button class="btn-download">전체 설명서 다운로드</button>
 
             <!-- 설명서 다운로드 버튼 -->
-            <button class="btn-confirm">구매하기</button>
+            <button class="btn-confirm" disabled>투자하기</button>
 
         </div>
 
@@ -120,21 +138,17 @@
 </section>
 
 
-
-
-
-
 <!-- 기본 JavaScript 프레임워크 -->
 <script src="assets/javascript/jquery-3.2.1.min.js"></script>
 <script src="assets/javascript/tether.min.js"></script>
 <script src="assets/javascript/tossframe-2.0.0.js"></script>
 
-<!-- 차트 -->
-<script src="assets/javascript/Chart.bundle.js"></script>
-<script src="assets/javascript/chartSetting.js"></script>
+<!-- Validation -->
+<script src="assets/javascript/email-checker.js"></script>
+<script src="assets/javascript/term-checker.js"></script>
 
 <!-- 커스텀 이벤트 -->
-<!-- <script src="assets/javascript/event.js"></script> -->
+<script src="assets/javascript/event.js"></script>
 
 </body>
 </html>

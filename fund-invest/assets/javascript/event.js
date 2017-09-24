@@ -22,55 +22,48 @@ $(document).ready(function(){
         }
     });
 
+    // 필터 선택 col 강조
+    var firstOptionHead = $('.stockList tr th:nth-child(2)');
+    var firstOptionCol = $('.stockList tr td:nth-child(3)');
+    var secondOptionHead = $('.stockList tr th:nth-child(3)');
+    var secondOptionCol = $('.stockList tr td:nth-child(4)');
+    secondOptionHead.addClass('b-1-gray500');
+    secondOptionCol.addClass('col-option-selected');
+
     // 구매자/판매자
     $('#modalOptionFilter button').click(function(){
-        var text = $(this).text();
-        $('#modalOptionFilter button').toggleClass('oi oi-check');
-        $("[data-target='#modalOptionFilter'] span").text(text);
+        var optionText = $(this).text();
+        var th = $("[data-target='#modalOptionFilter'] span");
 
+        $('#modalOptionFilter button').toggleClass('oi oi-check');
+        th.text(optionText);
+
+        firstOptionCol.addClass('col-option-selected');
+        secondOptionCol.removeClass('col-option-selected');
+        firstOptionHead.addClass('b-1-gray500');
+        secondOptionHead.removeClass('b-1-gray500');
     });
+
     // 수익률
     $('#profitFilter button').click(function(){
         $('#profitFilter button').removeClass('oi oi-check');
         $(this).addClass('oi oi-check');
+        firstOptionCol.removeClass('col-option-selected');
+        secondOptionCol.addClass('col-option-selected');
+        firstOptionHead.removeClass('b-1-gray500');
+        secondOptionHead.addClass('b-1-gray500');
     });
 
-    //스크롤 이벤트
-    var lastScrollTop = 0;
-    $(window).scroll(function () {
+    // 매월 반복 옵션
+    $("label:contains('매월 반복')").click(function(){
+        $('#repeatOption').removeClass('hide');
+        $('body').stop().animate({scrollTop:178});
+    })
+    $("label:contains('한 번만')").click(function(){
+        $('body').stop().animate({scrollTop:0}, function(){
+            $('#repeatOption').addClass('hide');
+        });
 
-        var src = $(this).scrollTop();
-        var btn = $('#filterButton');
-        var targetSrc = 860;
-
-        // 모든 상품 영역을 볼 때 필터 보임
-        if (src > targetSrc) {
-            // 스크롤 내리는 중이면 필터 보임
-            if(src < lastScrollTop) {
-                btn.addClass('btn-hide');
-            }
-            // 스크롤 올리는 중이면 필터 가림
-            else {
-                btn.removeClass('btn-hide');
-            }
-            lastScrollTop = src;
-        } else {
-        // 모든 상품을 안볼 때 필터 가림
-          btn.addClass('btn-hide');
-        }
-    });
-
-    // Carousel 터치 슬라이드
-    $(".carousel").swipe({
-
-      swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
-
-        if (direction == 'left') $(this).carousel('next');
-        if (direction == 'right') $(this).carousel('prev');
-
-      },
-      allowPageScroll:"vertical"
-
-    });
+    })
 
 });

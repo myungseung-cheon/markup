@@ -25,7 +25,7 @@
     <section id="recommendList" class="p-4">
 
       <!-- 수익률 추천 -->
-      <h4 class="mt-4 bold">3개월 수익율 TOP3</h4>
+      <h4 class="mt-4 bold">3개월 수익률 TOP3</h4>
       <p class="mb-4 w-90 ">최근 3개월 가장 높은 수익률을 기록한 상품에 투자해보세요</p>
       <div class="stockList gray0 b-1 mb-6">
         <table>
@@ -252,7 +252,7 @@
 
     <!-- 하단 고정 필터 -->
     <button id="filterButton" class="btn-warning btn-hide" data-toggle="modal" data-target="#modalSelectType">
-      <i></i> <span class="name">실리형</span>
+      <i></i> <span class="name">중립형</span>
     </button>
 
     <!-- 성향 선택 모달 -->
@@ -279,9 +279,9 @@
                 </td>
               </tr>
 
-              <!-- 실리형 필터 카드 -->
+              <!-- 중립형 필터 카드 -->
               <tr id="filterBeneficial" class="filter-card selected" data-dismiss="modal">
-                <td class="title">실리형</td>
+                <td class="title">중립형</td>
                 <td class="align-top">
                   <p class="h7 mt-0 pr-2">시장 평균 수익률을 추구하며 약간의 손실을 감수할 수 있는 주식 반 채권 반 펀드 등을 일컫습니다.</p>
                   <span class="tag danger-4">다소높은위험</span>
@@ -352,8 +352,52 @@
     <script src="assets/javascript/tether.min.js"></script>
     <script src="assets/javascript/tossframe-2.0.0.js"></script>
 
+    <!-- carousel 플러그인 -->
+    <script src="assets/javascript/touchSwipe.js"></script>
+
     <!-- 커스텀 이벤트 -->
     <script src="assets/javascript/event.js"></script>
+    <script type="text/javascript">
+
+      // Carousel 터치 슬라이드
+      $(".carousel").swipe({
+
+        swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
+
+          if (direction == 'left') $(this).carousel('next');
+          if (direction == 'right') $(this).carousel('prev');
+
+        },
+        allowPageScroll:"vertical"
+
+      });
+
+      //스크롤 이벤트
+      var lastScrollTop = 0;
+      $(window).scroll(function () {
+
+          var src = $(this).scrollTop();
+          var btn = $('#filterButton');
+          var targetSrc = 860;
+
+          // 모든 상품 영역을 볼 때 필터 보임
+          if (src > targetSrc) {
+              // 스크롤 내리는 중이면 필터 보임
+              if(src < lastScrollTop) {
+                btn.addClass('btn-hide');
+              }
+              // 스크롤 올리는 중이면 필터 가림
+              else {
+
+                btn.removeClass('btn-hide');
+              }
+              lastScrollTop = src;
+          } else {
+          // 모든 상품을 안볼 때 필터 가림
+            btn.addClass('btn-hide');
+          }
+      });
+    </script>
 
   </body>
 </html>

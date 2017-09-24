@@ -27,24 +27,42 @@
         <div class="sheet">
 
             <!-- 제목 -->
-            <h4 class="title">판매 주문서</h4>
+            <h4 class="title">환매 주문서</h4>
 
             <!-- 요약 -->
             <table>
                 <!-- 상품명 -->
                 <tr>
                     <td class="head">상품명</td>
-                    <td class="data">맥쿼리테마따라잡기증권자투자신탁1호[주식](A)</td>
+                    <td class="text-right">맥쿼리테마따라잡기증권자투자신탁1호[주식](A)</td>
                 </tr>
                 <!-- 투자금액 -->
                 <tr>
-                    <td class="head">판매 금액</td>
-                    <td class="data">200 만원</td>
+                    <td class="head">
+                        환매 예상 금액
+                    </td>
+                    <td class="text-right">198,000 원</td>
                 </tr>
-                <!-- 수수료 -->
                 <tr>
-                    <td class="head">수수료</td>
-                    <td class="data">없음</td>
+                    <td colspan="2">
+                        <table class="unstyled">
+                            <tr>
+                                <td>상품 금액</td>
+                                <td class="text-right">200,000 원</td>
+                            </tr>
+                            <tr>
+                                <td>세금</td>
+                                <td class="text-right">- 200 원</td>
+                            </tr>
+                            <tr>
+                                <td>수수료</td>
+                                <td class="text-right">- 0 원</td>
+                            </tr>
+                        </table>
+                        <div class="quote mt-3">
+                            환매 예상 금액은 당일 기준가 환율로 계산되었으며, 실제 주문시 금액이 달라질 수 있습니다.
+                        </div>
+                    </td>
                 </tr>
                 <!-- 계약일 -->
                 <tr>
@@ -54,7 +72,7 @@
                             <li>
                                 <div class="circle"></div>
                                 <div class="bar"></div>
-                                <h7>판매요청</h7>
+                                <h7>환매요청</h7>
                                 <span class="term">1일</span>
                             </li>
                             <li>
@@ -72,7 +90,7 @@
 
                         <!-- 15:30 이후 구매 안내 -->
                         <!-- <div class="quote-warning">
-                            15:30 이후에 판매를 요청하셨기 때문에, 투자를 위해 출금된 돈은 다음날 투자사로 입금됩니다.
+                            15:30 이후에 환매를 요청하셨기 때문에, 투자를 위해 출금된 돈은 다음날 투자사로 입금됩니다.
                         </div> -->
 
                         <!-- 17:00 이후 구매 안내 -->
@@ -84,7 +102,7 @@
             </table>
 
             <!-- 설명서 다운로드 버튼 -->
-            <button class="btn-confirm">판매하기</button>
+            <button class="btn-confirm">환매하기</button>
 
         </div>
 
