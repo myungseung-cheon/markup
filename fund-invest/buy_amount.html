@@ -49,7 +49,26 @@
           <!-- 반복 마감 설정 -->
           <h6 class="sub-question">언제까지 반복할까요?</h6>
           <input id="repeatDue" class="form-control form-control-lg" readonly="true" data-toggle="datepicker">
-          <div data-toggle="datepicker"></div>
+
+          <!-- 날짜 선택 모달 -->
+          <div class="modal fade" id="exampleModalName" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog fixed-bottom" role="document">
+              <div class="modal-content">
+
+                <!-- header -->
+                <div class="modal-header">
+                  <h5 class="modal-title">날짜 선택</h5>
+                </div>
+
+                <!-- body -->
+                <div class="modal-body">
+                  <div data-toggle="datepicker"></div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
 
