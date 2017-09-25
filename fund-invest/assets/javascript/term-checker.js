@@ -1,4 +1,14 @@
 // 구매계약서 자택-이메일 선택
+$("label:contains('받음')").click(function(){
+    $('#adressInfo').removeClass('hide');
+    checkTermValid();
+});
+$("label:contains('받지 않음')").click(function(){
+    $('#adressInfo').addClass('hide');
+    checkTermValid();
+});
+
+// 구매계약서 자택-이메일 선택
 var homeValid = true;
 $("label:contains('자택')").click(function(){
     $('#reportToHome').removeClass('hide');

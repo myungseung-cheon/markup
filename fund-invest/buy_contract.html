@@ -53,15 +53,31 @@
                     <td>
                         <p class="h7">투자의 운용에 대한 보고서를 수령할 방법을 선택하세요.</p>
                         <label class="radio-lg inline">
-                          <input type="radio" name="radio" value="1" checked>자택
+                          <input type="radio" name="receive" value="1">받음
                         </label>
-                        <label class="radio-lg inline ml-4">
-                          <input type="radio" name="radio" value="2">이메일
+                        <label class="radio-lg inline ml-3">
+                          <input type="radio" name="receive" value="2" checked>받지 않음
                         </label>
                     </td>
                 </tr>
-                <tr>
-                    <td class="bt-0" colspan="2">
+                <tr id="adressInfo" class="hide">
+                    <td colspan="2" class="bt-0">
+                        <table>
+                            <tr>
+                                <td class="head" style="border-bottom: 0 !important;">
+                                    받을 방법
+                                </td>
+                                <td class="data" style="border-bottom: 0 !important;">
+                                    <label class="radio-lg inline">
+                                      <input type="radio" name="radio" value="1" checked>자택
+                                    </label>
+                                    <label class="radio-lg inline ml-3">
+                                      <input type="radio" name="radio" value="2">이메일
+                                    </label>
+                                </td>
+                            </tr>
+                        </table>
+
                         <!-- 자택 선택 시 노출 -->
                         <div id="reportToHome" class="b-1 rounded p-3 gray50">
                             주소 : 서울시 관악구 봉천동 ###
@@ -69,7 +85,7 @@
                         <!-- 이메일 선택 시 노출 -->
                         <div id="reportToEmail" class="b-1 rounded p-3 gray50 hide">
                             <p>이메일</p>
-                            <input class="form-control form-control-lg mb-0" type="email" placeholder="name@email.com" required>
+                            <input class="form-control form-control-lg mb-2" type="email" placeholder="name@email.com" required>
                             <h7 id="errorLog" class="ABlue500-text">이메일 주소를 입력해주세요</h7>
                         </div>
                     </td>
