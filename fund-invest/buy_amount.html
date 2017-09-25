@@ -40,18 +40,16 @@
         </form>
 
         <!-- 반복 상세 설정 -->
-        <div id="repeatOption" class="sheet py-2 rounded gray100 mt-3 hide">
+        <div id="repeatOption" class="sheet pt-1 pb-4 rounded gray100 mt-3 hide">
           <!-- 반복일 설정 -->
           <h6 class="sub-question">어떤 날짜에 반복할까요?</h6>
-          <select class="repeat-date oi oi-caret-bottom mb-3">
-            <option selected>매월 31일</option>
-          </select>
+          <input id="repeatDate" class="form-control form-control-lg" readonly="true" data-toggle="datepicker">
+          <div data-toggle="datepicker"></div>
 
           <!-- 반복 마감 설정 -->
           <h6 class="sub-question">언제까지 반복할까요?</h6>
-          <select class="repeat-date oi oi-caret-bottom mb-3">
-            <option selected>18년 7월</option>
-          </select>
+          <input id="repeatDue" class="form-control form-control-lg" readonly="true" data-toggle="datepicker">
+          <div data-toggle="datepicker"></div>
         </div>
       </div>
 
@@ -66,6 +64,22 @@
     <script src="assets/javascript/jquery-3.2.1.min.js"></script>
     <script src="assets/javascript/tether.min.js"></script>
     <script src="assets/javascript/tossframe-2.0.0.js"></script>
+
+    <!-- 날짜 선택 -->
+    <link  href="assets/javascript/date-picker/datepicker.css" rel="stylesheet">
+    <script src="assets/javascript/date-picker/datepicker.js"></script>
+    <script type="text/javascript">
+      var d = new Date();
+      $('#repeatDate').datepicker({
+        autoPick: true,
+        format: '매월 dd일'
+      });
+      $('#repeatDue').datepicker({
+        autoPick: true,
+        date: new Date( d.getFullYear() + 1, d.getMonth() ),
+        format: 'yy년 mm월'
+      });
+    </script>
 
     <!-- 커스텀 이벤트 -->
     <script src="assets/javascript/event.js"></script>

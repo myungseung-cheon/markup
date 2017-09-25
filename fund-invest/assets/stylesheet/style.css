@@ -11110,6 +11110,12 @@ a, a:focus, a:hover {
   -webkit-appearance: none;
   outline: none; }
 
+input {
+  outline: none; }
+
+.form-control[readonly], [readonly].repeat-date {
+  background-color: white; }
+
 .quote-warning {
   background-color: #fef2e6;
   border: 0 !important; }
@@ -11341,7 +11347,7 @@ a, a:focus, a:hover {
   background: #fff url(../../assets/images/caret-bottom.svg) no-repeat right 0.75rem center; }
 
 #invest_amount {
-  margin-bottom: 160px; }
+  margin-bottom: 300px; }
 
 .circle-steps {
   display: table;

@@ -7,9 +7,6 @@
     <!-- 위 3개의 메타 태그는 *반드시* head 태그의 처음에 와야합니다; 어떤 다른 콘텐츠들은 반드시 이 태그들 *다음에* 와야 합니다 -->
     <title>Toss - 소액 펀드 투자</title>
 
-    <!-- Toss 공용 CSS 문서의 맨 처음에 와야 합니다;-->
-    <link href="assets/stylesheet/tossframe-2.0.4.css" rel="stylesheet">
-
     <!-- 커스텀 스타일 -->
     <link href="assets/stylesheet/style.css" rel="stylesheet">
 
@@ -45,27 +42,25 @@
           </fieldset>
 
           <!-- 반복 상세 설정 -->
-          <div id="repeatOption" class="sheet py-2 rounded gray100 mt-3">
+          <div id="repeatOption" class="sheet pt-1 pb-4 rounded gray100 mt-3">
+
             <!-- 반복일 설정 -->
             <fieldset disabled>
               <h6 class="sub-question">어떤 날짜에 반복할까요?</h6>
-              <select class="repeat-date oi oi-caret-bottom mb-3">
-                <option selected>매월 31일</option>
-              </select>
+              <input id="repeatDate" class="form-control form-control-lg" data-toggle="datepicker">
+              <div data-toggle="datepicker"></div>
             </fieldset>
 
             <!-- 반복 마감 설정 -->
             <h6 class="sub-question">언제까지 반복할까요?</h6>
-            <select class="repeat-date oi oi-caret-bottom mb-3">
-              <option selected>18년 7월</option>
-            </select>
+            <input id="repeatDue" class="form-control form-control-lg" data-toggle="datepicker">
+            <div data-toggle="datepicker"></div>
           </div>
+        </div>
 
           <a href="#confirmRepeatModal" data-toggle="modal" data-target="#confirmRepeatModal">
             <input type="submit" value="다음" class="btn-next">
           </a>
-
-
         </form>
       </div>
 
@@ -99,9 +94,21 @@
     <script src="assets/javascript/tether.min.js"></script>
     <script src="assets/javascript/tossframe-2.0.0.js"></script>
 
-    <!-- 차트 -->
-    <script src="assets/javascript/Chart.bundle.js"></script>
-    <script src="assets/javascript/chartSetting.js"></script>
+    <!-- 날짜 선택 -->
+    <link  href="assets/javascript/date-picker/datepicker.css" rel="stylesheet">
+    <script src="assets/javascript/date-picker/datepicker.js"></script>
+    <script type="text/javascript">
+      var d = new Date();
+      $('#repeatDate').datepicker({
+        autoPick: true,
+        format: '매월 dd일'
+      });
+      $('#repeatDue').datepicker({
+        autoPick: true,
+        date: new Date( d.getFullYear() + 1, d.getMonth() ),
+        format: 'yy년 mm월'
+      });
+    </script>
 
     <!-- 커스텀 이벤트 -->
     <!-- <script src="assets/javascript/event.js"></script> -->

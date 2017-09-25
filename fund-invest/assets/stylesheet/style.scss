@@ -20,6 +20,12 @@ a, a:focus, a:hover {
   -webkit-appearance:none;
   outline: none;
 }
+input {
+  outline: none;
+}
+.form-control[readonly] {
+  background-color: white;
+}
 .quote {
   @extend .h7, .p-3, .b-1, .rounded, .gray50, .gray700-text ;
   ul {
@@ -645,7 +651,7 @@ fieldset:disabled {
 
 //투자 설정
 #invest_amount {
-  margin-bottom: 160px;
+  margin-bottom: 300px;
 }
 
 // 환매 설정
