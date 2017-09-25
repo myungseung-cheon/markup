@@ -117,6 +117,9 @@ fieldset:disabled {
 .nav-item a {
     padding: 0.75rem 0;
 }
+.prevent-click {
+    pointer-events: none;
+}
 
 // 시작 가이드 배너
 #banner {

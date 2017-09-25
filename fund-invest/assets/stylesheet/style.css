@@ -11176,6 +11176,9 @@ input {
 .nav-item a {
   padding: 0.75rem 0; }
 
+.prevent-click {
+  pointer-events: none; }
+
 .stockList .list-header .arrow {
   position: absolute;
   font-size: 10px;

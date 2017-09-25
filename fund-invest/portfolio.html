@@ -12,6 +12,19 @@
 
   </head>
   <body class="gray150">
+    <!-- tabs -->
+    <div class="container-tabs blue600">
+      <div class="content">
+          <ul class="nav nav-tabs blue600 px-3">
+              <li class='nav-item w-50 text-center'>
+                  <a id="tabToPurchase" class="nav-link nav-active">구매하기</a>
+              </li>
+              <li class='nav-item nav-active w-50 text-center'>
+                  <a id="tabToHistory" class="nav-link">구매 내역</a>
+              </li>
+          </ul>
+      </div>
+    </div>
 
     <!-- 총 투자 자산 요약 -->
     <section id="protfolioSummary" class="block-blue py-5">
@@ -42,12 +55,12 @@
     <section id="portfolioItems">
       <table class="table-portfolio">
         <tr>
-          <td>
+          <td class="w-35">
             <h6>국내 주식형</h6>
             <h7>맥쿼리테마…</h7>
           </td>
           <td>
-            <canvas id="profitChart" style="width:60px; height:20px;"></canvas>
+            <canvas id="profitChart" class="prevent-click" style="width:60px; height:20px;"></canvas>
           </td>
           <td>
             <h6>120,230원</h6>
@@ -66,9 +79,6 @@
             <h6>국내 주식형</h6>
             <h7 class="gray600-text">맥쿼리테마따라잡기증권자투자신탁1호[주식](A)</h7>
           </td>
-          <td>
-            <canvas id="profitChart" style="width:60px; height:20px;"></canvas>
-          </td>
           <td class="w-30">
             <h6>50,000원</h6>
             <h7 class="status">구매 대기 중</h7>
@@ -78,9 +88,6 @@
           <td>
             <h6>국내대형주</h6>
             <h7 class="gray600-text">맥쿼리테마따라잡기증권자투자신탁1호[주식](A)</h7>
-          </td>
-          <td>
-            <canvas id="profitChart" style="width:60px; height:20px;"></canvas>
           </td>
           <td class="w-30">
             <h6>50,000원</h6>
@@ -99,9 +106,6 @@
             <h6>국내 주식형 / 구매</h6>
             <h7 class="gray600-text">맥쿼리테마따라잡기증권자투자신탁1호[주식](A)</h7>
           </td>
-          <td>
-            <canvas id="profitChart" style="width:60px; height:20px;"></canvas>
-          </td>
           <td class="w-35">
             <h6 class="blue500-text">+50,000원</h6>
             <h7 class="status">어제 12:33</h7>
@@ -111,9 +115,6 @@
           <td>
             <h6>국내 대형주 / 판매</h6>
             <h7 class="gray600-text">맥쿼리테마따라잡기증권자투자신탁1호[주식](A)</h7>
-          </td>
-          <td>
-            <canvas id="profitChart" style="width:60px; height:20px;"></canvas>
           </td>
           <td class="w-35">
             <h6 class="red500-text" >-50,000원</h6>
@@ -135,6 +136,9 @@
 
     <!-- 커스텀 이벤트 -->
     <!-- <script src="assets/javascript/event.js"></script> -->
+    <script type="text/javascript">
+      $('#profitChart').click(false);
+    </script>
 
   </body>
 </html>
