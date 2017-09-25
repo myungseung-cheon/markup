@@ -101,6 +101,10 @@ fieldset:disabled {
 .shadow-blue600 {
     box-shadow: 0px 1px 6px 0px #2e4996;
 }
+.input-password {
+    background-color: rgba(255, 255, 255, 0.24);
+        border: 1px solid #1c2334;
+}
 
 // navigation
 .nav-active {
