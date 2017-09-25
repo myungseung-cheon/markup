@@ -14,11 +14,14 @@ h1, h2, h3, h4, h5, h6, p
   position: fixed;
   bottom: 0;
 }
-a, a:focus, a:hover {
+a, a:focus, a:hover,
+a:not([href]):not([tabindex]):focus,
+a:not([href]):not([tabindex]) {
   text-decoration: none !important;
   color: inherit !important;
   -webkit-appearance:none;
   outline: none;
+  border: 0;
 }
 input {
   outline: none;
@@ -75,7 +78,7 @@ input {
   border: 1px solid #e0e0e0;
 }
 .col-option-selected {
-  @extend .blue50 ;
+  @extend .gray50 ;
 }
 .hide {
   display: none;
@@ -94,6 +97,25 @@ fieldset:disabled {
 }
 .modal-content {
   @extend .p-2 ;
+}
+.shadow-blue600 {
+    box-shadow: 0px 1px 6px 0px #2e4996;
+}
+
+// navigation
+.nav-active {
+    font-weight: bold;
+    border-bottom: 4px solid white;
+}
+.nav-tabs {
+    @extend .shadow-blue600 ;
+    position: relative;
+    z-index: 2;
+    border: none;
+    color: white;
+}
+.nav-item a {
+    padding: 0.75rem 0;
 }
 
 // 시작 가이드 배너
@@ -263,16 +285,19 @@ fieldset:disabled {
 .btn-hide {
   bottom: -62px !important;
 }
+.transition {
+    transition: all 0.2s ease-in-out;
+}
+
 // 상품 헤더
 .header-shinhan {
-  @extend .blue600, .blue200-text, .h7, .text-center, .py-2 ;
-  box-shadow: 0px 1px 6px 0px #2e4996;
-  position: relative;
+  @extend .gray800, .gray100-text, .h7, .text-center, .py-3 ;
   z-index: 1;
   img {
     opacity: 0.9;
     height:18px;
     margin-top:-2px;
+    margin-right: 8px;
   }
 }
 

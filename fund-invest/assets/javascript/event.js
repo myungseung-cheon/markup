@@ -23,11 +23,8 @@ $(document).ready(function(){
     });
 
     // 필터 선택 col 강조
-    var firstOptionHead = $('.stockList tr th:nth-child(2)');
-    var firstOptionCol = $('.stockList tr td:nth-child(3)');
-    var secondOptionHead = $('.stockList tr th:nth-child(3)');
-    var secondOptionCol = $('.stockList tr td:nth-child(4)');
-    secondOptionHead.addClass('b-1-gray500');
+    var firstOptionCol = $('.stockList tr th:nth-child(2), .stockList tr td:nth-child(3)');
+    var secondOptionCol = $('.stockList tr th:nth-child(3), .stockList tr td:nth-child(4)');
     secondOptionCol.addClass('col-option-selected');
 
     // 구매자/판매자
@@ -40,8 +37,6 @@ $(document).ready(function(){
 
         firstOptionCol.addClass('col-option-selected');
         secondOptionCol.removeClass('col-option-selected');
-        firstOptionHead.addClass('b-1-gray500');
-        secondOptionHead.removeClass('b-1-gray500');
     });
 
     // 수익률
@@ -50,8 +45,6 @@ $(document).ready(function(){
         $(this).addClass('oi oi-check');
         firstOptionCol.removeClass('col-option-selected');
         secondOptionCol.addClass('col-option-selected');
-        firstOptionHead.removeClass('b-1-gray500');
-        secondOptionHead.addClass('b-1-gray500');
     });
 
     // 매월 반복 옵션
