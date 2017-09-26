@@ -1490,7 +1490,7 @@ mark,
 .ABlue800-text {
   color: #081D5A; }
 
-.blue50, .col-option-selected {
+.blue50 {
   background-color: #EDF2FE; }
 
 .blue50-text {
@@ -1505,7 +1505,7 @@ mark,
 .blue200 {
   background-color: #B8CAFD; }
 
-.blue200-text, .header-shinhan, #portfolio .minus, #portfolio .arrow i:before, .table-full-width.reverse .label {
+.blue200-text, #portfolio .minus, #portfolio .arrow i:before, .table-full-width.reverse .label {
   color: #B8CAFD; }
 
 .blue300 {
@@ -1526,7 +1526,7 @@ mark,
 .blue500-text, .radio-btn, .filter-card.selected .title, .table-portfolio .minus, .table-wating .minus, .table-complete .minus, .survey .tag, .survey .description, .circle-steps .term, .circle-steps .term.active, .circle-steps .active h7 {
   color: #4E7BFA; }
 
-.blue600, #banner, .header-shinhan, #portfolio, .block-blue {
+.blue600, #banner, #portfolio, .block-blue {
   background-color: #3E63BC; }
 
 .blue600-text {
@@ -1550,7 +1550,7 @@ mark,
 .gray0-text, .btn-square, #banner h1, #portfolio .title, #portfolio .asset, #portfolio .arrow i, .block-blue, .table-full-width.reverse .value, #blockButtons button, #blockAutoInvest, .survey .btn-next {
   color: #FFFFFF; }
 
-.gray50, .quote, .quote-warning, #blockInfo .table-left-head .head {
+.gray50, .quote, .quote-warning, .col-option-selected, #blockInfo .table-left-head .head {
   background-color: #FAFAFA; }
 
 .gray50-text {
@@ -1559,7 +1559,7 @@ mark,
 .gray100 {
   background-color: #F5F5F5; }
 
-.gray100-text {
+.gray100-text, .header-shinhan {
   color: #F5F5F5; }
 
 .gray150 {
@@ -1617,7 +1617,7 @@ fieldset:disabled .h1, fieldset:disabled .h2, fieldset:disabled #portfolio .asse
 .gray700-text, .quote, .quote-warning, .section-header, .order-detail table .head, .agree-all {
   color: #666; }
 
-.gray800 {
+.gray800, .header-shinhan {
   background-color: #333; }
 
 .gray800-text, .block .title-sm, .block-card .title-sm, #profit .title-sm, .table-full-width .value, .survey table .head, .survey table .data, .order-detail table .data, .post {
@@ -6439,7 +6439,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
   padding-right: 0.5rem !important;
   padding-left: 0.5rem !important; }
 
-.py-2, .header-shinhan, .input-dash {
+.py-2, .input-dash {
   padding-top: 0.5rem !important;
   padding-bottom: 0.5rem !important; }
 
@@ -6462,7 +6462,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
   padding-right: 1rem !important;
   padding-left: 1rem !important; }
 
-.py-3, .radio-btn, .stockList .list-header th, #blockInfo .table-left-head td, .survey table td, .agree-all {
+.py-3, .radio-btn, .stockList .list-header th, .header-shinhan, #blockInfo .table-left-head td, .survey table td, .agree-all {
   padding-top: 1rem !important;
   padding-bottom: 1rem !important; }
 
@@ -11104,11 +11104,14 @@ h1, h2, h3, h4, h5, h6, p
   position: fixed;
   bottom: 0; }
 
-a, a:focus, a:hover {
+a, a:focus, a:hover,
+a:not([href]):not([tabindex]):focus,
+a:not([href]):not([tabindex]) {
   text-decoration: none !important;
   color: inherit !important;
   -webkit-appearance: none;
-  outline: none; }
+  outline: none;
+  border: 0; }
 
 input {
   outline: none; }
@@ -11156,6 +11159,29 @@ input {
 
 .line-height-base {
   line-height: 1.6rem; }
+
+.shadow-blue600, .nav-tabs {
+  box-shadow: 0px 1px 6px 0px #2e4996; }
+
+.input-password {
+  background-color: rgba(255, 255, 255, 0.24);
+  border: 1px solid #1c2334; }
+
+.nav-active {
+  font-weight: bold;
+  border-bottom: 4px solid white; }
+
+.nav-tabs {
+  position: relative;
+  z-index: 2;
+  border: none;
+  color: white; }
+
+.nav-item a {
+  padding: 0.75rem 0; }
+
+.prevent-click {
+  pointer-events: none; }
 
 .stockList .list-header .arrow {
   position: absolute;
@@ -11255,14 +11281,16 @@ input {
 .btn-hide {
   bottom: -62px !important; }
 
+.transition {
+  transition: all 0.2s ease-in-out; }
+
 .header-shinhan {
-  box-shadow: 0px 1px 6px 0px #2e4996;
-  position: relative;
   z-index: 1; }
   .header-shinhan img {
     opacity: 0.9;
     height: 18px;
-    margin-top: -2px; }
+    margin-top: -2px;
+    margin-right: 8px; }
 
 #portfolio .carousel-indicators li {
   height: 8px;

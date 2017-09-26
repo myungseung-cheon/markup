@@ -1,5 +1,5 @@
 <html lang="ko">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,260 +7,273 @@
     <!-- 위 3개의 메타 태그는 *반드시* head 태그의 처음에 와야합니다; 어떤 다른 콘텐츠들은 반드시 이 태그들 *다음에* 와야 합니다 -->
     <title>Toss - 소액 펀드 투자</title>
 
-    <!-- Toss 공용 CSS 문서의 맨 처음에 와야 합니다;-->
-    <link href="assets/stylesheet/tossframe-2.0.4.css" rel="stylesheet">
+    <!-- 커스텀 스타일-->
     <link href="assets/stylesheet/style.css" rel="stylesheet">
 
 
-  </head>
-  <body>
+</head>
+<body>
 
-    <!-- 판매처 고지 -->
-    <header class="header-shinhan">
-      <img src="assets/images/logo_shinhan.png" alt="로고-신한금융투자">
-      신한금융투자의 추천 상품을 중계합니다
-    </header>
+    <!-- tabs -->
+    <div class="container-tabs blue600">
+        <div class="content">
+            <ul class="nav nav-tabs blue600 px-3">
+                <li class='nav-item nav-active w-50 text-center'>
+                    <a id="tabToPurchase" class="nav-link nav-active">구매하기</a>
+                </li>
+                <li class='nav-item w-50 text-center'>
+                    <a id="tabToHistory" class="nav-link">구매 내역</a>
+                </li>
+            </ul>
+        </div>
+    </div>
 
     <!-- 투자 가이드 -->
     <section id="banner">
-      <h1>5,000원으로 시작하는<br>맞춤 펀드 투자</h1>
-      <button>투자 가이드</button>
+        <h1>5,000원으로 시작하는<br>맞춤 펀드 투자</h1>
+        <button>투자 가이드</button>
     </section>
+
+    <!-- 판매처 고지 -->
+    <header class="header-shinhan fixed-bottom">
+        <img src="assets/images/logo_shinhan.png" alt="로고-신한금융투자">
+        펀드상품은 신한금융투자가 제공합니다
+    </header>
 
     <!-- 상품 리스트 -->
     <section id="productList" class="stockList">
-      <table>
-        <thead>
-          <!-- 필터 -->
-          <tr class="list-header">
-            <th colspan="2">상품명</th>
-            <th>
-              <a href="#modalOptionFilter" data-toggle="modal" data-target="#modalOptionFilter">
-                 <span>구매자</span> <i></i>
-              </a>
-            </th>
-            <th>
-              <a href="#profitFilter" data-toggle="modal" data-target="#profitFilter">
-                <span>수익률</span> <i></i>
-              </a>
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          <!-- 상품 -->
-          <tr class="list-item">
-            <td class="product-type">
-              <i>●</i>
-            </td>
-            <td class="product-name">
-              <p class="sort">국내 대형주 주식형</p>
-              <h7 class="name">삼성중국본토레버리지…</h7>
-            </td>
-            <td class="product-option w-25 bold">3,506명</td>
-            <td class="product-profit w-25 bold pink500-text">20.5%</td>
-          </tr>
-          <tr class="list-item">
-            <td class="product-type">
-              <i>●</i>
-            </td>
-            <td class="product-name">
-              <p class="sort">국내 대형주 주식형</p>
-              <h7 class="name">삼성중국본토레버리지…</h7>
-            </td>
-            <td class="product-option w-25 bold">3,506명</td>
-            <td class="product-profit w-25 bold pink500-text">20.5%</td>
-          </tr>
-          <tr class="list-item">
-            <td class="product-type">
-              <i>●</i>
-            </td>
-            <td class="product-name">
-              <p class="sort">국내 대형주 주식형</p>
-              <h7 class="name">삼성중국본토레버리지…</h7>
-            </td>
-            <td class="product-option w-25 bold">3,506명</td>
-            <td class="product-profit w-25 bold pink500-text">20.5%</td>
-          </tr>
-          <tr class="list-item">
-            <td class="product-type">
-              <i>●</i>
-            </td>
-            <td class="product-name">
-              <p class="sort">국내 대형주 주식형</p>
-              <h7 class="name">삼성중국본토레버리지…</h7>
-            </td>
-            <td class="product-option w-25 bold">3,506명</td>
-            <td class="product-profit w-25 bold pink500-text">20.5%</td>
-          </tr>
-          <tr class="list-item">
-            <td class="product-type">
-              <i>●</i>
-            </td>
-            <td class="product-name">
-              <p class="sort">국내 대형주 주식형</p>
-              <h7 class="name">삼성중국본토레버리지…</h7>
-            </td>
-            <td class="product-option w-25 bold">3,506명</td>
-            <td class="product-profit w-25 bold pink500-text">20.5%</td>
-          </tr>
-          <tr class="list-item">
-            <td class="product-type">
-              <i>●</i>
-            </td>
-            <td class="product-name">
-              <p class="sort">국내 대형주 주식형</p>
-              <h7 class="name">삼성중국본토레버리지…</h7>
-            </td>
-            <td class="product-option w-25 bold">3,506명</td>
-            <td class="product-profit w-25 bold pink500-text">20.5%</td>
-          </tr>
-          <tr class="list-item">
-            <td class="product-type">
-              <i>●</i>
-            </td>
-            <td class="product-name">
-              <p class="sort">국내 대형주 주식형</p>
-              <h7 class="name">삼성중국본토레버리지…</h7>
-            </td>
-            <td class="product-option w-25 bold">3,506명</td>
-            <td class="product-profit w-25 bold pink500-text">20.5%</td>
-          </tr>
-          <tr class="list-item">
-            <td class="product-type">
-              <i>●</i>
-            </td>
-            <td class="product-name">
-              <p class="sort">국내 대형주 주식형</p>
-              <h7 class="name">삼성중국본토레버리지…</h7>
-            </td>
-            <td class="product-option w-25 bold">3,506명</td>
-            <td class="product-profit w-25 bold pink500-text">20.5%</td>
-          </tr>
-          <tr class="list-item">
-            <td class="product-type">
-              <i>●</i>
-            </td>
-            <td class="product-name">
-              <p class="sort">국내 대형주 주식형</p>
-              <h7 class="name">삼성중국본토레버리지…</h7>
-            </td>
-            <td class="product-option w-25 bold">3,506명</td>
-            <td class="product-profit w-25 bold pink500-text">20.5%</td>
-          </tr>
-          <tr class="list-item">
-            <td class="product-type">
-              <i>●</i>
-            </td>
-            <td class="product-name">
-              <p class="sort">국내 대형주 주식형</p>
-              <h7 class="name">삼성중국본토레버리지…</h7>
-            </td>
-            <td class="product-option w-25 bold">3,506명</td>
-            <td class="product-profit w-25 bold pink500-text">20.5%</td>
-          </tr>
-          <tr>
-            <td class="product-info" colspan="4">
-              온라인에서 구매 가능한한 선후취, 환매수수료가 없는 신한금융투자 제공 펀드리스트입니다.
-            </td>
-          </tr>
-        </tbody>
-      </table>
+        <table>
+            <thead>
+                <!-- 필터 -->
+                <tr class="list-header">
+                    <th colspan="2">상품명</th>
+                    <th >
+                        <a href="#modalOptionFilter" data-toggle="modal" data-target="#modalOptionFilter">
+                            <span>구매자</span> <i></i>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="#profitFilter" data-toggle="modal" data-target="#profitFilter">
+                            <span>수익률</span> <i></i>
+                        </a>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- 상품 -->
+                <tr class="list-item">
+                    <td class="product-type">
+                        <i>●</i>
+                    </td>
+                    <td class="product-name">
+                        <p class="sort">국내 대형주 주식형</p>
+                        <h7 class="name">계열사펀드 / 삼성중국…</h7>
+                    </td>
+                    <td class="product-option w-25 bold">3,506명</td>
+                    <td class="product-profit w-25 bold pink500-text">20.5%</td>
+                </tr>
+                <tr class="list-item">
+                    <td class="product-type">
+                        <i>●</i>
+                    </td>
+                    <td class="product-name">
+                        <p class="sort">국내 대형주 주식형</p>
+                        <h7 class="name">삼성중국본토레버리지…</h7>
+                    </td>
+                    <td class="product-option w-25 bold">3,506명</td>
+                    <td class="product-profit w-25 bold pink500-text">20.5%</td>
+                </tr>
+                <tr class="list-item">
+                    <td class="product-type">
+                        <i>●</i>
+                    </td>
+                    <td class="product-name">
+                        <p class="sort">국내 대형주 주식형</p>
+                        <h7 class="name">삼성중국본토레버리지…</h7>
+                    </td>
+                    <td class="product-option w-25 bold">3,506명</td>
+                    <td class="product-profit w-25 bold pink500-text">20.5%</td>
+                </tr>
+                <tr class="list-item">
+                    <td class="product-type">
+                        <i>●</i>
+                    </td>
+                    <td class="product-name">
+                        <p class="sort">국내 대형주 주식형</p>
+                        <h7 class="name">계열사펀드 / 삼성중국…</h7>
+                    </td>
+                    <td class="product-option w-25 bold">3,506명</td>
+                    <td class="product-profit w-25 bold pink500-text">20.5%</td>
+                </tr>
+                <tr class="list-item">
+                    <td class="product-type">
+                        <i>●</i>
+                    </td>
+                    <td class="product-name">
+                        <p class="sort">국내 대형주 주식형</p>
+                        <h7 class="name">삼성중국본토레버리지…</h7>
+                    </td>
+                    <td class="product-option w-25 bold">3,506명</td>
+                    <td class="product-profit w-25 bold pink500-text">20.5%</td>
+                </tr>
+                <tr class="list-item">
+                    <td class="product-type">
+                        <i>●</i>
+                    </td>
+                    <td class="product-name">
+                        <p class="sort">국내 대형주 주식형</p>
+                        <h7 class="name">계열사펀드 / 삼성중국…</h7>
+                    </td>
+                    <td class="product-option w-25 bold">3,506명</td>
+                    <td class="product-profit w-25 bold pink500-text">20.5%</td>
+                </tr>
+                <tr class="list-item">
+                    <td class="product-type">
+                        <i>●</i>
+                    </td>
+                    <td class="product-name">
+                        <p class="sort">국내 대형주 주식형</p>
+                        <h7 class="name">삼성중국본토레버리지…</h7>
+                    </td>
+                    <td class="product-option w-25 bold">3,506명</td>
+                    <td class="product-profit w-25 bold pink500-text">20.5%</td>
+                </tr>
+                <tr class="list-item">
+                    <td class="product-type">
+                        <i>●</i>
+                    </td>
+                    <td class="product-name">
+                        <p class="sort">국내 대형주 주식형</p>
+                        <h7 class="name">삼성중국본토레버리지…</h7>
+                    </td>
+                    <td class="product-option w-25 bold">3,506명</td>
+                    <td class="product-profit w-25 bold pink500-text">20.5%</td>
+                </tr>
+                <tr class="list-item">
+                    <td class="product-type">
+                        <i>●</i>
+                    </td>
+                    <td class="product-name">
+                        <p class="sort">국내 대형주 주식형</p>
+                        <h7 class="name">삼성중국본토레버리지…</h7>
+                    </td>
+                    <td class="product-option w-25 bold">3,506명</td>
+                    <td class="product-profit w-25 bold pink500-text">20.5%</td>
+                </tr>
+                <tr class="list-item">
+                    <td class="product-type">
+                        <i>●</i>
+                    </td>
+                    <td class="product-name">
+                        <p class="sort">국내 대형주 주식형</p>
+                        <h7 class="name">계열사펀드 / 삼성중국…</h7>
+                    </td>
+                    <td class="product-option w-25 bold">3,506명</td>
+                    <td class="product-profit w-25 bold pink500-text">20.5%</td>
+                </tr>
+                <tr>
+                    <td class="product-info" colspan="4">
+                        온라인에서 구매 가능한한 선후취, 환매수수료가 없는 신한금융투자 제공 펀드리스트입니다.
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </section>
 
     <!-- 하단 고정 필터 -->
-    <button id="filterButton" class="btn-warning" data-toggle="modal" data-target="#modalSelectType">
-      <i></i> <span class="name">중립형</span>
+    <button id="filterButton" class="btn-warning btn-hide" data-toggle="modal" data-target="#modalSelectType">
+        <i></i> <span class="name">중립형</span>
     </button>
 
     <!-- 성향 선택 모달 -->
     <div class="modal fade" id="modalSelectType" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog fixed-bottom" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">필터 선택</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
+        <div class="modal-dialog fixed-bottom" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">필터 선택</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
 
-            <!-- 필터들 -->
-            <table>
-              <!-- 공격형 필터 카드 -->
-              <tr id="filterAggressive" class="filter-card" data-dismiss="modal">
-                <td class="title">공격형</td>
-                <td class="align-top">
-                  <p class="h7 mt-0 pr-2">수익성이 높고 원금 손실의 위험도 있는 펀드입니다.</p>
-                  <span class="tag danger-6">매우높은위험</span>
-                  <span class="tag danger-5">높은위험</span>
-                </td>
-              </tr>
+                    <!-- 필터들 -->
+                    <table>
+                        <!-- 공격형 필터 카드 -->
+                        <tr id="filterAggressive" class="filter-card" data-dismiss="modal">
+                            <td class="title">공격형</td>
+                            <td class="align-top">
+                                <p class="h7 mt-0 pr-2">수익성이 높고 원금 손실의 위험도 있는 펀드입니다.</p>
+                                <span class="tag danger-6">매우높은위험</span>
+                                <span class="tag danger-5">높은위험</span>
+                            </td>
+                        </tr>
 
-              <!-- 중립형 필터 카드 -->
-              <tr id="filterBeneficial" class="filter-card selected" data-dismiss="modal">
-                <td class="title">중립형</td>
-                <td class="align-top">
-                  <p class="h7 mt-0 pr-2">시장 평균 수익률을 추구하며 약간의 손실을 감수할 수 있는 주식 반 채권 반 펀드 등을 일컫습니다.</p>
-                  <span class="tag danger-4">다소높은위험</span>
-                  <span class="tag danger-3">보통위험</span>
-                </td>
-              </tr>
+                        <!-- 중립형 필터 카드 -->
+                        <tr id="filterBeneficial" class="filter-card selected" data-dismiss="modal">
+                            <td class="title">중립형</td>
+                            <td class="align-top">
+                                <p class="h7 mt-0 pr-2">시장 평균 수익률을 추구하며 약간의 손실을 감수할 수 있는 주식 반 채권 반 펀드 등을 일컫습니다.</p>
+                                <span class="tag danger-4">다소높은위험</span>
+                                <span class="tag danger-3">보통위험</span>
+                            </td>
+                        </tr>
 
-              <!-- 안정형 필터 카드 -->
-              <tr id="filterStable" class="filter-card" data-dismiss="modal">
-                <td class="title">안정형</td>
-                <td class="align-top">
-                  <p class="h7 mt-0 pr-2">내 돈은 내가 지킨다! 수익률은 조금 적더라도 원금의 손실이 없는 국.공채 MMF 등의 상품을 일컫습니다.</p>
-                  <span class="tag danger-2">낮은위험</span>
-                  <span class="tag danger-1">매우낮은위험</span>
-                </td>
-              </tr>
+                        <!-- 안정형 필터 카드 -->
+                        <tr id="filterStable" class="filter-card" data-dismiss="modal">
+                            <td class="title">안정형</td>
+                            <td class="align-top">
+                                <p class="h7 mt-0 pr-2">내 돈은 내가 지킨다! 수익률은 조금 적더라도 원금의 손실이 없는 국.공채 MMF 등의 상품을 일컫습니다.</p>
+                                <span class="tag danger-2">낮은위험</span>
+                                <span class="tag danger-1">매우낮은위험</span>
+                            </td>
+                        </tr>
 
-            </table>
+                    </table>
 
-          </div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
 
     <!-- 구매자/판매자 선택 모달 -->
     <div class="modal fade" id="modalOptionFilter" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog fixed-bottom" role="document">
+        <div class="modal-dialog fixed-bottom" role="document">
 
-        <div class="modal-content">
-          <div class="modal-body p-0 text-center">
-              <button data-dismiss="modal" class="dropdown-item w-100 py-4 bb-1 oi oi-check" type="button">
-                구매자
-              </button>
-              <button data-dismiss="modal" class="dropdown-item w-100 py-4" type="button">
-                판매액
-            </button>
-          </div>
+            <div class="modal-content">
+                <div class="modal-body p-0 text-center">
+                    <button data-dismiss="modal" class="dropdown-item w-100 py-4 bb-1 oi oi-check" type="button">
+                        구매자
+                    </button>
+                    <button data-dismiss="modal" class="dropdown-item w-100 py-4" type="button">
+                        판매액
+                    </button>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
 
     <!-- 수익률 선택 모달 -->
     <div class="modal fade" id="profitFilter" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog fixed-bottom" role="document">
+        <div class="modal-dialog fixed-bottom" role="document">
 
-        <div class="modal-content">
-          <div class="modal-body p-0 text-center">
-              <button data-dismiss="modal" class="dropdown-item w-100 py-4 bb-1" type="button">
-                1개월
-              </button>
-              <button data-dismiss="modal" class="dropdown-item w-100 py-4 bb-1 oi oi-check" type="button">
-                3개월
-              </button>
-              <button data-dismiss="modal" class="dropdown-item w-100 py-4 bb-1" type="button">
-                6개월
-              </button>
-              <button data-dismiss="modal" class="dropdown-item w-100 py-4" type="button">
-                1개월
-            </button>
-          </div>
+            <div class="modal-content">
+                <div class="modal-body p-0 text-center">
+                    <button data-dismiss="modal" class="dropdown-item w-100 py-4 bb-1" type="button">
+                        1개월
+                    </button>
+                    <button data-dismiss="modal" class="dropdown-item w-100 py-4 bb-1 oi oi-check" type="button">
+                        3개월
+                    </button>
+                    <button data-dismiss="modal" class="dropdown-item w-100 py-4 bb-1" type="button">
+                        6개월
+                    </button>
+                    <button data-dismiss="modal" class="dropdown-item w-100 py-4" type="button">
+                        1개월
+                    </button>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
 
 
@@ -272,28 +285,31 @@
     <!-- 커스텀 이벤트 -->
     <script src="assets/javascript/event.js"></script>
     <script type="text/javascript">
-      //스크롤 이벤트
-      var lastScrollTop = 0;
-      $(window).scroll(function () {
+    //스크롤 이벤트
+    var lastScrollTop = 0;
+    $(window).scroll(function () {
+        var src = $(this).scrollTop();
+        var btn = $('#filterButton');
+        var toast = $('.header-shinhan');
+        var targetSrc = 0;
 
-          var src = $(this).scrollTop();
-          var btn = $('#filterButton');
-          var targetSrc = 0;
-
-          // 모든 상품 영역을 볼 때 필터 보임
-          if (src > targetSrc) {
-              // 스크롤 내리는 중이면 필터 가림
-              if(src < lastScrollTop) {
-                btn.removeClass('btn-hide');
-              }
-              // 스크롤 올리는 중이면 필터 보임
-              else {
+        // 모든 상품 영역을 볼 때 필터 보임
+        if (src > targetSrc) {
+            toast.addClass('btn-hide');
+            // 스크롤 내리는 중이면 필터 가림
+            if(src < lastScrollTop) {
                 btn.addClass('btn-hide');
-              }
-              lastScrollTop = src;
-          }
-      });
+            }
+            // 스크롤 올리는 중이면 필터 보임
+            else {
+                btn.removeClass('btn-hide');
+            }
+            lastScrollTop = src;
+        } else {
+            toast.removeClass('btn-hide');
+        }
+    });
     </script>
 
-  </body>
+</body>
 </html>

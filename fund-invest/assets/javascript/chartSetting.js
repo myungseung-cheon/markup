@@ -71,6 +71,7 @@ Chart.pluginService.register({
 
 
 var ctx = document.getElementById("profitChart");
+var ctk = document.getElementById("profitChartSmall");
 var cty = document.getElementById("stockChart");
 var ctz = document.getElementById("assetChart");
 
@@ -206,75 +207,6 @@ var stockChart = new Chart(cty, {
           }
         }
       }]
-    }
-  }
-});
-
-
-// 수익률 차트
-var smallChart = new Chart(cts, {
-  type: 'LineWithLine',
-  mode: 'vertical',
-  scaleID: 'x-axis-label',
-  borderColor: '#144ae1',
-  borderWidth: 3,
-  data: {
-    labels: ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"],
-    datasets: [{
-      label: false,
-      data: [1, 9, 7, 18, 24, 41, 65, 54, 88, 75, 66, 71],
-      fill: false,
-      borderColor: '#fe4545',
-      borderWidth: 2,
-      pointRadius: '0',
-      lineTension: '0',
-
-    }]
-  },
-  options: {
-    legend: {
-      display: false
-    },
-    scales: {
-      yAxes: [{
-        ticks: {
-          beginAtZero:true
-        },
-        display: false
-      }],
-      xAxes: [{
-        gridLines: {
-          display: false
-        },
-        display: false,
-        ticks: {
-          maxRotation: 0,
-          autoSkipPadding: 8
-        }
-      }]
-    },
-    tooltips: {
-      position: 'nearest',
-      intersect: false,
-      yPadding: 8,
-      xPadding: 12,
-      caretSize: 6,
-      backgroundColor: '#144ae1',
-      borderColor: 'none',
-      borderWidth: 0,
-      cornerRadius: 4,
-      owAllTooltips: true,
-      titleFontSize: 13,
-      bodyFontSize: 16,
-      custom: function(tooltip) {
-        if (!tooltip) return;
-        tooltip.displayColors = false;
-      },
-      callbacks: {
-        label: function(tooltipItems, data) {
-          return tooltipItems.yLabel + '%';
-        },
-      }
     }
   }
 });
