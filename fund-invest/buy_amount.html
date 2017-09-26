@@ -1,5 +1,5 @@
 <html lang="ko">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,67 +10,98 @@
     <!-- 커스텀 스타일 -->
     <link href="assets/stylesheet/style.css" rel="stylesheet">
 
-  </head>
-  <body>
+</head>
+<body>
 
     <section id="invest_amount" class="survey">
 
-      <!-- 진행 바 -->
-      <div class="progress">
-        <div class="progress-bar w-50" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-      </div>
-
-      <!-- 질문 -->
-      <div class="sheet">
-        <h4 class="question">얼마를 투자할까요?</h4>
-        <p class="description">최대금액 : 2,000,000원</p>
-        <form action="">
-          <div class="input-group mb-3">
-            <input id="buyAmount" class="form-control form-control-lg mb-0" aria-describedby="basic-addon3" type="number">
-            <span class="input-group-addon px-3" id="basic-addon3">원</span>
-          </div>
-
-          <label class="radio-lg inline">
-            <input type="radio" name="radio" value="1" checked>한 번만
-          </label>
-          <label class="radio-lg inline ml-4">
-            <input type="radio" name="radio" value="2">매월 반복
-          </label>
-          <input type="submit" value="다음" class="btn-next">
-        </form>
-
-        <!-- 반복 상세 설정 -->
-        <div id="repeatOption" class="sheet pt-1 pb-4 rounded gray100 mt-3 hide">
-          <!-- 반복일 설정 -->
-          <h6 class="sub-question">어떤 날짜에 반복할까요?</h6>
-          <input id="repeatDate" class="form-control form-control-lg" readonly="true" data-toggle="datepicker">
-          <div data-toggle="datepicker"></div>
-
-          <!-- 반복 마감 설정 -->
-          <h6 class="sub-question">언제까지 반복할까요?</h6>
-          <input id="repeatDue" class="form-control form-control-lg" readonly="true" data-toggle="datepicker">
-
-          <!-- 날짜 선택 모달 -->
-          <div class="modal fade" id="exampleModalName" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog fixed-bottom" role="document">
-              <div class="modal-content">
-
-                <!-- header -->
-                <div class="modal-header">
-                  <h5 class="modal-title">날짜 선택</h5>
-                </div>
-
-                <!-- body -->
-                <div class="modal-body">
-                  <div data-toggle="datepicker"></div>
-                </div>
-
-              </div>
-            </div>
-          </div>
-
+        <!-- 진행 바 -->
+        <div class="progress">
+            <div class="progress-bar w-50" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
         </div>
-      </div>
+
+        <!-- 질문 -->
+        <div class="sheet">
+            <h4 class="question">얼마를 투자할까요?</h4>
+            <p class="description">최대금액 : 2,000,000원</p>
+            <form action="">
+                <div class="input-group mb-3">
+                    <input id="buyAmount" class="form-control form-control-lg mb-0" aria-describedby="basic-addon3" type="number">
+                    <span class="input-group-addon px-3" id="basic-addon3">원</span>
+                </div>
+
+                <label class="radio-lg inline">
+                    <input type="radio" name="radio" value="1" checked>한 번만
+                </label>
+                <label class="radio-lg inline ml-4">
+                    <input type="radio" name="radio" value="2">매월 반복
+                </label>
+                <input type="submit" value="다음" class="btn-next">
+            </form>
+
+            <!-- 반복 상세 설정 -->
+            <div id="repeatOption" class="sheet pt-1 pb-4 rounded gray100 mt-3 hide">
+                <!-- 반복일 설정 -->
+                <h6 class="sub-question">어떤 날짜에 반복할까요?</h6>
+                <select class="form-control form-control-lg custom-select">
+                    <option>매월 1일</option>       
+                    <option>매월 2일</option>
+                    <option>매월 3일</option>
+                    <option>매월 4일</option>
+                    <option>매월 5일</option>
+                    <option>매월 6일</option>
+                    <option>매월 7일</option>
+                    <option>매월 8일</option>
+                    <option>매월 9일</option>
+                    <option>매월 10일</option>
+                    <option>매월 11일</option>
+                    <option>매월 12일</option>
+                    <option>매월 13일</option>
+                    <option>매월 14일</option>
+                    <option>매월 15일</option>
+                    <option>매월 16일</option>
+                    <option>매월 17일</option>
+                    <option>매월 18일</option>
+                    <option>매월 19일</option>
+                    <option>매월 20일</option>
+                    <option>매월 21일</option>
+                    <option>매월 22일</option>
+                    <option>매월 23일</option>
+                    <option>매월 24일</option>
+                    <option>매월 25일</option>
+                    <option>매월 26일</option>
+                    <option>매월 27일</option>
+                    <option>매월 28일</option>
+                    <option>매월 29일</option>
+                    <option>매월 30일</option>
+                    <option>매월 31일</option>
+                </select>
+
+                <!-- 반복 마감 설정 -->
+                <h6 class="sub-question">언제까지 반복할까요?</h6>
+                <input id="repeatDue" class="form-control form-control-lg" readonly="true" data-toggle="datepicker">
+
+                <!-- 날짜 선택 모달 -->
+                <div class="modal fade" id="exampleModalName" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog fixed-bottom" role="document">
+                        <div class="modal-content">
+
+                            <!-- header -->
+                            <div class="modal-header">
+                                <h5 class="modal-title">날짜 선택</h5>
+                            </div>
+
+                            <!-- body -->
+                            <div class="modal-body">
+                                <div data-toggle="datepicker"></div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
 
     </section>
 
@@ -88,21 +119,21 @@
     <link  href="assets/javascript/date-picker/datepicker.css" rel="stylesheet">
     <script src="assets/javascript/date-picker/datepicker.js"></script>
     <script type="text/javascript">
-      var d = new Date();
-      $('#repeatDate').datepicker({
+    var d = new Date();
+    $('#repeatDate').datepicker({
         autoPick: true,
         format: '매월 dd일'
-      });
-      $('#repeatDue').datepicker({
+    });
+    $('#repeatDue').datepicker({
         autoPick: true,
         startDate: d,
         date: new Date( d.getFullYear() + 1, d.getMonth() ),
         format: 'yy년 mm월'
-      });
+    });
     </script>
 
     <!-- 커스텀 이벤트 -->
     <script src="assets/javascript/event.js"></script>
 
-  </body>
+</body>
 </html>

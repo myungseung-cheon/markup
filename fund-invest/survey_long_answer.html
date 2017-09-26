@@ -1,0 +1,67 @@
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#ffffff" />
+    <!-- 위 3개의 메타 태그는 *반드시* head 태그의 처음에 와야합니다; 어떤 다른 콘텐츠들은 반드시 이 태그들 *다음에* 와야 합니다 -->
+    <title>Toss - 소액 펀드 투자</title>
+
+    <!-- Toss 공용 CSS 문서의 맨 처음에 와야 합니다;-->
+    <link href="assets/stylesheet/tossframe-2.0.4.css" rel="stylesheet">
+
+    <!-- 커스텀 스타일 -->
+    <link href="assets/stylesheet/style.css" rel="stylesheet">
+
+  </head>
+  <body>
+
+    <section id="sell_amount" class="survey">
+
+      <!-- 진행 바 -->
+      <div class="progress">
+        <div class="progress-bar w-10" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+      </div>
+
+      <!-- 질문 -->
+      <div class="sheet">
+        <p class="tag">질문 1</p>
+        <h4 class="mb-5">투자 할 때, 나는 _____________</h4>
+        <form>
+          <!-- 라디오 버튼-lg -->
+          <label class="radio-lg radio-btn text-left">
+            <input type="radio" name="radio1" value="1" checked>안정형<br>
+            <h7 class="gray800-text normal">원금은 지켜야 한다</h7>
+          </label>
+          <label class="radio-lg radio-btn text-left">
+            <input type="radio" name="radio1" value="1" checked>중립형<br>
+            <h7 class="gray800-text normal">투자수익이 더 중요하지만 손실이 적었으면 좋겠다</h7>
+          </label>
+          <label class="radio-lg radio-btn text-left">
+            <input type="radio" name="radio1" value="1" checked>공격형<br>
+            <h7 class="gray800-text normal">수익이 높다면 위험해도 상관없다</h7>
+          </label>
+        </form>
+      </div>
+
+    </section>
+
+
+
+
+
+
+    <!-- 기본 JavaScript 프레임워크 -->
+    <script src="assets/javascript/jquery-3.2.1.min.js"></script>
+    <script src="assets/javascript/tether.min.js"></script>
+    <script src="assets/javascript/tossframe-2.0.0.js"></script>
+
+    <!-- 차트 -->
+    <script src="assets/javascript/Chart.bundle.js"></script>
+    <script src="assets/javascript/chartSetting.js"></script>
+
+    <!-- 커스텀 이벤트 -->
+    <!-- <script src="assets/javascript/event.js"></script> -->
+
+  </body>
+</html>
