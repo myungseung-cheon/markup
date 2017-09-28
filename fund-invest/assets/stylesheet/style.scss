@@ -112,6 +112,9 @@ fieldset:disabled {
     background-color: rgba(255, 255, 255, 0.24);
         border: 1px solid #1c2334;
 }
+.no-content::before {
+    content: '' !important;
+}
 
 // navigation
 .nav-active {
@@ -130,6 +133,9 @@ fieldset:disabled {
 }
 .prevent-click {
     pointer-events: none;
+}
+.lh-14 {
+  line-height: 1.4;
 }
 
 // 시작 가이드 배너

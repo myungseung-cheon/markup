@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="36px" height="32px" viewBox="0 0 36 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-rank-2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="100%" y1="78.8338125%" x2="0%" y2="78.8338104%" id="linearGradient-1">
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#E398E9" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Screens" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon-rank-2" transform="translate(1.000000, 0.250000)">
+            <polyline id="Path-4-Copy" fill="url(#linearGradient-1)" points="0.0931022535 23.6603306 8.51436221 14.2301863 15.2504527 19.5081922 21.3548225 13.2190974 26.3267698 17.3570767 33.2150171 10.4626704 33.2150171 29.6751942 -1.13686838e-13 29.6751942"></polyline>
+            <polyline id="Path-2" stroke="#333333" stroke-width="2" points="1.13686838e-13 0 1.13686838e-13 30.1923705 34.0416238 30.1923705"></polyline>
+            <polyline id="Path-4" stroke="#333333" stroke-width="2" points="0 23.6603306 8.42125995 14.2301863 15.1573504 19.5081922 21.5258678 12.9469563 26.2341136 17.5356672 33.3604772 9.61602852"></polyline>
+            <polyline id="Path-5" stroke="#333333" stroke-width="2" points="27 10 33.0954322 10 33.0954322 15.5850588"></polyline>
+        </g>
+    </g>
+</svg>

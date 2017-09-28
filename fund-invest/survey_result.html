@@ -1,0 +1,93 @@
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#ffffff" />
+    <!-- 위 3개의 메타 태그는 *반드시* head 태그의 처음에 와야합니다; 어떤 다른 콘텐츠들은 반드시 이 태그들 *다음에* 와야 합니다 -->
+    <title>Toss - 소액 펀드 투자</title>
+
+    <!-- 커스텀 스타일 -->
+    <link href="assets/stylesheet/style.css" rel="stylesheet">
+    <style>
+        .li-mb-3 li {
+            margin-bottom: 1rem;
+            word-break: keep-all;
+        }
+        .li-mb-3 li:last-child {
+            margin-bottom: 0;
+        }
+        .color-rank-4 {
+            color: #83BEF0;
+        }
+        .block-icon img {
+            margin-right: 4px;
+        }
+        .dimmed {
+            opacity: 0.3;
+        }
+    </style>
+
+</head>
+<body>
+
+    <section class="p-4 gray700-text">
+        <div class="header text-center">
+            <h1 class="h3 lh-14 mt-4 mb-2">
+                나의 투자성향은<br><strong id="typeOfInvest" class="color-rank-4">안정추구형(4등급)</strong> 입니다
+            </h1>
+            <p class="h7 mb-4">파생투자성향 원금부분보장형(3등급)</p>
+            <div class="block-icon">
+                <img src="assets/images/icon-rank-1.svg" alt="rank-1" class="mb-4 dimmed">
+                <img src="assets/images/icon-rank-2.svg" alt="rank-2" class="mb-4 dimmed">
+                <img src="assets/images/icon-rank-3.svg" alt="rank-3" class="mb-4 dimmed">
+                <img src="assets/images/icon-rank-4.svg" alt="rank-4" class="mb-4">
+                <img src="assets/images/icon-rank-5.svg" alt="rank-5" class="mb-4 dimmed">
+            </div>
+        </div>
+        <div class="p-4 rounded gray50 b-1-gray200">
+            <ul class="pl-3 li-mb-3 h7 mb-0">
+                <li>투자원금의 손실위험은 최소화하고, 이자소득이나 배당소득 수준의 안정적인 투자를 목표로 합니다.</li>
+                <li>예·적금보다 높은 수익을 위해 자산 중 일부를 변동성 높은 상품에 투자할 의향이 있습니다. (수익을 위해 단기적인 손실을 수용할 수 있음)</li>
+                <li>진단결과(점수) : 11점 ~ 15점</li>
+            </ul>
+        </div>
+
+        <label id="checkAllAgreement" class="checkbox-lg bold mb-0 agree-all my-3">
+          <input type="checkbox" name="input1">나의 투자성향을 확인하였습니다.
+        </label>
+
+          <button id="confirmInvestType" class="btn btn-block btn-accent" disabled>투자성향 확정</button>
+          <button class="btn btn-block btn-secondary">다시 측정하기</button>
+
+        </p>
+
+    </section>
+
+
+
+    <!-- 기본 JavaScript 프레임워크 -->
+    <script src="assets/javascript/jquery-3.2.1.min.js"></script>
+    <script src="assets/javascript/tether.min.js"></script>
+    <script src="assets/javascript/tossframe-2.0.0.js"></script>
+
+    <!-- 커스텀 이벤트 -->
+    <!-- <script src="assets/javascript/event.js"></script> -->
+    <script type="text/javascript">
+
+        function checkValid(){
+            var btn = $('#confirmInvestType');
+            var checked = $('#checkAllAgreement input').is(':checked');
+            if( checked == true ){
+                btn.removeAttr('disabled');
+            } else {
+                btn.attr('disabled','disabled');
+            }
+        };
+        $('#checkAllAgreement').click(function(){
+            checkValid();
+        });
+    </script>
+
+</body>
+</html>
