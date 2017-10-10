@@ -28,7 +28,7 @@ input {
 }
 .custom-select {
     background-image: url('/assets/images/caret-bottom.svg');
-    padding: 0.75rem 1.5rem !important;
+    padding: 0.75rem 1rem !important;
 }
 .form-control[readonly] {
   background-color: white;
@@ -54,6 +54,7 @@ input {
   background-position: center center;
   background-size: cover;
 }
+.checkbox-btn,
 .radio-btn {
   @extend .blue500-text, .mb-1, .p-3, .px-0, .bold ;
   border: 1px solid #144ae1;
@@ -88,7 +89,7 @@ input {
   @extend .gray50 ;
 }
 .hide {
-  display: none;
+  display: none !important;
 }
 fieldset:disabled {
   h1, h2, h3, h4, h5, h6, h7, label, input,
@@ -136,6 +137,9 @@ fieldset:disabled {
 }
 .lh-14 {
   line-height: 1.4;
+}
+.lh-18 {
+  line-height: 1.8;
 }
 
 // 시작 가이드 배너

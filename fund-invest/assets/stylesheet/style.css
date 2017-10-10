@@ -1369,7 +1369,8 @@ h5, .h5, .filter-card .title, .block .title, .block-card .title, #profit .title,
 h6, .h6, #filterButton i, #portfolio .title, .block .title-sm, .block-card .title-sm, #profit .title-sm {
   font-size: 1rem; }
 
-.bold, .quote-warning, .radio-btn, .btn-square, .btn-modal, .btn-fixed-bottom, .modal-title, #filterButton span, .filter-card .title, .block .title-sm, .block-card .title-sm, #profit .title-sm, #blockButtons button, #blockAutoInvest .title, .survey table .head, .survey .btn-next, .survey .btn-confirm, #contractSummary .title, .circle-steps .active h7 {
+.bold, .quote-warning, .checkbox-btn,
+.radio-btn, .btn-square, .btn-modal, .btn-fixed-bottom, .modal-title, #filterButton span, .filter-card .title, .block .title-sm, .block-card .title-sm, #profit .title-sm, #blockButtons button, #blockAutoInvest .title, .survey table .head, .survey .btn-next, .survey .btn-confirm, #contractSummary .title, .circle-steps .active h7 {
   font-weight: 700 !important; }
 
 .normal, .stockList .list-header th, .stockList .list-header i, .survey .info {
@@ -1523,7 +1524,8 @@ mark,
 .blue500, #blockAutoInvest, .survey .progress-bar, .circle-steps .active .circle {
   background-color: #4E7BFA; }
 
-.blue500-text, .radio-btn, .filter-card.selected .title, .table-portfolio .minus, .table-wating .minus, .table-complete .minus, .survey .tag, .survey .description, .circle-steps .term, .circle-steps .term.active, .circle-steps .active h7 {
+.blue500-text, .checkbox-btn,
+.radio-btn, .filter-card.selected .title, .table-portfolio .minus, .table-wating .minus, .table-complete .minus, .survey .tag, .survey .description, .circle-steps .term, .circle-steps .term.active, .circle-steps .active h7 {
   color: #4E7BFA; }
 
 .blue600, #banner, #portfolio, .block-blue {
@@ -6231,7 +6233,8 @@ a.bg-inverse:focus, a.bg-inverse:hover {
 .mr-1 {
   margin-right: 0.25rem !important; }
 
-.mb-1, .radio-btn, .block .label, .block-card .label, #profit .label, .table-full-width .label, .table-portfolio td h6, .table-wating td h6, .table-complete td h6 {
+.mb-1, .checkbox-btn,
+.radio-btn, .block .label, .block-card .label, #profit .label, .table-full-width .label, .table-portfolio td h6, .table-wating td h6, .table-complete td h6 {
   margin-bottom: 0.25rem !important; }
 
 .ml-1 {
@@ -6398,7 +6401,8 @@ a.bg-inverse:focus, a.bg-inverse:hover {
 .pl-0 {
   padding-left: 0 !important; }
 
-.px-0, .radio-btn, .survey table td, .order-detail table td {
+.px-0, .checkbox-btn,
+.radio-btn, .survey table td, .order-detail table td {
   padding-right: 0 !important;
   padding-left: 0 !important; }
 
@@ -6452,7 +6456,8 @@ a.bg-inverse:focus, a.bg-inverse:hover {
   padding-top: 0.5rem !important;
   padding-bottom: 0.5rem !important; }
 
-.p-3, .quote, .quote-warning, .radio-btn, .stockList .product-info, #blockAutoInvest, .terms-agree-all {
+.p-3, .quote, .quote-warning, .checkbox-btn,
+.radio-btn, .stockList .product-info, #blockAutoInvest, .terms-agree-all {
   padding: 1rem 1rem !important; }
 
 .pt-3, .section-header {
@@ -11210,7 +11215,7 @@ input {
 
 .custom-select, .repeat-date {
   background-image: url("/assets/images/caret-bottom.svg");
-  padding: 0.75rem 1.5rem !important; }
+  padding: 0.75rem 1rem !important; }
 
 .form-control[readonly], [readonly].repeat-date {
   background-color: white; }
@@ -11227,10 +11232,12 @@ input {
   background-position: center center;
   background-size: cover; }
 
+.checkbox-btn,
 .radio-btn {
   border: 1px solid #144ae1;
   text-align: center;
   font-size: 18px; }
+  .checkbox-btn input,
   .radio-btn input {
     display: none; }
 
@@ -11251,7 +11258,7 @@ input {
   border: 1px solid #e0e0e0; }
 
 .hide {
-  display: none; }
+  display: none !important; }
 
 .line-height-base {
   line-height: 1.6rem; }
@@ -11284,6 +11291,9 @@ input {
 
 .lh-14 {
   line-height: 1.4; }
+
+.lh-18 {
+  line-height: 1.8; }
 
 .stockList .list-header .arrow {
   position: absolute;
