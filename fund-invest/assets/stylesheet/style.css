@@ -11391,7 +11391,8 @@ input {
   background-color: inherit; }
 
 .btn-hide {
-  bottom: -62px !important; }
+  bottom: -62px !important;
+  opacity: 0; }
 
 .transition {
   transition: all 0.2s ease-in-out; }

@@ -21,9 +21,14 @@
     </section>
 
     <!-- 판매처 고지 -->
-    <header class="header-shinhan fixed-bottom">
+    <header id="headerShinhan" class="header-shinhan fixed-bottom transition">
         <img src="assets/images/logo_shinhan.png" alt="로고-신한금융투자">
         펀드상품은 신한금융투자가 제공합니다
+    </header>
+
+    <!-- 투자 기간 고지 -->
+    <header id="headerPeriod" class="btn-hide header-shinhan fixed-bottom transition">
+        투자자 : 3개월 기준 / 수익률 : 3개월 기준
     </header>
 
     <!-- 상품 리스트 -->
@@ -35,7 +40,7 @@
                     <th colspan="2">상품명</th>
                     <th >
                         <a href="#modalOptionFilter" data-toggle="modal" data-target="#modalOptionFilter">
-                            <span>구매자</span> <i></i>
+                            <span>투자자</span> <i></i>
                         </a>
                     </th>
                     <th>
@@ -173,10 +178,10 @@
 
     <!-- 성향 선택 모달 -->
     <div class="modal fade" id="modalSelectType" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog fixed-bottom" role="document">
+        <div class="modal-dialog " role="document" >
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">필터 선택</h5>
+                    <h5 class="modal-title">유형 선택</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -229,7 +234,7 @@
             <div class="modal-content">
                 <div class="modal-body p-0 text-center">
                     <button data-dismiss="modal" class="dropdown-item w-100 py-4 bb-1 oi oi-check" type="button">
-                        구매자
+                        투자자 (3개월)
                     </button>
                     <button data-dismiss="modal" class="dropdown-item w-100 py-4" type="button">
                         판매액
@@ -276,23 +281,27 @@
     $(window).scroll(function () {
         var src = $(this).scrollTop();
         var btn = $('#filterButton');
-        var toast = $('.header-shinhan');
+        var toast1 = $('#headerShinhan');
+        var toast2 = $('#headerPeriod');
         var targetSrc = 0;
 
         // 모든 상품 영역을 볼 때 필터 보임
         if (src > targetSrc) {
-            toast.addClass('btn-hide');
+            toast1.addClass('btn-hide');
             // 스크롤 내리는 중이면 필터 가림
             if(src < lastScrollTop) {
-                btn.addClass('btn-hide');
+                btn.removeClass('btn-hide');
+                toast2.addClass('btn-hide');
             }
             // 스크롤 올리는 중이면 필터 보임
             else {
-                btn.removeClass('btn-hide');
+                btn.addClass('btn-hide');
+                toast2.removeClass('btn-hide');
             }
             lastScrollTop = src;
         } else {
-            toast.removeClass('btn-hide');
+
+
         }
     });
     </script>
