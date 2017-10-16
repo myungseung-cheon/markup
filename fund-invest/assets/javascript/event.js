@@ -28,16 +28,16 @@ $(document).ready(function(){
     secondOptionCol.addClass('col-option-selected');
 
     // 구매자/판매자
-    $('#modalOptionFilter button').click(function(){
-        var optionText = $(this).text();
-        var th = $("[data-target='#modalOptionFilter'] span");
-
-        $('#modalOptionFilter button').toggleClass('oi oi-check');
-        th.text(optionText);
-
-        firstOptionCol.addClass('col-option-selected');
-        secondOptionCol.removeClass('col-option-selected');
-    });
+    // $('#modalOptionFilter button').click(function(){
+    //     var optionText = $(this).text();
+    //     var th = $("[data-target='#modalOptionFilter'] span");
+    //
+    //     $('#modalOptionFilter button').toggleClass('oi oi-check');
+    //     th.text(optionText);
+    //
+    //     firstOptionCol.addClass('col-option-selected');
+    //     secondOptionCol.removeClass('col-option-selected');
+    // });
 
     // 수익률
     $('#profitFilter button').click(function(){

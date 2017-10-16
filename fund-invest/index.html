@@ -9,7 +9,12 @@
 
     <!-- 커스텀 스타일-->
     <link href="assets/stylesheet/style.css" rel="stylesheet">
-
+    <style>
+        .text-period {
+            font-size: 13px;
+            font-color: #ededed;
+        }
+    </style>
 
 </head>
 <body>
@@ -26,10 +31,12 @@
         펀드상품은 신한금융투자가 제공합니다
     </header>
 
-    <!-- 투자 기간 고지 -->
-    <header id="headerPeriod" class="btn-hide header-shinhan fixed-bottom transition">
-        투자자 : 3개월 기준 / 수익률 : 3개월 기준
-    </header>
+    <!-- 투자 필터 고지 -->
+    <!-- <header id="headerPeriod" class="p-3 text-center gray0 ">
+        <div class="gray100 gray800-text p-3">
+            투자자 : 3개월 / 수익률 : 3개월
+        </div>
+    </header> -->
 
     <!-- 상품 리스트 -->
     <section id="productList" class="stockList">
@@ -40,18 +47,43 @@
                     <th colspan="2">상품명</th>
                     <th >
                         <a href="#modalOptionFilter" data-toggle="modal" data-target="#modalOptionFilter">
-                            <span>투자자</span> <i></i>
+                            <table class="text-center">
+                                <tr>
+                                    <td class="pl-2">
+                                        <span>투자자</span>
+                                        <span class="text-period">(3개월)</span>
+                                    </td>
+                                    <td class="pr-2">
+                                        <i></i>
+                                    </td>
+                                </tr>
+                            </table>
                         </a>
                     </th>
                     <th>
                         <a href="#profitFilter" data-toggle="modal" data-target="#profitFilter">
-                            <span>수익률</span> <i></i>
+                            <table class="text-center">
+                                <tr>
+                                    <td class="pl-2">
+                                        <span>수익률</span>
+                                        <span class="text-period">(3개월)</span>
+                                    </td>
+                                    <td class="pr-2">
+                                        <i></i>
+                                    </td>
+                                </tr>
+                            </table>
                         </a>
                     </th>
                 </tr>
             </thead>
             <tbody>
                 <!-- 상품 -->
+                <!-- <tr class="list-item">
+                    <td colspan="2"></td>
+                    <td class="text-center py-2 h7">3개월 기준</td>
+                    <td class="text-center py-2 h7">3개월 기준</td>
+                </tr> -->
                 <tr class="list-item">
                     <td class="product-type">
                         <i>●</i>
@@ -172,8 +204,8 @@
     </section>
 
     <!-- 하단 고정 필터 -->
-    <button id="filterButton" class="btn-warning btn-hide" data-toggle="modal" data-target="#modalSelectType">
-        <i></i> <span class="name">중립형</span>
+    <button id="filterButtonWide" class="btn btn-hide fixed-bottom btn-block btn-warning py-4 rounded-0" data-toggle="modal" data-target="#modalSelectType">
+        <i class="oi oi-sort-descending pr-2"></i> <span class="name bold">투자 성향  / 중립형</span>
     </button>
 
     <!-- 성향 선택 모달 -->
@@ -280,28 +312,24 @@
     var lastScrollTop = 0;
     $(window).scroll(function () {
         var src = $(this).scrollTop();
-        var btn = $('#filterButton');
-        var toast1 = $('#headerShinhan');
-        var toast2 = $('#headerPeriod');
+        var btn = $('#filterButtonWide');
+        var toast = $('#headerShinhan');
         var targetSrc = 0;
 
         // 모든 상품 영역을 볼 때 필터 보임
         if (src > targetSrc) {
-            toast1.addClass('btn-hide');
+            toast.addClass('btn-hide');
             // 스크롤 내리는 중이면 필터 가림
             if(src < lastScrollTop) {
-                btn.removeClass('btn-hide');
-                toast2.addClass('btn-hide');
+                btn.addClass('btn-hide');
             }
             // 스크롤 올리는 중이면 필터 보임
             else {
-                btn.addClass('btn-hide');
-                toast2.removeClass('btn-hide');
+                btn.removeClass('btn-hide');
             }
             lastScrollTop = src;
         } else {
-
-
+            toast.removeClass('btn-hide');
         }
     });
     </script>
