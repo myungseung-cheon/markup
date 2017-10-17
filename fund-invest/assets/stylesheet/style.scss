@@ -380,7 +380,7 @@ fieldset:disabled {
     @extend .h6, .gray800-text, .mb-3, .bold ;
   }
   .subtitle {
-    @extend .h7, .gray600-text, .mb-0 ;
+    @extend .h7, .gray600-text ;
   }
   .label {
     @extend .gray600-text, .mb-1 ;

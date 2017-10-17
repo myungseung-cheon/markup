@@ -6210,7 +6210,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
 .mr-0 {
   margin-right: 0 !important; }
 
-.mb-0, .btn-fixed-bottom, .filter-card .title, .block .subtitle, .block-card .subtitle, #profit .subtitle, .table-full-width .value, .table-full-width.reverse .value, #blockAutoInvest .quit, .survey table.unstyled, .survey .btn-next, .order-detail table {
+.mb-0, .btn-fixed-bottom, .filter-card .title, .table-full-width .value, .table-full-width.reverse .value, #blockAutoInvest .quit, .survey table.unstyled, .survey .btn-next, .order-detail table {
   margin-bottom: 0 !important; }
 
 .ml-0 {
