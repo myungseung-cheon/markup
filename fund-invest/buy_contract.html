@@ -169,10 +169,7 @@
             </table>
 
             <div id="termAgreement">
-                <p class="bold">투자자 동의사항</p>
-                <ul class="pl-3 mb-4 terms-list required">
-                    <li class="terms-child">간이투자설명서</li>
-                </ul>
+                <p class="bold mb-4">투자자 확인사항</p>
 
                 <!-- 주요내용 설명서 및 투자자 확인사항 -->
                 <ul class="pl-3 mb-0 terms-list required">
@@ -374,13 +371,17 @@
 
                 </ul>
 
-
+                <ul id="checkReadInvestDesc" class="b-1 pl-3 mb-2 required">
+                    <label class="checkbox-lg bold my-0 p-3 ml-3">
+                        <input type="checkbox" name="input1">간이투자설명서
+                    </label>
+                </ul>
+                <ul id="checkAllAgreement" class="b-1 pl-3 mb-4 required">
+                    <label class="checkbox-lg bold my-0 p-3 ml-3">
+                        <input type="checkbox" name="input1">투자자 동의사항 모두 확인
+                    </label>
+                </ul>
             </div>
-
-            <!-- 투자자 동의사항 체크 -->
-            <label id="checkAllAgreement" class="checkbox-lg bold my-0 agree-all mt-3">
-                <input type="checkbox" name="input1">투자자 동의사항 모두 확인
-            </label>
 
             <!-- 투자하기 버튼 -->
             <button class="btn-confirm" disabled>투자하기</button>
