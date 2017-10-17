@@ -11,7 +11,7 @@
     <link href="assets/stylesheet/style.css" rel="stylesheet">
     <style>
 
-        img {
+        img.fullscreen {
             width: 100%;
         }
         .btn-back {
@@ -27,11 +27,17 @@
 </head>
 <body class="gray50">
 
-    <img src="assets/images/img-start-guide-full.png" alt="">
+    <img class="fullscreen" src="assets/images/img-start-guide-full.png" alt="">
     <section class="px-4 py-7 text-center">
         <h4 class="mb-4 lh-14">지금, 천원으로<br>투자를 시작해보세요.</h4>
         <a href="/" class="btn btn-block btn-back py-4">투자 목록으로 이동</a>
     </section>
+
+    <!-- 판매처 고지 -->
+    <header id="headerShinhan" class="header-shinhan fixed-bottom transition">
+        <img src="assets/images/logo_shinhan.png" alt="로고-신한금융투자">
+        펀드상품은 신한금융투자가 제공합니다
+    </header>
 
 
 
@@ -48,6 +54,24 @@
 
     <!-- 커스텀 이벤트 -->
     <!-- <script src="assets/javascript/event.js"></script> -->
+    <script type="text/javascript">
+    //스크롤 이벤트
+    var lastScrollTop = 0;
+    $(window).scroll(function () {
+        var src = $(this).scrollTop();
+        var toast = $('#headerShinhan');
+        var targetSrc = 0;
+
+        // 모든 상품 영역을 볼 때 필터 보임
+        if (src > targetSrc) {
+            toast.addClass('btn-hide');
+            // 스크롤 내리는 중이면 필터 가림
+            lastScrollTop = src;
+        } else {
+            toast.removeClass('btn-hide');
+        }
+    });
+    </script>
 
 </body>
 </html>
