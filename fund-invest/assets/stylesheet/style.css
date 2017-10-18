@@ -11357,6 +11357,24 @@ input {
 .danger-1 {
   background-color: #FACA33; }
 
+.danger-6-text {
+  color: #CD665F; }
+
+.danger-5-text {
+  color: #937AB2; }
+
+.danger-4-text {
+  color: #59BAD1; }
+
+.danger-3-text {
+  color: #A1D562; }
+
+.danger-2-text {
+  color: #58BB65; }
+
+.danger-1-text {
+  color: #FACA33; }
+
 /* 옵션 필터 */
 #modalOptionFilter button.oi-check:before,
 #profitFilter button.oi-check:before {
