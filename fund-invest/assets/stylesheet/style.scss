@@ -197,11 +197,19 @@ fieldset:disabled {
       color: #999999;
     }
   }
-  .product-info {
-    @extend .h7, .p-3, .gray200, .gray600-text ;
-    line-height: 1.6;
+}
+
+.product-info {
+  @extend .p-3, .gray200, .gray600-text ;
+  line-height: 1.6;
+  .info-list {
+    border: 1px solid #ccc;
+    text-align: center;
+    padding: 16px;
+    margin-bottom: 8px;
   }
 }
+
 // 필터 버튼
 #filterButton {
   @extend .btn, .btn-block ;

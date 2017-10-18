@@ -194,13 +194,13 @@
                     <td class="product-option w-25 bold">3,506명</td>
                     <td class="product-profit w-25 bold pink500-text">20.5%</td>
                 </tr>
-                <tr>
-                    <td class="product-info" colspan="4">
-                        온라인에서 구매 가능한한 선후취, 환매수수료가 없는 신한금융투자 제공 펀드리스트입니다.
-                    </td>
-                </tr>
             </tbody>
         </table>
+    </section>
+
+    <section class="product-info">
+        <div class="info-list">고객센터 : 1588-0365</div>
+        <div class="info-list"> 자주 묻는 질문</div>
     </section>
 
     <!-- 하단 고정 필터 -->
@@ -314,13 +314,14 @@
         var src = $(this).scrollTop();
         var btn = $('#filterButtonWide');
         var toast = $('#headerShinhan');
-        var targetSrc = 0;
+        var startSrc = 0;
+        var endSrc = 731;
 
         // 모든 상품 영역을 볼 때 필터 보임
-        if (src > targetSrc) {
+        if (src > startSrc ) {
             toast.addClass('btn-hide');
             // 스크롤 내리는 중이면 필터 가림
-            if(src < lastScrollTop) {
+            if(src > endSrc) {
                 btn.addClass('btn-hide');
             }
             // 스크롤 올리는 중이면 필터 보임
@@ -329,7 +330,7 @@
             }
             lastScrollTop = src;
         } else {
-            toast.removeClass('btn-hide');
+            
         }
     });
     </script>
