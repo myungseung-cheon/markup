@@ -148,9 +148,15 @@ fieldset:disabled {
   h1 {
     @extend .h4, .gray0-text, .mx-auto, .mb-4 ;
   }
-  button {
-    @extend .btn, .btn-block, .btn-accent ;
-  }
+}
+.btn-main-banner {
+  @extend .btn ;
+  color: white;
+  font-weight: bold;
+  background: #40B59B;
+  border: 1px solid #369C86;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.17);
+  border-radius: 100px;
 }
 
 // 상품 리스트
