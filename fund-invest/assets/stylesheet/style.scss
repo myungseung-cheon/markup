@@ -200,7 +200,7 @@ fieldset:disabled {
 }
 
 .product-info {
-  @extend .p-3, .gray200, .gray600-text ;
+  @extend .p-3, .gray150, .gray600-text ;
   line-height: 1.6;
   .info-list {
     border: 1px solid #ccc;

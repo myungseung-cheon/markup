@@ -1564,13 +1564,13 @@ mark,
 .gray100-text, .header-shinhan {
   color: #F5F5F5; }
 
-.gray150 {
+.gray150, .product-info {
   background-color: #F0F0F0; }
 
 .gray150-text {
   color: #F0F0F0; }
 
-.gray200, .product-info, .circle-steps .circle {
+.gray200, .circle-steps .circle {
   background-color: #EBEBEB; }
 
 .gray200-text {
