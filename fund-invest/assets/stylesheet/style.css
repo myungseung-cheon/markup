@@ -6502,7 +6502,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
   padding-right: 1.5rem !important;
   padding-left: 1.5rem !important; }
 
-.py-4, .btn-fixed-bottom, .filter-card, .table-portfolio td, .table-wating td, .table-complete td, #blockButtons button, .survey .btn-next {
+.py-4, .btn-fixed-bottom, .btn-main-banner, .filter-card, .table-portfolio td, .table-wating td, .table-complete td, #blockButtons button, .survey .btn-next {
   padding-top: 1.5rem !important;
   padding-bottom: 1.5rem !important; }
 
