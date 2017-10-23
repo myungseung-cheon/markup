@@ -208,6 +208,7 @@ fieldset:disabled {
 .product-info {
   @extend .p-3, .gray150, .gray600-text ;
   line-height: 1.6;
+  margin-bottom: 70px;
   .info-list {
     border: 1px solid #ccc;
     text-align: center;
@@ -333,6 +334,7 @@ fieldset:disabled {
 }
 .btn-filter {
   @extend .btn, .fixed-bottom, .gray0-text, .btn-block, .py-4, .rounded-0, .text-left ;
+  font-size: 16px;
 }
 .transition {
     transition: all 0.2s ease-in-out;

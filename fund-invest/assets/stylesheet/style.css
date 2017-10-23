@@ -11350,7 +11350,8 @@ input {
     color: #999999; }
 
 .product-info {
-  line-height: 1.6; }
+  line-height: 1.6;
+  margin-bottom: 70px; }
   .product-info .info-list {
     border: 1px solid #ccc;
     text-align: center;
@@ -11459,6 +11460,9 @@ input {
 .btn-hide {
   bottom: -62px !important;
   opacity: 0; }
+
+.btn-filter {
+  font-size: 16px; }
 
 .transition {
   transition: all 0.2s ease-in-out; }
