@@ -23,6 +23,9 @@
         .product-info {
             word-break: keep-all;
         }
+        .icon-filter {
+            width: 20px;
+        }
     </style>
 
 </head>
@@ -210,6 +213,12 @@
 
     <footer class="product-info">
         <p class="mt-2 mb-4">온라인에서 구매 가능한한 선후취, 환매수수료가 없는 신한금융투자 제공 펀드리스트입니다.</p>
+        <p class="mt-2 mb-4">
+            <i class="danger-6-text">●</i>
+            <i class="danger-4-text">●</i>
+            <i class="danger-1-text">●</i>
+            : 나의 투자 성향
+        </p>
 
         <a href="tel:1588-0365">
             <div class="info-list">신한금융투자 고객지원센터 : 1588-0365</div>
@@ -218,8 +227,14 @@
     </footer>
 
     <!-- 하단 고정 필터 -->
-    <button id="filterButtonWide" class="btn btn-hide fixed-bottom btn-block btn-warning py-4 rounded-0" data-toggle="modal" data-target="#modalSelectType">
-        <i class="oi oi-sort-descending pr-2"></i> <span class="name bold">투자 성향  / 중립형</span>
+    <!--공격형의 경우 danger-6 클래스를
+        중립형의 경우 danger-4 클래스를
+        안정형의 경우 danger-1 클래스를
+        적용 부탁드립니다. -->
+    <button id="filterButtonWide" class="btn-filter btn-hide danger-4" data-toggle="modal" data-target="#modalSelectType">
+        <img class="icon-filter mr-2" src="assets/images/icon-filter.png" alt="icon-filter">
+        <span class="name bold"> 중립형 투자 상품</span>
+        <a class="float-right"><u>필터 변경</u></a>
     </button>
 
     <!-- 성향 선택 모달 -->

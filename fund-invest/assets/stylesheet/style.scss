@@ -298,19 +298,19 @@ fieldset:disabled {
 }
 
 // 위험도 태그
-.danger-6 { background-color: #CD665F }
-.danger-5 { background-color: #937AB2 }
-.danger-4 { background-color: #59BAD1 }
-.danger-3 { background-color: #A1D562 }
-.danger-2 { background-color: #58BB65 }
-.danger-1 { background-color: #FACA33 }
+.danger-6 { background-color: #BD151D }
+.danger-5 { background-color: #F9AD54 }
+.danger-4 { background-color: #FACA33 }
+.danger-3 { background-color: #A3BE7D }
+.danger-2 { background-color: #668BB8 }
+.danger-1 { background-color: #094A90 }
 
-.danger-6-text { color: #CD665F }
-.danger-5-text { color: #937AB2 }
-.danger-4-text { color: #59BAD1 }
-.danger-3-text { color: #A1D562 }
-.danger-2-text { color: #58BB65 }
-.danger-1-text { color: #FACA33 }
+.danger-6-text { color: #BD151D }
+.danger-5-text { color: #F9AD54 }
+.danger-4-text { color: #FACA33 }
+.danger-3-text { color: #A3BE7D }
+.danger-2-text { color: #668BB8 }
+.danger-1-text { color: #094A90 }
 
 /* 옵션 필터 */
 #modalOptionFilter button.oi-check:before,
@@ -330,6 +330,9 @@ fieldset:disabled {
 .btn-hide {
   bottom: -62px !important;
   opacity: 0;
+}
+.btn-filter {
+  @extend .btn, .fixed-bottom, .gray0-text, .btn-block, .py-4, .rounded-0, .text-left ;
 }
 .transition {
     transition: all 0.2s ease-in-out;
