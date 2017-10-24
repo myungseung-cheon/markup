@@ -78,6 +78,10 @@ input {
 .btn-fixed-bottom {
   @extend .btn, .btn-block, .mt-5, .mb-0, .rounded-0, .py-4, .bold, .fixed-bottom, .gray0-text ;
 }
+.btn-outline-gray {
+    @extend .btn, .btn-block, .mb-2, .py-4, .b-1-gray600, .gray600-text ;
+    background: transparent;
+}
 .w-49 {
     width: 49%;
 }
