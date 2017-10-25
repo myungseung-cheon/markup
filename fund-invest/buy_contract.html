@@ -374,11 +374,13 @@
 
                 </ul>
 
-                <ul id="checkReadInvestDesc" class="b-1 pl-3 mb-2 required">
-                    <label class="checkbox-lg bold my-0 p-3 ml-3">
-                        <input type="checkbox" name="input1">간이투자설명서
-                    </label>
-                </ul>
+                    <ul id="checkReadInvestDesc" class="b-1 pl-3 mb-2 required">
+                        <label class="checkbox-lg bold my-0 p-3 ml-3">
+                            <input type="checkbox" name="input1">간이투자설명서
+                        </label>
+                    </ul>
+
+
                 <ul id="checkAllAgreement" class="b-1 pl-3 mb-4 required">
                     <label class="checkbox-lg bold my-0 p-3 ml-3">
                         <input type="checkbox" name="input1">투자자 동의사항 모두 확인
@@ -410,6 +412,12 @@
 
 <!-- 커스텀 이벤트 -->
 <script src="assets/javascript/event.js"></script>
+<script type="text/javascript">
+
+    $('#checkReadInvestDesc').click(function(){
+        window.location.href = 'http://file.shinhaninvest.com/filedoc/dfm/fundJJ/R3_KR5101792749_20170831_2039102.pdf#page=1';
+    });
+</script>
 
 </body>
 </html>
