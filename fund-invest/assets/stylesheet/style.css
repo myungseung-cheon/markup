@@ -1370,7 +1370,7 @@ h6, .h6, #filterButton i, #portfolio .title, .block .title-sm, .block-card .titl
   font-size: 1rem; }
 
 .bold, .quote-warning, .checkbox-btn,
-.radio-btn, .btn-square, .btn-modal, .btn-fixed-bottom, .modal-title, #filterButton span, .filter-card .title, .block .title-sm, .block-card .title-sm, #profit .title-sm, #blockButtons button, #blockAutoInvest .title, .survey table .head, .survey .btn-next, .survey .btn-confirm, #contractSummary .title, .circle-steps .active h7 {
+.radio-btn, .btn-square, .btn-modal, .btn-fixed-bottom, .modal-title, #filterButton span, .filter-card .title, #portfolio .plus, #portfolio .minus, .block .title-sm, .block-card .title-sm, #profit .title-sm, .table-portfolio .plus, .table-portfolio .minus, #blockButtons button, #blockAutoInvest .title, .survey table .head, .survey .btn-next, .survey .btn-confirm, #contractSummary .title, .circle-steps .active h7 {
   font-weight: 700 !important; }
 
 .normal, .stockList .list-header th, .stockList .list-header i, .survey .info {
@@ -6117,13 +6117,13 @@ a.bg-inverse:focus, a.bg-inverse:hover {
 .w-35, .survey table .head {
   width: 35% !important; }
 
-.w-40, .order-detail table .head {
+.w-40, .table-wating td:last-child, .table-complete td:last-child, .order-detail table .head {
   width: 40% !important; }
 
 .w-45, .input-birthdate {
   width: 45% !important; }
 
-.w-50 {
+.w-50, .table-portfolio td:last-child {
   width: 50% !important; }
 
 .w-55 {
@@ -11480,6 +11480,16 @@ input {
   line-height: 1;
   font-weight: bold;
   margin-right: 4px; }
+
+.tag-portfolio {
+  display: inline-block;
+  font-size: 12px;
+  padding: 4px 8px;
+  color: white;
+  border-radius: 4px;
+  font-weight: bold;
+  margin-right: 4px;
+  margin-top: -2px; }
 
 .danger-6 {
   background-color: #BD151D; }

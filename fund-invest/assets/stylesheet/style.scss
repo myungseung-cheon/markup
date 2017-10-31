@@ -301,6 +301,16 @@ fieldset:disabled {
     margin-right: 4px;
   }
 }
+.tag-portfolio {
+  display: inline-block;
+  font-size: 12px;
+  padding: 4px 8px;
+  color: white;
+  border-radius: 4px;
+  font-weight: bold;
+  margin-right: 4px;
+  margin-top: -2px;
+}
 
 // 위험도 태그
 .danger-6 { background-color: #BD151D }
@@ -372,10 +382,10 @@ fieldset:disabled {
     @extend .mb-3 ;
   }
   .plus {
-    @extend .pink500-text ;
+    @extend .pink500-text, .bold ;
   }
   .minus {
-    @extend .blue200-text ;
+    @extend .blue200-text, .bold ;
   }
   .carousel-indicators li {
     height: 8px;
@@ -462,17 +472,17 @@ fieldset:disabled {
       @extend .pl-4, .text-left ;
     }
     &:last-child {
-      @extend .pr-4, .text-right ;
+      @extend .pr-4, .text-right,  .w-50 ;
     }
     h6 {
       @extend .mb-1 ;
     }
   }
   .plus {
-    @extend .pink500-text ;
+    @extend .pink500-text, .bold ;
   }
   .minus {
-    @extend .blue500-text ;
+    @extend .blue500-text, .bold ;
   }
 }
 
@@ -488,7 +498,7 @@ fieldset:disabled {
       @extend .pl-4, .text-left ;
     }
     &:last-child {
-      @extend .pr-4, .text-right ;
+      @extend .pr-4, .text-right, .w-40 ;
     }
     h6 {
       @extend .mb-1 ;
@@ -519,7 +529,7 @@ fieldset:disabled {
       @extend .pl-4, .text-left ;
     }
     &:last-child {
-      @extend .pr-4, .text-right ;
+      @extend .pr-4, .text-right,  .w-40 ;
     }
     h6 {
       @extend .mb-1 ;
