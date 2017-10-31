@@ -1760,7 +1760,7 @@ fieldset:disabled .h1, fieldset:disabled .h2, fieldset:disabled #portfolio .asse
 .orange500 {
   background-color: #F57F0A; }
 
-.orange500-text, .quote-warning, .stockList .list-item i, .table-wating .status {
+.orange500-text, .quote-warning, .stockList .list-item i, .table-wating .status, .order-detail table .data.due-date {
   color: #F57F0A; }
 
 .orange600 {

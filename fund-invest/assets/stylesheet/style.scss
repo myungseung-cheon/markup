@@ -729,6 +729,9 @@ fieldset:disabled {
     }
     .data {
       @extend .text-right, .gray800-text ;
+      &.due-date {
+        @extend .orange500-text ;
+      }
      }
   }
 }
