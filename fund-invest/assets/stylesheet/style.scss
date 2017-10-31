@@ -199,6 +199,9 @@ fieldset:disabled {
   .product-name {
     padding: 24px 0;
     text-align: left;
+    word-wrap: break-word;
+    word-break: break-all;
+    // max-width: 126px;
     @extend .mb-2 ;
     .sort {
       margin-bottom: 0px;

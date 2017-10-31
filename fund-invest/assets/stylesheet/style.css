@@ -11416,7 +11416,9 @@ input {
   margin: 5px 0 0 6px; }
 .stockList .product-name {
   padding: 24px 0;
-  text-align: left; }
+  text-align: left;
+  word-wrap: break-word;
+  word-break: break-all; }
   .stockList .product-name .sort {
     margin-bottom: 0px; }
   .stockList .product-name .name {
