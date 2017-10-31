@@ -53,10 +53,10 @@
     </section>
 
     <!-- 판매처 고지 -->
-    <header id="headerShinhan" class="header-shinhan fixed-bottom transition">
+    <!-- <header id="headerShinhan" class="header-shinhan fixed-bottom transition">
         <img src="assets/images/logo_shinhan.png" alt="로고-신한금융투자">
         펀드상품은 신한금융투자가 제공합니다
-    </header>
+    </header> -->
 
     <!-- 투자 필터 고지 -->
     <!-- <header id="headerPeriod" class="p-3 text-center gray0 ">
@@ -383,23 +383,25 @@
     <!-- 커스텀 이벤트 -->
     <script src="assets/javascript/event.js"></script>
     <script type="text/javascript">
-    //스크롤 이벤트
-    var lastScrollTop = 0;
-    $(window).scroll(function () {
-        var src = $(this).scrollTop();
-        var btn = $('#filterButtonWide');
-        var toast = $('#headerShinhan');
-        var startSrc = 0;
-        var endSrc = 731;
+        //스크롤 이벤트
+        var lastScrollTop = 0;
+        $(window).scroll(function () {
+            var src = $(this).scrollTop();
+            var btn = $('#filterButtonWide');
+            var toast = $('#headerShinhan');
+            var startSrc = 0;
+            var endSrc = 731;
 
-        // 모든 상품 영역을 볼 때 필터 보임
-        if (src > startSrc ) {
-            toast.addClass('btn-hide');
-            btn.removeClass('btn-hide');
-        } else {
+            if(src < lastScrollTop) {
+                btn.addClass('btn-hide');
+            }
+            // 스크롤 올리는 중이면 필터 보임
+            else {
+                btn.removeClass('btn-hide');
 
-        }
-    });
+            }
+            lastScrollTop = src;
+        });
     </script>
 
 </body>
