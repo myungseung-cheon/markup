@@ -170,7 +170,7 @@ fieldset:disabled {
   }
 
   .list-header {
-    @extend .bb-1 ;
+    @extend .bb-1, .bt-1 ;
     th {
       @extend .text-center, .normal, .py-3 ;
     }

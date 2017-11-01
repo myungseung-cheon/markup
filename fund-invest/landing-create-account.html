@@ -35,6 +35,7 @@
         img.logo {
             height: 20px;
         }
+
     </style>
 
 </head>
@@ -103,20 +104,21 @@
 
     <!-- 주플 없을 시 경고 -->
     <!-- 모달의 id를 설정하세요. data-target은 id를 기준으로 모달을 호출합니다 -->
-    <div class="modal fade" id="alreadyOnlineAccountOpening" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+    <!-- <div class="modal fade show d-block" data-show="true" id="alreadyOnlineAccountOpening" data-show="true" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" >
+
         <div class="modal-dialog fixed-bottom" role="document">
             <div class="modal-content">
-
-                <!-- header -->
+                header
                 <div class="modal-header">
                     <h5 class="modal-title">계좌 개설 중</h5>
-                    <!-- Close button
+                    Close button
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
-                </button> -->
+                </button>
                 </div>
 
-                <!-- body -->
+                body
                 <div class="modal-body">
                     <div class="content pb-3 mb-3">주계좌 플러스가 개설된 뒤에 진행할 수 있습니다. 개설이 완료되면 푸시를 통해 결과를 알려드립니다.</div>
                     <div class="text-center">
@@ -126,6 +128,7 @@
             </div>
         </div>
     </div>
+    <div class="modal-backdrop fade show"></div> -->
 
 
 
@@ -139,7 +142,7 @@
     <!-- <script src="assets/javascript/event.js"></script> -->
     <script>
         $(document).ready(function(){
-            $('#alreadyOnlineAccountOpening').modal('show');
+            // $('#alreadyOnlineAccountOpening').modal('show');
         });
         $('#backToHistroy').click(function(){
             window.history.back();
