@@ -1546,7 +1546,7 @@ mark,
 .blue800-text {
   color: #1F3164; }
 
-.gray0, .filter-card, .block, .block-card, #profit {
+.gray0, .filter-card, .block, .block-card, #profit, .block-list {
   background-color: #FFFFFF; }
 
 .gray0-text, .btn-square, .btn-fixed-bottom, #banner h1, .btn-filter, #portfolio .title, #portfolio .asset, #portfolio .arrow i, .block-blue, .table-full-width.reverse .value, #blockButtons button, #blockAutoInvest, .survey .btn-next {
@@ -4817,7 +4817,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
 .bl-1-gray100 {
   border-left: 1px solid #F5F5F5 !important; }
 
-.b-1-gray150 {
+.b-1-gray150, .block-shadow, .block-list {
   border: 1px solid #F0F0F0 !important; }
 
 .bt-1-gray150 {
@@ -6153,7 +6153,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
 .w-95 {
   width: 95% !important; }
 
-.w-100, .stockList table, #portfolio .page, .table-full-width, .table-portfolio, .table-wating, .table-complete, #profit .control, .terms-agree-all {
+.w-100, .stockList table, #portfolio .page, .block-list, .table-full-width, .table-portfolio, .table-wating, .table-complete, #profit .control, .terms-agree-all {
   width: 100% !important; }
 
 .h-5 {
@@ -6278,7 +6278,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
 .mr-2 {
   margin-right: 0.5rem !important; }
 
-.mb-2, .btn-modal, .btn-outline-gray, .stockList .product-name, #profit .control, .survey .question, .survey .title, .survey .tag {
+.mb-2, .btn-modal, .btn-outline-gray, .stockList .product-name, .block-list, #profit .control, .survey .question, .survey .title, .survey .tag {
   margin-bottom: 0.5rem !important; }
 
 .ml-2, #blockAutoInvest .title {
@@ -11577,6 +11577,12 @@ input {
 
 .block-card, #profit {
   box-shadow: 0 1px 2px 0 #E0E0E0; }
+
+.block-shadow {
+  box-shadow: 0 1px 2px 0 #cccccc; }
+
+.block-list {
+  box-shadow: 0 1px 2px 0 #e0e0e0; }
 
 .table-portfolio tr {
   background-color: white;

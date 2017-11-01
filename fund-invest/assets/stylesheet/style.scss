@@ -444,6 +444,14 @@ fieldset:disabled {
   @extend .block, .m-3 ;
   box-shadow: 0 1px 2px 0 #E0E0E0;
 }
+.block-shadow {
+  box-shadow: 0 1px 2px 0 #cccccc;
+  @extend .b-1-gray150 ;
+}
+.block-list {
+  @extend .w-100, .mb-2, .b-1-gray150, .gray0 ;
+  box-shadow: 0 1px 2px 0 #e0e0e0;
+}
 
 .table-full-width {
   @extend  .w-100 ;
