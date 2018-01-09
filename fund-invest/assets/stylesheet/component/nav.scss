@@ -1,0 +1,24 @@
+// navigation
+.nav-active {
+    font-weight: bold;
+    border-bottom: 4px solid white;
+}
+.nav-tabs {
+    @extend .shadow-blue600 ;
+    position: relative;
+    z-index: 2;
+    border: none;
+    color: white;
+}
+.nav-item a {
+    padding: 0.75rem 0;
+}
+.prevent-click {
+    pointer-events: none;
+}
+.lh-14 {
+    line-height: 1.4;
+}
+.lh-18 {
+    line-height: 1.8;
+}

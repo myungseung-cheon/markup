@@ -1,0 +1,45 @@
+/* 모든 글꼴 */
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    word-break: keep-all !important;
+    // color: $color-main-content ;
+}
+
+// 링크
+a, a:focus, a:hover,
+a:not([href]):not([tabindex]):focus,
+a:not([href]):not([tabindex]) {
+    text-decoration: none !important;
+    color: inherit !important;
+    -webkit-appearance:none;
+    outline: none;
+    border: 0;
+}
+
+// 인용
+.quote {
+    color: $color-sub-content ;
+    @extend .h7, .p-3, .b-1, .rounded, .gray50 ;
+    ul {
+        @extend .pl-3 ;
+    }
+}
+.quote-warning {
+    @extend .quote, .orange500-text, .bold ;
+    background-color: #fef2e6 ;
+    border: 0 !important;
+}
+
+//link
+.more-info {
+    color: #144ae1 !important ;
+    // font-weight: bold;
+}
+
+// subtitle
+.title-recommend {
+    @extend .h6, .bold, .mb-0 ;
+}
+.subtitle-recommend {
+    @extend .h7, .mb-0 ;
+}

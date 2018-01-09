@@ -1,0 +1,36 @@
+.btn-square {
+    @extend .btn, .rounded-0, .bold, .gray0-text ;
+}
+.btn-modal {
+    @extend .btn, .w-49, .mb-2, .bold ;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.btn-outline-white {
+    background-color: transparent;
+}
+.btn-fixed-bottom {
+    @extend .btn, .btn-block, .mt-5, .mb-0, .rounded-0, .py-4, .bold, .fixed-bottom, .gray0-text ;
+}
+.btn-outline-gray {
+    @extend .btn, .btn-block, .mb-2, .py-4, .b-1-gray600, .gray600-text ;
+    background: transparent;
+}
+.btn-main-banner {
+    @extend .btn, .py-4 ;
+    color: white;
+    font-weight: bold;
+    background: #40B59B;
+    border: 1px solid #369C86;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.17);
+    border-radius: 100px;
+}
+// 필터 버튼
+.btn-filter {
+    @extend .btn, .fixed-bottom, .gray0-text, .btn-block, .py-4, .rounded-0, .text-left ;
+    font-size: 16px;
+}
+.btn-hide {
+    bottom: -62px !important;
+    opacity: 0;
+}

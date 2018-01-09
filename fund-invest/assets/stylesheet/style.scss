@@ -1,318 +1,200 @@
+//Colre
 @import 'tossframe';
 
+// Variables
+$color-main-content: #333;
+$color-sub-content: #999;
+$color-profit: #fe4545;
 
-/* 기본 설정 */
-h1, h2, h3, h4, h5, h6, p
-.h1, .h2, .h3, .h4, .h5, .h6 {
-  word-break: keep-all;
+// Components
+@import 'component/typography.scss';
+@import 'component/form.scss';
+@import 'component/nav.scss';
+@import 'component/button.scss';
+@import 'component/list.scss';
+
+
+
+.container {
+    max-width: 475px;
+    margin: auto;
+}
+#recommendList {
+    @extend .gray100, .py-4 ;
+}
+.block-recommend {
+    @extend .gray0, .mb-3, .bt-1-gray200, .bb-1-gray200 ;
+    margin-bottom: 4rem;
+}
+.header-recommend {
+    @extend .px-4, .py-3 ;
+}
+.product-info {
+    @extend .p-3, .elephant800, .gray300-text, .h7 ;
+    line-height: 2;
+    padding-bottom: 100px !important;
+    a {
+        @extend .py-3 ;
+        font-size: 16px;
+    }
+    .info-list {
+        border: 1px solid #ccc;
+        text-align: center;
+        padding: 16px;
+        margin-bottom: 8px;
+    }
 }
 
 .container { max-width: 475px; }
 .h4 { line-height: 1.3em; }
 .h7, h7 { font-size: 13px; }
 .fixed-bottom {
-  position: fixed;
-  bottom: 0;
-}
-a, a:focus, a:hover,
-a:not([href]):not([tabindex]):focus,
-a:not([href]):not([tabindex]) {
-  text-decoration: none !important;
-  color: inherit !important;
-  -webkit-appearance:none;
-  outline: none;
-  border: 0;
-}
-input {
-  outline: none;
-}
-.custom-select {
-    background-image: url('/assets/images/caret-bottom.svg');
-    padding: 0.75rem 1rem !important;
-}
-.form-control[readonly] {
-  background-color: white;
-}
-.quote {
-  @extend .h7, .p-3, .b-1, .rounded, .gray50, .gray700-text ;
-  ul {
-    @extend .pl-3 ;
-  }
-}
-.quote-warning {
-  @extend .quote, .orange500-text, .bold ;
-  background-color: #fef2e6 ;
-  border: 0 !important;
-}
-.no-col-padding {
-  [class*='col'] {
-    padding: 0;
-  }
+    position: fixed;
+    bottom: 0;
 }
 .block-image {
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
 }
-.checkbox-btn,
-.radio-btn {
-  @extend .blue500-text, .mb-1, .p-3, .px-0, .bold ;
-  border: 1px solid #144ae1;
-  text-align: center;
-  font-size: 18px;
-  input {
-    display: none;
-  }
-}
-.btn-square {
-    @extend .btn, .rounded-0, .bold, .gray0-text ;
-}
-.btn-modal {
-    @extend .btn, .w-49, .mb-2, .bold ;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-.btn-outline-white {
-  background-color: transparent;
-}
-.btn-fixed-bottom {
-  @extend .btn, .btn-block, .mt-5, .mb-0, .rounded-0, .py-4, .bold, .fixed-bottom, .gray0-text ;
-}
-.btn-outline-gray {
-    @extend .btn, .btn-block, .mb-2, .py-4, .b-1-gray600, .gray600-text ;
-    background: transparent;
-}
+.flex-1 { flex: 1; }
+.flex-2 { flex: 2; }
+.flex-3 { flex: 3; }
+.flex-4 { flex: 4; }
+
 .w-49 {
     width: 49%;
 }
 .modal .table-bordered th,
 .modal .table-bordered td {
-  border: 1px solid #e0e0e0;
+    border: 1px solid #e0e0e0;
 }
 .col-option-selected {
-  @extend .gray50 ;
+    @extend .gray50 ;
 }
 .hide {
-  display: none !important;
-}
-fieldset:disabled {
-  h1, h2, h3, h4, h5, h6, h7, label, input,
-  .h1, .h2, .h3, .h4, .h5, .h6, .h7 {
-    @extend .gray600-text ;
-  }
+    display: none !important;
 }
 .line-height-base {
-  line-height: 1.6rem;
+    line-height: 1.6rem;
 }
 .modal-title {
-  @extend .bold ;
+    @extend .bold ;
 }
 .modal-content {
-  @extend .p-2 ;
+    @extend .p-2 ;
 }
 .shadow-blue600 {
     box-shadow: 0px 1px 6px 0px #2e4996;
 }
 .input-password {
     background-color: rgba(255, 255, 255, 0.24);
-        border: 1px solid #1c2334;
+    border: 1px solid #1c2334;
 }
 .no-content::before {
     content: '' !important;
 }
 
-// navigation
-.nav-active {
-    font-weight: bold;
-    border-bottom: 4px solid white;
-}
-.nav-tabs {
-    @extend .shadow-blue600 ;
-    position: relative;
-    z-index: 2;
-    border: none;
-    color: white;
-}
-.nav-item a {
-    padding: 0.75rem 0;
-}
-.prevent-click {
-    pointer-events: none;
-}
-.lh-14 {
-  line-height: 1.4;
-}
-.lh-18 {
-  line-height: 1.8;
-}
-
 // 시작 가이드 배너
 #banner {
-  @extend .blue600, .py-5, .px-3, .text-center ;
-  h1 {
-    @extend .h4, .gray0-text, .mx-auto, .mb-4 ;
-  }
-}
-.btn-main-banner {
-  @extend .btn, .py-4 ;
-  color: white;
-  font-weight: bold;
-  background: #40B59B;
-  border: 1px solid #369C86;
-  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.17);
-  border-radius: 100px;
+    @extend .blue600, .py-5, .px-3, .text-center ;
+    h1 {
+        @extend .h4, .mx-auto, .mb-4 ;
+        color: white;
+    }
 }
 
-// 상품 리스트
-.stockList {
-  table {
-    @extend .w-100 ;
-  }
 
-  .list-header {
-    @extend .bb-1, .bt-1 ;
-    th {
-      @extend .text-center, .normal, .py-3 ;
-    }
-    .arrow {
-      position: absolute;
-      font-size: 10px;
-      margin: 5px 0 0 6px;
-    }
-    i {
-      @extend .oi, .oi-caret-bottom, .h7, .normal ;
-    }
-    [data-toggle="modal"] {
-
-    }
-  }
-
-  .list-item {
-    i {
-      @extend .h7, .orange500-text, .px-2, .orange500-text ;
-    }
-  }
-  .product-option,
-  .product-profit {
-    @extend .text-center ;
-  }
-  .product-name {
-    padding: 24px 0;
-    text-align: left;
-    word-wrap: break-word;
-    word-break: break-all;
-    // max-width: 126px;
-    @extend .mb-2 ;
-    .sort {
-      margin-bottom: 0px;
-    }
-    .name {
-      color: #999999;
-    }
-  }
-}
-
-.product-info {
-  @extend .p-3, .gray150, .gray600-text ;
-  line-height: 1.6;
-  margin-bottom: 70px;
-  .info-list {
-    border: 1px solid #ccc;
-    text-align: center;
-    padding: 16px;
-    margin-bottom: 8px;
-  }
-}
 
 // 필터 버튼
 #filterButton {
-  @extend .btn, .btn-block ;
-  position: fixed;
-  bottom: 24px;
-  left: 50vw;
-  width: 8rem;
-  text-align: center;
+    @extend .btn, .btn-block ;
+    position: fixed;
+    bottom: 24px;
+    left: 50vw;
+    width: 8rem;
+    text-align: center;
 
-  padding: 1rem 1rem 1rem 0.7rem;
-  margin-left: -4rem;
-  border-radius: 100px;
-  color: #FFFFFF;
-  box-shadow: 0 1px 4px 0 #999999;
+    padding: 1rem 1rem 1rem 0.7rem;
+    margin-left: -4rem;
+    border-radius: 100px;
+    color: #FFFFFF;
+    box-shadow: 0 1px 4px 0 #999999;
 
-  i {
-    @extend .oi, .oi-sort-descending, .h6 ;
-    margin-top: -4px;
-    margin-bottom: 0px;
-  }
-  span {
-    @extend .bold ;
-    color: white;
-  }
+    i {
+        @extend .oi, .oi-sort-descending, .h6 ;
+        margin-top: -4px;
+        margin-bottom: 0px;
+    }
+    span {
+        @extend .bold ;
+        color: white;
+    }
 }
 
 // 모달 설정
 .modal-dialog {
-  margin: 0;
-  padding: 0;
-  &.fixed-bottom {
-    position: fixed;
-    width: 100%;
-  }
+    margin: 0;
+    padding: 0;
+    &.fixed-bottom {
+        position: fixed;
+        width: 100%;
+    }
 }
 .modal-content {
-  height: auto;
-  border-radius: 0;
-  border: 0;
-  background-color: #fafafa;
+    height: auto;
+    border-radius: 0;
+    border: 0;
+    background-color: #fafafa;
 
-  p {
-    line-height: 1.5;
-  }
+    p {
+        line-height: 1.5;
+    }
 }
 .modal-footer {
-  button {
-    @extend .px-4 ;
-  }
+    button {
+        @extend .px-4 ;
+    }
 }
 .modal.fade .modal-dialog {
-  transform: translate(0, 100vh);
+    transform: translate(0, 100vh);
 }
 .modal.show .modal-dialog {
-  transform: translate(0, 0);
+    transform: translate(0, 0);
 }
 
 // 성향 필터 카드
 .filter-card {
-  @extend .rounded, .b-1, .gray0, .py-4, .d-block, .mb-3 ;
-  &.selected {
-    background: #EDF2FE;
-    border: 1px solid #4E7BFA !important;
-    .title {
-      @extend .blue500-text ;
+    @extend .rounded, .b-1, .gray0, .py-4, .d-block, .mb-3 ;
+    &.selected {
+        background: #EDF2FE;
+        border: 1px solid #4E7BFA !important;
+        .title {
+            @extend .blue500-text ;
+        }
     }
-  }
-  .title {
-    @extend .w-30, .text-center, .align-top, .mb-0, .h5, .bold ;
-  }
-  .tag {
-    font-size: 12px;
-    padding: 6px 12px;
-    color: white;
-    border-radius: 4px;
-    line-height: 1;
-    font-weight: bold;
-    margin-right: 4px;
-  }
+    .title {
+        @extend .w-30, .text-center, .align-top, .mb-0, .h5, .bold ;
+    }
+    .tag {
+        font-size: 12px;
+        padding: 6px 12px;
+        color: white;
+        border-radius: 4px;
+        line-height: 1;
+        font-weight: bold;
+        margin-right: 4px;
+    }
 }
 .tag-portfolio {
-  display: inline-block;
-  font-size: 12px;
-  padding: 4px 8px;
-  color: white;
-  border-radius: 4px;
-  font-weight: bold;
-  margin-right: 4px;
-  margin-top: -2px;
+    display: inline-block;
+    font-size: 12px;
+    padding: 4px 8px;
+    color: white;
+    border-radius: 4px;
+    font-weight: bold;
+    margin-right: 4px;
+    margin-top: -2px;
 }
 
 // 위험도 태그
@@ -333,492 +215,522 @@ fieldset:disabled {
 /* 옵션 필터 */
 #modalOptionFilter button.oi-check:before,
 #profitFilter button.oi-check:before {
-  position: absolute;
-  right: 0;
-  color: #4e7bfa;
-  margin-right: 1rem;
+    position: absolute;
+    right: 0;
+    color: #4e7bfa;
+    margin-right: 1rem;
 }
 .dropdown-item:active {
-  color: inherit;
-  text-decoration: none;
-  background-color: inherit;
+    color: inherit;
+    text-decoration: none;
+    background-color: inherit;
 }
 
-// 필터 버튼 숨김
-.btn-hide {
-  bottom: -62px !important;
-  opacity: 0;
-}
-.btn-filter {
-  @extend .btn, .fixed-bottom, .gray0-text, .btn-block, .py-4, .rounded-0, .text-left ;
-  font-size: 16px;
-}
+
 .transition {
     transition: all 0.2s ease-in-out;
 }
 
 // 상품 헤더
 .header-shinhan {
-  @extend .gray800, .gray100-text, .h7, .text-center, .py-3 ;
-  z-index: 1;
-  img {
-    opacity: 0.9;
-    height:18px;
-    margin-top:-2px;
-    margin-right: 8px;
-  }
+    @extend .gray800, .gray100-text, .h7, .text-center, .py-3 ;
+    z-index: 1;
+    img {
+        opacity: 0.9;
+        height:18px;
+        margin-top:-2px;
+        margin-right: 8px;
+    }
 }
 
 // 메인화면 내 자산
 #portfolio {
-  @extend .blue600  ;
-  .page {
-    @extend .py-5, .px-3, .text-center, .w-100 ;
-  }
-  .title {
-    @extend .h6, .gray0-text ;
-  }
-  .asset {
-    @extend .h2, .gray0-text ;
-  }
-  .profit {
-    @extend .mb-3 ;
-  }
-  .plus {
-    @extend .pink500-text, .bold ;
-  }
-  .minus {
-    @extend .blue200-text, .bold ;
-  }
-  .carousel-indicators li {
-    height: 8px;
-    max-width: 8px;
-    border-radius: 4px;
-  }
-  .arrow {
-    display: inline-block;
-    position: absolute;
-    margin-left: 6px;
-    margin-top: 2px;
-    background-color: #34549f;
-    border-radius: 100px;
-    i {
-      padding: 8px 10px 10px 12px;
-      font-size: 12px;
-      @extend .oi, .oi-chevron-right, .gray0-text ;
-      &:before {
-        @extend .blue200-text ;
-      }
+    @extend .blue600  ;
+    .page {
+        @extend .py-5, .px-3, .text-center, .w-100 ;
     }
-  }
+    .title {
+        @extend .h6, .gray0-text ;
+    }
+    .asset {
+        @extend .h2, .gray0-text ;
+    }
+    .profit {
+        @extend .mb-3 ;
+    }
+    .plus {
+        @extend .pink500-text, .bold ;
+    }
+    .minus {
+        @extend .blue200-text, .bold ;
+    }
+    .carousel-indicators li {
+        height: 8px;
+        max-width: 8px;
+        border-radius: 4px;
+    }
+    .arrow {
+        display: inline-block;
+        position: absolute;
+        margin-left: 6px;
+        margin-top: 2px;
+        background-color: #34549f;
+        border-radius: 100px;
+        i {
+            padding: 8px 10px 10px 12px;
+            font-size: 12px;
+            @extend .oi, .oi-chevron-right, .gray0-text ;
+            &:before {
+                @extend .blue200-text ;
+            }
+        }
+    }
 }
 
 // 블럭
 .block {
-  @extend .p-4, .gray0, .bb-1 ;
-  .title {
-    @extend .h5, .gray900-text ;
-  }
-  .title-sm {
-    @extend .h6, .gray800-text, .mb-3, .bold ;
-  }
-  .subtitle {
-    @extend .h7, .gray600-text ;
-  }
-  .label {
-    @extend .gray600-text, .mb-1 ;
-  }
+    @extend .p-4, .gray0, .bb-1 ;
+    .title {
+        @extend .h5, .gray900-text ;
+    }
+    .title-sm {
+        @extend .h6, .gray800-text, .mb-3, .bold ;
+    }
+    .subtitle {
+        @extend .h7, .gray600-text ;
+    }
+    .label {
+        @extend .gray600-text, .mb-1 ;
+    }
 }
 .block-blue {
-  @extend .p-4, .blue600, .gray0-text ;
-  .title {
+    @extend .p-4, .blue600, .gray0-text ;
+    .title {
 
-  }
-  .label {
+    }
+    .label {
 
-  }
+    }
 }
 
 // 카드 블럭
+.block-list {
+    @extend .gray0, .bb-1 ;
+    box-shadow: 0 1px 2px 0 #E0E0E0;
+}
 .block-card {
-  @extend .block, .m-3 ;
-  box-shadow: 0 1px 2px 0 #E0E0E0;
+    @extend .block, .m-3 ;
+    box-shadow: 0 1px 2px 0 #E0E0E0;
 }
 .block-shadow {
-  box-shadow: 0 1px 2px 0 #cccccc;
-  @extend .b-1-gray150 ;
+    box-shadow: 0 1px 2px 0 #cccccc;
+    @extend .b-1-gray150 ;
 }
 .block-list {
-  @extend .w-100, .mb-2, .b-1-gray150, .gray0 ;
-  box-shadow: 0 1px 2px 0 #e0e0e0;
+    @extend .w-100, .mb-2, .b-1-gray150, .gray0 ;
+    box-shadow: 0 1px 2px 0 #e0e0e0;
 }
 
 .table-full-width {
-  @extend  .w-100 ;
-  .label {
-    @extend .gray600-text, .mb-1 ;
-  }
-  .value {
-    @extend .gray800-text, .h5, .mb-0 ;
-  }
-  &.reverse {
+    @extend  .w-100 ;
     .label {
-      @extend .blue200-text ;
+        @extend .gray600-text, .mb-1 ;
     }
     .value {
-      @extend .gray0-text, .h5, .mb-0 ;
+        @extend .gray800-text, .h5, .mb-0 ;
     }
-  }
+    &.reverse {
+        .label {
+            @extend .blue200-text ;
+        }
+        .value {
+            @extend .gray0-text, .h5, .mb-0 ;
+        }
+    }
 }
 
 .table-portfolio {
-  @extend .w-100 ;
-  tr {
-    background-color: white;
-    border-bottom: 1px solid #e0e0e0;
-  }
-  td {
-    @extend .py-4 ;
-    &:first-child {
-      @extend .pl-4, .text-left ;
+    @extend .w-100 ;
+    tr {
+        background-color: white;
+        border-bottom: 1px solid #e0e0e0;
     }
-    &:last-child {
-      @extend .pr-4, .text-right,  .w-50 ;
+    td {
+        @extend .py-4 ;
+        &:first-child {
+            @extend .pl-4, .text-left ;
+        }
+        &:last-child {
+            @extend .pr-4, .text-right,  .w-50 ;
+        }
+        h6 {
+            @extend .mb-1 ;
+        }
     }
-    h6 {
-      @extend .mb-1 ;
+    .plus {
+        @extend .pink500-text, .bold ;
     }
-  }
-  .plus {
-    @extend .pink500-text, .bold ;
-  }
-  .minus {
-    @extend .blue500-text, .bold ;
-  }
+    .minus {
+        @extend .blue500-text, .bold ;
+    }
 }
 
 .table-wating {
-  @extend .w-100 ;
-  tr {
-    background-color: white;
-    border-bottom: 1px solid #e0e0e0;
-  }
-  td {
-    @extend .py-4, .align-top ;
-    &:first-child {
-      @extend .pl-4, .text-left ;
+    @extend .w-100 ;
+    tr {
+        background-color: white;
+        border-bottom: 1px solid #e0e0e0;
     }
-    &:last-child {
-      @extend .pr-4, .text-right, .w-40 ;
+    td {
+        @extend .py-4, .align-top ;
+        &:first-child {
+            @extend .pl-4, .text-left ;
+        }
+        &:last-child {
+            @extend .pr-4, .text-right, .w-40 ;
+        }
+        h6 {
+            @extend .mb-1 ;
+        }
     }
-    h6 {
-      @extend .mb-1 ;
+    .plus {
+        @extend .pink500-text ;
     }
-  }
-  .plus {
-    @extend .pink500-text ;
-  }
-  .minus {
-    @extend .blue500-text ;
-  }
-  .status {
-    @extend .orange500-text ;
-    font-size: 14px;
-    font-weight: bold;
-  }
+    .minus {
+        @extend .blue500-text ;
+    }
+    .status {
+        @extend .orange500-text ;
+        font-size: 14px;
+        font-weight: bold;
+    }
 }
 
 .table-complete {
-  @extend .w-100 ;
-  tr {
-    background-color: white;
-    border-bottom: 1px solid #e0e0e0;
-  }
-  td {
-    @extend .py-4, .align-top ;
-    &:first-child {
-      @extend .pl-4, .text-left ;
+    @extend .w-100 ;
+    tr {
+        background-color: white;
+        border-bottom: 1px solid #e0e0e0;
     }
-    &:last-child {
-      @extend .pr-4, .text-right,  .w-40 ;
+    td {
+        @extend .py-4, .align-top ;
+        &:first-child {
+            @extend .pl-4, .text-left ;
+        }
+        &:last-child {
+            @extend .pr-4, .text-right,  .w-40 ;
+        }
+        h6 {
+            @extend .mb-1 ;
+        }
     }
-    h6 {
-      @extend .mb-1 ;
+    .plus {
+        @extend .pink500-text ;
     }
-  }
-  .plus {
-    @extend .pink500-text ;
-  }
-  .minus {
-    @extend .blue500-text ;
-  }
-  .status {
-    @extend .gray600-text ;
-    font-size: 14px;
-    font-weight: bold;
-  }
+    .minus {
+        @extend .blue500-text ;
+    }
+    .status {
+        @extend .gray600-text ;
+        font-size: 14px;
+        font-weight: bold;
+    }
 }
 
 .section-header {
-  @extend .text-center, .gray700-text, .pb-2, .pt-3, .mt-2 ;
+    @extend .text-center, .gray700-text, .pb-2, .pt-3, .mt-2 ;
 }
 
 // 상세화면 수익률
 #profit {
-  @extend .block-card ;
-  canvas {
-    @extend .px-2, .mb-4 ;
-  }
-  .control {
-    @extend .w-100, .text-center, .mb-2 ;
-    button {
-      @extend .btn ;
-      border-radius: 100px ;
-      font-size: 14px;
-      line-height: 1;
-      padding: 8px 11px;
-      background-color: transparent;
-      &.selected {
-        @extend .btn-accent ;
-      }
+    @extend .block-card ;
+    canvas {
+        @extend .px-2, .mb-4 ;
     }
-  }
+    .control {
+        @extend .w-100, .text-center, .mb-2 ;
+        button {
+            @extend .btn ;
+            border-radius: 100px ;
+            font-size: 14px;
+            line-height: 1;
+            padding: 8px 11px;
+            background-color: transparent;
+            &.selected {
+                @extend .btn-accent ;
+            }
+        }
+    }
 }
 
 // 투자 버튼
 #blockButtons {
-  @extend .fixed-bottom ;
-  button {
-    @extend .btn, .rounded-0, .py-4, .bold, .gray0-text ;
-    float: left;
-  }
-  .btn-sell {
-    @extend .ABlue800 ;
-  }
-  .btn-invest {
-    @extend .btn-accent ;
-  }
+    @extend .fixed-bottom ;
+    button {
+        @extend .btn, .rounded-0, .py-4, .bold, .gray0-text ;
+        float: left;
+    }
+    .btn-sell {
+        @extend .ABlue800 ;
+    }
+    .btn-invest {
+        @extend .btn-accent ;
+    }
 
 }
 
 //정보 화면
 #blockInfo {
 
-  .table-left-head {
-    @extend .table, .table-bordered, .mb-5 ;
-    td {
-      @extend .py-3 ;
-      min-width: 92px;
+    .table-left-head {
+        @extend .table, .table-bordered, .mb-5 ;
+        td {
+            @extend .py-3 ;
+            min-width: 92px;
+        }
+        .head {
+            @extend .gray50 ;
+        }
     }
-    .head {
-      @extend .gray50 ;
-    }
-  }
 }
 
 // 자동 투자 블럭
 #blockAutoInvest {
-  @extend .blue500, .m-3, .gray0-text, .p-3 ;
-  box-shadow: 0 1px 2px 0 #E0E0E0;
-  i {
-    @extend .oi, .oi-reload, .h7 ;
-  }
-  .title {
-    @extend .ml-2, .bold ;
-  }
-  .description {
-    @extend .ml-4 ;
-  }
-  hr {
-    @extend .ml-4 ;
-    border-top: 1px solid white ;
-  }
-  .quit {
-    @extend .ml-4, .mb-0 ;
-  }
+    @extend .blue500, .m-3, .gray0-text, .p-3 ;
+    box-shadow: 0 1px 2px 0 #E0E0E0;
+    i {
+        @extend .oi, .oi-reload, .h7 ;
+    }
+    .title {
+        @extend .ml-2, .bold ;
+    }
+    .description {
+        @extend .ml-4 ;
+    }
+    hr {
+        @extend .ml-4 ;
+        border-top: 1px solid white ;
+    }
+    .quit {
+        @extend .ml-4, .mb-0 ;
+    }
 }
 #finishAutoInvestModal {
-  .modal-header {
-    border-bottom: 0;
-    padding: 1rem 1rem 0;
-  }
-  .modal-footer {
-    padding: 0 1rem 2rem;
-    border-top: 0;
-  }
+    .modal-header {
+        border-bottom: 0;
+        padding: 1rem 1rem 0;
+    }
+    .modal-footer {
+        padding: 0 1rem 2rem;
+        border-top: 0;
+    }
 }
 
 // 투자하기, 환매하기, 성향 조사에 쓰이는 질문지 형식
 .survey {
-  .progress-bar {
-    @extend .blue500 ;
-    height: 0.25rem ;
-  }
-  .sheet {
-    @extend .px-4 ;
-  }
-  .question, .title {
-    @extend .mb-2, .mt-5 ;
-  }
-  .sub-question {
-    @extend .mt-4 ;
-  }
-  .tag {
-    @extend .blue500-text, .mt-5, .mb-2 ;
-  }
-  .description {
-    @extend .blue500-text ;
-  }
-  .info {
-    @extend .gray600-text, .normal ;
-    line-height: 1.6;
-  }
-  table {
-    @extend .table ;
-    &.unstyled {
-      @extend .mb-0 ;
-      td {
-        @extend .bb-0, .pt-0, .pb-2 ;
-      }
+    .progress-bar {
+        @extend .blue500 ;
+        height: 0.25rem ;
     }
-    td {
-      @extend .py-3, .px-0, .bt-0, .bb-1 ;
+    .sheet {
+        @extend .px-4 ;
     }
-    .head {
-      @extend .bold, .gray800-text, .w-35 ;
+    .question, .title {
+        @extend .mb-2, .mt-5 ;
     }
-    .data {
-      @extend .gray800-text ;
-      word-break: normal;
-     }
-  }
-  .btn-next {
-    @extend .btn, .btn-block, .btn-accent, .mt-5, .mb-0, .rounded-0, .py-4, .bold, .fixed-bottom, .gray0-text ;
-  }
-  .btn-confirm {
-    @extend .btn, .btn-accent, .btn-block, .rounded-0, .bold, .mb-5 ;
-  }
-  .btn-download {
-    @extend .btn, .btn-secondary, .btn-block ;
-    font-size: 1rem !important;
-    border-radius: 0 !important;
-    border-color: #e0e0e0;
-  }
-  fieldset[disabled] {
-    .question {
-      @extend .gray600-text ;
+    .sub-question {
+        @extend .mt-4 ;
+    }
+    .tag {
+        @extend .blue500-text, .mt-5, .mb-2 ;
     }
     .description {
-      @extend .gray600-text ;
+        @extend .blue500-text ;
     }
-  }
-  .terms-list {
-    @extend .mb-4 ;
-  }
-  .terms-child {
-    @extend .pr-4 ;
-    position: relative;
-    font-size: 14px;
-    &:before {
-      @extend .oi, .oi-chevron-right, .pt-2, .gray500-text ;
-      position: absolute;
-      top: 0;
-      right: 0;
+    .info {
+        @extend .gray600-text, .normal ;
+        line-height: 1.6;
     }
-  }
+    table {
+        @extend .table ;
+        &.unstyled {
+            @extend .mb-0 ;
+            td {
+                @extend .bb-0, .pt-0, .pb-2 ;
+            }
+        }
+        td {
+            @extend .py-3, .px-0, .bt-0, .bb-1 ;
+        }
+        .head {
+            @extend .bold, .gray800-text, .w-35 ;
+        }
+        .data {
+            @extend .gray800-text ;
+            word-break: normal;
+        }
+    }
+    .btn-next {
+        @extend .btn, .btn-block, .btn-accent, .mt-5, .mb-0, .rounded-0, .py-4, .bold, .fixed-bottom, .gray0-text ;
+    }
+    .btn-confirm {
+        @extend .btn, .btn-accent, .btn-block, .rounded-0, .bold, .mb-5 ;
+    }
+    .btn-download {
+        @extend .btn, .btn-secondary, .btn-block ;
+        font-size: 1rem !important;
+        border-radius: 0 !important;
+        border-color: #e0e0e0;
+    }
+    fieldset[disabled] {
+        .question {
+            @extend .gray600-text ;
+        }
+        .description {
+            @extend .gray600-text ;
+        }
+    }
+    .terms-list {
+        @extend .mb-4 ;
+    }
+    .terms-child {
+        @extend .pr-4 ;
+        position: relative;
+        font-size: 14px;
+        &:before {
+            @extend .oi, .oi-chevron-right, .pt-2, .gray500-text ;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    }
 }
 
 // 포트폴리오 내역
 .order-detail {
-  table {
-    @extend .table, .mb-0 ;
-    td {
-      @extend .pt-0, .px-0, .bt-0 ;
+    table {
+        @extend .table, .mb-0 ;
+        td {
+            @extend .pt-0, .px-0, .bt-0 ;
+        }
+        .head {
+            @extend .gray700-text, .w-40 ;
+        }
+        .data {
+            @extend .text-right, .gray800-text ;
+            &.due-date {
+                @extend .orange500-text ;
+            }
+        }
     }
-    .head {
-      @extend .gray700-text, .w-40 ;
-    }
-    .data {
-      @extend .text-right, .gray800-text ;
-      &.due-date {
-        @extend .orange500-text ;
-      }
-     }
-  }
 }
 
 // 자동 투자 설정
 .repeat-date {
-  @extend .form-control, .form-control-lg, .custom-select ;
-  background: #fff url(../../assets/images/caret-bottom.svg) no-repeat right 0.75rem center;
+    @extend .form-control, .form-control-lg, .custom-select ;
+    background: #fff url(../../assets/images/caret-bottom.svg) no-repeat right 0.75rem center;
 }
 
 //투자 설정
 #invest_amount {
-  margin-bottom: 300px;
+    margin-bottom: 300px;
 }
 
 // 환매 설정
 #sell_amount {
-  .note {
-    @extend .h7, .gray600-text ;
-  }
+    .note {
+        @extend .h7, .gray600-text ;
+    }
 }
 
 // 구매 계약서
 #contractSummary {
-  .title {
-    @extend .mb-5, .bold ;
-  }
+    .title {
+        @extend .mb-5, .bold ;
+    }
 }
 .circle-steps {
-  display: table;
-  width: 100%;
-  text-align: center;
-  li {
-    @extend .w-25 ;
-    display: table-cell;
-    position: relative;
-  }
-  h7 {
-    display: block;
-    margin-top: 52px;
-  }
-  .circle {
-    @extend .gray200 ;
-    position: absolute;
-    border-radius: 100px;
-    width: 40px;
-    height: 40px;
-    left: 0;
-    right: 0;
-    margin: auto;
-    z-index: 2;
-
-  }
-  .bar {
+    display: table;
     width: 100%;
-    position: absolute;
-    border: 6px solid #EBEBEB;
-    left: 50%;
-    top: 13px;
-    z-index: 1;
-  }
-  .term {
-    @extend .h7, .blue500-text ;
-    &.active {
-      @extend .blue500-text ;
-    }
-  }
-  .active {
-    .circle {
-      @extend .blue500 ;
-    }
-    .bar {
-      border-color: #4E7BFA;
+    text-align: center;
+    li {
+        @extend .w-25 ;
+        display: table-cell;
+        position: relative;
     }
     h7 {
-      @extend .blue500-text, .bold ;
+        display: block;
+        margin-top: 52px;
     }
-  }
+    .circle {
+        @extend .gray200 ;
+        position: absolute;
+        border-radius: 100px;
+        width: 40px;
+        height: 40px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        z-index: 2;
+
+    }
+    .bar {
+        width: 100%;
+        position: absolute;
+        border: 6px solid #EBEBEB;
+        left: 50%;
+        top: 13px;
+        z-index: 1;
+    }
+    .term {
+        @extend .h7, .blue500-text ;
+        &.active {
+            @extend .blue500-text ;
+        }
+    }
+    .active {
+        .circle {
+            @extend .blue500 ;
+        }
+        .bar {
+            border-color: #4E7BFA;
+        }
+        h7 {
+            @extend .blue500-text, .bold ;
+        }
+    }
+}
+
+
+// info 부분
+
+.text-period {
+    font-size: 13px;
+    font-color: #ededed;
+}
+.img-main-banner {
+    width: 210px;
+}
+.btn-main-banner {
+    margin-top: -52px;
+}
+.product-info {
+    word-break: keep-all;
+}
+.icon-filter {
+    width: 20px;
+}
+.info-list {
+    list-style: none;
+    padding-left: 0;
+}
+.info-list li {
+    margin-top: 40px;
+}
+.info-head {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+.info-body {
+    color: #333333;
 }

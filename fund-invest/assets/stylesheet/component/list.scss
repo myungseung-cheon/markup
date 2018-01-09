@@ -1,0 +1,107 @@
+// 추천 리스트
+.list-recommend-rank {
+    @extend .d-flex, .bt-1-gray150, .py-3 ;
+    align-items: center;
+    .order {
+        @extend .h5, .w-20, .text-center, .mb-1, .bold ;
+    }
+    .key {
+        flex: 1 ;
+    }
+    .title {
+        margin-bottom: 0;
+    }
+    .subtitle {
+        color: $color-sub-content;
+    }
+    .value {
+        color: $color-profit;
+        @extend .w-30, .bold, .text-center ;
+    }
+}
+.list-recommend-keyword {
+    @extend .d-flex, .bt-1-gray150, .px-4 ;
+    align-items: center;
+    min-height: 112px;
+    .img {
+        width: 70px;
+        height: 70px;
+        border-radius: 1000px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+    }
+    .contents {
+        @extend .flex-3, .p-3 ;
+        .title {
+            @extend .bold, .mb-2 ;
+        }
+        .subtitle {
+
+        }
+    }
+}
+.list-recommend-pro {
+    @extend .d-flex, .bt-1-gray150, .py-3, .px-4 ;
+    align-items: center;
+    .key {
+        flex: 1 ;
+    }
+    .title {
+        margin-bottom: 0.25rem;
+    }
+    .subtitle {
+        color: $color-sub-content;
+    }
+    .value {
+        @extend .pl-4 ;
+    }
+}
+
+// 상품 리스트
+.list-stock {
+    table {
+        width: 100%;
+    }
+    .list-header {
+        @extend .bb-1, .bt-1 ;
+        th {
+            @extend .text-center, .normal, .py-3 ;
+        }
+        .arrow {
+            position: absolute;
+            font-size: 10px;
+            margin: 5px 0 0 6px;
+        }
+        i {
+            @extend .oi, .oi-caret-bottom, .h7, .normal ;
+        }
+        [data-toggle="modal"] {
+
+        }
+    }
+    .list-item {
+        @extend .bb-1-gray150 ;
+        i {
+            @extend .h7, .orange500-text, .px-2, .orange500-text ;
+        }
+    }
+    .product-option,
+    .product-profit {
+        @extend .text-center ;
+    }
+    .product-name {
+        padding: 24px 0;
+        text-align: left;
+        word-wrap: break-word;
+        word-break: break-all;
+        // max-width: 126px;
+        @extend .mb-2 ;
+        .sort {
+            margin-bottom: 0px;
+        }
+        .name {
+            color: #999999;
+        }
+    }
+}
