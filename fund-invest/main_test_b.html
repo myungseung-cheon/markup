@@ -10,21 +10,57 @@
     <!-- Toss 공용 CSS 문서의 맨 처음에 와야 합니다;-->
     <link href="assets/stylesheet/style.css" rel="stylesheet">
 
+    <style>
+        .text-period {
+            font-size: 13px;
+            font-color: #ededed;
+        }
+        .img-main-banner {
+            width: 210px;
+            display: block;
+            margin: auto;
+        }
+        .btn-main-banner {
+            margin-top: -52px;
+        }
+        .product-info {
+            word-break: keep-all;
+        }
+        .icon-filter {
+            width: 20px;
+        }
+        .info-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        .info-list li {
+            margin-top: 40px;
+        }
+        .info-head {
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        .info-body {
+            color: #333333;
+        }
+    </style>
+
 
 </head>
 <body style="background-color:rgb(245, 246, 249)">
 
     <!-- 투자 가이드 -->
     <section id="banner">
-        <h1>5,000원으로 시작하는<br>맞춤 펀드 투자</h1>
-        <button>투자 가이드</button>
+        <h1>단돈 1,000원으로<br>전문가와 함께 투자하세요</h1>
+        <img class="img-main-banner" src="assets/images/img-main-banner.png" alt="">
+        <button class="btn-main-banner px-6">30초 투자 가이드</button>
     </section>
 
     <!-- 판매처 고지 -->
-    <header class="header-shinhan fixed-bottom transition">
+    <!-- <header class="header-shinhan fixed-bottom transition">
         <img src="assets/images/logo_shinhan.png" alt="로고-신한금융투자">
         펀드상품은 신한금융투자가 제공합니다
-    </header>
+    </header> -->
 
     <!-- 추천 리스트 -->
     <section id="recommendList" class="p-4">
@@ -248,12 +284,11 @@
 </section>
 
 
-
-
-
 <!-- 하단 고정 필터 -->
-<button id="filterButton" class="btn-warning btn-hide" data-toggle="modal" data-target="#modalSelectType">
-    <i></i> <span class="name">중립형</span>
+<button id="filterButtonWide" class="btn-filter btn-hide gray800" data-toggle="modal" data-target="#modalSelectType">
+    <img class="icon-filter mr-2" src="assets/images/icon-filter.png" alt="icon-filter">
+    <span class="name bold"> 필터를 추가할 수 있습니다.</span>
+    <a class="float-right"><u>필터 변경</u></a>
 </button>
 
 <!-- 성향 선택 모달 -->
@@ -360,25 +395,12 @@
 <script src="assets/javascript/event.js"></script>
 <script type="text/javascript">
 
-    // Carousel 터치 슬라이드
-    $(".carousel").swipe({
-
-        swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
-
-            if (direction == 'left') $(this).carousel('next');
-            if (direction == 'right') $(this).carousel('prev');
-
-        },
-        allowPageScroll:"vertical"
-
-    });
-
     //스크롤 이벤트
     var lastScrollTop = 0;
     $(window).scroll(function () {
 
         var src = $(this).scrollTop();
-        var btn = $('#filterButton');
+        var btn = $('#filterButtonWide');
         var toast = $('.header-shinhan');
         var targetSrc = 860;
 
