@@ -19,6 +19,9 @@ $color-profit: #fe4545;
     max-width: 475px;
     margin: auto;
 }
+#productList {
+    background-color: white;
+}
 #recommendList {
     @extend .gray100, .py-4 ;
 }
@@ -27,8 +30,20 @@ $color-profit: #fe4545;
     margin-bottom: 4rem;
 }
 .header-recommend {
-    @extend .px-4, .py-3 ;
+    @extend .px-4, .py-3, .d-flex ;
+    .title, .subtitle {
+        flex: 1;
+    }
+    .title {
+        @extend .h6, .bold, .mb-0 ;
+    }
+    .subtitle {
+        @extend .h7 ;
+        color: $color-sub-content ;
+        text-align: right;
+    }
 }
+
 .product-info {
     @extend .p-3, .elephant800, .gray300-text, .h7 ;
     line-height: 2;

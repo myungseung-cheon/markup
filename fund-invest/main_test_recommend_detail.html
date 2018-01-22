@@ -34,144 +34,164 @@
     </section>
 
     <!-- 상품 리스트 -->
-    <section id="productList" class="stockList">
-      <table class="gray0">
-        <thead>
-          <!-- 필터 -->
-          <tr class="list-header">
-            <th colspan="2">상품명</th>
-            <th>
-              <a href="#modalOptionFilter" data-toggle="modal" data-target="#modalOptionFilter">
-                 <span>구매자</span> <i></i>
-              </a>
-            </th>
-            <th>
-              <a href="#profitFilter" data-toggle="modal" data-target="#profitFilter">
-                <span>수익률</span> <i></i>
-              </a>
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          <!-- 상품 -->
-          <tr class="list-item">
-            <td class="product-type">
-              <i>●</i>
-            </td>
-            <td class="product-name">
-              <p class="sort">국내 대형주 주식형</p>
-              <h7 class="name">삼성중국본토레버리지…</h7>
-            </td>
-            <td class="product-option w-25 bold">3,506명</td>
-            <td class="product-profit w-25 bold pink500-text">20.5%</td>
-          </tr>
-          <tr class="list-item">
-            <td class="product-type">
-              <i>●</i>
-            </td>
-            <td class="product-name">
-              <p class="sort">국내 대형주 주식형</p>
-              <h7 class="name">삼성중국본토레버리지…</h7>
-            </td>
-            <td class="product-option w-25 bold">3,506명</td>
-            <td class="product-profit w-25 bold pink500-text">20.5%</td>
-          </tr>
-          <tr class="list-item">
-            <td class="product-type">
-              <i>●</i>
-            </td>
-            <td class="product-name">
-              <p class="sort">국내 대형주 주식형</p>
-              <h7 class="name">삼성중국본토레버리지…</h7>
-            </td>
-            <td class="product-option w-25 bold">3,506명</td>
-            <td class="product-profit w-25 bold pink500-text">20.5%</td>
-          </tr>
-          <tr class="list-item">
-            <td class="product-type">
-              <i>●</i>
-            </td>
-            <td class="product-name">
-              <p class="sort">국내 대형주 주식형</p>
-              <h7 class="name">삼성중국본토레버리지…</h7>
-            </td>
-            <td class="product-option w-25 bold">3,506명</td>
-            <td class="product-profit w-25 bold pink500-text">20.5%</td>
-          </tr>
-          <tr class="list-item">
-            <td class="product-type">
-              <i>●</i>
-            </td>
-            <td class="product-name">
-              <p class="sort">국내 대형주 주식형</p>
-              <h7 class="name">삼성중국본토레버리지…</h7>
-            </td>
-            <td class="product-option w-25 bold">3,506명</td>
-            <td class="product-profit w-25 bold pink500-text">20.5%</td>
-          </tr>
-          <tr class="list-item">
-            <td class="product-type">
-              <i>●</i>
-            </td>
-            <td class="product-name">
-              <p class="sort">국내 대형주 주식형</p>
-              <h7 class="name">삼성중국본토레버리지…</h7>
-            </td>
-            <td class="product-option w-25 bold">3,506명</td>
-            <td class="product-profit w-25 bold pink500-text">20.5%</td>
-          </tr>
-          <tr class="list-item">
-            <td class="product-type">
-              <i>●</i>
-            </td>
-            <td class="product-name">
-              <p class="sort">국내 대형주 주식형</p>
-              <h7 class="name">삼성중국본토레버리지…</h7>
-            </td>
-            <td class="product-option w-25 bold">3,506명</td>
-            <td class="product-profit w-25 bold pink500-text">20.5%</td>
-          </tr>
-          <tr class="list-item">
-            <td class="product-type">
-              <i>●</i>
-            </td>
-            <td class="product-name">
-              <p class="sort">국내 대형주 주식형</p>
-              <h7 class="name">삼성중국본토레버리지…</h7>
-            </td>
-            <td class="product-option w-25 bold">3,506명</td>
-            <td class="product-profit w-25 bold pink500-text">20.5%</td>
-          </tr>
-          <tr class="list-item">
-            <td class="product-type">
-              <i>●</i>
-            </td>
-            <td class="product-name">
-              <p class="sort">국내 대형주 주식형</p>
-              <h7 class="name">삼성중국본토레버리지…</h7>
-            </td>
-            <td class="product-option w-25 bold">3,506명</td>
-            <td class="product-profit w-25 bold pink500-text">20.5%</td>
-          </tr>
-          <tr class="list-item">
-            <td class="product-type">
-              <i>●</i>
-            </td>
-            <td class="product-name">
-              <p class="sort">국내 대형주 주식형</p>
-              <h7 class="name">삼성중국본토레버리지…</h7>
-            </td>
-            <td class="product-option w-25 bold">3,506명</td>
-            <td class="product-profit w-25 bold pink500-text">20.5%</td>
-          </tr>
-          <tr>
-            <td class="product-info" colspan="4">
-              온라인에서 구매 가능한한 선후취, 환매수수료가 없는 신한금융투자 제공 펀드리스트입니다.
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
+      <section id="productList" class="list-stock">
+          <table>
+              <thead>
+                  <!-- 필터 -->
+                  <tr class="list-header">
+                      <th colspan="2">상품명</th>
+                      <th >
+                          <a href="#modalOptionFilter" data-toggle="modal" data-target="#modalOptionFilter">
+                              <table class="text-center">
+                                  <tr>
+                                      <td class="pl-2">
+                                          <span>투자자</span><br>
+                                          <span class="text-period">(3개월)</span>
+                                      </td>
+                                      <td class="pr-2">
+                                          <i></i>
+                                      </td>
+                                  </tr>
+                              </table>
+                          </a>
+                      </th>
+                      <th>
+                          <a href="#profitFilter" data-toggle="modal" data-target="#profitFilter">
+                              <table class="text-center">
+                                  <tr>
+                                      <td class="pl-2">
+                                          <span>수익률</span><br>
+                                          <span class="text-period">(3개월)</span>
+                                      </td>
+                                      <td class="pr-2">
+                                          <i></i>
+                                      </td>
+                                  </tr>
+                              </table>
+                          </a>
+                      </th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <!-- 상품 -->
+                  <!-- <tr class="list-item">
+                      <td colspan="2"></td>
+                      <td class="text-center py-2 h7">3개월 기준</td>
+                      <td class="text-center py-2 h7">3개월 기준</td>
+                  </tr> -->
+                  <tr class="list-item">
+                      <td class="product-type">
+                          <i>●</i>
+                      </td>
+                      <td class="product-name">
+                          <p class="sort">국내 대형주 주식형</p>
+                          <h7 class="name">삼성아세안증권자투자신탁제2호[주식](C-e)</h7>
+                      </td>
+                      <td class="product-option w-25 bold">3,506명</td>
+                      <td class="product-profit w-25 bold pink500-text">20.5%</td>
+                  </tr>
+                  <tr class="list-item">
+                      <td class="product-type">
+                          <i>●</i>
+                      </td>
+                      <td class="product-name">
+                          <p class="sort">국내 대형주 주식형</p>
+                          <h7 class="name">삼성중국본토레버리지…</h7>
+                      </td>
+                      <td class="product-option w-25 bold">3,506명</td>
+                      <td class="product-profit w-25 bold pink500-text">20.5%</td>
+                  </tr>
+                  <tr class="list-item">
+                      <td class="product-type">
+                          <i>●</i>
+                      </td>
+                      <td class="product-name">
+                          <p class="sort">국내 대형주 주식형</p>
+                          <h7 class="name">삼성중국본토레버리지…</h7>
+                      </td>
+                      <td class="product-option w-25 bold">3,506명</td>
+                      <td class="product-profit w-25 bold pink500-text">20.5%</td>
+                  </tr>
+                  <tr class="list-item">
+                      <td class="product-type">
+                          <i>●</i>
+                      </td>
+                      <td class="product-name">
+                          <p class="sort">국내 대형주 주식형</p>
+                          <h7 class="name">계열사펀드 / 삼성중국…</h7>
+                      </td>
+                      <td class="product-option w-25 bold">3,506명</td>
+                      <td class="product-profit w-25 bold pink500-text">20.5%</td>
+                  </tr>
+                  <tr class="list-item">
+                      <td class="product-type">
+                          <i>●</i>
+                      </td>
+                      <td class="product-name">
+                          <p class="sort">국내 대형주 주식형</p>
+                          <h7 class="name">삼성중국본토레버리지…</h7>
+                      </td>
+                      <td class="product-option w-25 bold">3,506명</td>
+                      <td class="product-profit w-25 bold pink500-text">20.5%</td>
+                  </tr>
+                  <tr class="list-item">
+                      <td class="product-type">
+                          <i>●</i>
+                      </td>
+                      <td class="product-name">
+                          <p class="sort">국내 대형주 주식형</p>
+                          <h7 class="name">계열사펀드 / 삼성중국…</h7>
+                      </td>
+                      <td class="product-option w-25 bold">3,506명</td>
+                      <td class="product-profit w-25 bold pink500-text">20.5%</td>
+                  </tr>
+                  <tr class="list-item">
+                      <td class="product-type">
+                          <i>●</i>
+                      </td>
+                      <td class="product-name">
+                          <p class="sort">국내 대형주 주식형</p>
+                          <h7 class="name">삼성중국본토레버리지…</h7>
+                      </td>
+                      <td class="product-option w-25 bold">3,506명</td>
+                      <td class="product-profit w-25 bold pink500-text">20.5%</td>
+                  </tr>
+                  <tr class="list-item">
+                      <td class="product-type">
+                          <i>●</i>
+                      </td>
+                      <td class="product-name">
+                          <p class="sort">국내 대형주 주식형</p>
+                          <h7 class="name">삼성중국본토레버리지…</h7>
+                      </td>
+                      <td class="product-option w-25 bold">3,506명</td>
+                      <td class="product-profit w-25 bold pink500-text">20.5%</td>
+                  </tr>
+                  <tr class="list-item">
+                      <td class="product-type">
+                          <i>●</i>
+                      </td>
+                      <td class="product-name">
+                          <p class="sort">국내 대형주 주식형</p>
+                          <h7 class="name">삼성중국본토레버리지…</h7>
+                      </td>
+                      <td class="product-option w-25 bold">3,506명</td>
+                      <td class="product-profit w-25 bold pink500-text">20.5%</td>
+                  </tr>
+                  <tr class="list-item">
+                      <td class="product-type">
+                          <i>●</i>
+                      </td>
+                      <td class="product-name">
+                          <p class="sort">국내 대형주 주식형</p>
+                          <h7 class="name">계열사펀드 / 삼성중국…</h7>
+                      </td>
+                      <td class="product-option w-25 bold">3,506명</td>
+                      <td class="product-profit w-25 bold pink500-text">20.5%</td>
+                  </tr>
+              </tbody>
+          </table>
+      </section>
 
     <!-- 구매자/판매자 선택 모달 -->
     <div class="modal fade" id="modalOptionFilter" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

@@ -35,11 +35,3 @@ a:not([href]):not([tabindex]) {
     color: #144ae1 !important ;
     // font-weight: bold;
 }
-
-// subtitle
-.title-recommend {
-    @extend .h6, .bold, .mb-0 ;
-}
-.subtitle-recommend {
-    @extend .h7, .mb-0 ;
-}

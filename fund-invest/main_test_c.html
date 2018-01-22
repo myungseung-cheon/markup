@@ -32,7 +32,10 @@
         <!-- 전문가 추천 -->
         <div class="block-recommend">
             <header class="header-recommend">
-                <h1 class="title-recommend">전문가 추천</h1>
+                <h1 class="title">신한금융투자 추천</h1>
+                <span class="subtitle">
+                    <a href="" data-toggle="modal" data-target="#infoRecommend">추천 기준 안내</a>
+                </span>
             </header>
             <div class="list-recommend-pro">
                 <div class="key">
@@ -68,7 +71,7 @@
         <!-- 키워드 추천 -->
         <div class="block-recommend">
             <header class="header-recommend">
-                <h1 class="title-recommend">인기 키워드</h1>
+                <h1 class="title">인기 키워드</h1>
             </header>
             <div class="list-recommend-keyword">
                 <div class="img"
@@ -104,7 +107,7 @@
     <!-- 상품 리스트 -->
     <section id="productList" class="list-stock">
         <header class="header-recommend bt-1-gray200">
-            <h1 class="title-recommend">모든 상품</h1>
+            <h1 class="title">모든 상품</h1>
         </header>
         <table>
             <thead>
@@ -266,9 +269,9 @@
 
     <footer class="product-info">
         <p class="mt-2 mb-4">온라인에서 투자 가능한 선,후취, 환매수수료가 없는 신한금융투자 제공 펀드리스트 입니다.<br>(단, 운용보수 등은 별도)</p>
-
+        <a class="btn-outline-gray" data-toggle="modal" data-target="#warningBeforeInvenst">투자 유의사항</a>
+        <a class="btn-outline-gray" data-toggle="modal" data-target="#FAQ">자주 묻는 질문</a>
         <a class="btn-outline-gray">신한금융투자 고객지원센터 : 1588-0365</a>
-        <a class="btn-outline-gray" data-toggle="modal" data-target="#FAQ"> 자주 묻는 질문</a>
     </footer>
 
     <!-- 하단 고정 필터 -->
@@ -408,6 +411,55 @@
                             <p class="info-body">주식에 50%이상 투자하는 펀드는 ①8:40~15:30 ②15:30~17:00  해당 구간에 주문한 건만 해당 시간에 취소할 수 있습니다. (그 외 펀드는 08:40~15:00) 세부 문의는 신한금융투자 고객지원센터(1588-0365)로 연락주세요.</p>
                         </li>
                     </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 추천 기준 모달 -->
+    <div class="modal fade" id="infoRecommend" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog fixed-bottom" role="document">
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">신한금융투자 추천 기준</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    수익률, 변동성, 펀드 규모(순자산총액 100억 이상) 등 다양한 정량적 성과를 기반으로 리서치센터의 전망(하우스뷰)를 반영하여 투자상품부, 투자자산전략부 등을 구성된 투자상품협의회에서 매월 선정하는 신한금융투자 추천펀드입니다.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 확인하세요 모달 -->
+    <div class="modal fade" id="warningBeforeInvenst" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">투자 유의사항</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="quote mb-5">
+                        <ul>
+                            <li>이 금융상품은 예금자보호법에 따라 예금보험공사가 보호하지 않습니다.</li>
+                            <li>집합투자증권은 운용실적에 따라 이익 또는 손실이 발생할 수 있으며 그 결과는 투자자에게 귀속됩니다.</li>
+                            <li>당사는 금융투자상품 등에 관하여 충분히 설명할 의무가 있으며, 투자자는 투자에 앞서 그러한 설명을 충분히 들으시기 바랍니다.</li>
+                            <li>집합투자증권을 취득하시기 전에 투자대상, 보수&middot;수수료 및 환매방법 등에 관하여 (간이)투자설명서를 반드시 읽어보시기 바랍니다.</li>
+                            <li>집합투자증권은 증권거래비용 등이 추가로 발생할 수 있습니다.</li>
+                            <li>재간접형 펀드는 피투자펀드 보수 등 추가비용이 발생할 수 있습니다.</li>
+                            <li>해외표시자산에 투자하는 상품은 환율변동에 따라 투자자산가치가 변동될 수 있습니다.</li>
+                            <li>해외에 투자하는 금융투자상품의 경우 투자대상국가의 시장, 정치 및 경제상황 등에 따른 위험으로 자산가치의 손실이 발생할 수 있습니다.</li>
+                            <li>하이일드채권은 신용위험 및 유동성위험이 상대적으로 높아 원리금 지급이 원활하게 이루어지지 못할 위험이 크며 이로 인하여 투자원금 손실이 크게 발생할 수 있습니다. 종류형펀드는 보수에 따라 수익률이 달라질 수 있습니다. 과거의 운용실적이 미래의 수익을 보장하는 것은 아닙니다. 본자료는펀드상품의판매나권유를위해작성된것이아닌, 정보제공을 목적으로 하는 단순 참고자료로서 당사는 이에 대해 법적 책임을 지지 않습니다.</li>
+                            <li>펀드정보는 영업일 오전 8시30분에 업데이트 됩니다.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
