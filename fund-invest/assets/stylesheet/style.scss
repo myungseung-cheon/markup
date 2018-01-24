@@ -248,7 +248,7 @@ $color-profit: #fe4545;
 
 // 상품 헤더
 .header-shinhan {
-    @extend .gray800, .gray100-text, .h7, .text-center, .py-3 ;
+    @extend .blue800, .gray200-text, .h7, .text-center, .py-3 ;
     z-index: 1;
     img {
         opacity: 0.9;

@@ -1540,7 +1540,7 @@ mark,
 .blue700-text {
   color: #2E4996; }
 
-.blue800 {
+.blue800, .header-shinhan {
   background-color: #1F3164; }
 
 .blue800-text {
@@ -1561,7 +1561,7 @@ mark,
 .gray100, #recommendList {
   background-color: #F5F5F5; }
 
-.gray100-text, .header-shinhan {
+.gray100-text {
   color: #F5F5F5; }
 
 .gray150 {
@@ -1573,7 +1573,7 @@ mark,
 .gray200, .circle-steps .circle {
   background-color: #EBEBEB; }
 
-.gray200-text {
+.gray200-text, .header-shinhan {
   color: #EBEBEB; }
 
 .gray250 {
@@ -1619,7 +1619,7 @@ fieldset:disabled .h1, fieldset:disabled .h2, fieldset:disabled #portfolio .asse
 .gray700-text, .section-header, .order-detail table .head, .agree-all {
   color: #666; }
 
-.gray800, .header-shinhan {
+.gray800 {
   background-color: #333; }
 
 .gray800-text, .block .title-sm, .block-card .title-sm, #profit .title-sm, .table-full-width .value, .survey table .head, .survey table .data, .order-detail table .data, .post {
