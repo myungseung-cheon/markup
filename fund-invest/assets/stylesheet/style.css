@@ -1573,7 +1573,7 @@ mark,
 .gray200, .circle-steps .circle {
   background-color: #EBEBEB; }
 
-.gray200-text, .header-shinhan {
+.gray200-text {
   color: #EBEBEB; }
 
 .gray250 {
@@ -1585,7 +1585,7 @@ mark,
 .gray300 {
   background-color: #E0E0E0; }
 
-.gray300-text, .product-info {
+.gray300-text, .product-info, .header-shinhan {
   color: #E0E0E0; }
 
 .gray350 {
@@ -11623,6 +11623,8 @@ input {
 
 .header-shinhan {
   z-index: 1; }
+  .header-shinhan span {
+    font-size: 15px; }
   .header-shinhan img {
     opacity: 0.9;
     height: 18px;
