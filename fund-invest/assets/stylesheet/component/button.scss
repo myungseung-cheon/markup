@@ -25,6 +25,18 @@
     box-shadow: 0 2px 4px 0 rgba(0,0,0,0.17);
     border-radius: 100px;
 }
+.btn-main-banner-panic {
+    @extend .btn, .px-4 ;
+    color: white ;
+    font-weight: bold;
+    background: #40B59B;
+    border: 1px solid #369C86;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.17);
+    border-radius: 4px;
+    a:not([href]):not([tabindex]) {
+        color: white !important;
+    }
+}
 // 필터 버튼
 .btn-filter {
     @extend .btn, .fixed-bottom, .gray0-text, .btn-block, .py-4, .rounded-0, .text-left ;
