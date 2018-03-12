@@ -1,0 +1,50 @@
+.list-setting {
+    display: flex;
+    align-items: center;
+    padding: 20px 16px;
+    background-color: white;
+    box-shadow: 0 -1px 0 0 #E5E5E5, inset 0 -1px 0 0 #E5E5E5;
+    &__icon {
+        width: 24px;
+    }
+    &__label {
+        color: #666;
+        flex: 1;
+        margin: 2px 0 0 28px;
+        line-height: 1;
+    }
+}
+.list-cancel {
+    margin-bottom: 1.5rem;   
+}
+.sub-table {
+    background-color: white;
+    padding: 2.5rem 1.5rem 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 -1px 0 0 #E5E5E5, inset 0 -1px 0 0 #E5E5E5;
+
+    table {
+        @extend .table ;
+    }
+    & .title {
+        font-weight: bold;
+        margin-bottom: 3rem;
+    }
+    &.unstyled {
+        @extend .mb-0 ;
+        td {
+            @extend .bb-0, .pt-0, .pb-2 ;
+        }
+    }
+    td {
+        @extend .py-3, .px-0, .bt-0, .bb-1 ;
+        word-break: keep-all;
+    }
+    .head {
+        @extend .bold, .gray800-text, .w-35 ;
+    }
+    .data {
+        @extend .gray800-text, .pl-4 ;
+        word-break: normal;
+    }
+}

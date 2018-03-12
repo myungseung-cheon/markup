@@ -52,6 +52,13 @@
       </table>
     </section>
 
+    <!-- 구독 설정 -->
+    <section id="subscribtionSetting" class="list-setting">
+        <img class="list-setting__icon" src="assets/images/icon-setting.png" alt="">
+        <div class="list-setting__label">구독 설정</div>
+        <img class="list-setting__icon" src="assets/images/icon-arrow.png" alt="">
+    </section>
+
     <!-- 대기중인 내역 -->
     <section id="watingList">
       <div class="section-header">대기중인 내역</div>
@@ -169,14 +176,12 @@
     <script src="assets/javascript/tether.min.js"></script>
     <script src="assets/javascript/tossframe-2.0.0.js"></script>
 
-    <!-- 차트 -->
-    <script src="assets/javascript/Chart.bundle.js"></script>
-    <script src="assets/javascript/chartSetting.js"></script>
-
     <!-- 커스텀 이벤트 -->
     <!-- <script src="assets/javascript/event.js"></script> -->
     <script type="text/javascript">
-      $('#profitChart').click(false);
+        $("#subscribtionSetting").click(function(){
+            window.location.href = 'subscribe-setting.html';
+        });
     </script>
 
   </body>

@@ -1,0 +1,81 @@
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#3E63BC" />
+    <!-- 위 3개의 메타 태그는 *반드시* head 태그의 처음에 와야합니다; 어떤 다른 콘텐츠들은 반드시 이 태그들 *다음에* 와야 합니다 -->
+    <title>Toss - 소액 펀드 투자</title>
+
+    <!-- 커스텀 스타일 -->
+    <link href="assets/stylesheet/style.css" rel="stylesheet">
+
+  </head>
+  <body class="gray150">
+
+    <section id="subscribtionDetail" class="sub-table">
+        <h4 class="title">구독 설정</h4>
+        <table>
+            <!-- 서비스명 -->
+            <tr>
+                <td class="head">서비스명</td>
+                <td class="data">소액 펀드 투자</td>
+            </tr>
+            <!-- 구독료 -->
+            <tr>
+                <td class="head">구독료</td>
+                <td class="data">매 월 1000원</td>
+            </tr>
+            <!-- 구독료 -->
+            <tr>
+                <td class="head">구독료 납부 계좌</td>
+                <td class="data">기업 1002839037432</td>
+            </tr>
+            <!-- 구독 시작일 -->
+            <tr>
+                <td class="head">구독 시작일</td>
+                <td class="data">2018년 1월 12일</td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- 구독 설정 -->
+    <section id="subcribeCancel" class="list-setting list-cancel">
+        <img class="list-setting__icon" src="assets/images/icon-cancel.png" alt="">
+        <div class="list-setting__label">구독 중단</div>
+        <img class="list-setting__icon" src="assets/images/icon-arrow.png" alt="">
+    </section>
+
+    <div class="modal fade" id="confirmCancel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    구독을 중단할까요?
+                </div>
+                <div class="modal-body">
+                    이번 달 구독 기간이 끝나면 새로운 펀드에 투자할 수 없습니다
+                </div>
+                <div class="modal-footer">
+                    <button class="btn-modal btn-secondary w-50" data-dismiss="modal">다음에</button>
+                    <button class="btn-modal btn-danger w-50" type="button" name="button">구독 중단</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 기본 JavaScript 프레임워크 -->
+    <script src="assets/javascript/jquery-3.2.1.min.js"></script>
+    <script src="assets/javascript/tether.min.js"></script>
+    <script src="assets/javascript/tossframe-2.0.0.js"></script>
+
+    <!-- 커스텀 이벤트 -->
+    <!-- <script src="assets/javascript/event.js"></script> -->
+    <script type="text/javascript">
+        $("#subcribeCancel").click(function(){
+            $("#confirmCancel").modal();
+        });
+    </script>
+
+  </body>
+</html>

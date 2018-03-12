@@ -1370,7 +1370,7 @@ h6, .h6, .header-recommend .title, #filterButton i, #portfolio .title, .block .t
   font-size: 1rem; }
 
 .bold, .quote-warning, .checkbox-btn,
-.radio-btn, .btn-square, .btn-modal, .btn-fixed-bottom, .list-recommend-rank .order, .list-recommend-rank .value, .list-recommend-keyword .contents .title, .summary-portfolio__name, .header-recommend .title, .modal-title, #filterButton span, .filter-card .title, #portfolio .plus, #portfolio .minus, .block .title-sm, .block-card .title-sm, #profit .title-sm, .table-portfolio .plus, .table-portfolio .minus, #blockButtons button, #blockAutoInvest .title, .survey table .head, .survey .btn-next, .survey .btn-confirm, #contractSummary .title, .circle-steps .active h7 {
+.radio-btn, .btn-square, .btn-modal, .btn-fixed-bottom, .list-recommend-rank .order, .list-recommend-rank .value, .list-recommend-keyword .contents .title, .summary-portfolio__name, .sub-table .head, .header-recommend .title, .modal-title, #filterButton span, .filter-card .title, #portfolio .plus, #portfolio .minus, .block .title-sm, .block-card .title-sm, #profit .title-sm, .table-portfolio .plus, .table-portfolio .minus, #blockButtons button, #blockAutoInvest .title, .survey table .head, .survey .btn-next, .survey .btn-confirm, #contractSummary .title, .circle-steps .active h7 {
   font-weight: 700 !important; }
 
 .normal, .list-stock .list-header th, .list-stock .list-header i, .survey .info {
@@ -1622,7 +1622,7 @@ fieldset:disabled .h1, fieldset:disabled .h2, fieldset:disabled #portfolio .asse
 .gray800 {
   background-color: #333; }
 
-.gray800-text, .block .title-sm, .block-card .title-sm, #profit .title-sm, .table-full-width .value, .survey table .head, .survey table .data, .order-detail table .data, .post {
+.gray800-text, .sub-table .head, .sub-table .data, .block .title-sm, .block-card .title-sm, #profit .title-sm, .table-full-width .value, .survey table .head, .survey table .data, .order-detail table .data, .post {
   color: #333; }
 
 .gray900 {
@@ -2321,18 +2321,19 @@ fieldset[disabled] a.terms-agree-all {
   font-size: 0.875rem;
   border-radius: 0.2rem; }
 
-.btn-block, .btn-fixed-bottom, .btn-outline-gray, .btn-filter, #filterButton, .survey .btn-next, .survey .btn-confirm, .survey .btn-download {
+.btn-block, .btn-fixed-bottom, .btn-outline-gray, .btn-filter, .btn-modal, #filterButton, .survey .btn-next, .survey .btn-confirm, .survey .btn-download {
   display: block;
   width: 100%; }
 
-.btn-block + .btn-block, .btn-fixed-bottom + .btn-block, .btn-outline-gray + .btn-block, .btn-filter + .btn-block, #filterButton + .btn-block, .survey .btn-next + .btn-block, .survey .btn-confirm + .btn-block, .survey .btn-download + .btn-block, .btn-block + .btn-fixed-bottom, .btn-fixed-bottom + .btn-fixed-bottom, .btn-outline-gray + .btn-fixed-bottom, .btn-filter + .btn-fixed-bottom, #filterButton + .btn-fixed-bottom, .survey .btn-next + .btn-fixed-bottom, .survey .btn-confirm + .btn-fixed-bottom, .survey .btn-download + .btn-fixed-bottom, .btn-block + .btn-outline-gray, .btn-fixed-bottom + .btn-outline-gray, .btn-outline-gray + .btn-outline-gray, .btn-filter + .btn-outline-gray, #filterButton + .btn-outline-gray, .survey .btn-next + .btn-outline-gray, .survey .btn-confirm + .btn-outline-gray, .survey .btn-download + .btn-outline-gray, .btn-block + .btn-filter, .btn-fixed-bottom + .btn-filter, .btn-outline-gray + .btn-filter, .btn-filter + .btn-filter, #filterButton + .btn-filter, .survey .btn-next + .btn-filter, .survey .btn-confirm + .btn-filter, .survey .btn-download + .btn-filter, .btn-block + #filterButton, .btn-fixed-bottom + #filterButton, .btn-outline-gray + #filterButton, .btn-filter + #filterButton, #filterButton + #filterButton, .survey .btn-next + #filterButton, .survey .btn-confirm + #filterButton, .survey .btn-download + #filterButton, .survey .btn-block + .btn-next, .survey .btn-fixed-bottom + .btn-next, .survey .btn-outline-gray + .btn-next, .survey .btn-filter + .btn-next, .survey #filterButton + .btn-next, .survey .btn-next + .btn-next, .survey .btn-confirm + .btn-next, .survey .btn-download + .btn-next, .survey .btn-block + .btn-confirm, .survey .btn-fixed-bottom + .btn-confirm, .survey .btn-outline-gray + .btn-confirm, .survey .btn-filter + .btn-confirm, .survey #filterButton + .btn-confirm, .survey .btn-next + .btn-confirm, .survey .btn-confirm + .btn-confirm, .survey .btn-download + .btn-confirm, .survey .btn-block + .btn-download, .survey .btn-fixed-bottom + .btn-download, .survey .btn-outline-gray + .btn-download, .survey .btn-filter + .btn-download, .survey #filterButton + .btn-download, .survey .btn-next + .btn-download, .survey .btn-confirm + .btn-download, .survey .btn-download + .btn-download {
+.btn-block + .btn-block, .btn-fixed-bottom + .btn-block, .btn-outline-gray + .btn-block, .btn-filter + .btn-block, .btn-modal + .btn-block, #filterButton + .btn-block, .survey .btn-next + .btn-block, .survey .btn-confirm + .btn-block, .survey .btn-download + .btn-block, .btn-block + .btn-fixed-bottom, .btn-fixed-bottom + .btn-fixed-bottom, .btn-outline-gray + .btn-fixed-bottom, .btn-filter + .btn-fixed-bottom, .btn-modal + .btn-fixed-bottom, #filterButton + .btn-fixed-bottom, .survey .btn-next + .btn-fixed-bottom, .survey .btn-confirm + .btn-fixed-bottom, .survey .btn-download + .btn-fixed-bottom, .btn-block + .btn-outline-gray, .btn-fixed-bottom + .btn-outline-gray, .btn-outline-gray + .btn-outline-gray, .btn-filter + .btn-outline-gray, .btn-modal + .btn-outline-gray, #filterButton + .btn-outline-gray, .survey .btn-next + .btn-outline-gray, .survey .btn-confirm + .btn-outline-gray, .survey .btn-download + .btn-outline-gray, .btn-block + .btn-filter, .btn-fixed-bottom + .btn-filter, .btn-outline-gray + .btn-filter, .btn-filter + .btn-filter, .btn-modal + .btn-filter, #filterButton + .btn-filter, .survey .btn-next + .btn-filter, .survey .btn-confirm + .btn-filter, .survey .btn-download + .btn-filter, .btn-block + .btn-modal, .btn-fixed-bottom + .btn-modal, .btn-outline-gray + .btn-modal, .btn-filter + .btn-modal, .btn-modal + .btn-modal, #filterButton + .btn-modal, .survey .btn-next + .btn-modal, .survey .btn-confirm + .btn-modal, .survey .btn-download + .btn-modal, .btn-block + #filterButton, .btn-fixed-bottom + #filterButton, .btn-outline-gray + #filterButton, .btn-filter + #filterButton, .btn-modal + #filterButton, #filterButton + #filterButton, .survey .btn-next + #filterButton, .survey .btn-confirm + #filterButton, .survey .btn-download + #filterButton, .survey .btn-block + .btn-next, .survey .btn-fixed-bottom + .btn-next, .survey .btn-outline-gray + .btn-next, .survey .btn-filter + .btn-next, .survey .btn-modal + .btn-next, .survey #filterButton + .btn-next, .survey .btn-next + .btn-next, .survey .btn-confirm + .btn-next, .survey .btn-download + .btn-next, .survey .btn-block + .btn-confirm, .survey .btn-fixed-bottom + .btn-confirm, .survey .btn-outline-gray + .btn-confirm, .survey .btn-filter + .btn-confirm, .survey .btn-modal + .btn-confirm, .survey #filterButton + .btn-confirm, .survey .btn-next + .btn-confirm, .survey .btn-confirm + .btn-confirm, .survey .btn-download + .btn-confirm, .survey .btn-block + .btn-download, .survey .btn-fixed-bottom + .btn-download, .survey .btn-outline-gray + .btn-download, .survey .btn-filter + .btn-download, .survey .btn-modal + .btn-download, .survey #filterButton + .btn-download, .survey .btn-next + .btn-download, .survey .btn-confirm + .btn-download, .survey .btn-download + .btn-download {
   margin-top: 0.5rem; }
 
-input[type="submit"].btn-block, input[type="submit"].btn-fixed-bottom, input[type="submit"].btn-outline-gray, input[type="submit"].btn-filter, input[type="submit"]#filterButton, .survey input[type="submit"].btn-next, .survey input[type="submit"].btn-confirm, .survey input[type="submit"].btn-download,
+input[type="submit"].btn-block, input[type="submit"].btn-fixed-bottom, input[type="submit"].btn-outline-gray, input[type="submit"].btn-filter, input[type="submit"].btn-modal, input[type="submit"]#filterButton, .survey input[type="submit"].btn-next, .survey input[type="submit"].btn-confirm, .survey input[type="submit"].btn-download,
 input[type="reset"].btn-block,
 input[type="reset"].btn-fixed-bottom,
 input[type="reset"].btn-outline-gray,
 input[type="reset"].btn-filter,
+input[type="reset"].btn-modal,
 input[type="reset"]#filterButton,
 .survey input[type="reset"].btn-next,
 .survey input[type="reset"].btn-confirm,
@@ -2341,6 +2342,7 @@ input[type="button"].btn-block,
 input[type="button"].btn-fixed-bottom,
 input[type="button"].btn-outline-gray,
 input[type="button"].btn-filter,
+input[type="button"].btn-modal,
 input[type="button"]#filterButton,
 .survey input[type="button"].btn-next,
 .survey input[type="button"].btn-confirm,
@@ -4587,13 +4589,13 @@ a.bg-inverse:focus, a.bg-inverse:hover {
 .b-0 {
   border: 0 solid #E0E0E0 !important; }
 
-.bt-0, .survey table td, .order-detail table td {
+.bt-0, .sub-table td, .survey table td, .order-detail table td {
   border-top: 0 solid #E0E0E0 !important; }
 
 .br-0 {
   border-right: 0 solid #E0E0E0 !important; }
 
-.bb-0, .survey table.unstyled td {
+.bb-0, .sub-table.unstyled td, .survey table.unstyled td {
   border-bottom: 0 solid #E0E0E0 !important; }
 
 .bl-0 {
@@ -4998,7 +5000,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
 .br-1 {
   border-right: 1px solid #E0E0E0 !important; }
 
-.bb-1, .list-stock .list-header, .block, .block-card, #profit, .block-list, .survey table td {
+.bb-1, .list-stock .list-header, .sub-table td, .block, .block-card, #profit, .block-list, .survey table td {
   border-bottom: 1px solid #E0E0E0 !important; }
 
 .bl-1 {
@@ -6121,7 +6123,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
 .w-30, .list-recommend-rank .value, .filter-card .title, .input-dots {
   width: 30% !important; }
 
-.w-35, .survey table .head {
+.w-35, .sub-table .head, .survey table .head {
   width: 35% !important; }
 
 .w-40, .table-wating td:last-child, .table-complete td:last-child, .order-detail table .head {
@@ -6238,7 +6240,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
 .mr-0 {
   margin-right: 0 !important; }
 
-.mb-0, .btn-fixed-bottom, .header-recommend .title, .filter-card .title, .table-full-width .value, .table-full-width.reverse .value, #blockAutoInvest .quit, .survey table.unstyled, .survey .btn-next, .order-detail table {
+.mb-0, .btn-fixed-bottom, .sub-table.unstyled, .header-recommend .title, .filter-card .title, .table-full-width .value, .table-full-width.reverse .value, #blockAutoInvest .quit, .survey table.unstyled, .survey .btn-next, .order-detail table {
   margin-bottom: 0 !important; }
 
 .ml-0 {
@@ -6417,7 +6419,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
 .p-0 {
   padding: 0 0 !important; }
 
-.pt-0, .survey table.unstyled td, .order-detail table td {
+.pt-0, .sub-table.unstyled td, .survey table.unstyled td, .order-detail table td {
   padding-top: 0 !important; }
 
 .pr-0 {
@@ -6430,7 +6432,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
   padding-left: 0 !important; }
 
 .px-0, .checkbox-btn,
-.radio-btn, .survey table td, .order-detail table td {
+.radio-btn, .sub-table td, .survey table td, .order-detail table td {
   padding-right: 0 !important;
   padding-left: 0 !important; }
 
@@ -6470,7 +6472,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
 .pr-2 {
   padding-right: 0.5rem !important; }
 
-.pb-2, .section-header, .survey table.unstyled td {
+.pb-2, .sub-table.unstyled td, .section-header, .survey table.unstyled td {
   padding-bottom: 0.5rem !important; }
 
 .pl-2 {
@@ -6504,7 +6506,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
   padding-right: 1rem !important;
   padding-left: 1rem !important; }
 
-.py-3, .list-recommend-rank, .list-recommend-pro, .list-stock .list-header th, .summary-portfolio, .header-recommend, .product-info a, .header-shinhan, #blockInfo .table-left-head td, .survey table td, .agree-all {
+.py-3, .list-recommend-rank, .list-recommend-pro, .list-stock .list-header th, .btn-modal, .summary-portfolio, .sub-table td, .header-recommend, .product-info a, .header-shinhan, #blockInfo .table-left-head td, .survey table td, .agree-all {
   padding-top: 1rem !important;
   padding-bottom: 1rem !important; }
 
@@ -6520,7 +6522,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
 .pb-4 {
   padding-bottom: 1.5rem !important; }
 
-.pl-4, .list-recommend-pro .value, .table-portfolio td:first-child, .table-wating td:first-child, .table-complete td:first-child {
+.pl-4, .list-recommend-pro .value, .sub-table .data, .table-portfolio td:first-child, .table-wating td:first-child, .table-complete td:first-child {
   padding-left: 1.5rem !important; }
 
 .px-4, .btn-main-banner-panic, .list-recommend-keyword, .list-recommend-pro, .summary-portfolio, .header-recommend, .modal-footer button, .survey .sheet {
@@ -10739,13 +10741,14 @@ button.close {
   border: 0;
   -webkit-appearance: none; }
 
-.table, #blockInfo .table-left-head, .survey table, .order-detail table {
+.table, .sub-table table, #blockInfo .table-left-head, .survey table, .order-detail table {
   width: 100%;
   max-width: 100%;
   margin-bottom: 1rem; }
 
-.table th, #blockInfo .table-left-head th, .survey table th, .order-detail table th,
+.table th, .sub-table table th, #blockInfo .table-left-head th, .survey table th, .order-detail table th,
 .table td,
+.sub-table table td,
 #blockInfo .table-left-head td,
 .survey table td,
 .order-detail table td {
@@ -10753,14 +10756,14 @@ button.close {
   vertical-align: top;
   border-top: 1px solid #eceeef; }
 
-.table thead th, #blockInfo .table-left-head thead th, .survey table thead th, .order-detail table thead th {
+.table thead th, .sub-table table thead th, #blockInfo .table-left-head thead th, .survey table thead th, .order-detail table thead th {
   vertical-align: bottom;
   border-bottom: 2px solid #eceeef; }
 
-.table tbody + tbody, #blockInfo .table-left-head tbody + tbody, .survey table tbody + tbody, .order-detail table tbody + tbody {
+.table tbody + tbody, .sub-table table tbody + tbody, #blockInfo .table-left-head tbody + tbody, .survey table tbody + tbody, .order-detail table tbody + tbody {
   border-top: 2px solid #eceeef; }
 
-.table .table, #blockInfo .table-left-head .table, .survey table .table, .order-detail table .table, .table #blockInfo .table-left-head, #blockInfo .table .table-left-head, #blockInfo .table-left-head .table-left-head, .survey table #blockInfo .table-left-head, #blockInfo .survey table .table-left-head, .order-detail table #blockInfo .table-left-head, #blockInfo .order-detail table .table-left-head, .table .survey table, .survey .table table, #blockInfo .table-left-head .survey table, .survey #blockInfo .table-left-head table, .survey table table, .table .order-detail table, .order-detail .table table, #blockInfo .table-left-head .order-detail table, .order-detail #blockInfo .table-left-head table, .order-detail table table {
+.table .table, .sub-table table .table, #blockInfo .table-left-head .table, .survey table .table, .order-detail table .table, .table .sub-table table, .sub-table .table table, .sub-table table table, #blockInfo .table-left-head .sub-table table, .sub-table #blockInfo .table-left-head table, .table #blockInfo .table-left-head, #blockInfo .table .table-left-head, .sub-table table #blockInfo .table-left-head, #blockInfo .sub-table table .table-left-head, #blockInfo .table-left-head .table-left-head, .survey table #blockInfo .table-left-head, #blockInfo .survey table .table-left-head, .order-detail table #blockInfo .table-left-head, #blockInfo .order-detail table .table-left-head, .table .survey table, .survey .table table, #blockInfo .table-left-head .survey table, .survey #blockInfo .table-left-head table, .survey table table, .table .order-detail table, .order-detail .table table, #blockInfo .table-left-head .order-detail table, .order-detail #blockInfo .table-left-head table, .order-detail table table {
   background-color: #fff; }
 
 .table-sm th,
@@ -11504,6 +11507,50 @@ input {
   .list-stock .product-name .name {
     color: #999999; }
 
+.modal-dialog {
+  position: fixed;
+  z-index: 9998;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity .3s ease; }
+
+.modal-content {
+  position: fixed;
+  z-index: 9999;
+  bottom: 0;
+  width: 100%;
+  background-color: #fafafa;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
+  transition: all .3s ease; }
+
+.modal-header {
+  padding: 24px;
+  font-weight: bold;
+  font-size: 20px;
+  border-bottom: 1px solid #D6D6D6; }
+
+.modal-body {
+  padding: 24px; }
+
+.modal-footer {
+  padding: 24px; }
+
+.btn-danger {
+  margin-top: 0 !important; }
+
+.modal-enter {
+  opacity: 0; }
+
+.modal-leave-active {
+  opacity: 0; }
+
+.modal-enter .modal-container,
+.modal-leave-active .modal-container {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1); }
+
 .summary-portfolio {
   align-items: center; }
   .summary-portfolio__name {
@@ -11513,6 +11560,36 @@ input {
     text-align: right;
     font-size: 15px;
     line-height: 1; }
+
+.list-setting {
+  display: flex;
+  align-items: center;
+  padding: 20px 16px;
+  background-color: white;
+  box-shadow: 0 -1px 0 0 #E5E5E5, inset 0 -1px 0 0 #E5E5E5; }
+  .list-setting__icon {
+    width: 24px; }
+  .list-setting__label {
+    color: #666;
+    flex: 1;
+    margin: 2px 0 0 28px;
+    line-height: 1; }
+
+.list-cancel {
+  margin-bottom: 1.5rem; }
+
+.sub-table {
+  background-color: white;
+  padding: 2.5rem 1.5rem 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 -1px 0 0 #E5E5E5, inset 0 -1px 0 0 #E5E5E5; }
+  .sub-table .title {
+    font-weight: bold;
+    margin-bottom: 3rem; }
+  .sub-table td {
+    word-break: keep-all; }
+  .sub-table .data {
+    word-break: normal; }
 
 .container {
   max-width: 475px;
