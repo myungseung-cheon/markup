@@ -1,0 +1,170 @@
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#3E63BC" />
+    <!-- 위 3개의 메타 태그는 *반드시* head 태그의 처음에 와야합니다; 어떤 다른 콘텐츠들은 반드시 이 태그들 *다음에* 와야 합니다 -->
+    <title>Toss - 소액 펀드 투자</title>
+
+    <!-- 커스텀 스타일 -->
+    <link href="assets/stylesheet/style.css" rel="stylesheet">
+
+  </head>
+  <body class="gray150">
+
+    <!-- 총 투자 자산 요약 -->
+    <section id="protfolioSummary" class="block-blue py-5">
+      <table class="table-full-width reverse">
+        <tr>
+          <td colspan="2">
+            <div class="label">총 투자 자산</div>
+            <h2 class="title h2 gray0-text mb-5">2,512,230원</h2>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="label">투자원금</div>
+            <div class="value">1,350,000원</div>
+          </td>
+          <td>
+            <div class="label">수익률</div>
+            <div class="value">25.1%</div>
+          </td>
+          <td>
+            <div class="label">수익금</div>
+            <div class="value">1,232원</div>
+          </td>
+        </tr>
+      </table>
+    </section>
+
+    <!-- 대기중인 내역 -->
+    <section id="watingList">
+      <div class="section-header">대기중인 내역</div>
+      <table class="table-wating">
+        <tr>
+          <td>
+            <h6>국내 주식형</h6>
+            <h7 class="gray600-text">맥쿼리테마따라잡기증권자투자신탁1호[주식](A)</h7>
+          </td>
+          <td>
+            <h6>50,000원</h6>
+            <h7 class="status">구매 대기 중</h7>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <h6>국내대형주</h6>
+            <h7 class="gray600-text">맥쿼리테마따라잡기증권자투자신탁1호[주식](A)</h7>
+          </td>
+          <td >
+            <h6>50,000원</h6>
+            <h7 class="status">판매 대기 중</h7>
+          </td>
+        </tr>
+      </table>
+    </section>
+
+    <!-- 대기중인 내역 -->
+    <section id="portfolioItems">
+      <div class="section-header">투자 중인 내역</div>
+      <table class="table-portfolio">
+        <tr>
+          <td class="">
+            <h6>국내 주식형</h6>
+            <h7 class="gray600-text">맥쿼리테마따라잡기증권자투자신탁1호[주식](A)</h7>
+          </td>
+          <td>
+            <h6>120,230원</h6>
+            <h7 class="plus">▲ 1,223원 / 24.1%</h7>
+          </td>
+        </tr>
+        <tr>
+          <td class="">
+            <h6>
+              국내 주식형
+              <span class="float-left tag-portfolio blue500 mr-1">자동</span>
+            </h6>
+            <h7 class="gray600-text">맥쿼리테마따라잡기증권자투자신탁1호[주식](A)</h7>
+          </td>
+          <td>
+            <h6>120,230원</h6>
+            <h7 class="minus">▼ 1,223원 / -24.1%</h7>
+          </td>
+        </tr>
+      </table>
+    </section>
+
+    <!-- 완료 내역 -->
+    <section id="completeList">
+      <div class="section-header">완료 내역</div>
+      <table class="table-complete">
+        <tr>
+          <td>
+            <h6>국내 주식형 / 투자취소</h6>
+            <h7 class="gray600-text">맥쿼리테마따라잡기증권자투자신탁1호[주식](A)</h7>
+          </td>
+          <td class="w-35">
+            <h6 class="gray600-text">50,000원</h6>
+            <h7 class="status">어제 12:33</h7>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <h6>국내 주식형 / 환매취소</h6>
+            <h7 class="gray600-text">맥쿼리테마따라잡기증권자투자신탁1호[주식](A)</h7>
+          </td>
+          <td class="w-35">
+            <h6 class="gray600-text">50,000원</h6>
+            <h7 class="status">어제 12:33</h7>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <h6>국내 주식형 / 구매</h6>
+            <h7 class="gray600-text">맥쿼리테마따라잡기증권자투자신탁1호[주식](A)</h7>
+          </td>
+          <td class="w-35">
+            <h6 class="blue500-text">+50,000원</h6>
+            <h7 class="status">어제 12:33</h7>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <h6>국내 대형주 / 판매</h6>
+            <h7 class="gray600-text">맥쿼리테마따라잡기증권자투자신탁1호[주식](A)</h7>
+          </td>
+          <td class="w-35">
+            <h6 class="red500-text" >-50,000원</h6>
+            <h7 class="status">08/01</h7>
+          </td>
+        </tr>
+      </table>
+    </section>
+
+    <footer class="product-info">
+        <a href="tel:1588-0365">
+            <div class="info-list">고객센터 : 1588-0365</div>
+        </a>
+        <div class="info-list"> 자주 묻는 질문</div>
+    </footer>
+
+
+    <!-- 기본 JavaScript 프레임워크 -->
+    <script src="assets/javascript/jquery-3.2.1.min.js"></script>
+    <script src="assets/javascript/tether.min.js"></script>
+    <script src="assets/javascript/tossframe-2.0.0.js"></script>
+
+    <!-- 차트 -->
+    <script src="assets/javascript/Chart.bundle.js"></script>
+    <script src="assets/javascript/chartSetting.js"></script>
+
+    <!-- 커스텀 이벤트 -->
+    <!-- <script src="assets/javascript/event.js"></script> -->
+    <script type="text/javascript">
+      $('#profitChart').click(false);
+    </script>
+
+  </body>
+</html>

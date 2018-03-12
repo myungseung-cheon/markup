@@ -1370,7 +1370,7 @@ h6, .h6, .header-recommend .title, #filterButton i, #portfolio .title, .block .t
   font-size: 1rem; }
 
 .bold, .quote-warning, .checkbox-btn,
-.radio-btn, .btn-square, .btn-modal, .btn-fixed-bottom, .list-recommend-rank .order, .list-recommend-rank .value, .list-recommend-keyword .contents .title, .header-recommend .title, .modal-title, #filterButton span, .filter-card .title, #portfolio .plus, #portfolio .minus, .block .title-sm, .block-card .title-sm, #profit .title-sm, .table-portfolio .plus, .table-portfolio .minus, #blockButtons button, #blockAutoInvest .title, .survey table .head, .survey .btn-next, .survey .btn-confirm, #contractSummary .title, .circle-steps .active h7 {
+.radio-btn, .btn-square, .btn-modal, .btn-fixed-bottom, .list-recommend-rank .order, .list-recommend-rank .value, .list-recommend-keyword .contents .title, .summary-portfolio__name, .header-recommend .title, .modal-title, #filterButton span, .filter-card .title, #portfolio .plus, #portfolio .minus, .block .title-sm, .block-card .title-sm, #profit .title-sm, .table-portfolio .plus, .table-portfolio .minus, #blockButtons button, #blockAutoInvest .title, .survey table .head, .survey .btn-next, .survey .btn-confirm, #contractSummary .title, .circle-steps .active h7 {
   font-weight: 700 !important; }
 
 .normal, .list-stock .list-header th, .list-stock .list-header i, .survey .info {
@@ -1528,7 +1528,7 @@ mark,
 .radio-btn, .filter-card.selected .title, .table-portfolio .minus, .table-wating .minus, .table-complete .minus, .survey .tag, .survey .description, .circle-steps .term, .circle-steps .term.active, .circle-steps .active h7 {
   color: #4E7BFA; }
 
-.blue600, #banner, #portfolio, .block-blue {
+.blue600, .summary-portfolio, #banner, #portfolio, .block-blue {
   background-color: #3E63BC; }
 
 .blue600-text {
@@ -1549,7 +1549,7 @@ mark,
 .gray0, .block-recommend, .filter-card, .block, .block-card, #profit, .block-list {
   background-color: #FFFFFF; }
 
-.gray0-text, .btn-square, .btn-fixed-bottom, .btn-filter, #portfolio .title, #portfolio .asset, #portfolio .arrow i, .block-blue, .table-full-width.reverse .value, #blockButtons button, #blockAutoInvest, .survey .btn-next {
+.gray0-text, .btn-square, .btn-fixed-bottom, .btn-filter, .summary-portfolio, #portfolio .title, #portfolio .asset, #portfolio .arrow i, .block-blue, .table-full-width.reverse .value, #blockButtons button, #blockAutoInvest, .survey .btn-next {
   color: #FFFFFF; }
 
 .gray50, .quote, .quote-warning, .col-option-selected, #blockInfo .table-left-head .head {
@@ -5457,7 +5457,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
 .d-table-cell {
   display: table-cell !important; }
 
-.d-flex, .list-recommend-rank, .list-recommend-keyword, .list-recommend-pro, .header-recommend {
+.d-flex, .list-recommend-rank, .list-recommend-keyword, .list-recommend-pro, .summary-portfolio, .header-recommend {
   display: flex !important; }
 
 .d-inline-flex {
@@ -6504,7 +6504,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
   padding-right: 1rem !important;
   padding-left: 1rem !important; }
 
-.py-3, .list-recommend-rank, .list-recommend-pro, .list-stock .list-header th, .header-recommend, .product-info a, .header-shinhan, #blockInfo .table-left-head td, .survey table td, .agree-all {
+.py-3, .list-recommend-rank, .list-recommend-pro, .list-stock .list-header th, .summary-portfolio, .header-recommend, .product-info a, .header-shinhan, #blockInfo .table-left-head td, .survey table td, .agree-all {
   padding-top: 1rem !important;
   padding-bottom: 1rem !important; }
 
@@ -6523,7 +6523,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
 .pl-4, .list-recommend-pro .value, .table-portfolio td:first-child, .table-wating td:first-child, .table-complete td:first-child {
   padding-left: 1.5rem !important; }
 
-.px-4, .btn-main-banner-panic, .list-recommend-keyword, .list-recommend-pro, .header-recommend, .modal-footer button, .survey .sheet {
+.px-4, .btn-main-banner-panic, .list-recommend-keyword, .list-recommend-pro, .summary-portfolio, .header-recommend, .modal-footer button, .survey .sheet {
   padding-right: 1.5rem !important;
   padding-left: 1.5rem !important; }
 
@@ -11503,6 +11503,16 @@ input {
     margin-bottom: 0px; }
   .list-stock .product-name .name {
     color: #999999; }
+
+.summary-portfolio {
+  align-items: center; }
+  .summary-portfolio__name {
+    min-width: 124px; }
+  .summary-portfolio__total-amount, .summary-portfolio__changes {
+    flex: 1;
+    text-align: right;
+    font-size: 15px;
+    line-height: 1; }
 
 .container {
   max-width: 475px;
