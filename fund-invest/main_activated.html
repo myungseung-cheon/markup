@@ -7,12 +7,8 @@
     <!-- 위 3개의 메타 태그는 *반드시* head 태그의 처음에 와야합니다; 어떤 다른 콘텐츠들은 반드시 이 태그들 *다음에* 와야 합니다 -->
     <title>Toss - 소액 펀드 투자</title>
 
-    <!-- Toss 공용 CSS 문서의 맨 처음에 와야 합니다;-->
-    <link href="assets/stylesheet/tossframe-2.0.4.css" rel="stylesheet">
-
-    <!-- 펀드 공용 스타일 -->
+    <!-- 커스텀 스타일-->
     <link href="assets/stylesheet/style.css" rel="stylesheet">
-
 </head>
 <body>
     <!-- tabs -->
@@ -29,37 +25,99 @@
         </div>
     </div>
 
-    <!-- 포트폴리오 -->
-    <div id="portfolio" class="carousel slide" data-ride="false">
-        <ol class="carousel-indicators">
-            <li data-slide-to="0" class="active"></li>
-            <li data-slide-to="1"></li>
-        </ol>
-        <div class="carousel-inner" role="listbox">
-            <div class="carousel-item active">
-                <div class="page">
-                    <h2 class="title">현재 투자금</h2>
-                    <h1 class="asset">
-                        2,512,230원 <span class="arrow"><i></i></span>
-                    </h1>
+    <!-- 투자 가이드 -->
+    <!-- <section id="banner">
+        <h1>단돈 1,000원으로<br>전문가와 함께 투자하세요</h1>
+        <img class="img-main-banner" src="assets/images/img-main-banner.png" alt="">
+        <button class="btn-main-banner px-6">30초 투자 가이드</button>
+    </section> -->
 
-                    <p class="profit plus">▲ 1,232원 / 25.1%</p>
+    <!-- 추천 리스트 -->
+    <section id="recommendList">
+
+        <!-- 수익률 추천 -->
+        <div class="block-recommend">
+            <header class="header-recommend">
+                <h1 class="title">수익률 랭킹 TOP3</h1>
+                <span class="subtitle">최근 3개월 기준</span>
+            </header>
+            <div class="list-recommend-rank">
+                <div class="order">1</div>
+                <div class="key">
+                    <p class="title">국내 대형주 주식형</p>
+                    <h7 class="subtitle">삼성중국본토레버리지…</h7>
+                </div>
+                <div class="value">20.5%</div>
+            </div>
+            <div class="list-recommend-rank">
+                <div class="order">2</div>
+                <div class="key">
+                    <p class="title">국내 대형주 주식형</p>
+                    <h7 class="subtitle">삼성중국본토레버리지…</h7>
+                </div>
+                <div class="value">20.5%</div>
+            </div>
+            <div class="list-recommend-rank">
+                <div class="order">3</div>
+                <div class="key">
+                    <p class="title">국내 대형주 주식형</p>
+                    <h7 class="subtitle">삼성중국본토레버리지…</h7>
+                </div>
+                <div class="value">20.5%</div>
+            </div>
+        </div>
+
+        <!-- 키워드 추천 -->
+        <div class="block-recommend">
+            <header class="header-recommend">
+                <h1 class="title">인기 키워드</h1>
+                <span class="subtitle">최근 3개월 기준</span>
+            </header>
+            <div class="list-recommend-keyword">
+                <div class="img"
+                     style="background-image: url('assets/images/img-recommend-1.jpg')">
+                </div>
+                <div class="contents">
+                    <p class="title">4차 산업 혁명</p>
+                    <h7 class="subtitle">IT를 중심으로 한 산업재편, AI와 Big Data를 기반으로 한 기술혁신</h7>
                 </div>
             </div>
-            <div class="carousel-item">
-                <div class="page">
-                    <h2 class="title">삼성중국본토레버리지…</h2>
-                    <h1 class="asset">
-                        31,022원 <span class="arrow"><i></i></span>
-                    </h1>
-                    <p class="profit minus">▼ 132원 / 11.1%</p>
+            <div class="list-recommend-keyword">
+                <div class="img"
+                     style="background-image: url('assets/images/img-recommend-2.jpg');">
+                </div>
+                <div class="contents">
+                    <p class="title">베트남 펀드</p>
+                    <h7 class="subtitle">‘베트남 펀드’ 성장성 부각, 수익성도 호조</h7>
+                </div>
+            </div>
+            <div class="list-recommend-keyword">
+                <div class="img"
+                     style="background-image: url('assets/images/img-recommend-3.jpg')">
+                </div>
+                <div class="contents">
+                    <p class="title">중소형주 펀드</p>
+                    <h7 class="subtitle">새로운 성장동력, 강소기업에 투자, 소외된 중소형주에 관심</h7>
+                </div>
+            </div>
+            <div class="list-recommend-keyword">
+                <div class="img"
+                style="background-image: url('assets/images/img-recommend-4.jpg')">
+                </div>
+                <div class="contents">
+                    <p class="title">코스닥 벤쳐 펀드</p>
+                    <h7 class="subtitle">고성장이 기대되는 코스닥 상장 벤처 기업에 집중투자</h7>
                 </div>
             </div>
         </div>
-    </div>
+
+    </section>
 
     <!-- 상품 리스트 -->
-    <section id="productList" class="stockList">
+    <section id="productList" class="list-stock">
+        <header class="header-recommend bt-1-gray200">
+            <h1 class="title">모든 상품</h1>
+        </header>
         <table>
             <thead>
                 <!-- 필터 -->
@@ -67,25 +125,50 @@
                     <th colspan="2">상품명</th>
                     <th >
                         <a href="#modalOptionFilter" data-toggle="modal" data-target="#modalOptionFilter">
-                            <span>구매자</span> <i></i>
+                            <table class="text-center">
+                                <tr>
+                                    <td class="pl-2">
+                                        <span>투자자</span><br>
+                                        <span class="text-period">(3개월)</span>
+                                    </td>
+                                    <td class="pr-2">
+                                        <i></i>
+                                    </td>
+                                </tr>
+                            </table>
                         </a>
                     </th>
                     <th>
                         <a href="#profitFilter" data-toggle="modal" data-target="#profitFilter">
-                            <span>수익률</span> <i></i>
+                            <table class="text-center">
+                                <tr>
+                                    <td class="pl-2">
+                                        <span>수익률</span><br>
+                                        <span class="text-period">(3개월)</span>
+                                    </td>
+                                    <td class="pr-2">
+                                        <i></i>
+                                    </td>
+                                </tr>
+                            </table>
                         </a>
                     </th>
                 </tr>
             </thead>
             <tbody>
                 <!-- 상품 -->
+                <!-- <tr class="list-item">
+                    <td colspan="2"></td>
+                    <td class="text-center py-2 h7">3개월 기준</td>
+                    <td class="text-center py-2 h7">3개월 기준</td>
+                </tr> -->
                 <tr class="list-item">
                     <td class="product-type">
                         <i>●</i>
                     </td>
                     <td class="product-name">
                         <p class="sort">국내 대형주 주식형</p>
-                        <h7 class="name">계열사펀드 / 삼성중국…</h7>
+                        <h7 class="name">삼성아세안증권자투자신탁제2호[주식](C-e)</h7>
                     </td>
                     <td class="product-option w-25 bold">3,506명</td>
                     <td class="product-profit w-25 bold pink500-text">20.5%</td>
@@ -188,27 +271,36 @@
                     </td>
                     <td class="product-option w-25 bold">3,506명</td>
                     <td class="product-profit w-25 bold pink500-text">20.5%</td>
-                </tr>
-                <tr>
-                    <td class="product-info" colspan="4">
-                        온라인에서 구매 가능한한 선후취, 환매수수료가 없는 신한금융투자 제공 펀드리스트입니다.
-                    </td>
                 </tr>
             </tbody>
         </table>
     </section>
 
+    <footer class="product-info">
+        <p class="mt-2 mb-4">온라인에서 투자 가능한 선,후취, 환매수수료가 없는 신한금융투자 제공 펀드리스트 입니다.<br>(단, 운용보수 등은 별도)</p>
+
+        <a class="btn-outline-gray">신한금융투자 고객지원센터 : 1588-0365</a>
+        <a class="btn-outline-gray" data-toggle="modal" data-target="#FAQ"> 자주 묻는 질문</a>
+    </footer>
+
     <!-- 하단 고정 필터 -->
-    <button id="filterButton" class="btn-warning btn-hide" data-toggle="modal" data-target="#modalSelectType">
-        <i></i> <span class="name">중립형</span>
+    <!--default / class="gray800" / name : "필터를 추가할 수 있습니다." / label : "필터 추가"
+        공격형 / class="danger-6" / name : "필터 : 공격형" / label : "필터 변경"
+        중립형 / class="danger-4" / name : "필터 : 중립형" / label : "필터 변경"
+        안정형 / class="danger-1" / name : "필터 : 안정형" / label : "필터 변경"
+        적용 부탁드립니다. -->
+    <button id="filterButtonWide" class="btn-filter btn-hide gray800" data-toggle="modal" data-target="#modalSelectType">
+        <img class="icon-filter mr-2" src="assets/images/icon-filter.png" alt="icon-filter">
+        <span class="name bold"> 필터를 추가할 수 있습니다.</span>
+        <a class="float-right"><u>필터 변경</u></a>
     </button>
 
     <!-- 성향 선택 모달 -->
     <div class="modal fade" id="modalSelectType" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog fixed-bottom" role="document">
+        <div class="modal-dialog " role="document" >
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">필터 선택</h5>
+                    <h5 class="modal-title">필터 변경</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -254,12 +346,6 @@
         </div>
     </div>
 
-    <!-- 판매처 고지 -->
-    <header class="header-shinhan fixed-bottom transition">
-      <img src="assets/images/logo_shinhan.png" alt="로고-신한금융투자">
-      펀드상품은 신한금융투자가 제공합니다
-    </header>
-
     <!-- 구매자/판매자 선택 모달 -->
     <div class="modal fade" id="modalOptionFilter" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog fixed-bottom" role="document">
@@ -267,10 +353,10 @@
             <div class="modal-content">
                 <div class="modal-body p-0 text-center">
                     <button data-dismiss="modal" class="dropdown-item w-100 py-4 bb-1 oi oi-check" type="button">
-                        구매자
+                        투자자 (3개월)
                     </button>
                     <button data-dismiss="modal" class="dropdown-item w-100 py-4" type="button">
-                        판매액
+                        판매액 (3개월)
                     </button>
                 </div>
             </div>
@@ -300,57 +386,81 @@
         </div>
     </div>
 
+    <!-- FAQ 모달 -->
+    <div class="modal fade" id="FAQ" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">자주 묻는 질문</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <ul class="info-list">
+                        <li>
+                            <p class="info-head">1. 펀드를 사려면 무엇이 필요한가요?</p>
+                            <p class="info-body">주계좌 플러스를 개설해야 하며, 주계좌플러스를 만들때 입력한 숫자 4자리의 계좌 비밀번호를 아셔야 합니다.</p>
+                        </li>
+                        <li>
+                            <p class="info-head">2. 비밀번호를 잊어버렸어요. 어떻게 하죠?</p>
+                            <p class="info-body">5회 입력 오류 또는 분실 시 신한금융투자 지점을 방문하여 재등록하셔야 합니다.</p>
+                        </li>
+                        <li>
+                            <p class="info-head">3. 투자/환매를 완료했는데  아무 일도 일어나지 않아요!</p>
+                            <p class="info-body">펀드의 특성상, 주문시간에 따라 주문 및 계약 체결이 1~수 영업일이 걸릴 수 있습니다. 진행사항은 ‘나의 투자현황’에서 가입한 펀드의 상세 내역을 확인하세요!</p>
+                        </li>
+                        <li>
+                            <p class="info-head">4. 자동투자를 선택하면 언제부터 시작하나요? </p>
+                            <p class="info-body">투자계약서에 기재된 시작월부터 자동투자가 진행됩니다. 만약 잔고 부족 시 이체일 D+3영업일까지 출금이 시도 되오니 잊지마세요.</p>
+                        </li>
+                        <li>
+                            <p class="info-head">5. 투자/환매를  취소하고 싶은데   “지금은 취소가 불가능하다”라고 나와요!</p>
+                            <p class="info-body">주식에 50%이상 투자하는 펀드는 ①8:40~15:30 ②15:30~17:00  해당 구간에 주문한 건만 해당 시간에 취소할 수 있습니다. (그 외 펀드는 08:40~15:00) 세부 문의는 신한금융투자 고객지원센터(1588-0365)로 연락주세요.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <!-- 기본 JavaScript 프레임워크 -->
     <script src="assets/javascript/jquery-3.2.1.min.js"></script>
     <script src="assets/javascript/tether.min.js"></script>
     <script src="assets/javascript/tossframe-2.0.0.js"></script>
 
-    <!-- carousel 플러그인 -->
-    <script src="assets/javascript/touchSwipe.js"></script>
-
     <!-- 커스텀 이벤트 -->
     <script src="assets/javascript/event.js"></script>
     <script type="text/javascript">
+        //스크롤 이벤트
+        var lastScrollTop = 0;
+        $(window).scroll(function () {
+            var src = $(this).scrollTop();
+            var btn = $('#filterButtonWide');
+            var toast = $('#headerShinhan');
+            var startSrc = 0;
+            var endSrc = 731;
+            var targetSrc = 860;
 
-    // Carousel 터치 슬라이드
-    $(".carousel").swipe({
+            // 모든 상품 영역을 볼 때 필터 보임
+            if (src > targetSrc) {
+                // 스크롤 내리는 중이면 필터 보임
+                if(src < lastScrollTop) {
+                    btn.addClass('btn-hide');
+                }
+                // 스크롤 올리는 중이면 필터 안보임
+                else {
+                    btn.removeClass('btn-hide');
 
-        swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
-
-            if (direction == 'left') $(this).carousel('next');
-            if (direction == 'right') $(this).carousel('prev');
-
-        },
-        allowPageScroll:"vertical"
-
-    });
-
-    //스크롤 이벤트
-    var lastScrollTop = 0;
-    $(window).scroll(function () {
-
-        var src = $(this).scrollTop();
-        var btn = $('#filterButton');
-        var toast = $('.header-shinhan');
-        var targetSrc = 0;
-
-        // 모든 상품 영역을 볼 때 필터 보임
-        if (src > targetSrc) {
-            toast.addClass('btn-hide');
-            // 스크롤 내리는 중이면 필터 가림
-            if(src < lastScrollTop) {
+                }
+                lastScrollTop = src;
+            } else {
+                // 모든 상품을 안볼 때 필터 가림
                 btn.addClass('btn-hide');
             }
-            // 스크롤 올리는 중이면 필터 보임
-            else {
-                btn.removeClass('btn-hide');
-            }
-            lastScrollTop = src;
-        } else {
-            toast.removeClass('btn-hide');
-        }
-    });
+        });
     </script>
 
 </body>
