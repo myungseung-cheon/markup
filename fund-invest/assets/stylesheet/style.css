@@ -11460,6 +11460,19 @@ input {
   bottom: -62px !important;
   opacity: 0; }
 
+.bedge-dark, .bedge-dark-outline {
+  padding: 2px 6px;
+  border-radius: 2px;
+  font-weight: bold; }
+
+.bedge-dark {
+  background-color: rgba(77, 93, 117, 0.1);
+  color: #4d5d75; }
+
+.bedge-dark-outline {
+  border: solid 1px rgba(77, 93, 117, 0.46);
+  color: #4d5d75; }
+
 .list-recommend-rank {
   align-items: center; }
   .list-recommend-rank .key {
@@ -11503,9 +11516,10 @@ input {
   word-wrap: break-word;
   word-break: break-all; }
   .list-stock .product-name .sort {
-    margin-bottom: 0px; }
+    margin-bottom: 6px; }
   .list-stock .product-name .name {
-    color: #999999; }
+    color: #999999;
+    line-height: 1.6; }
 
 .modal-dialog {
   position: fixed;

@@ -98,10 +98,11 @@
         // max-width: 126px;
         @extend .mb-2 ;
         .sort {
-            margin-bottom: 0px;
+            margin-bottom: 6px;
         }
         .name {
             color: #999999;
+            line-height: 1.6;
         }
     }
 }
