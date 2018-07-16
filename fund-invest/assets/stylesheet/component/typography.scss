@@ -35,3 +35,10 @@ a:not([href]):not([tabindex]) {
     color: #144ae1 !important ;
     // font-weight: bold;
 }
+
+//icon-font
+.arrow {
+  display: inline-block;
+  font-size: 0.7em;
+  margin-right: 0.25em;
+}

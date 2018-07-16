@@ -39,8 +39,16 @@
 }
 // 필터 버튼
 .btn-filter {
-    @extend .btn, .fixed-bottom, .gray0-text, .btn-block, .py-4, .rounded-0, .text-left ;
+    @extend .btn, .fixed-bottom, .btn-block, .p-4, .rounded-0, .text-left ;
     font-size: 16px;
+    color: white !important;
+    background-color: #3785F7;
+    i {
+        min-width: 20px;
+    }
+    // @media only screen and (max-width: 359px) {
+    //     padding: 24px 12px !important;
+    // }
 }
 .btn-hide {
     bottom: -62px !important;

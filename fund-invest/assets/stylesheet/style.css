@@ -222,8 +222,7 @@ body {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.6;
-  color: #292b2c;
-  background-color: #fff; }
+  color: #292b2c; }
 
 [tabindex="-1"]:focus {
   outline: none !important; }
@@ -1370,10 +1369,10 @@ h6, .h6, .header-recommend .title, #filterButton i, #portfolio .title, .block .t
   font-size: 1rem; }
 
 .bold, .quote-warning, .checkbox-btn,
-.radio-btn, .btn-square, .btn-modal, .btn-fixed-bottom, .list-recommend-rank .order, .list-recommend-rank .value, .list-recommend-keyword .contents .title, .summary-portfolio__name, .sub-table .head, .header-recommend .title, .modal-title, #filterButton span, .filter-card .title, #portfolio .plus, #portfolio .minus, .block .title-sm, .block-card .title-sm, #profit .title-sm, .table-portfolio .plus, .table-portfolio .minus, #blockButtons button, #blockAutoInvest .title, .survey table .head, .survey .btn-next, .survey .btn-confirm, #contractSummary .title, .circle-steps .active h7 {
+.radio-btn, .btn-square, .btn-modal, .btn-fixed-bottom, .list-recommend-rank .order, .list-recommend-rank .value, .list-recommend-keyword .contents .title, #filterButton span, .summary-portfolio__name, .sub-table .head, .modal-title, .filter-card .title, #portfolio .plus, #portfolio .minus, .block .title-sm, .block-card .title-sm, #profit .title-sm, .table-portfolio .plus, .table-portfolio .minus, #blockButtons button, #blockAutoInvest .title, .survey table .head, .survey .btn-next, .survey .btn-confirm, #contractSummary .title, .circle-steps .active h7 {
   font-weight: 700 !important; }
 
-.normal, .list-stock .list-header th, .list-stock .list-header i, .survey .info {
+.normal, .list-stock .list-header i, .survey .info {
   font-weight: 400 !important; }
 
 .light {
@@ -1525,7 +1524,7 @@ mark,
   background-color: #4E7BFA; }
 
 .blue500-text, .checkbox-btn,
-.radio-btn, .filter-card.selected .title, .table-portfolio .minus, .table-wating .minus, .table-complete .minus, .survey .tag, .survey .description, .circle-steps .term, .circle-steps .term.active, .circle-steps .active h7 {
+.radio-btn, .list-recommend-rank .order, .filter-card.selected .title, .table-portfolio .minus, .table-wating .minus, .table-complete .minus, .survey .tag, .survey .description, .circle-steps .term, .circle-steps .term.active, .circle-steps .active h7 {
   color: #4E7BFA; }
 
 .blue600, .summary-portfolio, #banner, #portfolio, .block-blue {
@@ -1549,7 +1548,7 @@ mark,
 .gray0, .block-recommend, .filter-card, .block, .block-card, #profit, .block-list {
   background-color: #FFFFFF; }
 
-.gray0-text, .btn-square, .btn-fixed-bottom, .btn-filter, .summary-portfolio, #portfolio .title, #portfolio .asset, #portfolio .arrow i, .block-blue, .table-full-width.reverse .value, #blockButtons button, #blockAutoInvest, .survey .btn-next {
+.gray0-text, .btn-square, .btn-fixed-bottom, .summary-portfolio, #portfolio .title, #portfolio .asset, #portfolio .arrow i, .block-blue, .table-full-width.reverse .value, #blockButtons button, #blockAutoInvest, .survey .btn-next {
   color: #FFFFFF; }
 
 .gray50, .quote, .quote-warning, .col-option-selected, #blockInfo .table-left-head .head {
@@ -1558,7 +1557,7 @@ mark,
 .gray50-text {
   color: #FAFAFA; }
 
-.gray100, #recommendList {
+.gray100 {
   background-color: #F5F5F5; }
 
 .gray100-text {
@@ -1585,7 +1584,7 @@ mark,
 .gray300 {
   background-color: #E0E0E0; }
 
-.gray300-text, .product-info, .header-shinhan {
+.gray300-text, .header-shinhan {
   color: #E0E0E0; }
 
 .gray350 {
@@ -1610,7 +1609,7 @@ mark,
   background-color: #999; }
 
 .gray600-text, fieldset:disabled h1, fieldset:disabled h2, fieldset:disabled h3, fieldset:disabled h4, fieldset:disabled h5, fieldset:disabled h6, fieldset:disabled h7, fieldset:disabled label, fieldset:disabled input,
-fieldset:disabled .h1, fieldset:disabled .h2, fieldset:disabled #portfolio .asset, #portfolio fieldset:disabled .asset, fieldset:disabled .h3, fieldset:disabled .h4, fieldset:disabled #banner h1, #banner fieldset:disabled h1, fieldset:disabled .h5, fieldset:disabled .list-recommend-rank .order, .list-recommend-rank fieldset:disabled .order, fieldset:disabled .filter-card .title, .filter-card fieldset:disabled .title, fieldset:disabled .block .title, .block fieldset:disabled .title, fieldset:disabled .block-card .title, .block-card fieldset:disabled .title, fieldset:disabled #profit .title, #profit fieldset:disabled .title, fieldset:disabled .table-full-width .value, .table-full-width fieldset:disabled .value, fieldset:disabled .h6, fieldset:disabled .header-recommend .title, .header-recommend fieldset:disabled .title, fieldset:disabled #filterButton i, #filterButton fieldset:disabled i, fieldset:disabled #portfolio .title, #portfolio fieldset:disabled .title, fieldset:disabled .block .title-sm, .block fieldset:disabled .title-sm, fieldset:disabled .block-card .title-sm, .block-card fieldset:disabled .title-sm, fieldset:disabled #profit .title-sm, #profit fieldset:disabled .title-sm, fieldset:disabled .h7, fieldset:disabled .quote, fieldset:disabled .quote-warning, fieldset:disabled .list-stock .list-header i, .list-stock .list-header fieldset:disabled i, fieldset:disabled .list-stock .list-item i, .list-stock .list-item fieldset:disabled i, fieldset:disabled .header-recommend .subtitle, .header-recommend fieldset:disabled .subtitle, fieldset:disabled .product-info, fieldset:disabled .header-shinhan, fieldset:disabled .block .subtitle, .block fieldset:disabled .subtitle, fieldset:disabled .block-card .subtitle, .block-card fieldset:disabled .subtitle, fieldset:disabled #blockAutoInvest i, #blockAutoInvest fieldset:disabled i, fieldset:disabled .circle-steps .term, .circle-steps fieldset:disabled .term, .btn-outline-gray, .block .subtitle, .block-card .subtitle, #profit .subtitle, .block .label, .block-card .label, #profit .label, .table-full-width .label, .table-complete .status, .survey .info, .survey fieldset[disabled] .question, .survey fieldset[disabled] .description, #sell_amount .note {
+fieldset:disabled .h1, fieldset:disabled .h2, fieldset:disabled #portfolio .asset, #portfolio fieldset:disabled .asset, fieldset:disabled .h3, fieldset:disabled .h4, fieldset:disabled #banner h1, #banner fieldset:disabled h1, fieldset:disabled .h5, fieldset:disabled .list-recommend-rank .order, .list-recommend-rank fieldset:disabled .order, fieldset:disabled .filter-card .title, .filter-card fieldset:disabled .title, fieldset:disabled .block .title, .block fieldset:disabled .title, fieldset:disabled .block-card .title, .block-card fieldset:disabled .title, fieldset:disabled #profit .title, #profit fieldset:disabled .title, fieldset:disabled .table-full-width .value, .table-full-width fieldset:disabled .value, fieldset:disabled .h6, fieldset:disabled .header-recommend .title, .header-recommend fieldset:disabled .title, fieldset:disabled #filterButton i, #filterButton fieldset:disabled i, fieldset:disabled #portfolio .title, #portfolio fieldset:disabled .title, fieldset:disabled .block .title-sm, .block fieldset:disabled .title-sm, fieldset:disabled .block-card .title-sm, .block-card fieldset:disabled .title-sm, fieldset:disabled #profit .title-sm, #profit fieldset:disabled .title-sm, fieldset:disabled .h7, fieldset:disabled .quote, fieldset:disabled .quote-warning, fieldset:disabled .header-recommend .subtitle, .header-recommend fieldset:disabled .subtitle, fieldset:disabled .list-stock .list-header i, .list-stock .list-header fieldset:disabled i, fieldset:disabled .list-stock .list-item i, .list-stock .list-item fieldset:disabled i, fieldset:disabled .header-shinhan, fieldset:disabled .block .subtitle, .block fieldset:disabled .subtitle, fieldset:disabled .block-card .subtitle, .block-card fieldset:disabled .subtitle, fieldset:disabled #blockAutoInvest i, #blockAutoInvest fieldset:disabled i, fieldset:disabled .circle-steps .term, .circle-steps fieldset:disabled .term, .btn-outline-gray, .block .subtitle, .block-card .subtitle, #profit .subtitle, .block .label, .block-card .label, #profit .label, .table-full-width .label, .table-complete .status, .survey .info, .survey fieldset[disabled] .question, .survey fieldset[disabled] .description, #sell_amount .note {
   color: #999; }
 
 .gray700 {
@@ -1679,7 +1678,7 @@ fieldset:disabled .h1, fieldset:disabled .h2, fieldset:disabled #portfolio .asse
 .elephant700-text {
   color: #5C6476; }
 
-.elephant800, .product-info {
+.elephant800 {
   background-color: #3D424E; }
 
 .elephant800-text {
@@ -5459,7 +5458,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
 .d-table-cell {
   display: table-cell !important; }
 
-.d-flex, .list-recommend-rank, .list-recommend-keyword, .list-recommend-pro, .summary-portfolio, .header-recommend {
+.d-flex, .header-recommend, .list-recommend-rank, .list-recommend-keyword, .list-recommend-pro, .summary-portfolio {
   display: flex !important; }
 
 .d-inline-flex {
@@ -6108,13 +6107,13 @@ a.bg-inverse:focus, a.bg-inverse:hover {
 .w-5 {
   width: 5% !important; }
 
-.w-10, .input-dash {
+.w-10, .list-recommend-rank .order, .input-dash {
   width: 10% !important; }
 
 .w-15, .input-gender {
   width: 15% !important; }
 
-.w-20, .list-recommend-rank .order {
+.w-20 {
   width: 20% !important; }
 
 .w-25, .circle-steps li {
@@ -6240,7 +6239,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
 .mr-0 {
   margin-right: 0 !important; }
 
-.mb-0, .btn-fixed-bottom, .sub-table.unstyled, .header-recommend .title, .filter-card .title, .table-full-width .value, .table-full-width.reverse .value, #blockAutoInvest .quit, .survey table.unstyled, .survey .btn-next, .order-detail table {
+.mb-0, .btn-fixed-bottom, .header-recommend .title, .sub-table.unstyled, .filter-card .title, .table-full-width .value, .table-full-width.reverse .value, #blockAutoInvest .quit, .survey table.unstyled, .survey .btn-next, .order-detail table {
   margin-bottom: 0 !important; }
 
 .ml-0 {
@@ -6469,7 +6468,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
 .pt-2, .survey .terms-child:before {
   padding-top: 0.5rem !important; }
 
-.pr-2 {
+.pr-2, .list-stock .list-item i {
   padding-right: 0.5rem !important; }
 
 .pb-2, .sub-table.unstyled td, .section-header, .survey table.unstyled td {
@@ -6478,7 +6477,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
 .pl-2 {
   padding-left: 0.5rem !important; }
 
-.px-2, .list-stock .list-item i, #profit canvas {
+.px-2, #profit canvas {
   padding-right: 0.5rem !important;
   padding-left: 0.5rem !important; }
 
@@ -6487,7 +6486,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
   padding-bottom: 0.5rem !important; }
 
 .p-3, .quote, .quote-warning, .checkbox-btn,
-.radio-btn, .list-recommend-keyword .contents, .product-info, #blockAutoInvest, .terms-agree-all {
+.radio-btn, .list-recommend-keyword .contents, #blockAutoInvest, .terms-agree-all {
   padding: 1rem 1rem !important; }
 
 .pt-3, .section-header {
@@ -6506,11 +6505,11 @@ a.bg-inverse:focus, a.bg-inverse:hover {
   padding-right: 1rem !important;
   padding-left: 1rem !important; }
 
-.py-3, .list-recommend-rank, .list-recommend-pro, .list-stock .list-header th, .btn-modal, .summary-portfolio, .sub-table td, .header-recommend, .product-info a, .header-shinhan, #blockInfo .table-left-head td, .survey table td, .agree-all {
+.py-3, .list-recommend-pro, .btn-modal, .summary-portfolio, .sub-table td, .header-shinhan, #blockInfo .table-left-head td, .survey table td, .agree-all {
   padding-top: 1rem !important;
   padding-bottom: 1rem !important; }
 
-.p-4, .block, .block-card, #profit, .block-blue {
+.p-4, .btn-filter, .block, .block-card, #profit, .block-blue {
   padding: 1.5rem 1.5rem !important; }
 
 .pt-4 {
@@ -6525,11 +6524,11 @@ a.bg-inverse:focus, a.bg-inverse:hover {
 .pl-4, .list-recommend-pro .value, .sub-table .data, .table-portfolio td:first-child, .table-wating td:first-child, .table-complete td:first-child {
   padding-left: 1.5rem !important; }
 
-.px-4, .btn-main-banner-panic, .list-recommend-keyword, .list-recommend-pro, .summary-portfolio, .header-recommend, .modal-footer button, .survey .sheet {
+.px-4, .btn-main-banner-panic, .list-recommend-keyword, .list-recommend-pro, .summary-portfolio, .product-info, .modal-footer button, .survey .sheet {
   padding-right: 1.5rem !important;
   padding-left: 1.5rem !important; }
 
-.py-4, .btn-fixed-bottom, .btn-outline-gray, .btn-main-banner, .btn-filter, #recommendList, .filter-card, .table-portfolio td, .table-wating td, .table-complete td, #blockButtons button, .survey .btn-next {
+.py-4, .btn-fixed-bottom, .btn-outline-gray, .btn-main-banner, .filter-card, .table-portfolio td, .table-wating td, .table-complete td, #blockButtons button, .survey .btn-next {
   padding-top: 1.5rem !important;
   padding-bottom: 1.5rem !important; }
 
@@ -6552,7 +6551,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
   padding-right: 3rem !important;
   padding-left: 3rem !important; }
 
-.py-5, #banner, #portfolio .page, .post {
+.py-5, .product-info, #banner, #portfolio .page, .post {
   padding-top: 3rem !important;
   padding-bottom: 3rem !important; }
 
@@ -8206,7 +8205,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
 .text-right, .table-portfolio td:last-child, .table-wating td:last-child, .table-complete td:last-child, .order-detail table .data {
   text-align: right !important; }
 
-.text-center, .list-recommend-rank .order, .list-recommend-rank .value, .list-stock .list-header th, .list-stock .product-option,
+.text-center, .list-recommend-rank .value, .list-stock .list-header i, .list-stock .product-option,
 .list-stock .product-profit, #banner, .filter-card .title, .header-shinhan, #portfolio .page, .section-header, #profit .control, .input-group-sign-in {
   text-align: center !important; }
 
@@ -11375,7 +11374,7 @@ a:not([href]):not([tabindex]) {
   border: 0; }
 
 .quote, .quote-warning {
-  color: #999; }
+  color: #B7B7BD; }
 
 .quote-warning {
   background-color: #fef2e6;
@@ -11383,6 +11382,11 @@ a:not([href]):not([tabindex]) {
 
 .more-info {
   color: #144ae1 !important; }
+
+.arrow {
+  display: inline-block;
+  font-size: 0.7em;
+  margin-right: 0.25em; }
 
 input {
   outline: none; }
@@ -11454,14 +11458,18 @@ input {
     color: white !important; }
 
 .btn-filter {
-  font-size: 16px; }
+  font-size: 16px;
+  color: white !important;
+  background-color: #3785F7; }
+  .btn-filter i {
+    min-width: 20px; }
 
 .btn-hide {
   bottom: -62px !important;
   opacity: 0; }
 
 .bedge-dark, .bedge-dark-outline {
-  padding: 2px 6px;
+  padding: 2px 4px 1px;
   border-radius: 2px;
   font-weight: bold; }
 
@@ -11473,14 +11481,26 @@ input {
   border: solid 1px rgba(77, 93, 117, 0.46);
   color: #4d5d75; }
 
+.header-recommend {
+  padding: 32px 24px 8px; }
+  .header-recommend .title, .header-recommend .subtitle {
+    flex: 1; }
+  .header-recommend .title {
+    color: #585861; }
+  .header-recommend .subtitle {
+    color: #B7B7BD;
+    text-align: right; }
+
 .list-recommend-rank {
+  padding: 20px 24px;
   align-items: center; }
   .list-recommend-rank .key {
     flex: 1; }
   .list-recommend-rank .title {
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    font-weight: 600; }
   .list-recommend-rank .subtitle {
-    color: #999; }
+    color: #B7B7BD; }
   .list-recommend-rank .value {
     color: #fe4545; }
 
@@ -11502,21 +11522,35 @@ input {
   .list-recommend-pro .title {
     margin-bottom: 0.25rem; }
   .list-recommend-pro .subtitle {
-    color: #999; }
+    color: #B7B7BD; }
 
 .list-stock table {
   width: 100%; }
+.list-stock td {
+  padding: 24px 0; }
+  .list-stock td:first-child {
+    padding-left: 24px; }
+  .list-stock td:last-child {
+    padding-right: 24px; }
+  @media only screen and (max-width: 359px) {
+    .list-stock td:first-child {
+      padding-left: 12px; }
+    .list-stock td:last-child {
+      padding-right: 12px; } }
+.list-stock .list-header td {
+  padding-bottom: 8px; }
 .list-stock .list-header .arrow {
   position: absolute;
   font-size: 10px;
   margin: 5px 0 0 6px; }
+.list-stock .product-type {
+  vertical-align: top; }
 .list-stock .product-name {
-  padding: 24px 0;
   text-align: left;
   word-wrap: break-word;
   word-break: break-all; }
   .list-stock .product-name .sort {
-    margin-bottom: 6px; }
+    margin-bottom: 2px; }
   .list-stock .product-name .name {
     color: #999999;
     line-height: 1.6; }
@@ -11565,6 +11599,47 @@ input {
   -webkit-transform: scale(1.1);
   transform: scale(1.1); }
 
+.i-arrow {
+  display: inline-block;
+  background: url("/assets/images/arrow.svg");
+  background-repeat: no-repeat;
+  background-position: right;
+  width: 8px;
+  height: 15px; }
+
+.i-arrow-white {
+  display: inline-block;
+  background: url("/assets/images/arrow-white.svg");
+  background-repeat: no-repeat;
+  background-position: right;
+  width: 8px;
+  height: 15px; }
+
+#selectType {
+  padding: 24px;
+  background-color: white;
+  height: 100vh; }
+  #selectType h1 {
+    font-size: 22px !important;
+    font-weight: bold; }
+
+#filterButton {
+  position: fixed;
+  bottom: 24px;
+  left: 50vw;
+  width: 8rem;
+  text-align: center;
+  padding: 1rem 1rem 1rem 0.7rem;
+  margin-left: -4rem;
+  border-radius: 100px;
+  color: #FFFFFF;
+  box-shadow: 0 1px 4px 0 #999999; }
+  #filterButton i {
+    margin-top: -4px;
+    margin-bottom: 0px; }
+  #filterButton span {
+    color: white; }
+
 .summary-portfolio {
   align-items: center; }
   .summary-portfolio__name {
@@ -11605,6 +11680,35 @@ input {
   .sub-table .data {
     word-break: normal; }
 
+.product-info {
+  line-height: 1.6;
+  padding-bottom: 100px !important; }
+  .product-info__title {
+    font-size: 17px;
+    line-height: 1;
+    margin-bottom: 12px; }
+  .product-info__subtitle {
+    font-size: 14px;
+    color: #95959E; }
+  .product-info__list {
+    display: flex;
+    padding: 14px 0 15px;
+    line-height: 1.2;
+    color: #585861; }
+    .product-info__list :first-child {
+      flex: 1; }
+    .product-info__list :last-child {
+      min-width: 20px;
+      color: #1E1E21 !important; }
+  .product-info .info-list {
+    border: 1px solid #ccc;
+    text-align: center;
+    padding: 16px;
+    margin-bottom: 8px; }
+
+body {
+  background-color: #F2F2F5; }
+
 .container {
   max-width: 475px;
   margin: auto; }
@@ -11615,30 +11719,13 @@ input {
 .block-recommend {
   margin-bottom: 4rem; }
 
-.header-recommend .title, .header-recommend .subtitle {
-  flex: 1; }
-.header-recommend .subtitle {
-  color: #999;
-  text-align: right; }
-
-.product-info {
-  line-height: 2;
-  padding-bottom: 100px !important; }
-  .product-info a {
-    font-size: 16px; }
-  .product-info .info-list {
-    border: 1px solid #ccc;
-    text-align: center;
-    padding: 16px;
-    margin-bottom: 8px; }
-
 .container {
   max-width: 475px; }
 
 .h4, #banner h1 {
   line-height: 1.3em; }
 
-.h7, .quote, .quote-warning, .list-stock .list-header i, .list-stock .list-item i, .header-recommend .subtitle, .product-info, .header-shinhan, .block .subtitle, .block-card .subtitle, #profit .subtitle, #blockAutoInvest i, #sell_amount .note, .circle-steps .term, h7 {
+.h7, .quote, .quote-warning, .header-recommend .subtitle, .list-stock .list-header i, .list-stock .list-item i, .header-shinhan, .block .subtitle, .block-card .subtitle, #profit .subtitle, #blockAutoInvest i, #sell_amount .note, .circle-steps .term, h7 {
   font-size: 13px; }
 
 .fixed-bottom, .btn-fixed-bottom, .btn-filter, #blockButtons, .survey .btn-next {
@@ -11689,23 +11776,6 @@ input {
 
 #banner h1 {
   color: white; }
-
-#filterButton {
-  position: fixed;
-  bottom: 24px;
-  left: 50vw;
-  width: 8rem;
-  text-align: center;
-  padding: 1rem 1rem 1rem 0.7rem;
-  margin-left: -4rem;
-  border-radius: 100px;
-  color: #FFFFFF;
-  box-shadow: 0 1px 4px 0 #999999; }
-  #filterButton i {
-    margin-top: -4px;
-    margin-bottom: 0px; }
-  #filterButton span {
-    color: white; }
 
 .modal-dialog {
   margin: 0;

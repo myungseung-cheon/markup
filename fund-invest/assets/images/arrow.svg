@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="8px" height="15px" viewBox="0 0 8 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51 (57462) - http://www.bohemiancoding.com/sketch -->
+    <title>~v2/icon/arrow</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0.449999988 1.82497202 1.27367759 1 7.98919275 7.70497825 1.27367759 14.4099565 0.449999988 13.5849845 6.33924668 7.70497825"></polygon>
+    </defs>
+    <g id="~v2/icon/arrow" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <use id="Mask" fill="#1E1E21" fill-rule="nonzero" xlink:href="#path-1"></use>
+        <g id="color/_grey/700-✓" mask="url(#mask-2)" fill="#585861">
+            <rect id="color/grey/700" x="0" y="0" width="8" height="15"></rect>
+        </g>
+    </g>
+</svg>
