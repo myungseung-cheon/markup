@@ -1,0 +1,81 @@
+// 상세화면 수익률
+#profit {
+    @extend .block-card ;
+    color: $color-grey-700;
+    canvas {
+        @extend .px-2, .mb-4 ;
+    }
+    .control {
+        @extend .w-100, .text-center, .mb-2 ;
+        button {
+            @extend .btn ;
+            border-radius: 100px ;
+            font-size: 14px;
+            line-height: 1;
+            padding: 8px 11px;
+            background-color: transparent;
+            &.selected {
+                @extend .btn-accent ;
+            }
+        }
+    }
+}
+
+// 투자 버튼
+#blockButtons {
+    @extend .fixed-bottom ;
+    .btn-sell {
+        @extend .btn-weak-dark ;
+        margin-right: 8px;
+    }
+    .btn-invest {
+        @extend .btn-fill-primary ;
+        margin: 0px;
+    }
+}
+
+//정보 화면
+#blockInfo {
+    padding: 32px 24px;
+
+    .table-left-head {
+        @extend .table, .table-bordered, .mb-5 ;
+        td {
+            @extend .py-3 ;
+            min-width: 92px;
+        }
+        .head {
+            @extend .gray50 ;
+        }
+    }
+}
+
+// 자동 투자 블럭
+#blockAutoInvest {
+    padding-top: 0px;
+    padding-bottom: 16px;
+
+    .number {
+        font-size: 22px;
+        font-weight: 600;
+    }
+    .metric {
+        font-size: 17px;
+    }
+    hr {
+        border: 1px solid $black-opacity-100;
+    }
+    .quit {
+        @extend .ml-4, .mb-0 ;
+    }
+}
+#finishAutoInvestModal {
+    .modal-header {
+        border-bottom: 0;
+        padding: 1rem 1rem 0;
+    }
+    .modal-footer {
+        padding: 0 1rem 2rem;
+        border-top: 0;
+    }
+}

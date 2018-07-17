@@ -1,3 +1,19 @@
+// 상품 헤더
+.header-shinhan {
+    @extend .h7, .text-center ;
+    padding: 24px 0 12px;
+    color: $color-grey-600;
+    z-index: 1;
+    span {
+        font-size: 15px;
+    }
+    img {
+        opacity: 0.9;
+        height:18px;
+        margin-top:-2px;
+        margin-right: 8px;
+    }
+}
 
 #selectType {
     padding: 24px;

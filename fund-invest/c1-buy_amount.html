@@ -11,7 +11,7 @@
     <link href="assets/stylesheet/style.css" rel="stylesheet">
 
 </head>
-<body>
+<body class="gray0">
 
     <section id="invest_amount" class="survey">
 
@@ -21,103 +21,137 @@
         </div>
 
         <!-- 질문 -->
+        <div class="list-header mb-4">
+            <h1 class="list-header__title">얼마를 투자할까요?</h1>
+        </div>
         <div class="sheet">
-            <h4 class="question">얼마를 투자할까요?</h4>
-            <p class="description">최대금액 : 2,000,000원</p>
             <form action="">
-                <div class="input-group mb-3">
-                    <input id="buyAmount" class="form-control form-control-lg mb-0" aria-describedby="basic-addon3" type="number">
-                    <span class="input-group-addon px-3" id="basic-addon3">원</span>
+                <div class="form-field">
+                    <div class="text-field mb-4">
+                        <input id="buyAmount" type="tel" class="text-field__input" placeholder="최소 1,000">
+                        <span class="text-field__suffix">원</span>
+                        <div class="text-field__bottom-line"></div>
+                    </div>
+                    <div class="custom-radio-group">
+                        <div class="custom-control custom-radio">
+                            <input class="custom-control-input" id="once" type="radio" name="radio" value="1" checked="">
+                            <label class="custom-control-label" for="once">한 번만</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input class="custom-control-input" id="repeat" type="radio" name="radio" value="2">
+                            <label class="custom-control-label" for="repeat">매월 반복</label>
+                        </div>
+                    </div>
                 </div>
 
-                <label class="radio-lg inline">
-                    <input type="radio" name="radio" value="1" checked>한 번만
-                </label>
-                <label class="radio-lg inline ml-4">
-                    <input type="radio" name="radio" value="2">매월 반복
-                </label>
-                <input type="submit" value="다음" class="btn-next">
+                <div id="repeatOption" class="hide mt-5">
+                    <div class="form-field">
+                        <label class="field-label">반복 날짜</label>
+                        <div class="form-control-group-vertical">
+                            <div class="dropdown">
+                                <select class="dropdown__select">
+                                    <option>매월 1일</option>
+                                    <option>매월 2일</option>
+                                    <option>매월 3일</option>
+                                    <option>매월 4일</option>
+                                    <option>매월 5일</option>
+                                    <option>매월 6일</option>
+                                    <option>매월 7일</option>
+                                    <option>매월 8일</option>
+                                    <option>매월 9일</option>
+                                    <option>매월 10일</option>
+                                    <option>매월 11일</option>
+                                    <option>매월 12일</option>
+                                    <option>매월 13일</option>
+                                    <option>매월 14일</option>
+                                    <option>매월 15일</option>
+                                    <option>매월 16일</option>
+                                    <option>매월 17일</option>
+                                    <option>매월 18일</option>
+                                    <option>매월 19일</option>
+                                    <option>매월 20일</option>
+                                    <option>매월 21일</option>
+                                    <option>매월 22일</option>
+                                    <option>매월 23일</option>
+                                    <option>매월 24일</option>
+                                    <option selected>매월 25일</option>
+                                    <option>매월 26일</option>
+                                    <option>매월 27일</option>
+                                    <option>매월 28일</option>
+                                    <option>매월 29일</option>
+                                    <option>매월 30일</option>
+                                    <option>매월 31일</option>
+                                </select>
+                                <i class="dropdown__icon i-keyboard-arrow-down"></i>
+                                <span class="dropdown__bottom-line"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-field">
+                        <label class="field-label">반복 날짜</label>
+                        <div class="form-control-group-vertical">
+                            <div class="dropdown">
+                                <select class="dropdown__select">
+                                    <option>1 개월</option>
+                                    <option>2 개월</option>
+                                    <option>3 개월</option>
+                                    <option>4 개월</option>
+                                    <option>5 개월</option>
+                                    <option>6 개월</option>
+                                    <option>7 개월</option>
+                                    <option>8 개월</option>
+                                    <option>9 개월</option>
+                                    <option>10 개월</option>
+                                    <option>11 개월</option>
+                                    <option selected>12 개월</option>
+                                    <option>13 개월</option>
+                                    <option>14 개월</option>
+                                    <option>15 개월</option>
+                                    <option>16 개월</option>
+                                    <option>17 개월</option>
+                                    <option>18 개월</option>
+                                    <option>19 개월</option>
+                                    <option>20 개월</option>
+                                    <option>21 개월</option>
+                                    <option>22 개월</option>
+                                    <option>23 개월</option>
+                                    <option>24 개월</option>
+                                    <option>25 개월</option>
+                                    <option>26 개월</option>
+                                    <option>27 개월</option>
+                                    <option>28 개월</option>
+                                    <option>29 개월</option>
+                                    <option>30 개월</option>
+                                    <option>31 개월</option>
+                                </select>
+                                <i class="dropdown__icon i-keyboard-arrow-down"></i>
+                                <span class="dropdown__bottom-line"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-field">
+                        <div class="list">
+                            <div class="list__key">시작일 : </div>
+                            <div class="list__value">{{ startDate }}</div>
+                        </div>
+                        <div class="list">
+                            <div class="list__key">종료일 : </div>
+                            <div class="list__value">{{ endDate }}</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fixed-bottom">
+                    <div class="block-btn__shadow"></div>
+                    <div class="block-btn__box">
+                        <input type="submit" value="다음" class="btn-next">
+                    </div>
+                </div>
             </form>
 
             <!-- 반복 상세 설정 -->
-            <div id="repeatOption" class="sheet pt-1 pb-4 rounded gray100 mt-3 hide">
-                <!-- 반복일 설정 -->
-                <h6 class="sub-question">반복할 날짜를 선택하세요.</h6>
-                <select class="form-control form-control-lg custom-select">
-                    <option>매월 1일</option>
-                    <option>매월 2일</option>
-                    <option>매월 3일</option>
-                    <option>매월 4일</option>
-                    <option>매월 5일</option>
-                    <option>매월 6일</option>
-                    <option>매월 7일</option>
-                    <option>매월 8일</option>
-                    <option>매월 9일</option>
-                    <option>매월 10일</option>
-                    <option>매월 11일</option>
-                    <option>매월 12일</option>
-                    <option>매월 13일</option>
-                    <option>매월 14일</option>
-                    <option>매월 15일</option>
-                    <option>매월 16일</option>
-                    <option>매월 17일</option>
-                    <option>매월 18일</option>
-                    <option>매월 19일</option>
-                    <option>매월 20일</option>
-                    <option>매월 21일</option>
-                    <option>매월 22일</option>
-                    <option>매월 23일</option>
-                    <option>매월 24일</option>
-                    <option selected>매월 25일</option>
-                    <option>매월 26일</option>
-                    <option>매월 27일</option>
-                    <option>매월 28일</option>
-                    <option>매월 29일</option>
-                    <option>매월 30일</option>
-                    <option>매월 31일</option>
-                </select>
+            <div id="repeatOption">
 
-                <!-- 반복 마감 설정 -->
-                <h6 class="sub-question">반복할 기간을 선택하세요.</h6>
-                <select class="form-control form-control-lg custom-select">
-                    <option>1 개월</option>
-                    <option>2 개월</option>
-                    <option>3 개월</option>
-                    <option>4 개월</option>
-                    <option>5 개월</option>
-                    <option>6 개월</option>
-                    <option>7 개월</option>
-                    <option>8 개월</option>
-                    <option>9 개월</option>
-                    <option>10 개월</option>
-                    <option>11 개월</option>
-                    <option selected>12 개월</option>
-                    <option>13 개월</option>
-                    <option>14 개월</option>
-                    <option>15 개월</option>
-                    <option>16 개월</option>
-                    <option>17 개월</option>
-                    <option>18 개월</option>
-                    <option>19 개월</option>
-                    <option>20 개월</option>
-                    <option>21 개월</option>
-                    <option>22 개월</option>
-                    <option>23 개월</option>
-                    <option>24 개월</option>
-                    <option>25 개월</option>
-                    <option>26 개월</option>
-                    <option>27 개월</option>
-                    <option>28 개월</option>
-                    <option>29 개월</option>
-                    <option>30 개월</option>
-                    <option>31 개월</option>
-                </select>
-
-
-                <p class="mt-4 mb-0 lh-18">
-                    시작일 : <span class="blue500-text">{{ startDate }}</span><br>
-                    종료일 : <span class="blue500-text">{{ endDate }}</span>
-                </p>
             </div>
         </div>
 
@@ -136,19 +170,19 @@
     <!-- 날짜 선택 -->
     <link  href="assets/javascript/date-picker/datepicker.css" rel="stylesheet">
     <script src="assets/javascript/date-picker/datepicker.js"></script>
-<!--     <script type="text/javascript">
-var d = new Date();
-$('#repeatDate').datepicker({
-    autoPick: true,
-    format: '매월 dd일'
-});
-$('#repeatDue').datepicker({
-    autoPick: true,
-    startDate: d,
-    date: new Date( d.getFullYear() + 1, d.getMonth() ),
-    format: 'yy년 mm월'
-});
-</script> -->
+    <!--     <script type="text/javascript">
+    var d = new Date();
+    $('#repeatDate').datepicker({
+        autoPick: true,
+        format: '매월 dd일'
+    });
+    $('#repeatDue').datepicker({
+        autoPick: true,
+        startDate: d,
+        date: new Date( d.getFullYear() + 1, d.getMonth() ),
+        format: 'yy년 mm월'
+    });
+    </script> -->
 
     <!-- 커스텀 이벤트 -->
     <script src="assets/javascript/event.js"></script>

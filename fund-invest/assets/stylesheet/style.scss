@@ -1,12 +1,25 @@
 //Colre
-// @import 'tossframe-renew';
 @import 'tossframe';
+@import 'tossframe-renew';
 
 
 // Variables
-$color-main-content: #585861;
-$color-sub-content: #B7B7BD;
-$color-profit: #fe4545;
+
+$color-primary: #3785f7;
+$color-red: #f44336;
+$color-grey-900: #1e1e21;
+$color-grey-700: #585861;
+$color-grey-600: #6e6e78;
+$color-grey-500: #95959e;
+$color-grey-400: #b7b7bd;
+
+$black-opacity-100: rgba(0,0,0,0.04);
+
+$color-main-content: $color-primary;
+$color-sub-content: $color-grey-700;
+$color-profit: $color-red;
+
+$asset-root: '../../assets/';
 
 // Components
 @import 'component/typography.scss';
@@ -17,11 +30,15 @@ $color-profit: #fe4545;
 @import 'component/list.scss';
 @import 'component/modal.scss';
 @import 'component/icon.scss';
+@import 'component/bottom-sheet.scss';
 
 // Pages
 @import "pages/main.scss";
+@import "pages/product-detail.scss";
+@import "pages/buy-sell.scss";
 @import "pages/portfolio.scss";
 @import "pages/footer.scss";
+@import "pages/faq.scss";
 
 
 body {
@@ -51,7 +68,15 @@ body {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
+    min-height: 192px;
 }
+
+@media only screen and (max-width: 359px) {
+    .block-image {
+        min-height: 120px;
+    }
+}
+
 .flex-1 { flex: 1; }
 .flex-2 { flex: 2; }
 .flex-3 { flex: 3; }
@@ -198,21 +223,6 @@ body {
     transition: all 0.2s ease-in-out;
 }
 
-// 상품 헤더
-.header-shinhan {
-    @extend .blue800, .gray300-text, .h7, .text-center, .py-3 ;
-    z-index: 1;
-    span {
-        font-size: 15px;
-    }
-    img {
-        opacity: 0.9;
-        height:18px;
-        margin-top:-2px;
-        margin-right: 8px;
-    }
-}
-
 // 메인화면 내 자산
 #portfolio {
     @extend .blue600  ;
@@ -259,12 +269,13 @@ body {
 
 // 블럭
 .block {
-    @extend .p-4, .gray0, .bb-1 ;
+    @extend .gray0 ;
+    padding: 24px;
     .title {
         @extend .h5, .gray900-text ;
     }
     .title-sm {
-        @extend .h6, .gray800-text, .mb-3, .bold ;
+        @extend .h6, .gray800-text, .mb-3 ;
     }
     .subtitle {
         @extend .h7, .gray600-text ;
@@ -288,9 +299,13 @@ body {
     @extend .gray0, .bb-1 ;
     box-shadow: 0 1px 2px 0 #E0E0E0;
 }
+.block-btn-group {
+    display: block;
+    padding: 0px 20px 20px;
+}
 .block-card {
-    @extend .block, .m-3 ;
-    box-shadow: 0 1px 2px 0 #E0E0E0;
+    @extend .block, .my-3 ;
+    // box-shadow: 0 1px 2px 0 #E0E0E0;
 }
 .block-shadow {
     box-shadow: 0 1px 2px 0 #cccccc;
@@ -411,91 +426,6 @@ body {
     @extend .text-center, .gray700-text, .pb-2, .pt-3, .mt-2 ;
 }
 
-// 상세화면 수익률
-#profit {
-    @extend .block-card ;
-    canvas {
-        @extend .px-2, .mb-4 ;
-    }
-    .control {
-        @extend .w-100, .text-center, .mb-2 ;
-        button {
-            @extend .btn ;
-            border-radius: 100px ;
-            font-size: 14px;
-            line-height: 1;
-            padding: 8px 11px;
-            background-color: transparent;
-            &.selected {
-                @extend .btn-accent ;
-            }
-        }
-    }
-}
-
-// 투자 버튼
-#blockButtons {
-    @extend .fixed-bottom ;
-    button {
-        @extend .btn, .rounded-0, .py-4, .bold, .gray0-text ;
-        float: left;
-    }
-    .btn-sell {
-        @extend .ABlue800 ;
-    }
-    .btn-invest {
-        @extend .btn-accent ;
-    }
-
-}
-
-//정보 화면
-#blockInfo {
-
-    .table-left-head {
-        @extend .table, .table-bordered, .mb-5 ;
-        td {
-            @extend .py-3 ;
-            min-width: 92px;
-        }
-        .head {
-            @extend .gray50 ;
-        }
-    }
-}
-
-// 자동 투자 블럭
-#blockAutoInvest {
-    @extend .blue500, .m-3, .gray0-text, .p-3 ;
-    box-shadow: 0 1px 2px 0 #E0E0E0;
-    i {
-        @extend .oi, .oi-reload, .h7 ;
-    }
-    .title {
-        @extend .ml-2, .bold ;
-    }
-    .description {
-        @extend .ml-4 ;
-    }
-    hr {
-        @extend .ml-4 ;
-        border-top: 1px solid white ;
-    }
-    .quit {
-        @extend .ml-4, .mb-0 ;
-    }
-}
-#finishAutoInvestModal {
-    .modal-header {
-        border-bottom: 0;
-        padding: 1rem 1rem 0;
-    }
-    .modal-footer {
-        padding: 0 1rem 2rem;
-        border-top: 0;
-    }
-}
-
 // 투자하기, 환매하기, 성향 조사에 쓰이는 질문지 형식
 .survey {
     .progress-bar {
@@ -540,9 +470,9 @@ body {
             word-break: normal;
         }
     }
-    .btn-next {
-        @extend .btn, .btn-block, .btn-accent, .mt-5, .mb-0, .rounded-0, .py-4, .bold, .fixed-bottom, .gray0-text ;
-    }
+    // .btn-next {
+    //     @extend .btn, .btn-block, .btn-accent, .mt-5, .mb-0, .rounded-0, .py-4, .bold, .fixed-bottom, .gray0-text ;
+    // }
     .btn-confirm {
         @extend .btn, .btn-accent, .btn-block, .rounded-0, .bold, .mb-5 ;
     }
@@ -669,38 +599,4 @@ body {
             @extend .blue500-text, .bold ;
         }
     }
-}
-
-
-// info 부분
-
-.text-period {
-    font-size: 13px;
-    font-color: #ededed;
-}
-.img-main-banner {
-    width: 210px;
-}
-.btn-main-banner {
-    margin-top: -52px;
-}
-.product-info {
-    word-break: keep-all;
-}
-.icon-filter {
-    width: 20px;
-}
-.info-list {
-    list-style: none;
-    padding-left: 0;
-}
-.info-list li {
-    margin-top: 40px;
-}
-.info-head {
-    font-weight: bold;
-    margin-bottom: 8px;
-}
-.info-body {
-    color: #333333;
 }

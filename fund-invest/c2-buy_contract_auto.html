@@ -1,0 +1,447 @@
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#ffffff" />
+    <meta http-equiv="Expires" content="Mon, 06 Jan 1990 00:00:01 GMT">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equ4iv="Cache-Control" content="no-cache">
+    <!-- 위 3개의 메타 태그는 *반드시* head 태그의 처음에 와야합니다; 어떤 다른 콘텐츠들은 반드시 이 태그들 *다음에* 와야 합니다 -->
+    <title>Toss - 소액 펀드 투자</title>
+
+
+    <!-- 커스텀 스타일 -->
+    <link href="assets/stylesheet/style.css" rel="stylesheet">
+    <style>
+    .scroll {
+        position: relative;
+        height: 160px;
+        overflow: scroll;
+        margin-bottom: 20px;
+    }
+    .scroll ul {
+        padding-left: 12px;
+    }
+    .scroll li {
+        margin-bottom: 12px;
+    }
+    .scroll li:last-child {
+        margin-bottom: 0px;
+    }
+    .survey table td.key,
+    .survey table td.value {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+    .survey table td.value {
+        width: 40% !important;
+    }
+    </style>
+
+</head>
+<body>
+
+    <section id="contractSummary" class="survey">
+
+        <!-- 진행 바 -->
+        <div class="progress">
+            <div class="progress-bar w-100" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+
+        <!-- 양식 -->
+        <div class="list-header pb-4 gray0">
+            <h1 class="list-header__title">투자 계약서</h1>
+        </div>
+        <div class="sheet pb-4 gray0">
+            <!-- 요약 -->
+            <table>
+                <!-- 상품명 -->
+                <tr>
+                    <td class="list__key">상품명</td>
+                    <td class="list__value">맥쿼리테마따라잡기증권자투자신탁1호[주식](A)</td>
+                </tr>
+                <!-- 투자금액 -->
+                <tr>
+                    <td class="list__key">투자 금액</td>
+                    <td class="list__value">200,200 원</td>
+                </tr>
+                <!-- 운용보고서 -->
+                <tr>
+                    <td class="list__key">운용보고서</td>
+                    <td class="">
+                        <p class="h7">투자의 운용에 대한 보고서를 수령할 방법을 선택하세요.</p>
+                        <div class="custom-radio-group">
+                            <div class="custom-control custom-radio">
+                                <input id="receive" class="custom-control-input" type="radio" name="receive" value="1" >
+                                <label class="custom-control-label" for="receive">신청</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input id="notRecive" class="custom-control-input" type="radio" name="receive" value="2" checked>
+                                <label class="custom-control-label" for="notRecive">신청 안함</label>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr id="adressInfo" class="">
+                    <td class="list__key" style="border-bottom: 0 !important;">
+                        받을 방법
+                    </td>
+                    <td class="list__value" style="border-bottom: 0 !important;">
+                        <div class="custom-radio-group">
+                            <div class="custom-control custom-radio">
+                                <input id="postcard" class="custom-control-input" type="radio" name="radio" value="1" checked>
+                                <label class="custom-control-label" for="postcard">우편</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input id="email" class="custom-control-input" type="radio" name="radio" value="2">
+                                <label class="custom-control-label" for="email">이메일</label>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="bt-0">
+                        <!-- 우편 선택 시 노출 -->
+                        <input id="reportToHome" type="text" class="form-control" placeholder="주소 : 서울시 관악구 봉천동 ###">
+                        <!-- 이메일 선택 시 노출 -->
+                        <div id="reportToEmail" class="hide">
+                            <input type="email" class="form-control" placeholder="hello@gmail.com">
+                            <h7 id="errorLog" class="ABlue500-text"></h7>
+                        </div>
+                    </td>
+                </tr>
+
+                <!-- 계약일 // 일반 투자일 시 노출 -->
+                <tr>
+                    <td colspan="2">
+                        <p class="list__key mb-4">진행 과정</p>
+                        <ol class="circle-steps">
+                            <li>
+                                <div class="circle"></div>
+                                <div class="bar"></div>
+                                <h7>투자요청</h7>
+                                <span class="term">즉시</span>
+                            </li>
+                            <li>
+                                <div class="circle"></div>
+                                <div class="bar"></div>
+                                <h7>주문완료</h7>
+                                <span class="term">즉시</span>
+                            </li>
+                            <li>
+                                <div class="circle"></div>
+                                <h7>결제완료</h7>
+                                <span class="term">1일</span>
+                            </li>
+                        </ol>
+
+                            <!-- 15:30 이후에 투자 안내 -->
+                            <!-- <div class="quote-warning">
+                            15:30 이후에 투자를 요청하셨기 때문에, 출금된 돈은 다음날 투자사로 입금됩니다.
+                        </div> -->
+
+                        <!-- 17:00 이후에 투자 안내 -->
+                        <!-- <div class="quote-warning">
+                        17:00 이후에 투자를 요청하셨기 때문에 다음날 접수됩니다.
+                    </div> -->
+                    </td>
+                </tr>
+
+                <!-- 자동 투자일 // 자동 투자일 시 노출 -->
+                <tr>
+                    <td colspan="2">
+                        <p class="list__key mb-4">자동투자일</p>
+                        <table class="table table-bordered table-px-3">
+                            <tr>
+                                <td class="key gray100 w-30 bold">이체시작월</td>
+                                <td class="value">2017.03</td>
+                            </tr>
+                            <tr>
+                                <td class="key gray100 w-30 bold">이체일</td>
+                                <td class="value">매월 16일</td>
+                            </tr>
+                            <tr>
+                                <td class="key gray100 w-30 bold">이체기간</td>
+                                <td class="value">3개월</td>
+                            </tr>
+                        </table>
+                        <div class="quote-warning">
+                            이체시작일에 잔액이 부족할 경우 D+3일까지 출금을 시도합니다. 이 기간에 펀드의 기준가가 변동될 수 있습니다.
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <p class="list__key mb-4">주요내용 설명서 및 투자자 확인사항</p>
+                        <div class="scroll b-1 p-3 gray50 mt-3" data-spy="scroll" data-offset="0">
+                            <ul class="pl-3 h7">
+                                <li>이 금융투자상품(계약)은 원금 손실 가능성 (또 는 원금 초과손실 가능성) 이 있습니다.</li>
+                                <li>이 금융투자상품(계약)은 예금자보호법에 따라  예금보험공사가 보호하지 않습니다.</li>
+                                <li>이 금융투자상품(계약)의 가장 핵심적인 투자위 험은 아래와 같이 발생할 수 있습니다.
+                                    <ul>
+                                        <li>신용위험 : 발행사 부도 등 위험에 따른 손실위험</li>
+                                        <li>시장위험 : 시장상황 변화에 따른 가격 변동위험</li>
+                                        <li>환율위험 : 환율 변동에 따른 환차손 위험</li>
+                                        <li>기타위험</li>
+                                    </ul>
+                                </li>
+                                <li>※ 이 금융투자상품(계약)의 다른 투자위험과 손익구조 등에 대해서는 설명서 등을 통해 확인하시기 바랍니다.</li>
+                            </ul>
+                            <hr class="my-4">
+                            <p class="h7 bold">투자자확인사항을 읽고, 해당 펀드의 주요 특징, 원금보장 여부, 판매 수수료 절차 등에 대하여 확인하였습니다.</p>
+                            <ul class="pl-3 h7">
+                                <li>펀드의 명칭 및 종류가 무엇인지 확인하였습니다.</li>
+                                <li>펀드의 운용개념 및 방법에 대해 확인하였습니다.</li>
+                                <li>펀드 투자시 투자원금이 보장되지 않는다는 사실 등 투자위험에 대해 확인하였습니다.</li>
+                                <li>펀드 재산의 운용방법, 운용제한 및 운용전략에 대하여 대해 확인하였습니다.</li>
+                                <li>펀드의 환매방법, 환매제한, 환매수수료, 환매수수료 부과기간 및 환매연기에 대해 확인하였습니다.</li>
+                                <li>투자자 또는 펀드가 부담하는 각종 보수, 수수료, 비용 및 투자소득의 과세에 대해 확인하였습니다.</li>
+                                <li>신탁약관 또는 투자회사 정관의 주요 내용 변경에 따른 공시에 대해 확인하였습니다.</li>
+                                <li>수익자 총회 또는 주주총회에 대해 확인하였습니다.</li>
+                                <li>펀드에 대한 투자는 본인 스스로의 판단과 책임으로 결정한 것이므로 투자와 관련하여 수반되는 모든 위험을 감수할 것을 확인하였습니다.</li>
+                                <li>펀드위험등급은 펀드설정이 3년경과시 부터 &lsquo;실제 수익률 변동성&rsquo;을 기준으로, 펀드설정이 3년 미경과시는 &lsquo;투자대상자산의 종류 및 위험도&rsquo; 를 기준으로 등급을 재 분류함에 따라 향후 변경될 수 있음을 확인하였습니다.</li>
+                                <li>회사의 권유 없이 본인의 선택으로 투자합니다.</li>
+                            </ul>
+                            <p class="mt-3 mb-2 h7 bold">해외자산에 투자하는 펀드의 경우 추가 확인사항</p>
+                            <ul class="pl-3 h7">
+                                <li>펀드 투자에 따른 일반적 위험(가격변동위험, 투자기업의 부도위험, 금리변동위험) 외에 환율변동이 있다는 사실과 해당 펀드의 환위험 헤지 여부 및 목표 환헤지 비율에 대해서 확인하였습니다.</li>
+                            </ul>
+                            <p class="mt-3 mb-2 h7 bold">파생상품, 부동산, 특별자산에 주로 투자하는 펀드의 경우 추가 확인사항</p>
+                            <ul class="pl-3 h7">
+                                <li>펀드의 주요 특성 외에 추가적으로 펀드의 투자대상인 파생상품, 부동산, 특별자산의 주요특성(구체적인 구조, 투자대상 등) 에 대해서 확인하였습니다.</li>
+                                <li>투자대상 파생상품, 부동산, 특별자산과 관련되는 투자위험과 기본적인 정보에 대해서 확인하였습니다.</li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <p class="list__key mb-4">자동이체 서비스 이용약관</p>
+                        <div class="scroll b-1 p-3 gray50 mt-3 h7 terms-contents" data-spy="scroll" data-target="#navbar-example3" data-offset="0">
+
+                            <p><strong>제1조 (목적)</strong></p>
+
+                            <p>본 약관은 고객이 신한금융투자주식회사(이하 &lsquo;회사&rsquo;라 합니다)가 제공하는 &lsquo;지정일 자동이체 서비스&rsquo; (이하 &lsquo;지정일 자동이체&rsquo;라 합니다)를 이용함에 있어 필요한 사항을 정함을 목적으로 합니다.</p>
+
+                            <p>&nbsp;</p>
+
+                            <p><strong>제2조 (용어의 정의)</strong></p>
+
+                            <p>본 약관에서 사용하는 지정일 자동이체 용어 정의는 다음 각 호와 같습니다.</p>
+
+                            <ol>
+                            	<li>&lsquo;지정일 자동이체 입금거래(은행&rarr;당사)&rsquo;라 함은 회사가 고객이 지정한 금액(이하 &ldquo;지정금액&rdquo;이라 함)을 고객이 지정하는 일자(이하 &lsquo;지정이체일&rsquo;이라 함)에, 고객이 지정한 은행계좌에서 회사에 개설된 고객계좌로 입금하는 것을 말합니다.</li>
+                            	<li>&lsquo;지정일 자동이체 출금거래(당사&rarr;당사)&rsquo;라 함은 지정금액을 지정이체일에, 회사에 개설된 고객계좌에서 고객이 지정한 회사에 개설된 계좌로 출금하는 것을 말합니다.</li>
+                            	<li>&lsquo;은행&rsquo;이라 함은 금융결제원의 금융공동망에 가입된 모든 금융기관을 말합니다.</li>
+                            </ol>
+
+                            <p>&nbsp;</p>
+
+                            <p><strong>제3조 (계약의 성립)</strong></p>
+
+                            <p>① 지정일 자동이체 계약은 고객이 회사 영업점에 내점하여 지정일 자동이체 신청서(이하 &lsquo;신청서&rsquo;라 한다)를 제출하거나 또는 홈트레이딩서비스를 통해 신청함으로써 계약이 성립됩니다.</p>
+
+                            <p>② 고객은 계약체결일에 따라 계약 당월의 지정일 자동이체 처리가 제한될 수 있습니다.</p>
+
+                            <p>&nbsp;</p>
+
+                            <p><strong>제4조 (영업일)</strong></p>
+
+                            <p>다음 각호의 휴일을 제외한 날을 영업일로 합니다.</p>
+
+                            <ol>
+                            	<li>대통령령에 의한 관공서의 공휴일</li>
+                            	<li>토요일</li>
+                            	<li>근로자의 날</li>
+                            </ol>
+
+                            <p>&nbsp;</p>
+
+                            <p><strong>제5조 (지정일 자동이체의 처리등)</strong></p>
+
+                            <p>① 지정일 자동이체 거래는 예금출금청구서 또는 예탁금출금 청구서 없이 예금 또는 예탁금을 출금하는 계좌에서 지정금액을 출금하여 자동출금처리 절차에 의해 자동이체 처리합니다.</p>
+
+                            <p>② 출금하는 계좌의 예금잔액(대출약정이 있는 경우 대출한도 포함) 또는 예탁금 잔액이 지정 이체일 현재 지정금액보다 부족한 경우에는 고객에 대한 별도의 통지 없이 지정일 자동이체를 처리하지 않습니다. 다만 고객이 자동이체 재처리를 지정 이체일 이전에 사전 신청한 경우 회사가 정한 일자에 자동이체 처리합니다.</p>
+
+                            <p>③ 회사는 지정이체일이 공휴일 등 영업일이 아닌 경우 지정이체일 이후 최초로 도래하는 영업일에 지정일 자동이체를 처리하며, 지정이체일이 처리 당월에 없는 경우에는 처리 당월 말일자를 지정이체일로 갈음하여 처리합니다.</p>
+
+                            <p>④ 고객은 지정일 자동이체를 위하여 지정한 출금계좌가 본인명의의 계좌인 경우이 계좌를 지정하여 전화로 이체출금을 신청할 수 있으며, 회사는 고객 본인임이 확인된 경우 이체처리해 줄 수 있습니다.</p>
+
+                            <p>&nbsp;</p>
+
+                            <p><strong>제6조 (수수료)</strong></p>
+
+                            <p>지정일 자동이체 입금거래를 위한 수수료는 회사가 부담하며, 지정일 자동이체 출금거래의 수수료는 당사간 거래이므로 고객에게 부담되지 않습니다.</p>
+
+                            <p>&nbsp;</p>
+
+                            <p><strong>제7조 (지정일자동이체의 처리 순서)</strong></p>
+
+                            <p>동일한 지정 이체일에 다수의 지정일 자동이체 청구가 있을 경우 다음 각호에 의해 처리됩니다.</p>
+
+                            <ol>
+                            	<li>출금계좌를 은행계좌로 지정한 경우에는 은행에서 정하는 우선순위</li>
+                            	<li>출금계좌를 회사에 개설된 계좌로 지정한 경우에는 회사에서 정하는 우선순위</li>
+                            </ol>
+
+                            <p>&nbsp;</p>
+
+                            <p><strong>제8조 (계좌정보의 제공)</strong></p>
+
+                            <p>회사는 지정일 자동이체 업무처리를 위하여 업무상 필요한 범위내에서 고객이 지정한 은행의 계좌정보(거래은행명, 지점명, 계좌번호 등)를 금융결제원에 제공할 수 있습니다.</p>
+
+                            <p>&nbsp;</p>
+
+                            <p><strong>제 9조 (거래내용의 확인)</strong></p>
+
+                            <p>이용자는 영업점으로 내점하거나 또는 전화(주소 및 전화번호는 회사 홈페이지 참조)로 거래내용의 서면 제공요청을 할 수 있으며, 회사는 그 요청을 받은 날로부터 2주 이내에 거래내용에 관한 서면을 우편 등으로 제공합니다.</p>
+
+                            <p>&nbsp;</p>
+
+                            <p><strong>제10조 (거래지시의 철회)</strong></p>
+
+                            <p>① 고객이 지정한 은행계좌에서 회사에 개설된 고객계좌로 입금하는 지정일 자동이체 입금거래의 경우 고객은 이체일 2영업일 전까지 철회할 수 있으며, 그 외 지정일 자동이체 입출금 거래의 경우에는 이체일 1영업일 전까지 철회할 수 있습니다.</p>
+
+                            <p>② 거래지시의 철회는 철회기간 내에 영업점에 내점하거나 전화로 요청할 수 있습니다.</p>
+
+                            <p>&nbsp;</p>
+
+                            <p><strong>제11조 (계약의 변경 및 해지 등)</strong></p>
+
+                            <p>① 고객의 신청서 내용을 변경하고자 하는 경우나 지정일 자동이체 계약을 해지하고자 하는 경우 지정이체일로부터 2 영업일 전까지 변경 또는 해지신청서를 제출하거나 HTS를 통해 신청하여야 합니다. 신청을 하지 않아 고객에게 발생하는 손해에 대해서는 회사는 책임을 지지 않습니다.</p>
+
+                            <p>② 입금계좌의 계약금액이 완납되거나 계약기간이 종료되면 별도의 해지신청 없이 지정일 자동이체 계약은 자동해지 됩니다.</p>
+
+                            <p>&nbsp;</p>
+
+                            <p><strong>제12조 (기재사항 변동 및 사고 신고)</strong></p>
+
+                            <p>① 고객은 신청서상의 기재내용에 변동이 있을 경우는 신청서를 재작성하여 회사의 영업점에 제출 하거나 전화로 요청할 수 있습니다.</p>
+
+                            <p>② 고객은 접근매체 등 전자금융거래에 있어 비밀을 요하는 사항이 도난, 분실, 위조, 변조 또는 누설되었음을 알았을 때에는 지체없이 이를 영업점 내방하거나 또는 전화로 회사에 신고하여야 합니다.</p>
+
+                            <p>&nbsp;</p>
+
+                            <p><strong>제13조 (약관의 변경 등)</strong></p>
+
+                            <p>① 회사는 약관을 변경하고자 하는 경우 시행일 1월 전에 변경되는 약관을 전자금융거래를 수행하는 전자적 장치(해당 전자적 장치에 게시하기 어려운 경우에는 이용자가 접근하기 용이한 전자적 장치로서 회사가 지정하는 대체장치를 포함한다. 이하 이조에서 같다.)에 게시하고 이용자에게 통지하여야 한다. 다만, 이용자가 이의를 제기할 경우 금융기관 또는 전자금융업자는 이용자에게 적절한 방법으로 약관 변경내용을 통지하였음을 확인해 주어야 한다. 또한, 약관의 변경내용이 고객에게 불리한 것일 때에는 이를 서면 등 고객과 사전에 합의한 방법으로 통지하여야 한다. 이경우 회사는 통지 또는 게시문에 제4항의 내용을 명시하여야 한다.</p>
+
+                            <p>② 제1항의 규정에도 불구하고 회사가 법령의 개정으로 인하여 긴급하게 약관을 변경하는 때에는 변경된 약관을 전자적 장치에 1월 이상 게시하고 이용자에게 통지하여야 한다.</p>
+
+                            <p>③ 이용자는 제1항 및 제2항의 규정에 따라 약관의 변경내용이 게시되거나 통지된 후부터 변경되는 약관의 시행일 전의 영업일까지 지정일자동이체서비스계약을 해지할 수 있다.</p>
+
+                            <p>④ 회사는 제3항의 규정에 의한 기간동안 이용자가 약관의 변경내용에 대하여 이의를 제기하지 아니하는 경우에는 약관의 변경을 승인한 것으로 본다.</p>
+
+                            <p>⑤ 회사는 이용자가 약관의 교부를 요청하는 경우 이에 응하여야 하며, 전자금융거래를 수행하는 전자적 장치에 게시하여 이용자가 약관을 조회하고 다운로드(화면출력을 포함한다)받을 수 있도록 한다.</p>
+
+                            <p>&nbsp;</p>
+
+                            <p><strong>제14조 (기타)</strong></p>
+
+                            <p>본 약관에서 정하지 아니한 사항은 관계법규 및 전자금융거래 이용에 관한 기본약관 등 전자금융거래관련 약관, 이체서비스 이용 약관과 일반적인 상관례에 따릅니다.</p>
+
+                            <p>&nbsp;</p>
+
+                            <p><strong>제15조 (관할법원의 합의)</strong></p>
+
+                            <p>지정일자동이체와 관련하여 고객과 회사간에 소송의 필요가 발생한 때에는 민사소송법이 정하는 법원을 관할법원으로 합니다.</p>
+
+                            <p>&nbsp;</p>
+
+                            <p><strong>제 16조 (분쟁조정)</strong></p>
+
+                            <p>고객은 회사와 분쟁소지가 있을 경우 회사의 민원처리기구에 그 해결을 요구하거나 금융감독원 금융분쟁조정</p>
+
+                            <p>위원회, 한국금융투자협회, 소비자보호원 소비자분쟁조정위원회 등을 통하여 분쟁조정을 신청할 수 있다.</p>
+
+                            <p>[시행일] 본 약관은 2009년 8월 24일부터 시행한다.</p>
+
+                            <p>[시행일] 본 약관은 2010년 5월 10일부터 시행한다.</p>
+
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+            <div id="termAgreement">
+                <p class="list__key mb-4">투자자 확인사항</p>
+                <ul class="h7 pl-3">
+                    <li>회사의 권유 없이 본인의 선택으로 투자합니다.</li>
+                    <li>투자자확인사항을 읽고, 해당 펀드의 주요 특징, 원금보장 여부, 환매 수수료 절차 등에 대하여 확인함</li>
+                </ul>
+
+                <ul id="checkReadInvestDesc" class="b-1 pl-3 mb-2 required">
+                    <label class="checkbox-lg bold my-0 p-3 ml-3">
+                        <input type="checkbox" name="input1">간이투자설명서
+                    </label>
+                </ul>
+
+
+                <ul id="checkAllAgreement" class="b-1 pl-3 mb-4 required">
+                    <label class="checkbox-lg bold my-0 p-3 ml-3">
+                        <input type="checkbox" name="input1">투자자 동의사항 모두 확인
+                    </label>
+                </ul>
+            </div>
+
+            <!-- 투자하기 버튼 -->
+            <button class="btn-next" disabled>투자하기</button>
+        </div>
+    </section>
+
+    <footer class="product-info">
+        <p class="product-info__title">신한금융투자 고객지원센터</p>
+        <p class="product-info__subtitle">
+            신한금융투자에서 제공한 해외주식 리스트입니다<br>
+            *원금손실 시 투자자 귀속, *투자 전 설명서 필독<br>
+            *예금자 보호법상 보호상품 아님, *운용보수 별도
+        </p>
+
+        <hr>
+
+        <a href="a6-FAQ.html">
+            <div class="product-info__list">
+                <span>자주 묻는 질문</span>
+                <i class="i-arrow"></i>
+            </div>
+        </a>
+        <div class="product-info__list">
+            <span>펀드투자 관련 문의</span>
+            <a href="tel:1588-0365">1588-0365</a>
+            <i class="i-arrow"></i>
+        </div>
+        <div class="product-info__list">
+            <span>해외투자 관련 문의</span>
+            <a href="tel:37222525">3722-2525</a>
+            <i class="i-arrow"></i>
+        </div>
+        <div class="product-info__list">
+            <span>펀드투자 관련 문의</span>
+            <a href="tel:15884905">1588-4905</a>
+            <i class="i-arrow"></i>
+        </div>
+    </footer>
+
+
+<!-- 기본 JavaScript 프레임워크 -->
+<script src="assets/javascript/jquery-3.2.1.min.js"></script>
+<script src="assets/javascript/tether.min.js"></script>
+<script src="assets/javascript/tossframe-2.0.0.js"></script>
+
+<!-- Validation -->
+<script src="assets/javascript/email-checker.js"></script>
+<script src="assets/javascript/term-checker.js"></script>
+
+<!-- 커스텀 이벤트 -->
+<script src="assets/javascript/event.js"></script>
+<script type="text/javascript">
+
+    $('#checkReadInvestDesc').click(function(){
+        window.open('http://file.shinhaninvest.com/filedoc/dfm/fundJJ/R3_KR5101792749_20170831_2039102.pdf#page=1');
+    });
+</script>
+
+</body>
+</html>

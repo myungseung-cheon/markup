@@ -2,7 +2,7 @@
 
 .i-arrow {
     display: inline-block;
-    background: url('/assets/images/arrow.svg');
+    background: url($asset-root + 'images/arrow.svg');
     background-repeat: no-repeat;
     background-position: right;
     width: 8px;
@@ -10,9 +10,18 @@
 }
 .i-arrow-white {
     display: inline-block;
-    background: url('/assets/images/arrow-white.svg');
+    background: url($asset-root + 'images/arrow-white.svg');
     background-repeat: no-repeat;
     background-position: right;
     width: 8px;
     height: 15px;
+}
+
+.i-arrow-list-down {
+    display: inline-block;
+    background: url($asset-root + 'images/arrow-list-down.svg');
+    background-repeat: no-repeat;
+    background-position: right;
+    width: 14px;
+    height: 9px;
 }

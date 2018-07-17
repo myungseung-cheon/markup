@@ -1,17 +1,20 @@
 // navigation
 .nav-active {
-    font-weight: bold;
-    border-bottom: 4px solid white;
+    color: $color-grey-900;
+    border-bottom: 2px solid $color-primary;
 }
 .nav-tabs {
-    @extend .shadow-blue600 ;
+    background-color: white;
     position: relative;
     z-index: 2;
     border: none;
-    color: white;
+    color: $color-grey-700;
 }
 .nav-item a {
-    padding: 0.75rem 0;
+    padding: 1rem 0;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 20px;
 }
 .prevent-click {
     pointer-events: none;
