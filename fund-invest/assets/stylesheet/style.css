@@ -1922,22 +1922,22 @@ fieldset[disabled] .survey a.btn-confirm,
 fieldset[disabled] a.terms-agree-all {
   pointer-events: none; }
 
-.btn-accent, #profit .control button.selected, .survey .btn-confirm, .terms-agree-all.checked {
+.btn-accent, .survey .btn-confirm, .terms-agree-all.checked {
   color: white;
   background-color: #144AE1;
   border-color: none; }
 
-.btn-accent:hover, #profit .control button.selected:hover, .survey .btn-confirm:hover, .terms-agree-all.checked:hover {
+.btn-accent:hover, .survey .btn-confirm:hover, .terms-agree-all.checked:hover {
   color: white;
   background-color: #144AE1;
   border-color: none; }
 
-.btn-accent:active, #profit .control button.selected:active, .survey .btn-confirm:active, .terms-agree-all.checked:active, .btn-accent.active, #profit .control button.active.selected, .survey .active.btn-confirm, .active.terms-agree-all.checked, .show > .btn-accent.dropdown-toggle, #profit .control .show > button.dropdown-toggle.selected, .survey .show > .dropdown-toggle.btn-confirm, .show > .dropdown-toggle.terms-agree-all.checked {
+.btn-accent:active, .survey .btn-confirm:active, .terms-agree-all.checked:active, .btn-accent.active, .survey .active.btn-confirm, .active.terms-agree-all.checked, .show > .btn-accent.dropdown-toggle, .survey .show > .dropdown-toggle.btn-confirm, .show > .dropdown-toggle.terms-agree-all.checked {
   color: #B8CAFD;
   background-color: #103BB4;
   border-color: none; }
 
-.btn-accent.disabled, #profit .control button.disabled.selected, .survey .disabled.btn-confirm, .disabled.terms-agree-all.checked, .btn-accent:disabled, #profit .control button.selected:disabled, .survey .btn-confirm:disabled, .terms-agree-all.checked:disabled {
+.btn-accent.disabled, .survey .disabled.btn-confirm, .disabled.terms-agree-all.checked, .btn-accent:disabled, .survey .btn-confirm:disabled, .terms-agree-all.checked:disabled {
   color: #BBBBBB;
   background-color: #CCCCCC;
   border-color: none; }
@@ -15317,15 +15317,15 @@ a.btn.disabled, a.disabled.btn-download, a.disabled.btn-cancel, a.disabled.btn-d
   border-color: transparent;
   color: #1c232e; }
 
-.btn-fill-dark {
+.btn-fill-dark, #profit .control button.selected {
   color: #fff;
   background-color: #3a4961; }
 
-.btn-fill-dark.disabled, .btn-fill-dark:disabled {
+.btn-fill-dark.disabled, #profit .control button.disabled.selected, .btn-fill-dark:disabled, #profit .control button.selected:disabled {
   background-color: #dcdce0;
   color: rgba(0, 0, 0, 0.38); }
 
-.btn-fill-dark:hover, .btn-fill-dark:not(:disabled):not(.disabled).active, .btn-fill-dark:not(:disabled):not(.disabled):active {
+.btn-fill-dark:hover, #profit .control button.selected:hover, .btn-fill-dark:not(:disabled):not(.disabled).active, #profit .control button.selected:not(:disabled):not(.disabled).active, .btn-fill-dark:not(:disabled):not(.disabled):active, #profit .control button.selected:not(:disabled):not(.disabled):active {
   background-color: #273141;
   border-color: transparent;
   color: #fff; }
@@ -17732,6 +17732,12 @@ input {
   background-color: #3785f7;
   border: none; }
 
+.btn-fill-dark, #profit .control button.selected {
+  color: white;
+  font-weight: 500;
+  background-color: #3F3F3F;
+  border: none; }
+
 .btn-fill-danger, .btn-danger {
   color: white;
   font-weight: 500;
@@ -18145,12 +18151,18 @@ input {
 
 #profit {
   color: #585861; }
+  #profit p {
+    font-size: 16px; }
   #profit .control button {
     border-radius: 100px;
     font-size: 14px;
     line-height: 1;
     padding: 8px 11px;
-    background-color: transparent; }
+    background-color: transparent;
+    color: #585861; }
+    #profit .control button:active, #profit .control button:focus, #profit .control button:hover {
+      background-color: transparent !important;
+      color: #585861 !important; }
 
 #blockButtons .btn-sell {
   margin-right: 8px; }

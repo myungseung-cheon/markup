@@ -5,6 +5,9 @@
     canvas {
         @extend .px-2, .mb-4 ;
     }
+    p {
+        font-size: 16px;
+    }
     .control {
         @extend .w-100, .text-center, .mb-2 ;
         button {
@@ -14,8 +17,15 @@
             line-height: 1;
             padding: 8px 11px;
             background-color: transparent;
+            color: $color-grey-700;
             &.selected {
-                @extend .btn-accent ;
+                @extend .btn-fill-dark ;
+            }
+            &:active,
+            &:focus,
+            &:hover {
+                background-color: transparent !important;
+                color: $color-grey-700 !important;
             }
         }
     }

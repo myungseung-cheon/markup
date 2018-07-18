@@ -16,7 +16,7 @@ Chart.controllers.LineWithLine = Chart.controllers.line.extend({
       ctx.moveTo(x, topY);
       ctx.lineTo(x, bottomY);
       ctx.lineWidth = 2;
-      ctx.strokeStyle = '#144ae1';
+      ctx.strokeStyle = '#3F3F3F';
       ctx.stroke();
       ctx.restore();
     }
@@ -80,7 +80,7 @@ var profitChart = new Chart(ctx, {
   type: 'LineWithLine',
   mode: 'vertical',
   scaleID: 'x-axis-label',
-  borderColor: '#144ae1',
+  borderColor: '#3F3F3F',
   borderWidth: 3,
   data: {
     labels: ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"],
@@ -88,7 +88,7 @@ var profitChart = new Chart(ctx, {
       label: false,
       data: [1, 9, 7, 18, 24, 41, 65, 54, 88, 75, 66, 71],
       fill: false,
-      borderColor: '#fe4545',
+      borderColor: '#f44336',
       borderWidth: 2,
       pointRadius: '0',
       lineTension: '0',
@@ -123,8 +123,8 @@ var profitChart = new Chart(ctx, {
       yPadding: 8,
       xPadding: 12,
       caretSize: 6,
-      backgroundColor: '#144ae1',
-      borderColor: 'none',
+      backgroundColor: '#3F3F3F',
+      borderColor: '#3F3F3F',
       borderWidth: 0,
       cornerRadius: 4,
       owAllTooltips: true,
