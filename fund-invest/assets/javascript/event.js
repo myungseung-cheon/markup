@@ -59,4 +59,64 @@ $(document).ready(function(){
 
     })
 
+    // 페이지 프리뷰용 링크
+    $(".list-item, .list-recommend-rank").click(function(){
+        window.location.href = "b1-product_detail_invest_only.html";
+    });
+    $(".list-recommend-keyword").click(function(){
+        window.location.href = "a4-recommend_detail.html";
+    });
+    $("#banner > button").click(function(){
+        window.location.href = "a3-start_guide.html";
+    });
+    $("body > section.px-4.py-7.text-center.gray50 > a").click(function(){
+        window.location.href = "a1-main.html";
+    });
+    $("#exampleModalName > div > div > div.block-btn__box > button.btn-next").click(function(){
+        window.location.href = "c1-buy_amount.html";
+    });
+    $("#invest_amount > div.sheet > form > div.fixed-bottom *").click(function(){
+        window.location.href = "c2-buy_contract.html";
+    });
+    $("#contractSummary > div.sheet.pb-6.gray0.__ghostlab-hover__ > button").click(function(){
+        window.location.href = "c1-buy_amount.html";
+    });
+    $("#contractSummary > div.sheet.pb-6.gray0 > button").click(function(){
+        window.location.href = "e2-portfolio_detail_buy_waiting.html";
+    });
+    $("#goToMain button").click(function(){
+        window.location.href = "a2-main_activated.html";
+    });
+    $("#tabToHistory").click(function(){
+        window.location.href = "e1-portfolio.html";
+    });
+    $("#tabToPurchase").click(function(){
+        window.location.href = "a2-main_activated.html";
+    });
+    $("#subscribtionSetting").click(function(){
+        window.location.href = 'b4-subscribe-setting.html';
+    });
+    $("#portfolioItems > table").click(function(){
+        window.location.href = "b2-product_detail_investing.html";
+    });
+    $("#waitingList > table").click(function(){
+        window.location.href = "e2-portfolio_detail_buy_waiting.html";
+    });
+    $("#blockButtons > div.block-btn__box > button.btn-sell").click(function(){
+        window.location.href = "c4-sell_amount.html";
+    });
+    $("#sell_amount div.fixed-bottom").click(function(){
+        window.location.href = "c5-sell_contract.html";
+        console.log = 'clicked';
+    });
+    $("#contractSummary > div.sheet.mb-7 > div > div.block-btn__box > input").click(function(){
+        window.location.href = "e3-portfolio_detail_sell_waiting.html";
+    });
+    // $("#").click(function(){
+    //     window.location.href = "e1-portfolio.html";
+    // });
+    // $("#").click(function(){
+    //     window.location.href = "e1-portfolio.html";
+    // });
+
 });

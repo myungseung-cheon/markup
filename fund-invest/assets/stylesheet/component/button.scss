@@ -12,6 +12,14 @@
     font-size: 15px;
     padding: 11px 19px 10px;
 }
+.btn-small {
+    font-size: 14px;
+    padding: 10px 18px 9px;
+}
+.btn-tiny {
+    font-size: 13px;
+    padding: 8px 13px 6px;
+}
 
 // 버튼 색상
 .btn-weak-primary {
@@ -38,6 +46,20 @@
     background-color: $color-red;
     border: none;
 }
+.btn-fill-light {
+    color: 2E4996;
+    font-weight: 500;
+    background-color: white;
+    border: none;
+}
+.btn-flat-primary {
+    color: $color-primary;
+    background-color: transparent;
+    border: none;
+}
+.btn-radio {
+
+}
 
 // 버튼 조합
 .btn-download {
@@ -55,6 +77,20 @@
 .btn-next {
     @extend .btn, .btn-big, .btn-block, .btn-fill-primary ;
 }
+.checkbox-btn,
+.radio-btn {
+    @extend .mb-1, .p-3, .px-0 ;
+    color: $color-primary;
+    text-align: center;
+    border: 1px solid $color-primary;
+    input {
+        display: none;
+    }
+    &.inactive {
+        color: $color-grey-600;
+        border-color: $color-border;
+    }
+}
 
 // 버튼 그룹
 .block-btn {
@@ -65,13 +101,14 @@
     }
     &__box {
         button {
-            @extend .btn, .btn-block, .btn-big ;
+            @extend .btn-block, .btn-big ;
+            border-radius: 4px;
             padding-left: 0;
             padding-right: 0;
         }
         button + button {
             margin-top: 0 !important;
-            margin-right: 8px;
+            margin-left: 8px;
         }
         display: flex;
         padding: 0px 24px 24px;
@@ -119,20 +156,21 @@
 //         color: white !important;
 //     }
 // }
-// // 필터 버튼
-// .btn-filter {
-//     @extend .btn, .fixed-bottom, .btn-block, .p-4, .rounded-0, .text-left ;
-//     font-size: 16px;
-//     color: white !important;
-//     background-color: #3785F7;
-//     i {
-//         min-width: 20px;
-//     }
-//     // @media only screen and (max-width: 359px) {
-//     //     padding: 24px 12px !important;
-//     // }
-// }
-// .btn-hide {
-//     bottom: -62px !important;
-//     opacity: 0;
-// }
+// 필터 버튼
+.btn-filter {
+    @extend .fixed-bottom, .btn-block, .p-4, .rounded-0, .text-left ;
+    font-size: 16px;
+    color: white !important;
+    background-color: #3785F7;
+    i {
+        min-width: 20px;
+    }
+    @media only screen and (max-width: 359px) {
+        padding: 24px 12px !important;
+    }
+}
+.btn-hide {
+    @extend .transition ;
+    bottom: -62px !important;
+    opacity: 0;
+}

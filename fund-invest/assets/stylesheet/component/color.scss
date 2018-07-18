@@ -1,0 +1,30 @@
+$color-primary: #3785f7;
+$color-red: #f44336;
+$color-grey-900: #1e1e21;
+$color-grey-700: #585861;
+$color-grey-600: #6e6e78;
+$color-grey-500: #95959e;
+$color-grey-400: #b7b7bd;
+
+// 위험도 태그
+.danger-6 { background-color: #BD151D }
+.danger-5 { background-color: #F9AD54 }
+.danger-4 { background-color: #FACA33 }
+.danger-3 { background-color: #A3BE7D }
+.danger-2 { background-color: #668BB8 }
+.danger-1 { background-color: #094A90 }
+
+.danger-6-text { color: #BD151D }
+.danger-5-text { color: #F9AD54 }
+.danger-4-text { color: #FACA33 }
+.danger-3-text { color: #A3BE7D }
+.danger-2-text { color: #668BB8 }
+.danger-1-text { color: #094A90 }
+
+$black-opacity-100: rgba(0,0,0,0.04);
+
+$color-border: #EBEBED;
+
+$color-main-content: $color-primary;
+$color-sub-content: $color-grey-700;
+$color-profit: $color-red;

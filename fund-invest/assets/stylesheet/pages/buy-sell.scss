@@ -1,6 +1,7 @@
 .sheet {
     .list__key,
-    .list__value {
+    .list__value,
+    .list__value-sm {
         text-align: left;
     }
     .list__key {
@@ -9,4 +10,94 @@
 }
 .terms-contents p {
     font-size: 13px;
+}
+
+.terms-outline {
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    border: 1px solid $color-border;
+    padding: 0 12px;
+}
+
+.circle-steps {
+    display: table;
+    width: 100%;
+    text-align: center;
+    li {
+        @extend .w-25 ;
+        display: table-cell;
+        position: relative;
+    }
+    h7 {
+        display: block;
+        margin-top: 52px;
+    }
+    .circle {
+        @extend .gray200 ;
+        position: absolute;
+        border-radius: 100px;
+        width: 40px;
+        height: 40px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        z-index: 2;
+
+    }
+    .bar {
+        width: 100%;
+        position: absolute;
+        border: 6px solid #EBEBEB;
+        right: 50%;
+        top: 13px;
+        z-index: 1;
+    }
+    .term {
+        @extend .h7, .blue500-text ;
+        &.active {
+            @extend .blue500-text ;
+        }
+    }
+    .active {
+        .circle {
+            @extend .blue500 ;
+        }
+        .bar {
+            border-color: #4E7BFA;
+        }
+        h7 {
+            @extend .blue500-text, .bold ;
+        }
+    }
+}
+
+//투자 설정
+#invest_amount {
+    margin-bottom: 300px;
+}
+
+// 환매 설정
+#sell_amount {
+    .note {
+        @extend .h7, .gray600-text ;
+    }
+}
+
+// 구매 계약서
+#contractSummary {
+    .title {
+        @extend .mb-5, .bold ;
+    }
+}
+
+// 자동 투자 설정
+.repeat-date {
+    @extend .form-control, .form-control-lg, .custom-select ;
+    background: #fff url(../../assets/images/caret-bottom.svg) no-repeat right 0.75rem center;
+}
+
+.input-password {
+    background-color: rgba(255, 255, 255, 0.24);
+    border: 1px solid #1c2334;
 }

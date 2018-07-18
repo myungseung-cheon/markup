@@ -1,0 +1,66 @@
+// 블럭
+.block {
+    @extend .gray0 ;
+    padding: 24px;
+    .title {
+        @extend .h5, .gray900-text ;
+    }
+    .title-sm {
+        @extend .h6, .gray800-text, .mb-3 ;
+    }
+    .subtitle {
+        @extend .h7, .gray600-text ;
+    }
+    .label {
+        @extend .gray600-text, .mb-1 ;
+    }
+}
+.block-blue {
+    @extend .p-4, .blue600, .gray0-text ;
+    .title {
+
+    }
+    .label {
+
+    }
+}
+
+// 카드 블럭
+.block-list {
+    @extend .gray0, .bb-1 ;
+    box-shadow: 0 1px 2px 0 #E0E0E0;
+}
+.block-btn-group {
+    display: block;
+    padding: 0px 20px 20px;
+}
+.block-card {
+    @extend .block, .my-3 ;
+    // box-shadow: 0 1px 2px 0 #E0E0E0;
+}
+.block-shadow {
+    box-shadow: 0 1px 2px 0 #cccccc;
+    @extend .b-1-gray150 ;
+}
+.block-list {
+    @extend .w-100, .mb-2, .b-1-gray150, .gray0 ;
+    box-shadow: 0 1px 2px 0 #e0e0e0;
+}
+
+.block-image {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    min-height: 192px;
+}
+
+@media only screen and (max-width: 359px) {
+    .block-image {
+        min-height: 120px;
+    }
+}
+
+.block-recommend {
+    @extend .gray0, .mb-3, .bt-1-gray200, .bb-1-gray200 ;
+    margin-bottom: 4rem;
+}

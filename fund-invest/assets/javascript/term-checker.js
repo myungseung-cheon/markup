@@ -40,7 +40,7 @@ $('#reportToEmail input').keyup(function(){
 //동의사항 체크여부
 var agreementValid = false
 $('#checkAllAgreement').click(function(){
-    if ( $('#checkAllAgreement input').is(':checked') ) {
+    if ( $('#checkAllAgreement').is(':checked') ) {
         console.log('term is all checked');
         agreementValid = true;
     } else {

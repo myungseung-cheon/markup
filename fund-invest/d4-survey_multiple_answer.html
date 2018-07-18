@@ -11,9 +11,9 @@
     <link href="assets/stylesheet/style.css" rel="stylesheet">
 
 </head>
-<body>
+<body class="gray0">
 
-    <section id="sell_amount" class="survey">
+    <section id="surveyMultipleAnswer" class="survey">
 
         <!-- 진행 바 -->
         <div class="progress">
@@ -26,17 +26,34 @@
             <h4 class="mb-5">나의 수입은 _________ 입니다.</h4>
             <form>
                 <!-- 라디오 버튼-lg -->
-                <label class="checkbox-lg w-100 checkbox-btn">
+                <label class="checkbox-lg w-100 checkbox-btn inactive">
                     <input type="checkbox" name="checkbox1" value="1"> 일정한 수입
                 </label>
-                <label class="checkbox-lg w-100 checkbox-btn">
+                <label class="checkbox-lg w-100 checkbox-btn inactive">
                     <input type="checkbox" name="checkbox2" value="1"> 일정한 수입
                 </label>
-                <label class="checkbox-lg w-100 checkbox-btn">
+                <label class="checkbox-lg w-100 checkbox-btn inactive">
+                    <input type="checkbox" name="checkbox3" value="1"> 일정한 수입
+                </label>
+                <label class="checkbox-lg w-100 checkbox-btn inactive">
+                    <input type="checkbox" name="checkbox3" value="1"> 일정한 수입
+                </label>
+                <label class="checkbox-lg w-100 checkbox-btn inactive">
+                    <input type="checkbox" name="checkbox3" value="1"> 일정한 수입
+                </label>
+                <label class="checkbox-lg w-100 checkbox-btn inactive">
+                    <input type="checkbox" name="checkbox3" value="1"> 일정한 수입
+                </label>
+                <label class="checkbox-lg w-100 checkbox-btn inactive">
                     <input type="checkbox" name="checkbox3" value="1"> 일정한 수입
                 </label>
             </form>
-            <button class="btn-next  w-100 rounded-0 py-4 hide transition">다음</button>
+            <div class="fixed-bottom">
+                <div class="block-btn__shadow"></div>
+                <div class="block-btn__box">
+                    <button class="btn-next hide">다음</button>
+                </div>
+            </div>
         </div>
 
     </section>
@@ -59,9 +76,9 @@
         var btn = $('label.checkbox-btn');
         btn.click(function(){
             if( $(this).find('input').is(':checked') ){
-                $(this).addClass('ABlue500 gray0-text');
+                $(this).removeClass('inactive');
             } else {
-                $(this).removeClass('ABlue500 gray0-text');
+                $(this).addClass('inactive');
             }
             if( $('input:checkbox').is(':checked') ){
                 $('button').removeClass('hide');

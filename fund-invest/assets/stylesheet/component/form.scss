@@ -15,13 +15,3 @@ fieldset:disabled {
 .form-control[readonly] {
     background-color: white;
 }
-.checkbox-btn,
-.radio-btn {
-    @extend .blue500-text, .mb-1, .p-3, .px-0, .bold ;
-    border: 1px solid #144ae1;
-    text-align: center;
-    font-size: 18px;
-    input {
-        display: none;
-    }
-}

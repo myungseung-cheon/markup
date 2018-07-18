@@ -54,7 +54,7 @@
         <div class="list-header pb-4 gray0">
             <h1 class="list-header__title">투자 계약서</h1>
         </div>
-        <div class="sheet pb-4 gray0">
+        <div class="sheet pb-6 gray0">
             <!-- 요약 -->
             <table>
                 <!-- 상품명 -->
@@ -120,7 +120,6 @@
                         <ol class="circle-steps">
                             <li>
                                 <div class="circle"></div>
-                                <div class="bar"></div>
                                 <h7>투자요청</h7>
                                 <span class="term">즉시</span>
                             </li>
@@ -132,8 +131,9 @@
                             </li>
                             <li>
                                 <div class="circle"></div>
+                                <div class="bar"></div>
                                 <h7>결제완료</h7>
-                                <span class="term">1일</span>
+                                <span class="term">1영업일</span>
                             </li>
                         </ol>
 
@@ -152,7 +152,7 @@
                 <!-- 자동 투자일 // 자동 투자일 시 노출 -->
                 <tr>
                     <td colspan="2">
-                        <p class="list__key mb-4">주요내용 설명서 및 투자자 확인사항</p>
+                        <p class="list__key mb-4">주요내용 설명서</p>
                         <div class="scroll b-1 p-3 gray50 mt-3" data-spy="scroll" data-offset="0">
                             <ul class="pl-3 h7">
                                 <li>이 금융투자상품(계약)은 원금 손실 가능성 (또 는 원금 초과손실 가능성) 이 있습니다.</li>
@@ -203,18 +203,16 @@
                     <li>투자자확인사항을 읽고, 해당 펀드의 주요 특징, 원금보장 여부, 환매 수수료 절차 등에 대하여 확인함</li>
                 </ul>
 
-                <ul id="checkReadInvestDesc" class="b-1 pl-3 mb-2 required">
-                    <label class="checkbox-lg bold my-0 p-3 ml-3">
-                        <input type="checkbox" name="input1">간이투자설명서
-                    </label>
-                </ul>
-
-
-                <ul id="checkAllAgreement" class="b-1 pl-3 mb-4 required">
-                    <label class="checkbox-lg bold my-0 p-3 ml-3">
-                        <input type="checkbox" name="input1">투자자 동의사항 모두 확인
-                    </label>
-                </ul>
+                <div class="terms-main terms-outline custom-control custom-checkbox mb-2">
+                    <input type="checkbox" name="input1" class="custom-control-input" id="checkReadInvestDesc">
+                    <label class="custom-control-label" for="checkReadInvestDesc">간이투자설명서</label>
+                    <i class="i-arrow list__value"></i>
+                </div>
+                <div class="terms-main terms-outline custom-control custom-checkbox mb-4">
+                    <input type="checkbox" name="input1" class="custom-control-input" id="checkAllAgreement">
+                    <label class="custom-control-label" for="checkAllAgreement">투자자 동의사항 모두 확인</label>
+                    <i class="i-arrow list__value"></i>
+                </div>
             </div>
 
             <!-- 투자하기 버튼 -->

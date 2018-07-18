@@ -157,28 +157,18 @@
 
     <!-- 성향 선택 모달 -->
     <!-- 모달의 id를 설정하세요. data-target은 id를 기준으로 모달을 호출합니다 -->
-    <div class="modal fade" id="exampleModalName" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade bottom-sheet" id="exampleModalName" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog fixed-bottom" role="document">
             <div class="modal-content">
 
-                <!-- header -->
-                <div class="modal-header">
-                    <h5 class="modal-title">정보 제공 동의</h5>
+                <div class="bottom-sheet__header">
+                  <h1 class="bottom-sheet__title">정보 제공 동의</h1>
                 </div>
-
-                <!-- body -->
-                <div class="modal-body">
-                    <p class="h7">
-                        상품 구매를 위해 토스에서 신한금융투자에 정보를 제공합니다. 제공된 정보는 투자 서비스 이외의 목적에 쓰이지 않습니다.
-                    </p>
-                    <label class="checkbox-lg d-block my-4">
-                        <input type="checkbox" name="input1" checked>개인정보 제3자 제공 동의
-                        <u class="blue500-text"><a href="#" class="blue500-text ml-1">자세히</a></u>
-                    </label>
-                    <div class="text-center">
-                        <button class="btn-modal btn-secondary">취소</button>
-                        <button class="btn-modal btn-accent">동의 후 계속</button>
-                    </div>
+                <div class="bottom-sheet__body">상품 구매를 위해 토스에서 신한금융투자에 정보를 제공합니다. 제공된 정보는 투자 서비스 이외의 목적에 쓰이지 않습니다.</div>
+                <div class="block-btn__shadow"></div>
+                <div class="block-btn__box">
+                    <button class="btn-sub" data-dismiss="modal" aria-label="Close">취소</button>
+                    <button class="btn-next">동의 후 계속</button>
                 </div>
             </div>
         </div>
@@ -237,7 +227,7 @@
     <script src="assets/javascript/chartSetting.js"></script>
 
     <!-- 커스텀 이벤트 -->
-    <!-- <script src="assets/javascript/event.js"></script> -->
+    <script src="assets/javascript/event.js"></script>
 
 </body>
 </html>
