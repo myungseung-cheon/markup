@@ -27,10 +27,17 @@ $asset-root: '../../assets/';
 @import "pages/faq.scss";
 @import "pages/survey.scss";
 
-
 body {
     background-color: #F2F2F5;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
 }
+
+// p, canvas, table, footer {
+//
+// }
 
 .container {
     max-width: 475px;
