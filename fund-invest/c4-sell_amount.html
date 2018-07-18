@@ -69,7 +69,9 @@
     <script src="assets/javascript/event.js"></script>
     <script type="text/javascript">
         $('#sellAll').click(function(){
-            $('#sellAmount').attr('disabled','disabled').val('2000000');
+            $('#sellAmount').val('2000000');
+            $('#sellAmount').val($('#sellAmount').val().split(',').join(''));
+            $('#sellAmount').val(($('#sellAmount').val()).replace(/\B(?=(?:\d{3})+(?!\d))/g, ","));
         });
     </script>
 
