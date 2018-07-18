@@ -75,11 +75,11 @@ $(document).ready(function(){
     $("#exampleModalName > div > div > div.block-btn__box > button.btn-next").click(function(){
         window.location.href = "c1-buy_amount.html";
     });
-    $("#invest_amount > div.sheet > form > div.fixed-bottom *").click(function(){
+    $("#invest_amount > div.sheet > div.fixed-bottom > div.block-btn__box > button").click(function(){
         window.location.href = "c2-buy_contract.html";
     });
-    $("#contractSummary > div.sheet.pb-6.gray0.__ghostlab-hover__ > button").click(function(){
-        window.location.href = "c1-buy_amount.html";
+    $("#sellConfirm").click(function(){
+        window.location.href = "e3-portfolio_detail_sell_waiting.html";
     });
     $("#contractSummary > div.sheet.pb-6.gray0 > button").click(function(){
         window.location.href = "e2-portfolio_detail_buy_waiting.html";
@@ -118,5 +118,10 @@ $(document).ready(function(){
     // $("#").click(function(){
     //     window.location.href = "e1-portfolio.html";
     // });
+    $('#buyAmount, #sellAmount').on('keyup', function() {
+        $(this).val($(this).val().split(',').join(''));
+        $(this).val(($(this).val()).replace(/\B(?=(?:\d{3})+(?!\d))/g, ","));
+
+    });
 
 });

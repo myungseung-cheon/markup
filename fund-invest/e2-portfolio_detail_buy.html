@@ -51,15 +51,6 @@
                     <td class="list__key">결제 완료</td>
                     <td class="list__value-sm due-date">2017. 07. 06 14:22</td>
                 </tr>
-                <tr>
-                    <td colspan="2">
-                        <div class="quote-warning mt-3 pr-2">
-                            <span class="text-primary">*</span> 15:30 이후에 구매를 요청하셨기 때문에, 투자를 위해 출금된 돈은 다음날 투자사로 입금됩니다.
-                            <br><br>
-                            <span class="text-primary">*</span> 주문완료 전까지 잔고가 부족하면 자동으로 취소됩니다.
-                        </div>
-                    </td>
-                </tr>
                 <!-- 15:30 이후에 구매 안내 -->
                 <!-- <tr>
                     <td colspan="2">
@@ -70,6 +61,14 @@
                 </tr> -->
                 <!-- 17:00 이후에 구매 안내 -->
             </table>
+        </div>
+
+        <div class="block-card">
+            <div class="quote-warning pr-2">
+                <span class="text-primary">*</span> 15:30 이후에 구매를 요청하셨기 때문에, 투자를 위해 출금된 돈은 다음날 투자사로 입금됩니다.
+                <br><br>
+                <span class="text-primary">*</span> 주문완료 전까지 잔고가 부족하면 자동으로 취소됩니다.
+            </div>
         </div>
 
         <div class="block-card">
@@ -94,30 +93,9 @@
         </div>
     </section>
 
-
     <section id="cancelButton" class="m-3">
         <button data-toggle="modal" data-target="#finishAutoInvestModal" class="btn btn-block btn-weak-primary">투자 취소하기</button>
     </section>
-
-
-    <!-- 종료 모달 -->
-    <div id="finishAutoInvestModal" class="modal fade bottom-sheet" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog fixed-bottom" role="document">
-            <div class="modal-content">
-
-                <!-- header -->
-                <div class="bottom-sheet__header">
-                    <h1 class="bottom-sheet__title">정말 투자를 취소할까요?</h1>
-                </div>
-                <div class="bottom-sheet__body">한 번 취소하면 되돌릴 수 없으며, 다시 투자과정을 진행해야 합니다.</div>
-                <div class="block-btn__shadow"></div>
-                <div class="block-btn__box">
-                    <button class="btn-sub" data-dismiss="modal" aria-label="Close">투자 유지</button>
-                    <button class="btn-danger">투자 취소</button>
-                </div>
-            </div>
-        </div>
-    </div>
 
 
 
