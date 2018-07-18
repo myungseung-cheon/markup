@@ -5399,7 +5399,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
 .rounded-circle {
   border-radius: 50%; }
 
-.rounded-0, .btn-filter, .survey .btn-confirm {
+.rounded-0, .survey .btn-confirm {
   border-radius: 0; }
 
 .clearfix::after, .input-group-sign-in::after {
@@ -5425,7 +5425,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
 .d-table-cell {
   display: table-cell !important; }
 
-.d-flex, .header-recommend, .list-recommend-rank, .list-recommend-keyword, .list-recommend-pro, .summary-portfolio {
+.d-flex, .btn-filter, .header-recommend, .list-recommend-rank, .list-recommend-keyword, .list-recommend-pro, .summary-portfolio {
   display: flex !important; }
 
 .d-inline-flex {
@@ -6200,7 +6200,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
 .m-0 {
   margin: 0 0 !important; }
 
-.mt-0 {
+.mt-0, .block-card:first-of-type, #profit:first-of-type {
   margin-top: 0 !important; }
 
 .mr-0 {
@@ -6398,7 +6398,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
   padding-left: 0 !important; }
 
 .px-0, .checkbox-btn,
-.radio-btn, .sub-table td, .survey table td {
+.radio-btn, .sub-table td, .order-detail table td, .survey table td {
   padding-right: 0 !important;
   padding-left: 0 !important; }
 
@@ -12218,7 +12218,7 @@ html {
 .d-table-cell {
   display: table-cell !important; }
 
-.d-flex, .header-recommend, .list-recommend-rank, .list-recommend-keyword, .list-recommend-pro, .summary-portfolio {
+.d-flex, .btn-filter, .header-recommend, .list-recommend-rank, .list-recommend-keyword, .list-recommend-pro, .summary-portfolio {
   display: -webkit-flex !important;
   display: flex !important; }
 
@@ -13331,7 +13331,7 @@ html {
 .m-0 {
   margin: 0 !important; }
 
-.mt-0 {
+.mt-0, .block-card:first-of-type, #profit:first-of-type {
   margin-top: 0 !important; }
 
 .mr-0 {
@@ -13518,11 +13518,11 @@ html {
   padding-bottom: 0 !important; }
 
 .pl-0, .px-0, .checkbox-btn,
-.radio-btn, .sub-table td, .survey table td {
+.radio-btn, .sub-table td, .order-detail table td, .survey table td {
   padding-left: 0 !important; }
 
 .px-0, .checkbox-btn,
-.radio-btn, .sub-table td, .survey table td {
+.radio-btn, .sub-table td, .order-detail table td, .survey table td {
   padding-right: 0 !important; }
 
 .py-0 {
@@ -17645,12 +17645,10 @@ a:not([href]):not([tabindex]) {
   font-size: 13px; }
 
 .quote-warning {
-  padding: 16px;
-  background-color: rgba(0, 0, 0, 0.04);
-  border-radius: 4px;
-  color: #585861;
+  color: #95959e;
   font-size: 15px;
-  line-height: 1.6; }
+  line-height: 1.6;
+  word-break: keep-all; }
 
 .line-height-base {
   line-height: 1.6rem; }
@@ -17781,9 +17779,11 @@ input {
     margin-left: 8px; }
 
 .btn-filter {
-  font-size: 16px;
+  width: 100%;
   color: white !important;
-  background-color: #3785F7; }
+  background-color: #3785F7 !important;
+  align-items: center;
+  font-size: 16px; }
   .btn-filter i {
     min-width: 20px; }
   @media only screen and (max-width: 359px) {

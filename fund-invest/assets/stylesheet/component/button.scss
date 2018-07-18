@@ -158,10 +158,13 @@
 // }
 // 필터 버튼
 .btn-filter {
-    @extend .fixed-bottom, .btn-block, .p-4, .rounded-0, .text-left ;
-    font-size: 16px;
+    @extend .fixed-bottom, .btn-block, .p-4, .text-left, .d-flex ;
+    width: 100%;
     color: white !important;
-    background-color: #3785F7;
+    background-color: #3785F7 !important;
+    align-items: center;
+    font-size: 16px;
+
     i {
         min-width: 20px;
     }

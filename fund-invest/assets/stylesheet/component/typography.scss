@@ -47,13 +47,14 @@ a:not([href]):not([tabindex]) {
 .h7, h7 { font-size: 13px; }
 
 .quote-warning {
-    padding: 16px;
-    background-color: $black-opacity-100;
-    border-radius: 4px;
+    // padding: 16px;
+    // background-color: $black-opacity-100;
+    // border-radius: 4px;
 
-    color: $color-grey-700;
+    color: $color-grey-500;
     font-size: 15px;
     line-height: 1.6;
+    word-break: keep-all;
 }
 
 .line-height-base {

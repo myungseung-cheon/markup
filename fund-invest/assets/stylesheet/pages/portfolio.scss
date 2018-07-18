@@ -65,9 +65,9 @@
 .order-detail {
     table {
         @extend .table, .mb-0 ;
-        // td {
-        //     @extend .pt-0, .px-0, .bt-0 ;
-        // }
+        td {
+            @extend .px-0 ;
+        }
     }
 }
 

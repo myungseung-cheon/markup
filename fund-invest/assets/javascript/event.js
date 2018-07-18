@@ -84,8 +84,8 @@ $(document).ready(function(){
     $("#contractSummary > div.sheet.pb-6.gray0 > button").click(function(){
         window.location.href = "e2-portfolio_detail_buy_waiting.html";
     });
-    $("#goToMain button").click(function(){
-        window.location.href = "a2-main_activated.html";
+    $("#goToPortfolio button").click(function(){
+        window.location.href = "e1-portfolio.html";
     });
     $("#tabToHistory").click(function(){
         window.location.href = "e1-portfolio.html";
@@ -100,7 +100,7 @@ $(document).ready(function(){
         window.location.href = "b2-product_detail_investing.html";
     });
     $("#waitingList > table").click(function(){
-        window.location.href = "e2-portfolio_detail_buy_waiting.html";
+        window.location.href = "e2-portfolio_detail_buy.html";
     });
     $("#blockButtons > div.block-btn__box > button.btn-sell").click(function(){
         window.location.href = "c4-sell_amount.html";
