@@ -18433,6 +18433,9 @@ body {
   -webkit-user-select: none;
   user-select: none; }
 
+table {
+  word-break: break-all; }
+
 .container {
   max-width: 475px;
   margin: auto; }

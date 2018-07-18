@@ -35,9 +35,9 @@ body {
     user-select: none;
 }
 
-// p, canvas, table, footer {
-//
-// }
+table {
+    word-break: break-all;
+}
 
 .container {
     max-width: 475px;
