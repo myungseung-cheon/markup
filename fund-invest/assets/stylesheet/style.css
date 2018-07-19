@@ -11360,6 +11360,45 @@ button.close {
   color: #fff;
   text-align: center; }
 
+.danger-6 {
+  background-color: #BD151D; }
+
+.danger-5 {
+  background-color: #F9AD54; }
+
+.danger-4 {
+  background-color: #FACA33; }
+
+.danger-3 {
+  background-color: #A3BE7D; }
+
+.danger-2 {
+  background-color: #668BB8; }
+
+.danger-1 {
+  background-color: #094A90; }
+
+.danger-6-text {
+  color: #BD151D; }
+
+.danger-5-text {
+  color: #F9AD54; }
+
+.danger-4-text {
+  color: #FACA33; }
+
+.danger-3-text {
+  color: #A3BE7D; }
+
+.danger-2-text {
+  color: #668BB8; }
+
+.danger-1-text {
+  color: #094A90; }
+
+.pink500-text, #portfolio .plus, .table-portfolio .plus, .table-wating .plus, .table-complete .plus {
+  color: #f44336 !important; }
+
 /* 모든 글꼴 */
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, #portfolio .asset, .h3, .h4, #banner h1, .h5, .list-recommend-rank .order, .filter-card .title, .block .title, .block-card .title, #profit .title, .table-full-width .value, .table-full-width.reverse .value, .h6, .header-recommend .title, #filterButton i, #portfolio .title, .block .title-sm, .block-card .title-sm, #profit .title-sm {
@@ -11375,7 +11414,7 @@ a:not([href]):not([tabindex]) {
   border: 0; }
 
 .quote, .quote-warning {
-  color: #999; }
+  color: #585861; }
 
 .quote-warning {
   background-color: #fef2e6;
@@ -11480,9 +11519,9 @@ input {
   .list-recommend-rank .title {
     margin-bottom: 0; }
   .list-recommend-rank .subtitle {
-    color: #999; }
+    color: #585861; }
   .list-recommend-rank .value {
-    color: #fe4545; }
+    color: #f44336; }
 
 .list-recommend-keyword {
   align-items: center;
@@ -11502,7 +11541,7 @@ input {
   .list-recommend-pro .title {
     margin-bottom: 0.25rem; }
   .list-recommend-pro .subtitle {
-    color: #999; }
+    color: #585861; }
 
 .list-stock table {
   width: 100%; }
@@ -11618,7 +11657,7 @@ input {
 .header-recommend .title, .header-recommend .subtitle {
   flex: 1; }
 .header-recommend .subtitle {
-  color: #999;
+  color: #585861;
   text-align: right; }
 
 .product-info {
@@ -11964,5 +12003,98 @@ input {
 
 .info-body {
   color: #333333; }
+
+.list {
+  display: flex;
+  padding: 4px 0; }
+  .list__key {
+    flex: 1;
+    font-size: 16px;
+    color: #585861; }
+  .list__value {
+    flex: 1;
+    font-size: 17px;
+    font-weight: 600;
+    text-align: right;
+    color: #1e1e21; }
+  .list__value-sm {
+    font-size: 16px;
+    text-align: right;
+    color: #585861; }
+
+.btn, .btn-square, .btn-modal, .btn-fixed-bottom, .btn-outline-gray, .btn-main-banner, .btn-main-banner-panic, .btn-filter, #filterButton, #profit .control button, #blockButtons button, .survey .btn-next, .survey .btn-confirm, .survey .btn-download {
+  border-radius: 4px; }
+
+.btn-big {
+  font-size: 17px;
+  padding: 18px 32px; }
+
+.btn-medium {
+  font-size: 15px;
+  padding: 11px 19px 10px; }
+
+.btn-small {
+  font-size: 14px;
+  padding: 10px 18px 9px; }
+
+.btn-tiny {
+  font-size: 13px;
+  padding: 8px 13px 6px; }
+
+.btn-weak-primary {
+  color: #3785f7;
+  font-weight: 500;
+  border: none;
+  background: rgba(58, 73, 97, 0.04); }
+
+.btn-weak-dark {
+  color: #3A4961;
+  font-weight: 500;
+  border: none;
+  background: rgba(58, 73, 97, 0.07); }
+
+.btn-fill-primary {
+  color: white;
+  font-weight: 500;
+  background-color: #3785f7;
+  border: none; }
+
+.btn-fill-dark {
+  color: white;
+  font-weight: 500;
+  background-color: #3F3F3F;
+  border: none; }
+
+.btn-fill-danger {
+  color: white;
+  font-weight: 500;
+  background-color: #f44336;
+  border: none; }
+
+.btn-fill-light {
+  color: 2E4996;
+  font-weight: 500;
+  background-color: white;
+  border: none; }
+
+.btn-flat-primary {
+  color: #3785f7;
+  background-color: transparent;
+  border: none; }
+
+.bottom-sheet .modal-content {
+  background-color: white;
+  padding: 0 !important;
+  background-color: white; }
+.bottom-sheet__header {
+  padding: 32px 24px 20px; }
+.bottom-sheet__title {
+  color: #1e1e21;
+  font-size: 22px;
+  font-weight: 500;
+  margin: 0; }
+.bottom-sheet__body {
+  padding: 0 24px;
+  color: #585861; }
 
 /*# sourceMappingURL=style.css.map */
