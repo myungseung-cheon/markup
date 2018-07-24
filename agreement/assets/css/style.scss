@@ -1,0 +1,41 @@
+@import "toss-frame-bootstrap";
+
+ul {
+    padding-left: 1.5rem;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+    height: 100vh;
+    padding-bottom: 240px;
+}
+.desc {
+    max-width: 275px;
+    @extend .grey600-text ;
+}
+.terms {
+    margin-bottom: 2rem;
+}
+.terms-border {
+    padding: 0 12px;
+    border: 1px solid #EBEBED;
+    border-radius: 4px;
+}
+.terms-main {
+    width: 100%;
+}
+.terms-border + .terms-sub {
+    padding: 1rem 0 0 0.6rem;
+}
+
+.agreement {
+    padding: 0 20px 20px;
+}
+
+.fixed-bottom {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

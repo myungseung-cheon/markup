@@ -1,0 +1,89 @@
+body, html {
+  word-break: keep-all;
+  padding-bottom: 40px; }
+
+header {
+  padding: 12px 0 8px;
+  background-color: #3e63bc;
+  position: relative; }
+
+header .logo {
+  color: #ffffff;
+  font-size: 1.2rem; }
+
+h1, h2, h3, h4, h5, h6, p, ol, ul, li, td, u, a {
+  color: #4d5256; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700; }
+
+p, ol, ul, li, td, u, em {
+  line-height: 1.8rem;
+  font-size: 15px; }
+
+.btn {
+  text-decoration: none !important; }
+
+a {
+  font-weight: bold;
+  text-decoration: underline !important; }
+
+h1 {
+  font-size: 28px;
+  margin-top: 48px; }
+
+h2 {
+  font-size: 24px;
+  margin-top: 48px; }
+
+h3 {
+  font-size: 20px; }
+
+h4 {
+  font-size: 16px; }
+
+.term-contents h2 {
+  margin-bottom: 2rem; }
+.term-contents ul, .term-contents ol {
+  margin-top: 0.5rem;
+  padding-left: 3rem;
+  counter-reset: item; }
+.term-contents ol > li {
+  display: block; }
+  .term-contents ol > li:before {
+    font-weight: bold;
+    position: absolute;
+    margin-left: -3rem;
+    width: 2rem;
+    text-align: right; }
+.term-contents li {
+  margin-bottom: 2rem; }
+  .term-contents li:before {
+    content: "(" counter(item) ") ";
+    counter-increment: item; }
+  .term-contents li li {
+    margin-bottom: 0.6rem; }
+    .term-contents li li:before {
+      content: counter(item) ". "; }
+    .term-contents li li li:before {
+      content: counter(item,lower-alpha) ". "; }
+.term-contents ul > li:before {
+  content: "" !important; }
+
+.table-horizontal tr:first-child > td,
+.table-vertical tr > td:first-child {
+  font-weight: bold;
+  background-color: #f5f5f5;
+  min-width: 100px; }
+
+@media (min-width: 992px) {
+  .container {
+    width: 750px; } }
+.text-danger {
+  color: #fe1010;
+  font-weight: bold; }
+
+.p-4 {
+  padding: 16px !important; }
+
+/*# sourceMappingURL=style.css.map */
