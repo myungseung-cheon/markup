@@ -18,20 +18,53 @@ a:not([href]):not([tabindex]) {
 
 // 인용
 .quote {
-    color: $color-sub-content ;
-    @extend .h7, .p-3, .b-1, .rounded, .gray50 ;
+    color: $color-grey-500 ;
+    @extend .h7, .pl-1 ;
     ul {
         @extend .pl-3 ;
     }
-}
-.quote-warning {
-    @extend .quote, .orange500-text, .bold ;
-    background-color: #fef2e6 ;
-    border: 0 !important;
 }
 
 //link
 .more-info {
     color: #144ae1 !important ;
     // font-weight: bold;
+}
+
+//icon-font
+.arrow {
+  display: inline-block;
+  font-size: 0.7em;
+  margin-right: 0.25em;
+}
+
+.h-number {
+    font-size: 34px;
+    font-weight: 600;
+}
+
+.h4 { line-height: 1.3em; }
+.h7, h7 { font-size: 13px; }
+
+.quote-warning {
+    // padding: 16px;
+    // background-color: $black-opacity-100;
+    // border-radius: 4px;
+
+    color: $color-grey-500;
+    font-size: 15px;
+    line-height: 1.6;
+    word-break: keep-all;
+}
+
+.line-height-base {
+    line-height: 1.6rem;
+}
+
+.number-profit {
+    color: $color-red;
+}
+
+.text-primary {
+    color: $color-primary;
 }

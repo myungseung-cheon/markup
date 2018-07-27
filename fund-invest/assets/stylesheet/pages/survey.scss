@@ -1,0 +1,86 @@
+.survey {
+    .progress-bar {
+        background-color: $color-primary;
+        height: 0.25rem ;
+    }
+    .sheet {
+        @extend .px-4 ;
+    }
+    .question, .title {
+        @extend .mb-2, .mt-5 ;
+    }
+    .sub-question {
+        @extend .mt-4 ;
+    }
+    .tag {
+        @extend .mt-5, .mb-2 ;
+        color: $color-grey-700;
+    }
+    .description {
+        @extend .blue500-text ;
+    }
+    .info {
+        @extend .gray600-text, .normal ;
+        line-height: 1.6;
+    }
+    table {
+        @extend .table ;
+        &.unstyled {
+            @extend .mb-0 ;
+            td {
+                @extend .bb-0, .pt-0, .pb-2 ;
+            }
+        }
+        .list-sub td {
+            border-bottom: 0 !important;
+            padding: 8px 0 !important;
+        }
+        td {
+            @extend .py-3, .px-0, .bt-0, .bb-1 ;
+        }
+        .head {
+            @extend .bold, .gray800-text, .w-35 ;
+        }
+        .data {
+            @extend .gray800-text ;
+            word-break: normal;
+        }
+    }
+    // .btn-next {
+    //     @extend .btn, .btn-block, .btn-accent, .mt-5, .mb-0, .rounded-0, .py-4, .bold, .fixed-bottom, .gray0-text ;
+    // }
+    .btn-confirm {
+        @extend .btn, .btn-accent, .btn-block, .rounded-0, .bold, .mb-5 ;
+    }
+    .btn-download {
+        @extend .btn, .btn-secondary, .btn-block ;
+        font-size: 1rem !important;
+        border-radius: 0 !important;
+        border-color: #e0e0e0;
+    }
+    .checkbox-btn:last-of-type {
+        margin-bottom: 120px !important;
+    }
+    fieldset[disabled] {
+        .question {
+            @extend .gray600-text ;
+        }
+        .description {
+            @extend .gray600-text ;
+        }
+    }
+    .terms-list {
+        @extend .mb-4 ;
+    }
+    .terms-child {
+        @extend .pr-4 ;
+        position: relative;
+        font-size: 14px;
+        &:before {
+            @extend .oi, .oi-chevron-right, .pt-2, .gray500-text ;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    }
+}

@@ -1,0 +1,21 @@
+.bottom-sheet {
+
+    .modal-content {
+        background-color: white;
+        padding: 0 !important;
+        background-color: white;
+    }
+    &__header {
+        padding: 32px 24px 20px;
+    }
+    &__title {
+        color: $color-grey-900;
+        font-size: 22px;
+        font-weight: 500;
+        margin: 0;
+    }
+    &__body {
+        padding: 0 24px;
+        color: $color-grey-700;
+    }
+}

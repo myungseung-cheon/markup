@@ -7,18 +7,15 @@
     <!-- 위 3개의 메타 태그는 *반드시* head 태그의 처음에 와야합니다; 어떤 다른 콘텐츠들은 반드시 이 태그들 *다음에* 와야 합니다 -->
     <title>Toss - 소액 펀드 투자</title>
 
-    <!-- Toss 공용 CSS 문서의 맨 처음에 와야 합니다;-->
-    <link href="assets/stylesheet/tossframe-2.0.4.css" rel="stylesheet">
-
     <!-- 커스텀 스타일 -->
     <link href="assets/stylesheet/style.css" rel="stylesheet">
 
 </head>
-<body class="gray150">
+<body>
 
     <!-- 헤더 -->
     <section id="header" class="block">
-        <h1 class="title mb-2 bold">국내 대형주 주식형</h1>
+        <h1 class="list-header-product__title">국내 대형주 주식형</h1>
         <p class="subtitle mb-0"><span class="bedge-dark">선취</span> 맥쿼리테마따라잡기증권자투자신탁1호[주식](A)</p>
     </section>
 
@@ -29,7 +26,10 @@
     <!-- 수익률 -->
     <section id="profit" class="block">
         <p class="label">수익률</p>
-        <h2 class="pink500-text">24.1%</h2>
+        <h2 class="number-profit">
+            <span class="arrow">▲</span>
+            24.1%
+        </h2>
         <canvas id="profitChart" width="400" height="200"></canvas>
         <!-- 기간 설정 -->
         <table class="control">
@@ -52,18 +52,14 @@
 
     <!-- 판매액 / 구매자 -->
     <section id="keyResult" class="block-card">
-        <table class="table-full-width text-center">
-            <tr>
-                <td width="50%">
-                    <div class="label">판매액</div>
-                    <div class="value">1,091억원</div>
-                </td>
-                <td width="50%">
-                    <div class="label">구매자수</div>
-                    <div class="value">4,232명</div>
-                </td>
-            </tr>
-        </table>
+        <div class="list">
+            <div class="list__key">판매액</div>
+            <div class="list__value">1,091억원</div>
+        </div>
+        <div class="list">
+            <div class="list__key">구매자수</div>
+            <div class="list__value">4,232명</div>
+        </div>
     </section>
 
     <!-- 주식 구성 -->
@@ -87,14 +83,17 @@
 
     <!-- 투자하기 버튼 -->
     <section id="blockButtons">
-        <button class="btn-invest btn-block" data-toggle="modal" data-target="#exampleModalName">구매하기</button>
+        <div class="block-btn__shadow"></div>
+        <div class="block-btn__box">
+            <button class="btn-invest btn-block" data-toggle="modal" data-target="#exampleModalName">투자하기</button>
+        </div>
     </section>
 
 
     <!-- 상세 정보 -->
     <section id="blockInfo" class="block">
 
-        <p class="title-sm">기본정보</p>
+        <p class="title mb-3">기본정보</p>
         <table class="table-left-head">
             <tr>
                 <td class="head">펀드코드</td>
@@ -149,46 +148,87 @@
         </div>
 
         <p class="title-sm">상품정보 다운로드</p>
-        <button class="btn btn-secondary mb-7">집합투자규약</button>
-        <button class="btn btn-secondary mb-7">투자설명서</button>
+        <div class="block-btn__box p-0">
+            <button class="btn-download">집합투자규약</button>
+            <button class="btn-download">투자설명서</button>
+        </div>
 
     </section>
 
-    <!-- 성향 선택 모달 -->
-    <!-- 모달의 id를 설정하세요. data-target은 id를 기준으로 모달을 호출합니다 -->
-    <div class="modal fade" id="exampleModalName" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <footer class="product-info">
+        <p class="product-info__title">신한금융투자 고객지원센터</p>
+        <p class="product-info__subtitle">
+            신한금융투자에서 제공한 해외주식 리스트입니다<br>
+            *원금손실 시 투자자 귀속, *투자 전 설명서 필독<br>
+            *예금자 보호법상 보호상품 아님, *운용보수 별도
+        </p>
+
+        <hr>
+
+        <a href="a6-FAQ.html">
+            <div class="product-info__list">
+                <span>자주 묻는 질문</span>
+                <i class="i-arrow"></i>
+            </div>
+        </a>
+        <div class="product-info__list">
+            <span>펀드투자 관련 문의</span>
+            <a href="tel:1588-0365">1588-0365</a>
+            <i class="i-arrow"></i>
+        </div>
+        <div class="product-info__list">
+            <span>해외투자 관련 문의</span>
+            <a href="tel:37222525">3722-2525</a>
+            <i class="i-arrow"></i>
+        </div>
+        <div class="product-info__list">
+            <span>펀드투자 관련 문의</span>
+            <a href="tel:15884905">1588-4905</a>
+            <i class="i-arrow"></i>
+        </div>
+
+
+        <!-- <p class="mt-2 mb-4">온라인에서 투자 가능한 선,후취, 환매수수료가 없는 신한금융투자 제공 펀드리스트 입니다.<br>(단, 운용보수 등은 별도)</p> -->
+
+        <!-- <a class="btn-outline-gray">신한금융투자 고객지원센터 : 1588-0365</a>
+        <a class="btn-outline-gray" data-toggle="modal" data-target="#FAQ"> 자주 묻는 질문</a> -->
+    </footer>
+
+    <div class="modal fade bottom-sheet" id="exampleModalName" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog fixed-bottom" role="document">
             <div class="modal-content">
 
                 <!-- header -->
-                <div class="modal-header">
-                    <h5 class="modal-title">정보 제공 동의</h5>
+                <div class="bottom-sheet__header">
+                    <h1 class="bottom-sheet__title">투자성향 및 상품위험등급 확인</h1>
                 </div>
-
-                <!-- body -->
-                <div class="modal-body">
-                    <p class="h7">
-                        상품 구매를 위해 토스에서 신한금융투자에 정보를 제공합니다. 제공된 정보는 투자 서비스 이외의 목적에 쓰이지 않습니다.
-                    </p>
-                    <label class="checkbox-lg d-block my-4">
-                        <input type="checkbox" name="input1" checked>개인정보 제3자 제공 동의
-                        <u class="blue500-text"><a href="#" class="blue500-text ml-1">자세히</a></u>
-                    </label>
-                    <div class="text-center">
-                        <button class="btn-modal btn-secondary">취소</button>
-                        <button class="btn-modal btn-accent">동의 후 계속</button>
+                <div class="bottom-sheet__body">
+                    <div class="content pb-3 mb-3">
+                        <table class="table table-bordered">
+                            <thead class="thead-default">
+                                <tr>
+                                    <th>나의 투자성향</th>
+                                    <th>투자 상품</th>
+                                </tr>
+                            </thead>
+                            <tr>
+                                <td>적극투자형(2등급)</td>
+                                <td class="red500-text">초고위험(1등급)</td>
+                            </tr>
+                        </table>
+                        <ul class="pl-4 h7 mb-0">
+                            <li>나의 투자성향보다 등급이 높은 상품에 투자합니다.</li>
+                            <li>부적합(부적성)금융투자상품 거래내용 확인서를 읽어보았으며 이에 동의합니다.</li>
+                            <li class="blue500-text bold">부적합(부적성)금융투자상품 거래내용 확인서</li>
+                        </ul>
                     </div>
                 </div>
-            </div>
+                <div class="block-btn__box">
+                    <button class="btn-sub" data-dismiss="modal" aria-label="Close">이전</button>
+                    <button class="btn-next">확인</button>
+                </div>
         </div>
     </div>
-
-    <footer class="product-info mb-6">
-        <a href="tel:1588-0365">
-            <div class="info-list">고객센터 : 1588-0365</div>
-        </a>
-        <div class="info-list"> 자주 묻는 질문</div>
-    </footer>
 
 
 
@@ -204,7 +244,7 @@
     <script src="assets/javascript/chartSetting.js"></script>
 
     <!-- 커스텀 이벤트 -->
-    <!-- <script src="assets/javascript/event.js"></script> -->
+    <script src="assets/javascript/event.js"></script>
 
 </body>
 </html>

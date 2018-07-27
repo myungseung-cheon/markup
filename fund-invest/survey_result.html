@@ -29,39 +29,50 @@
     </style>
 
 </head>
-<body>
+<body class="gray0">
 
     <section class="p-4 gray700-text">
-        <div class="header text-center">
-            <h1 class="h3 lh-14 mt-4 mb-2">
+        <div class="header">
+            <h1 class="h3 lh-14 mt-4 mb-1">
                 나의 투자성향은<br><strong id="typeOfInvest" class="color-rank-4">안정추구형(4등급)</strong> 입니다
             </h1>
-            <p class="h7 mb-4">파생투자성향 원금부분보장형(3등급)</p>
-            <div class="block-icon">
+            <p class="h7">파생투자성향 원금부분보장형(3등급)</p>
+            <button class="btn btn-weak-dark btn-tiny mb-4">
+                다시 측정하기
+            </button>
+            <!-- <div class="block-icon">
                 <img src="assets/images/icon-rank-1.svg" alt="rank-1" class="mb-4 dimmed">
                 <img src="assets/images/icon-rank-2.svg" alt="rank-2" class="mb-4 dimmed">
                 <img src="assets/images/icon-rank-3.svg" alt="rank-3" class="mb-4 dimmed">
                 <img src="assets/images/icon-rank-4.svg" alt="rank-4" class="mb-4">
                 <img src="assets/images/icon-rank-5.svg" alt="rank-5" class="mb-4 dimmed">
-            </div>
+            </div> -->
         </div>
-        <div class="p-4 rounded gray50 b-1-gray200">
+        <div class="mb-4">
             <ul class="pl-3 li-mb-3 h7 mb-0">
                 <li>투자원금의 손실위험은 최소화하고, 이자소득이나 배당소득 수준의 안정적인 투자를 목표로 합니다.</li>
                 <li>예·적금보다 높은 수익을 위해 자산 중 일부를 변동성 높은 상품에 투자할 의향이 있습니다. (수익을 위해 단기적인 손실을 수용할 수 있음)</li>
             </ul>
         </div>
 
-        <label id="checkAllAgreement" class="checkbox-lg bold mb-0 agree-all my-3">
+        <!-- <label id="checkAllAgreement" class="checkbox-lg bold mb-0 agree-all my-3">
           <input type="checkbox" name="input1">나의 투자성향을 확인하였습니다.
-        </label>
-
-          <button id="confirmInvestType" class="btn btn-block btn-accent" disabled>투자성향 확정</button>
-          <button class="btn btn-block btn-secondary">다시 측정하기</button>
-
-        </p>
-
+        </label> -->
     </section>
+
+    <div class="fixed-bottom">
+        <div class="block-btn__shadow"></div>
+        <div class="block-btn__box">
+            <div class="w-100">
+                <div class="terms-main terms-outline custom-control custom-checkbox mb-2">
+                    <input type="checkbox" name="input1" class="custom-control-input" id="checkAllAgreement">
+                    <label class="custom-control-label" for="checkAllAgreement">내 성향을 확인하였습니다.</label>
+                </div>
+
+                <button id="confirmInvestType" class="btn btn-block btn-accent" disabled>투자성향 확정</button>
+            </div>
+        </div>
+    </div>
 
 
 
@@ -76,7 +87,7 @@
 
         function checkValid(){
             var btn = $('#confirmInvestType');
-            var checked = $('#checkAllAgreement input').is(':checked');
+            var checked = $('#checkAllAgreement').is(':checked');
             if( checked == true ){
                 btn.removeAttr('disabled');
             } else {

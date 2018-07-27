@@ -1,15 +1,78 @@
+
+
+// 리스트 헤더
+.list-header {
+    padding: 24px 24px 0;
+    &__title {
+        font-size: 22px !important;
+        font-weight: bold;
+    }
+}
+.list-header-product {
+    padding: 24px 24px 0;
+    &__title {
+        font-size: 26px !important;
+        font-weight: bold;
+    }
+}
+
+// 리스트
+.list {
+    display: flex;
+    padding: 4px 0;
+    &__key {
+        flex: 1;
+        font-size: 16px;
+        color: $color-grey-700;
+    }
+    &__value {
+        flex: 1;
+        font-size: 17px;
+        font-weight: 600;
+        text-align: right;
+        color: $color-grey-900;
+    }
+    &__value-sm {
+        font-size: 16px;
+        text-align: right;
+        color: $color-grey-700;
+    }
+}
+
+
+
+.header-recommend {
+    @extend .d-flex ;
+    padding: 32px 24px 8px;
+    .title, .subtitle {
+        flex: 1;
+    }
+    .title {
+        @extend .h6, .mb-0 ;
+        color: $color-grey-700;
+        font-weight: 400;
+    }
+    .subtitle {
+        @extend .h7 ;
+        color: $color-sub-content ;
+        text-align: right;
+    }
+}
+
 // 추천 리스트
 .list-recommend-rank {
-    @extend .d-flex, .bt-1-gray150, .py-3 ;
+    @extend .d-flex, .bt-1-gray150 ;
+    padding: 20px 24px;
     align-items: center;
     .order {
-        @extend .h5, .w-20, .text-center, .mb-1, .bold ;
+        @extend .h5, .w-10, .mb-1, .bold, .blue500-text ;
     }
     .key {
         flex: 1 ;
     }
     .title {
         margin-bottom: 0;
+        font-weight: 500;
     }
     .subtitle {
         color: $color-sub-content;
@@ -63,10 +126,29 @@
     table {
         width: 100%;
     }
+    td {
+        padding: 24px 0 ;
+
+        &:first-child {
+            padding-left: 24px;
+        }
+        &:last-child {
+            padding-right: 24px;
+        }
+        @media only screen and (max-width: 359px) {
+            &:first-child {
+                padding-left: 12px;
+            }
+            &:last-child {
+                padding-right: 12px;
+            }
+        }
+    }
+
     .list-header {
         @extend .bb-1, .bt-1 ;
-        th {
-            @extend .text-center, .normal, .py-3 ;
+        td {
+            padding-bottom: 8px;
         }
         .arrow {
             position: absolute;
@@ -74,7 +156,7 @@
             margin: 5px 0 0 6px;
         }
         i {
-            @extend .oi, .oi-caret-bottom, .h7, .normal ;
+            @extend .oi, .oi-caret-bottom, .h7, .normal, .text-center ;
         }
         [data-toggle="modal"] {
 
@@ -83,26 +165,28 @@
     .list-item {
         @extend .bb-1-gray150 ;
         i {
-            @extend .h7, .orange500-text, .px-2, .orange500-text ;
+            @extend .h7, .orange500-text, .pr-2, .orange500-text ;
         }
     }
-    .product-option,
-    .product-profit {
-        @extend .text-center ;
+    .product-type {
+      vertical-align: top;
     }
     .product-name {
-        padding: 24px 0;
         text-align: left;
         word-wrap: break-word;
         word-break: break-all;
         // max-width: 126px;
         @extend .mb-2 ;
         .sort {
-            margin-bottom: 6px;
+            margin-bottom: 2px;
         }
         .name {
             color: #999999;
             line-height: 1.6;
         }
+    }
+    .product-option,
+    .product-profit {
+        @extend .text-center ;
     }
 }

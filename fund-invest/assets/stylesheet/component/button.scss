@@ -1,48 +1,185 @@
-.btn-square {
-    @extend .btn, .rounded-0, .bold, .gray0-text ;
-}
-.btn-modal {
-    @extend .btn, .w-49, .mb-2, .bold ;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-.btn-outline-white {
-    background-color: transparent;
-}
-.btn-fixed-bottom {
-    @extend .btn, .btn-block, .mt-5, .mb-0, .rounded-0, .py-4, .bold, .fixed-bottom, .gray0-text ;
-}
-.btn-outline-gray {
-    @extend .btn, .btn-block, .mb-2, .py-4, .b-1-gray600, .gray600-text ;
-    background: transparent;
-}
-.btn-main-banner {
-    @extend .btn, .py-4 ;
-    color: white;
-    font-weight: bold;
-    background: #40B59B;
-    border: 1px solid #369C86;
-    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.17);
-    border-radius: 100px;
-}
-.btn-main-banner-panic {
-    @extend .btn, .px-4 ;
-    color: white ;
-    font-weight: bold;
-    background: #40B59B;
-    border: 1px solid #369C86;
-    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.17);
+// 기본 속성
+.btn {
     border-radius: 4px;
-    a:not([href]):not([tabindex]) {
-        color: white !important;
+}
+
+// 버튼 사이즈
+.btn-big {
+    font-size: 17px;
+    padding: 18px 32px;
+}
+.btn-medium {
+    font-size: 15px;
+    padding: 11px 19px 10px;
+}
+.btn-small {
+    font-size: 14px;
+    padding: 10px 18px 9px;
+}
+.btn-tiny {
+    font-size: 13px;
+    padding: 8px 13px 6px;
+}
+
+// 버튼 색상
+.btn-weak-primary {
+    color: $color-primary;
+    font-weight: 500;
+    border: none;
+    background: rgba(58,73,97,0.04);
+}
+.btn-weak-dark {
+    color: #3A4961;
+    font-weight: 500;
+    border: none;
+    background: rgba(58,73,97,0.07);
+}
+.btn-fill-primary {
+    color: white;
+    font-weight: 500;
+    background-color: $color-primary;
+    border: none;
+}
+.btn-fill-dark {
+    color: white;
+    font-weight: 500;
+    background-color: #3F3F3F;
+    border: none;
+}
+.btn-fill-danger {
+    color: white;
+    font-weight: 500;
+    background-color: $color-red;
+    border: none;
+}
+.btn-fill-light {
+    color: 2E4996;
+    font-weight: 500;
+    background-color: white;
+    border: none;
+}
+.btn-flat-primary {
+    color: $color-primary;
+    background-color: transparent;
+    border: none;
+}
+.btn-radio {
+
+}
+
+// 버튼 조합
+.btn-download {
+    @extend .btn, .btn-big, .btn-weak-primary ;
+}
+.btn-cancel {
+    @extend .btn, .btn-medium, .btn-weak-dark ;
+}
+.btn-danger {
+    @extend .btn, .btn-big, .btn-fill-danger ;
+}
+.btn-sub {
+    @extend .btn, .btn-big, .btn-weak-dark ;
+}
+.btn-next {
+    @extend .btn, .btn-big, .btn-block, .btn-fill-primary ;
+}
+.checkbox-btn,
+.radio-btn {
+    @extend .mb-1, .p-3, .px-0 ;
+    color: $color-primary;
+    text-align: center;
+    border: 1px solid $color-primary;
+    input {
+        display: none;
+    }
+    &.inactive {
+        color: $color-grey-600;
+        border-color: $color-border;
     }
 }
+
+// 버튼 그룹
+.block-btn {
+    &__shadow {
+        width: 100%;
+        height: 34px;
+        background: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,1));
+    }
+    &__box {
+        button {
+            @extend .btn-block, .btn-big ;
+            border-radius: 4px;
+            padding-left: 0;
+            padding-right: 0;
+        }
+        button + button {
+            margin-top: 0 !important;
+            margin-left: 8px;
+        }
+        display: flex;
+        padding: 0px 24px 24px;
+        background-color: white;
+    }
+}
+
+
+// .btn-square {
+//     @extend .btn, .rounded-0, .bold, .gray0-text ;
+// }
+// .btn-modal {
+//     @extend .btn, .w-49, .mb-2, .bold ;
+//     padding-top: 20px;
+//     padding-bottom: 20px;
+// }
+// .btn-outline-white {
+//     background-color: transparent;
+// }
+// .btn-fixed-bottom {
+//     @extend .btn, .btn-block, .mt-5, .mb-0, .rounded-0, .py-4, .bold, .fixed-bottom, .gray0-text ;
+// }
+// .btn-outline-gray {
+//     @extend .btn, .btn-block, .mb-2, .py-4, .b-1-gray600, .gray600-text ;
+//     background: transparent;
+// }
+// .btn-main-banner {
+//     @extend .btn, .py-4 ;
+//     color: white;
+//     font-weight: bold;
+//     background: #40B59B;
+//     border: 1px solid #369C86;
+//     box-shadow: 0 2px 4px 0 rgba(0,0,0,0.17);
+//     border-radius: 100px;
+// }
+// .btn-main-banner-panic {
+//     @extend .btn, .px-4 ;
+//     color: white ;
+//     font-weight: bold;
+//     background: #40B59B;
+//     border: 1px solid #369C86;
+//     box-shadow: 0 2px 4px 0 rgba(0,0,0,0.17);
+//     border-radius: 4px;
+//     a:not([href]):not([tabindex]) {
+//         color: white !important;
+//     }
+// }
 // 필터 버튼
 .btn-filter {
-    @extend .btn, .fixed-bottom, .gray0-text, .btn-block, .py-4, .rounded-0, .text-left ;
+    @extend .fixed-bottom, .btn-block, .p-4, .text-left, .d-flex ;
+    width: 100%;
+    color: white !important;
+    background-color: #3785F7 !important;
+    align-items: center;
     font-size: 16px;
+
+    i {
+        min-width: 20px;
+    }
+    @media only screen and (max-width: 359px) {
+        padding: 24px 12px !important;
+    }
 }
 .btn-hide {
+    @extend .transition ;
     bottom: -62px !important;
     opacity: 0;
 }

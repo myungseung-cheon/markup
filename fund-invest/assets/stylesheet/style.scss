@@ -1,10 +1,9 @@
 //Colre
 @import 'tossframe';
+@import 'tossframe-renew';
 
-// Variables
-$color-main-content: #333;
-$color-sub-content: #999;
-$color-profit: #fe4545;
+
+$asset-root: '../../assets/';
 
 $color-primary: #3785f7;
 $color-red: #f44336;
@@ -43,6 +42,7 @@ $color-profit: $color-red;
 
 
 // Components
+@import 'component/color.scss';
 @import 'component/typography.scss';
 @import 'component/form.scss';
 @import 'component/nav.scss';
@@ -50,456 +50,65 @@ $color-profit: $color-red;
 @import 'component/bedge.scss';
 @import 'component/list.scss';
 @import 'component/modal.scss';
+@import 'component/icon.scss';
+@import 'component/bottom-sheet.scss';
+@import 'component/block.scss';
 
 // Pages
-@import "pages/main_activated_portfolio_summary.scss";
+@import "pages/main.scss";
+@import "pages/product-detail.scss";
+@import "pages/buy-sell.scss";
 @import "pages/portfolio.scss";
+@import "pages/footer.scss";
+@import "pages/faq.scss";
+@import "pages/survey.scss";
 
+body {
+    background-color: #F2F2F5;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
 
+table {
+    word-break: break-all;
+}
 
 .container {
     max-width: 475px;
     margin: auto;
 }
-#productList {
-    background-color: white;
-}
-#recommendList {
-    @extend .gray100, .py-4 ;
-}
-.block-recommend {
-    @extend .gray0, .mb-3, .bt-1-gray200, .bb-1-gray200 ;
-    margin-bottom: 4rem;
-}
-.header-recommend {
-    @extend .px-4, .py-3, .d-flex ;
-    .title, .subtitle {
-        flex: 1;
-    }
-    .title {
-        @extend .h6, .bold, .mb-0 ;
-    }
-    .subtitle {
-        @extend .h7 ;
-        color: $color-sub-content ;
-        text-align: right;
-    }
-}
 
-.product-info {
-    @extend .p-3, .elephant800, .gray300-text, .h7 ;
-    line-height: 2;
-    padding-bottom: 100px !important;
-    a {
-        @extend .py-3 ;
-        font-size: 16px;
-    }
-    .info-list {
-        border: 1px solid #ccc;
-        text-align: center;
-        padding: 16px;
-        margin-bottom: 8px;
-    }
-}
-
-.container { max-width: 475px; }
-.h4 { line-height: 1.3em; }
-.h7, h7 { font-size: 13px; }
 .fixed-bottom {
     position: fixed;
     bottom: 0;
 }
-.block-image {
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-}
+
 .flex-1 { flex: 1; }
 .flex-2 { flex: 2; }
 .flex-3 { flex: 3; }
 .flex-4 { flex: 4; }
 
-.w-49 {
-    width: 49%;
-}
-.modal .table-bordered th,
-.modal .table-bordered td {
-    border: 1px solid #e0e0e0;
-}
 .col-option-selected {
     @extend .gray50 ;
 }
 .hide {
     display: none !important;
 }
-.line-height-base {
-    line-height: 1.6rem;
-}
-.modal-title {
-    @extend .bold ;
-}
-.modal-content {
-    @extend .p-2 ;
-}
-.shadow-blue600 {
-    box-shadow: 0px 1px 6px 0px #2e4996;
-}
-.input-password {
-    background-color: rgba(255, 255, 255, 0.24);
-    border: 1px solid #1c2334;
-}
+
 .no-content::before {
     content: '' !important;
 }
-
-// 시작 가이드 배너
-#banner {
-    @extend .blue600, .py-5, .px-3, .text-center ;
-    h1 {
-        @extend .h4, .mx-auto, .mb-4 ;
-        color: white;
-    }
-}
-
-
-
-// 필터 버튼
-#filterButton {
-    @extend .btn, .btn-block ;
-    position: fixed;
-    bottom: 24px;
-    left: 50vw;
-    width: 8rem;
-    text-align: center;
-
-    padding: 1rem 1rem 1rem 0.7rem;
-    margin-left: -4rem;
-    border-radius: 100px;
-    color: #FFFFFF;
-    box-shadow: 0 1px 4px 0 #999999;
-
-    i {
-        @extend .oi, .oi-sort-descending, .h6 ;
-        margin-top: -4px;
-        margin-bottom: 0px;
-    }
-    span {
-        @extend .bold ;
-        color: white;
-    }
-}
-
-// 모달 설정
-.modal-dialog {
-    margin: 0;
-    padding: 0;
-    &.fixed-bottom {
-        position: fixed;
-        width: 100%;
-    }
-}
-.modal-content {
-    height: auto;
-    border-radius: 0;
-    border: 0;
-    background-color: #fafafa;
-
-    p {
-        line-height: 1.5;
-    }
-}
-.modal-footer {
-    button {
-        @extend .px-4 ;
-    }
-}
-.modal.fade .modal-dialog {
-    transform: translate(0, 100vh);
-}
-.modal.show .modal-dialog {
-    transform: translate(0, 0);
-}
-
-// 성향 필터 카드
-.filter-card {
-    @extend .rounded, .b-1, .gray0, .py-4, .d-block, .mb-3 ;
-    &.selected {
-        background: #EDF2FE;
-        border: 1px solid #4E7BFA !important;
-        .title {
-            @extend .blue500-text ;
-        }
-    }
-    .title {
-        @extend .w-30, .text-center, .align-top, .mb-0, .h5, .bold ;
-    }
-    .tag {
-        font-size: 12px;
-        padding: 6px 12px;
-        color: white;
-        border-radius: 4px;
-        line-height: 1;
-        font-weight: bold;
-        margin-right: 4px;
-    }
-}
-.tag-portfolio {
-    display: inline-block;
-    font-size: 12px;
-    padding: 4px 8px;
-    color: white;
-    border-radius: 4px;
-    font-weight: bold;
-    margin-right: 4px;
-    margin-top: -2px;
-}
-
-// 위험도 태그
-.danger-6 { background-color: #BD151D }
-.danger-5 { background-color: #F9AD54 }
-.danger-4 { background-color: #FACA33 }
-.danger-3 { background-color: #A3BE7D }
-.danger-2 { background-color: #668BB8 }
-.danger-1 { background-color: #094A90 }
-
-.danger-6-text { color: #BD151D }
-.danger-5-text { color: #F9AD54 }
-.danger-4-text { color: #FACA33 }
-.danger-3-text { color: #A3BE7D }
-.danger-2-text { color: #668BB8 }
-.danger-1-text { color: #094A90 }
-
-/* 옵션 필터 */
-#modalOptionFilter button.oi-check:before,
-#profitFilter button.oi-check:before {
-    position: absolute;
-    right: 0;
-    color: #4e7bfa;
-    margin-right: 1rem;
-}
-.dropdown-item:active {
-    color: inherit;
-    text-decoration: none;
-    background-color: inherit;
-}
-
 
 .transition {
     transition: all 0.2s ease-in-out;
 }
 
-// 상품 헤더
-.header-shinhan {
-    @extend .blue800, .gray300-text, .h7, .text-center, .py-3 ;
-    z-index: 1;
-    span {
-        font-size: 15px;
-    }
-    img {
-        opacity: 0.9;
-        height:18px;
-        margin-top:-2px;
-        margin-right: 8px;
-    }
-}
-
-// 메인화면 내 자산
-#portfolio {
-    @extend .blue600  ;
-    .page {
-        @extend .py-5, .px-3, .text-center, .w-100 ;
-    }
-    .title {
-        @extend .h6, .gray0-text ;
-    }
-    .asset {
-        @extend .h2, .gray0-text ;
-    }
-    .profit {
-        @extend .mb-3 ;
-    }
-    .plus {
-        @extend .pink500-text, .bold ;
-    }
-    .minus {
-        @extend .blue200-text, .bold ;
-    }
-    .carousel-indicators li {
-        height: 8px;
-        max-width: 8px;
-        border-radius: 4px;
-    }
-    .arrow {
-        display: inline-block;
-        position: absolute;
-        margin-left: 6px;
-        margin-top: 2px;
-        background-color: #34549f;
-        border-radius: 100px;
-        i {
-            padding: 8px 10px 10px 12px;
-            font-size: 12px;
-            @extend .oi, .oi-chevron-right, .gray0-text ;
-            &:before {
-                @extend .blue200-text ;
-            }
-        }
-    }
-}
-
-// 블럭
-.block {
-    @extend .p-4, .gray0, .bb-1 ;
-    .title {
-        @extend .h5, .gray900-text ;
-    }
-    .title-sm {
-        @extend .h6, .gray800-text, .mb-3, .bold ;
-    }
-    .subtitle {
-        @extend .h7, .gray600-text ;
-    }
-    .label {
-        @extend .gray600-text, .mb-1 ;
-    }
-}
-.block-blue {
-    @extend .p-4, .blue600, .gray0-text ;
-    .title {
-
-    }
-    .label {
-
-    }
-}
-
-// 카드 블럭
-.block-list {
-    @extend .gray0, .bb-1 ;
-    box-shadow: 0 1px 2px 0 #E0E0E0;
-}
-.block-card {
-    @extend .block, .m-3 ;
-    box-shadow: 0 1px 2px 0 #E0E0E0;
-}
-.block-shadow {
-    box-shadow: 0 1px 2px 0 #cccccc;
-    @extend .b-1-gray150 ;
-}
-.block-list {
-    @extend .w-100, .mb-2, .b-1-gray150, .gray0 ;
-    box-shadow: 0 1px 2px 0 #e0e0e0;
-}
-
-.table-full-width {
-    @extend  .w-100 ;
-    .label {
-        @extend .gray600-text, .mb-1 ;
-    }
-    .value {
-        @extend .gray800-text, .h5, .mb-0 ;
-    }
-    &.reverse {
-        .label {
-            @extend .blue200-text ;
-        }
-        .value {
-            @extend .gray0-text, .h5, .mb-0 ;
-        }
-    }
-}
-
-.table-portfolio {
-    @extend .w-100 ;
-    tr {
-        background-color: white;
-        border-bottom: 1px solid #e0e0e0;
-    }
-    td {
-        @extend .py-4 ;
-        &:first-child {
-            @extend .pl-4, .text-left ;
-        }
-        &:last-child {
-            @extend .pr-4, .text-right,  .w-50 ;
-        }
-        h6 {
-            @extend .mb-1 ;
-        }
-    }
-    .plus {
-        @extend .pink500-text, .bold ;
-    }
-    .minus {
-        @extend .blue500-text, .bold ;
-    }
-}
-
-.table-wating {
-    @extend .w-100 ;
-    tr {
-        background-color: white;
-        border-bottom: 1px solid #e0e0e0;
-    }
-    td {
-        @extend .py-4, .align-top ;
-        &:first-child {
-            @extend .pl-4, .text-left ;
-        }
-        &:last-child {
-            @extend .pr-4, .text-right, .w-40 ;
-        }
-        h6 {
-            @extend .mb-1 ;
-        }
-    }
-    .plus {
-        @extend .pink500-text ;
-    }
-    .minus {
-        @extend .blue500-text ;
-    }
-    .status {
-        @extend .orange500-text ;
-        font-size: 14px;
-        font-weight: bold;
-    }
-}
-
-.table-complete {
-    @extend .w-100 ;
-    tr {
-        background-color: white;
-        border-bottom: 1px solid #e0e0e0;
-    }
-    td {
-        @extend .py-4, .align-top ;
-        &:first-child {
-            @extend .pl-4, .text-left ;
-        }
-        &:last-child {
-            @extend .pr-4, .text-right,  .w-40 ;
-        }
-        h6 {
-            @extend .mb-1 ;
-        }
-    }
-    .plus {
-        @extend .pink500-text ;
-    }
-    .minus {
-        @extend .blue500-text ;
-    }
-    .status {
-        @extend .gray600-text ;
-        font-size: 14px;
-        font-weight: bold;
-    }
-}
-
 .section-header {
     @extend .text-center, .gray700-text, .pb-2, .pt-3, .mt-2 ;
 }
+<<<<<<< HEAD
 
 // 상세화면 수익률
 #profit {
@@ -906,3 +515,5 @@ $color-profit: $color-red;
         color: $color-grey-700;
     }
 }
+=======
+>>>>>>> origin/TDS_Migration

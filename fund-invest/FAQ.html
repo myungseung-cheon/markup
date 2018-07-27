@@ -1,0 +1,78 @@
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#3E63BC" />
+    <!-- 위 3개의 메타 태그는 *반드시* head 태그의 처음에 와야합니다; 어떤 다른 콘텐츠들은 반드시 이 태그들 *다음에* 와야 합니다 -->
+    <title>Toss - 소액 펀드 투자</title>
+
+    <!-- 커스텀 스타일-->
+    <link href="assets/stylesheet/style.css" rel="stylesheet">
+</head>
+<body>
+
+    <section class="wrapper-faq">
+
+        <div class="list-header mb-4">
+            <h1 class="list-header__title">자주 묻는 질문</h1>
+        </div>
+
+        <ul class="info-list">
+            <li class="list-board">
+                <div class="list-head">
+                    <span>펀드를 사려면 무엇이 필요한가요?</span>
+                    <i class="i-arrow-list-down"></i>
+                </div>
+                <div class="list-body">토스 신한금융투자 계좌를 개설해야 하며, 계좌를 만들때 입력한 숫자 4자리의 계좌 비밀번호를 아셔야 합니다.</div>
+            </li>
+            <li class="list-board">
+                <div class="list-head">
+                    <span>비밀번호를 잊어버렸어요. 어떻게 하죠?</span>
+                    <i class="i-arrow-list-down"></i>
+                </div>
+                <div class="list-body">5회 입력 오류 또는 분실 시 신한금융투자 지점을 방문하여 재등록하셔야 합니다.</div>
+            </li>
+            <li class="list-board">
+                <div class="list-head">
+                    <span>투자/환매를 완료했는데  아무 일도 일어나지 않아요.</span>
+                    <i class="i-arrow-list-down"></i>
+                </div>
+                <div class="list-body">펀드의 특성상, 주문시간에 따라 주문 및 계약 체결이 1~수 영업일이 걸릴 수 있습니다. 진행사항은 ‘나의 투자현황’에서 가입한 펀드의 상세 내역을 확인하세요.</div>
+            </li>
+            <li class="list-board">
+                <div class="list-head">
+                    <span>자동투자를 선택하면 언제부터 시작하나요?</span>
+                    <i class="i-arrow-list-down"></i>
+                </div>
+                <div class="list-body">투자계약서에 기재된 시작월부터 자동투자가 진행됩니다. 만약 잔고 부족 시 이체일 D+3영업일까지 출금이 시도 되오니 잊지마세요.</div>
+            </li>
+            <li class="list-board">
+                <div class="list-head">
+                    <span>투자/환매를  취소하고 싶은데   “지금은 취소가 불가능하다”라고 나와요.</span>
+                    <i class="i-arrow-list-down"></i>
+                </div>
+                <div class="list-body">주식에 50%이상 투자하는 펀드는 ①8:40~15:30 ②15:30~17:00  해당 구간에 주문한 건만 해당 시간에 취소할 수 있습니다. (그 외 펀드는 08:40~15:00) 세부 문의는 신한금융투자 고객지원센터(1588-0365)로 연락주세요.</div>
+            </li>
+        </ul>
+    </section>
+
+    <!-- 기본 JavaScript 프레임워크 -->
+    <script src="assets/javascript/jquery-3.2.1.min.js"></script>
+    <script src="assets/javascript/tether.min.js"></script>
+    <script src="assets/javascript/tossframe-2.0.0.js"></script>
+
+    <!-- 커스텀 이벤트 -->
+    <script type="text/javascript">
+        $(document).ready(function(){
+            var board = $('.list-board');
+
+            board.click(function(){
+                board.removeClass('active');
+                $(this).toggleClass('active');
+            });
+        });
+    </script>
+
+</body>
+</html>

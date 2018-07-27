@@ -1,10 +1,10 @@
 // 구매계약서 우편-이메일 선택
-$("label:contains('받음')").click(function(){
-    $('#adressInfo').removeClass('hide');
+$("label:contains('신청')").click(function(){
+    $('.more-option').removeClass('hide');
     checkTermValid();
 });
-$("label:contains('받지 않음')").click(function(){
-    $('#adressInfo').addClass('hide');
+$("label:contains('신청 안함')").click(function(){
+    $('.more-option').addClass('hide');
     checkTermValid();
 });
 
@@ -40,7 +40,7 @@ $('#reportToEmail input').keyup(function(){
 //동의사항 체크여부
 var agreementValid = false
 $('#checkAllAgreement').click(function(){
-    if ( $('#checkAllAgreement input').is(':checked') ) {
+    if ( $('#checkAllAgreement').is(':checked') ) {
         console.log('term is all checked');
         agreementValid = true;
     } else {
@@ -54,8 +54,8 @@ $('#checkAllAgreement').click(function(){
 function checkTermValid() {
     if ( (homeValid || emailValid) && agreementValid ){
         console.log('all valid');
-        $('.btn-confirm').removeAttr('disabled');
+        $('.btn-next').removeAttr('disabled');
     } else {
-        $('.btn-confirm').attr('disabled', 'disabled');
+        $('.btn-next').attr('disabled', 'disabled');
     }
 }
