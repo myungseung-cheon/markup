@@ -54,8 +54,8 @@ $('#checkAllAgreement').click(function(){
 function checkTermValid() {
     if ( (homeValid || emailValid) && agreementValid ){
         console.log('all valid');
-        $('.btn-next').removeAttr('disabled');
+        $('.btn-fill-primary').removeAttr('disabled');
     } else {
-        $('.btn-next').attr('disabled', 'disabled');
+        $('.btn-fill-primary').attr('disabled', 'disabled');
     }
 }

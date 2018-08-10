@@ -127,3 +127,24 @@
         font-weight: bold;
     }
 }
+
+#goToINTL {
+    @extend .py-5, .px-3, .text-center ;
+    background-color: white;
+
+    h1 {
+        @extend .h4, .mx-auto, .mb-4 ;
+    }
+    .img-main-banner {
+        width: 156px;
+    }
+    .block-intl-company {
+        padding: 0 12px;
+        margin-bottom: 24px;
+
+        img {
+            width: 100%;
+            margin-bottom: 8px;
+        }
+    }
+}

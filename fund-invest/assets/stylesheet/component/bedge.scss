@@ -1,7 +1,8 @@
 %bedge {
     padding: 2px 4px 1px;
     border-radius: 2px;
-    font-weight: bold;
+    font-weight: 500;
+    font-size: 11px;
 }
 .bedge-dark {
     @extend %bedge;

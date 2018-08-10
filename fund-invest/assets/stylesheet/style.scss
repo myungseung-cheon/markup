@@ -53,6 +53,7 @@ $color-profit: $color-red;
 @import 'component/icon.scss';
 @import 'component/bottom-sheet.scss';
 @import 'component/block.scss';
+@import 'component/tag.scss';
 
 // Pages
 @import "pages/main.scss";
@@ -108,7 +109,6 @@ table {
 .section-header {
     @extend .text-center, .gray700-text, .pb-2, .pt-3, .mt-2 ;
 }
-<<<<<<< HEAD
 
 // 상세화면 수익률
 #profit {
@@ -135,17 +135,6 @@ table {
 // 투자 버튼
 #blockButtons {
     @extend .fixed-bottom ;
-    button {
-        @extend .btn, .rounded-0, .py-4, .bold, .gray0-text ;
-        float: left;
-    }
-    .btn-sell {
-        @extend .ABlue800 ;
-    }
-    .btn-invest {
-        @extend .btn-accent ;
-    }
-
 }
 
 //정보 화면
@@ -346,20 +335,20 @@ table {
     .bar {
         width: 100%;
         position: absolute;
-        border: 6px solid #EBEBEB;
+        border: 2px solid #EBEBEB;
         left: 50%;
-        top: 13px;
+        top: 17px;
         z-index: 1;
     }
     .term {
         @extend .h7, .blue500-text ;
         &.active {
-            @extend .blue500-text ;
+            color: $color-primary;
         }
     }
     .active {
         .circle {
-            @extend .blue500 ;
+            background-color: $color-primary;
         }
         .bar {
             border-color: #4E7BFA;
@@ -369,151 +358,3 @@ table {
         }
     }
 }
-
-
-// info 부분
-
-.text-period {
-    font-size: 13px;
-    font-color: #ededed;
-}
-.img-main-banner {
-    width: 210px;
-}
-.btn-main-banner {
-    margin-top: -52px;
-}
-.product-info {
-    word-break: keep-all;
-}
-.icon-filter {
-    width: 20px;
-}
-.info-list {
-    list-style: none;
-    padding-left: 0;
-}
-.info-list li {
-    margin-top: 40px;
-}
-.info-head {
-    font-weight: bold;
-    margin-bottom: 8px;
-}
-.info-body {
-    color: #333333;
-}
-
-
-
-
-// 리스트
-.list {
-    display: flex;
-    padding: 4px 0;
-    &__key {
-        flex: 1;
-        font-size: 16px;
-        color: $color-grey-700;
-    }
-    &__value {
-        flex: 1;
-        font-size: 17px;
-        font-weight: 600;
-        text-align: right;
-        color: $color-grey-900;
-    }
-    &__value-sm {
-        font-size: 16px;
-        text-align: right;
-        color: $color-grey-700;
-    }
-}
-// 기본 속성
-.btn {
-    border-radius: 4px;
-}
-
-// 버튼 사이즈
-.btn-big {
-    font-size: 17px;
-    padding: 18px 32px;
-}
-.btn-medium {
-    font-size: 15px;
-    padding: 11px 19px 10px;
-}
-.btn-small {
-    font-size: 14px;
-    padding: 10px 18px 9px;
-}
-.btn-tiny {
-    font-size: 13px;
-    padding: 8px 13px 6px;
-}
-
-// 버튼 색상
-.btn-weak-primary {
-    color: $color-primary;
-    font-weight: 500;
-    border: none;
-    background: rgba(58,73,97,0.04);
-}
-.btn-weak-dark {
-    color: #3A4961;
-    font-weight: 500;
-    border: none;
-    background: rgba(58,73,97,0.07);
-}
-.btn-fill-primary {
-    color: white;
-    font-weight: 500;
-    background-color: $color-primary;
-    border: none;
-}
-.btn-fill-dark {
-    color: white;
-    font-weight: 500;
-    background-color: #3F3F3F;
-    border: none;
-}
-.btn-fill-danger {
-    color: white;
-    font-weight: 500;
-    background-color: $color-red;
-    border: none;
-}
-.btn-fill-light {
-    color: 2E4996;
-    font-weight: 500;
-    background-color: white;
-    border: none;
-}
-.btn-flat-primary {
-    color: $color-primary;
-    background-color: transparent;
-    border: none;
-}
-.bottom-sheet {
-
-    .modal-content {
-        background-color: white;
-        padding: 0 !important;
-        background-color: white;
-    }
-    &__header {
-        padding: 32px 24px 20px;
-    }
-    &__title {
-        color: $color-grey-900;
-        font-size: 22px;
-        font-weight: 500;
-        margin: 0;
-    }
-    &__body {
-        padding: 0 24px;
-        color: $color-grey-700;
-    }
-}
-=======
->>>>>>> origin/TDS_Migration

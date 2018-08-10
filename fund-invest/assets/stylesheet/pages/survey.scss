@@ -36,7 +36,9 @@
             padding: 8px 0 !important;
         }
         td {
-            @extend .py-3, .px-0, .bt-0, .bb-1 ;
+            @extend .px-0, .bb-1-gray50 ;
+            padding-top: 20px !important;
+            padding-bottom: 20px !important;
         }
         .head {
             @extend .bold, .gray800-text, .w-35 ;

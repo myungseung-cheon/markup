@@ -22,15 +22,12 @@
     padding: 4px 0;
     &__key {
         flex: 1;
-        font-size: 16px;
-        color: $color-grey-700;
+        color: $color-grey-900;
     }
     &__value {
         flex: 1;
-        font-size: 17px;
-        font-weight: 600;
         text-align: right;
-        color: $color-grey-900;
+        color: $color-grey-700;
     }
     &__value-sm {
         font-size: 16px;
@@ -61,11 +58,13 @@
 
 // 추천 리스트
 .list-recommend-rank {
-    @extend .d-flex, .bt-1-gray150 ;
+    @extend .d-flex, .bb-1-gray150 ;
     padding: 20px 24px;
     align-items: center;
     .order {
-        @extend .h5, .w-10, .mb-1, .bold, .blue500-text ;
+        @extend .h5, .w-10, .mb-1 ;
+        color: $color-primary;
+        font-weight: 500;
     }
     .key {
         flex: 1 ;
@@ -75,15 +74,17 @@
         font-weight: 500;
     }
     .subtitle {
-        color: $color-sub-content;
+        color: #95959E;
     }
     .value {
+        font-size: 15px;
+        font-weight: 500;
         color: $color-profit;
-        @extend .w-30, .bold, .text-center ;
+        @extend .w-30, .text-center ;
     }
 }
 .list-recommend-keyword {
-    @extend .d-flex, .bt-1-gray150, .px-4 ;
+    @extend .d-flex, .bb-1-gray150, .px-4 ;
     align-items: center;
     min-height: 112px;
     .img {
@@ -97,10 +98,11 @@
     .contents {
         @extend .flex-3, .p-3 ;
         .title {
-            @extend .bold, .mb-2 ;
+            @extend .mb-2 ;
+            font-weight: 500;
         }
         .subtitle {
-
+            color: #95959E;
         }
     }
 }
@@ -146,7 +148,7 @@
     }
 
     .list-header {
-        @extend .bb-1, .bt-1 ;
+        @extend .bt-1 ;
         td {
             padding-bottom: 8px;
         }
@@ -170,6 +172,7 @@
     }
     .product-type {
       vertical-align: top;
+      padding-top: 28px;
     }
     .product-name {
         text-align: left;
@@ -181,12 +184,17 @@
             margin-bottom: 2px;
         }
         .name {
-            color: #999999;
+            color: #95959E;
             line-height: 1.6;
         }
     }
     .product-option,
     .product-profit {
-        @extend .text-center ;
+        @extend .text-center, .w-25 ;
+        font-size: 15px;
+        font-weight: 500;
+    }
+    .product-profit {
+        color: $color-red;
     }
 }
